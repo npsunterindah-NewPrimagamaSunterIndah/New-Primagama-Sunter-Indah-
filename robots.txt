@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://npsunterindah-newprimagamasunterindah.github.io/New-Primagama-Sunter-Indah-/sitemap.xml
+Sitemap: https://newprimagamasunterindah.com/sitemap.xml
