@@ -32,6 +32,7 @@
             color: var(--text-main);
         }
 
+        /* HEADER BLOG */
         .blog-header {
             max-width: 850px;
             margin: 40px auto 20px auto;
@@ -48,6 +49,7 @@
             font-size: 0.95rem;
         }
 
+        /* KONTINER ARTIKEL */
         .blog-container {
             max-width: 850px;
             margin: 0 auto 50px auto;
@@ -61,7 +63,13 @@
             border: 1px solid rgba(91, 33, 182, 0.08);
             overflow: hidden;
             margin-bottom: 30px;
-            padding: 25px; /* Padding merata karena tidak ada gambar di atasnya */
+            padding: 25px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(91, 33, 182, 0.1);
         }
 
         .badge-pinned {
@@ -105,11 +113,17 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .read-more:hover {
+            background-color: #4c1d95;
         }
     </style>
 </head>
 <body>
 
+    <!-- NAVBAR UTAMA -->
     <header class="navbar">
         <div class="logo">
             <img src="logo primagama png.jpeg" alt="Logo New Primagama">
@@ -141,9 +155,10 @@
         <p>Tips kece seputar dunia sekolah, ujian, dan trik jago belajar.</p>
     </div>
 
+    <!-- DAFTAR LIST ARTIKEL (TANPA GAMBAR DI HALAMAN UTAMA) -->
     <main class="blog-container">
         
-        <!-- 1. ARTIKEL PENDIDIKAN (TANPA GAMBAR DI HALAMAN UTAMA) -->
+        <!-- 1. ARTIKEL PENDIDIKAN -->
         <article class="blog-card">
             <span class="badge-pinned">Edukasi & Tips</span>
             <h2><a href="arti-penting-pendidikan.html">Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!</a></h2>
@@ -151,7 +166,7 @@
             <a href="arti-penting-pendidikan.html" class="read-more">Baca Selengkapnya &rarr;</a>
         </article>
 
-        <!-- 2. ARTIKEL LAMA -->
+        <!-- 2. ARTIKEL TIPS UJIAN -->
         <article class="blog-card">
             <span class="badge-pinned">Tips Belajar</span>
             <h2><a href="tips-menghadapi-ujian.html">Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</a></h2>
@@ -161,6 +176,7 @@
 
     </main>
 
+    <!-- SCRIPT JS -->
     <script src="script.js"></script>
 </body>
 </html>
