@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog & Tips Belajar - Primagama</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         :root {
             --primary-purple: #5B21B6;
@@ -17,21 +16,21 @@
         body {
             background-color: var(--bg-color);
             margin: 0;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif, Arial, sans-serif;
             color: var(--text-main);
         }
 
-        /* HEADER & NAVBAR CUSTOM YANG PASTI MUNCUL DI HP */
+        /* HEADER & NAVBAR */
         header.custom-header {
             background: #ffffff;
-            padding: 15px 25px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 9999;
         }
 
         .logo-text {
@@ -60,23 +59,27 @@
             font-weight: 600;
         }
 
-        /* Tombol Hamburger HP */
+        /* TOMBOL HAMBURGER YANG DI-FORCE MUNCUL DI HP */
         .hamburger {
-            display: none;
+            display: none; /* Default di laptop disembunyikan */
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
             gap: 5px;
-            background: none;
+            background: var(--primary-purple); /* Dikasih warna ungu biar gak bisa ngumpet */
             border: none;
-            padding: 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            padding: 0;
         }
 
         .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-main);
+            width: 22px;
+            height: 2.5px;
+            background-color: #ffffff; /* Garis putih */
             border-radius: 2px;
-            transition: 0.3s;
         }
 
         /* HEADER BLOG */
@@ -87,16 +90,16 @@
             text-align: center;
         }
         .blog-header h1 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             color: var(--text-main);
             margin-bottom: 8px;
         }
         .blog-header p {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
-        /* KONTINER DAFTAR ARTIKEL */
+        /* KONTINER ARTIKEL */
         .blog-container {
             max-width: 850px;
             margin: 0 auto 50px auto;
@@ -109,12 +112,8 @@
             box-shadow: 0 4px 20px rgba(91, 33, 182, 0.06);
             border: 1px solid rgba(91, 33, 182, 0.08);
             overflow: hidden;
-            padding: 30px;
+            padding: 25px;
             margin-bottom: 25px;
-            transition: transform 0.2s;
-        }
-        .blog-card:hover {
-            transform: translateY(-3px);
         }
 
         .badge-pinned {
@@ -130,14 +129,13 @@
         }
 
         .blog-card h2 {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             margin: 0 0 10px 0;
         }
 
         .blog-card h2 a {
             color: var(--text-main);
             text-decoration: none;
-            transition: color 0.2s;
         }
         .blog-card h2 a:hover {
             color: var(--primary-purple);
@@ -145,7 +143,7 @@
 
         .blog-card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.6;
             margin-bottom: 20px;
         }
@@ -159,19 +157,15 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-        .read-more:hover {
-            background-color: #4C1D95;
         }
 
-        /* RESPONSIF UNTUK HP */
+        /* KHUSUS TAMPILAN HP (LAYAR KECIL) */
         @media (max-width: 768px) {
             .hamburger {
-                display: flex; /* Munculkan hamburger di HP */
+                display: flex !important; /* WAJIB MUNCUL DI HP */
             }
             .nav-menu {
-                display: none; /* Sembunyikan menu biasa secara default di HP */
+                display: none; /* Menu teks disembunyikan dulu */
                 flex-direction: column;
                 position: absolute;
                 top: 100%;
@@ -179,30 +173,28 @@
                 width: 100%;
                 background: #ffffff;
                 padding: 20px 0;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
                 text-align: center;
                 gap: 15px;
             }
             .nav-menu.active {
-                display: flex; /* Tampilkan menu saat hamburger diklik */
+                display: flex !important; /* Muncul pas hamburger diklik */
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR DENGAN HAMBURGER YANG PASTI MUNCUL -->
     <header class="custom-header">
         <a href="index.html" class="logo-text">New Primagama</a>
         
-        <!-- Tombol Hamburger -->
+        <!-- Tombol Hamburger dengan kotak ungu biar pasti keliatan -->
         <button class="hamburger" id="hamburger-btn" aria-label="Menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <!-- Menu Navigasi -->
         <nav class="nav-menu" id="nav-menu">
             <a href="index.html#hero">Beranda</a>
             <a href="index.html#tentang">Tentang</a>
@@ -214,23 +206,20 @@
         </nav>
     </header>
 
-    <!-- HEADER BLOG -->
     <div class="blog-header">
         <h1>Nongkrong & Belajar Bareng 🚀</h1>
-        <p>Tips kece seputar dunia sekolah, ujian, dan trik jago belajar tanpa bikin pusing.</p>
+        <p>Tips kece seputar dunia sekolah, ujian, dan trik jago belajar.</p>
     </div>
 
-    <!-- DAFTAR ARTIKEL -->
     <main class="blog-container">
         <article class="blog-card">
             <span class="badge-pinned">Pinned • Tips Belajar</span>
             <h2><a href="tips-menghadapi-ujian.html">Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</a></h2>
-            <p>Siapa nih yang kalau denger kata ujian langsung overthinking? Kenali cara jitu hadapi ujian tanpa harus sistem kebut semalam (SKS) yang bikin stres.</p>
+            <p>Siapa nih yang kalau denger kata ujian langsung overthinking? Kenali cara jitu hadapi ujian tanpa sistem kebut semalam.</p>
             <a href="tips-menghadapi-ujian.html" class="read-more">Baca Selengkapnya &rarr;</a>
         </article>
     </main>
 
-    <!-- SCRIPT SEDERHANA SUPAYA HAMBURGER BISA DIKLIK -->
     <script>
         const hamburger = document.getElementById('hamburger-btn');
         const navMenu = document.getElementById('nav-menu');
