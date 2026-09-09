@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & Tips Belajar - Primagama</title>
+    <title>Blog & Tips Belajar - New Primagama Sunter Indah</title>
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="./style.css">
+
     <style>
         :root {
             --primary-purple: #5B21B6;
@@ -20,69 +32,7 @@
             color: var(--text-main);
         }
 
-        /* HEADER & NAVBAR */
-        header.custom-header {
-            background: #ffffff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-        }
-
-        .logo-text {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary-purple);
-            text-decoration: none;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        .nav-menu a:hover, .nav-menu a.active {
-            color: var(--primary-purple);
-            font-weight: 600;
-        }
-
-        /* TOMBOL HAMBURGER YANG DI-FORCE MUNCUL DI HP */
-        .hamburger {
-            display: none; /* Default di laptop disembunyikan */
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            gap: 5px;
-            background: var(--primary-purple); /* Dikasih warna ungu biar gak bisa ngumpet */
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            padding: 0;
-        }
-
-        .hamburger span {
-            width: 22px;
-            height: 2.5px;
-            background-color: #ffffff; /* Garis putih */
-            border-radius: 2px;
-        }
-
-        /* HEADER BLOG */
+        /* HEADER BLOG KHUSUS HALAMAN INI */
         .blog-header {
             max-width: 850px;
             margin: 40px auto 20px auto;
@@ -158,43 +108,18 @@
             font-weight: 500;
             font-size: 0.9rem;
         }
-
-        /* KHUSUS TAMPILAN HP (LAYAR KECIL) */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex !important; /* WAJIB MUNCUL DI HP */
-            }
-            .nav-menu {
-                display: none; /* Menu teks disembunyikan dulu */
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: #ffffff;
-                padding: 20px 0;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-                text-align: center;
-                gap: 15px;
-            }
-            .nav-menu.active {
-                display: flex !important; /* Muncul pas hamburger diklik */
-            }
-        }
     </style>
 </head>
 <body>
 
-    <header class="custom-header">
-        <a href="index.html" class="logo-text">New Primagama</a>
-        
-        <!-- Tombol Hamburger dengan kotak ungu biar pasti keliatan -->
-        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <!-- NAVBAR UTAMA SESUAI INDEX.HTML -->
+    <header class="navbar">
+        <!-- LOGO GAMBAR -->
+        <div class="logo">
+            <img src="logo primagama png.jpeg" alt="Logo New Primagama">
+        </div>
 
+        <!-- NAVIGATION MENU -->
         <nav class="nav-menu" id="nav-menu">
             <a href="index.html#hero">Beranda</a>
             <a href="index.html#tentang">Tentang</a>
@@ -204,6 +129,18 @@
             <a href="index.html#kontak">Kontak</a>
             <a href="blog.html" class="active">Blog</a>
         </nav>
+
+        <!-- TOMBOL DAFTAR -->
+        <a href="index.html#kontak" class="btn-navbar">
+            Daftar Sekarang
+        </a>
+
+        <!-- HAMBURGER (UNTUK HP) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <div class="blog-header">
@@ -220,13 +157,7 @@
         </article>
     </main>
 
-    <script>
-        const hamburger = document.getElementById('hamburger-btn');
-        const navMenu = document.getElementById('nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    </script>
+    <!-- SCRIPT BAWAAN SCRIPT.JS ATAU TOGGLE MOBILE MENU -->
+    <script src="script.js"></script>
 </body>
 </html>
