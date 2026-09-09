@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Artikel Edukasi - Primagama Sunter Indah</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #111;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        /* Style untuk gambar di atas kartu */
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #0056b3;
+        }
+        .card-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .meta {
+            font-size: 12px;
+            color: #999;
+            margin-top: 15px;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 30px 0;
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Blog Edukasi Primagama Sunter Indah</h1>
+    </header>
+
+    <div class="container">
+        <!-- Kotak Artikel 1 -->
+        <div class="card">
+            <img src="nama-file-foto1.jpg" alt="Foto Artikel 1">
+            <div class="card-content">
+                <h3>Tips Ampuh Menghadapi Ujian Sekolah Tanpa Panik</h3>
+                <p>Ujian sering bikin deg-degan? Simak strategi belajar efektif dan cara mengatur waktu agar persiapan makin matang.</p>
+                <div class="meta">Oleh Tim Akademik - September 2026</div>
+            </div>
+        </div>
+
+        <!-- Kotak Artikel 2 -->
+        <div class="card">
+            <img src="nama-file-foto2.jpg" alt="Foto Artikel 2">
+            <div class="card-content">
+                <h3>Kenapa Metode Belajar Interaktif Lebih Cepat Masuk ke Otak?</h3>
+                <p>Pelajari bagaimana memahami konsep ketimbang sekadar menghafal rumus bisa mengubah hasil belajarmu.</p>
+                <div class="meta">Oleh Tim Akademik - September 2026</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-link">&larr; Kembali ke Beranda Utama</a>
+
+</body>
+</html>
