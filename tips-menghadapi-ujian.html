@@ -4,47 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</title>
+    <!-- Memanggil CSS utama supaya font, warna, dan gayanya sama persis dengan beranda -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Khusus untuk merapikan halaman artikel agar di tengah dan ukurannya pas */
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .top-nav {
+            background: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .top-nav nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+        .top-nav nav a:hover {
+            color: #5B21B6;
+        }
+        .article-card {
+            max-width: 750px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .article-card h1 {
+            font-size: 1.8rem;
+            color: #222;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .article-card img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .article-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 10px 20px;
+            background-color: #5B21B6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .back-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVIGATION MENU -->
-    <nav class="nav-menu">
-        <a href="index.html#hero">Beranda</a>
-        <a href="index.html#tentang">Tentang</a>
-        <a href="index.html#program">Program</a>
-        <a href="index.html#fasilitas">Fasilitas</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#kontak">Kontak</a>
-        <a href="blog.html">Blog</a>
-    </nav>
+    <!-- MENU NAVBAR DI TENGAH DAN RAPI -->
+    <header class="top-nav">
+        <nav>
+            <a href="index.html#hero">Beranda</a>
+            <a href="index.html#tentang">Tentang</a>
+            <a href="index.html#program">Program</a>
+            <a href="index.html#fasilitas">Fasilitas</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#kontak">Kontak</a>
+            <a href="blog.html" style="color: #5B21B6; font-weight: bold;">Blog</a>
+        </nav>
+    </header>
 
-    <!-- ARTIKEL UTAMA -->
-    <section class="article-container" style="padding: 40px 20px; max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif;">
-        <h1 style="color: #2c3e50; font-size: 2.2rem; margin-bottom: 10px;">Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</h1>
-        <p style="color: #7f8c8d; font-size: 0.95rem; margin-bottom: 25px;">Diposting oleh Admin • 9 September 2026</p>
+    <!-- KOTAK KONTENT ARTIKEL (DI TENGAH & UKURAN PAS) -->
+    <main class="article-card">
+        <h1>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</h1>
+        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Diposting oleh Admin • 9 September 2026</p>
 
-        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Belajar Ujian" style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Belajar Ujian">
 
-        <div class="article-content" style="line-height: 1.8; color: #333;">
+        <div class="article-content">
             <p>Halo, Sobat! Siapa nih yang kalau denger kata "Ujian" langsung mendadak <em>insecure</em>, keringetan dingin, atau malah overthinking duluan? Tenang, itu manusiawi banget kok. Tapi jangan sampe rasa takut itu bikin nilai kamu boncos, ya!</p>
             
-            <h3 style="margin-top: 25px; color: #2c3e50;">1. Jangan Sistem SKS (Sistem Kebut Semalam)</h3>
+            <h3 style="margin-top: 25px; color: #222;">1. Jangan Sistem SKS (Sistem Kebut Semalam)</h3>
             <p>Udah bukan zamannya lagi begadang semaleman buat ngafalin semua materi pas besoknya mau ujian. Otak kita itu bukan hardisk komputer yang bisa diisi data ribet dalam waktu 5 jam tanpa jeda istirahat. Mulailah cicil belajar dari jauh-jauh hari secara santai tapi konsisten.</p>
 
-            <h3 style="margin-top: 25px; color: #2c3e50;">2. Pahami Konsep, Bukan Cuma Ngafalin</h3>
+            <h3 style="margin-top: 25px; color: #222;">2. Pahami Konsep, Bukan Cuma Ngafalin</h3>
             <p>Kalau kamu cuma ngandelin hafalan, begitu soalnya dibolak-balik sedikit, dijamin bakal <em>blank</em> di tengah jalan. Coba pahami inti materinya, bikin ringkasan atau mind map sendiri pakai bahasa yang gampang kamu ngerti.</p>
 
-            <h3 style="margin-top: 25px; color: #2c3e50;">3. Jaga Vibe Positif & Istirahat Cukup</h3>
+            <h3 style="margin-top: 25px; color: #222;">3. Jaga Vibe Positif & Istirahat Cukup</h3>
             <p>Begadang pas mau ujian tuh cuma bikin besoknya kamu ngantuk dan gak fokus. Tidur yang cukup itu penting banget supaya otak bisa "re-charge" dan semua memori yang udah dipelajari bisa tersimpan rapi.</p>
 
-            <p style="margin-top: 30px; font-weight: bold;">Intinya, hadapi ujian dengan kepala dingin, persiapan matang, dan mental juara. Gaskeun raih nilai impianmu! 💪🔥</p>
+            <p style="margin-top: 25px; font-weight: 600; color: #222;">Intinya, hadapi ujian dengan kepala dingin, persiapan matang, dan mental juara. Gaskeun raih nilai impianmu! 💪🔥</p>
         </div>
 
-        <div style="margin-top: 40px;">
-            <a href="blog.html" style="background-color: #3498db; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">← Kembali ke Blog</a>
-        </div>
-    </section>
+        <a href="blog.html" class="back-btn">&larr; Kembali ke Blog</a>
+    </main>
 
 </body>
 </html>
