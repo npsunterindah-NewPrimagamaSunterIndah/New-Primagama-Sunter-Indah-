@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog & Tips Belajar - Primagama</title>
-    <!-- Memanggil CSS utama agar tombol hamburger & style bawaan web aktif -->
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
@@ -22,7 +21,65 @@
             color: var(--text-main);
         }
 
-        /* Penyesuaian khusus halaman blog agar rapi ala kartu */
+        /* HEADER & NAVBAR CUSTOM YANG PASTI MUNCUL DI HP */
+        header.custom-header {
+            background: #ffffff;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-purple);
+            font-weight: 600;
+        }
+
+        /* Tombol Hamburger HP */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-main);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* HEADER BLOG */
         .blog-header {
             max-width: 850px;
             margin: 40px auto 20px auto;
@@ -39,6 +96,7 @@
             font-size: 1rem;
         }
 
+        /* KONTINER DAFTAR ARTIKEL */
         .blog-container {
             max-width: 850px;
             margin: 0 auto 50px auto;
@@ -106,30 +164,54 @@
         .read-more:hover {
             background-color: #4C1D95;
         }
+
+        /* RESPONSIF UNTUK HP */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex; /* Munculkan hamburger di HP */
+            }
+            .nav-menu {
+                display: none; /* Sembunyikan menu biasa secara default di HP */
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                padding: 20px 0;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+                text-align: center;
+                gap: 15px;
+            }
+            .nav-menu.active {
+                display: flex; /* Tampilkan menu saat hamburger diklik */
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- MENGIKUTI STRUKTUR NAVBAR UTAMA DI INDEX.HTML -->
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo Primagama"> <!-- Sesuaikan jika nama file logo berbeda -->
-        </div>
-        <nav class="nav-menu">
+    <!-- NAVBAR DENGAN HAMBURGER YANG PASTI MUNCUL -->
+    <header class="custom-header">
+        <a href="index.html" class="logo-text">New Primagama</a>
+        
+        <!-- Tombol Hamburger -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Menu Navigasi -->
+        <nav class="nav-menu" id="nav-menu">
             <a href="index.html#hero">Beranda</a>
             <a href="index.html#tentang">Tentang</a>
             <a href="index.html#program">Program</a>
             <a href="index.html#fasilitas">Fasilitas</a>
             <a href="index.html#faq">FAQ</a>
             <a href="index.html#kontak">Kontak</a>
-            <a href="blog.html" class="active" style="color: var(--primary-purple); font-weight: bold;">Blog</a>
+            <a href="blog.html" class="active">Blog</a>
         </nav>
-        <!-- Tombol Hamburger bawaan jika ada di style.css utama -->
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
     </header>
 
     <!-- HEADER BLOG -->
@@ -148,7 +230,14 @@
         </article>
     </main>
 
-    <!-- Memanggil JS utama supaya fungsi klik hamburger jalan -->
-    <script src="script.js"></script>
+    <!-- SCRIPT SEDERHANA SUPAYA HAMBURGER BISA DIKLIK -->
+    <script>
+        const hamburger = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
