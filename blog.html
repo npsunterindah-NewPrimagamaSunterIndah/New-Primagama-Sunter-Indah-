@@ -3,33 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & Tips Belajar - New Primagama Sunter Indah</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Blog & Tips Belajar - Primagama</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-purple: #5B21B6;
+            --light-purple: #F3E8FF;
+            --bg-color: #F8FAFC;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
+        }
+
+        /* Navigasi Atas */
+        .top-nav {
+            background: #ffffff;
+            padding: 16px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .top-nav nav a {
+            margin: 0 14px;
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .top-nav nav a:hover, .top-nav nav a.active {
+            color: var(--primary-purple);
+            font-weight: 600;
+        }
+
+        /* Header Blog */
+        .blog-header {
+            max-width: 850px;
+            margin: 40px auto 20px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .blog-header h1 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+        .blog-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Kontainer Daftar Artikel */
+        .blog-container {
+            max-width: 850px;
+            margin: 0 auto 50px auto;
+            padding: 0 20px;
+        }
+
+        .blog-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(91, 33, 182, 0.06);
+            border: 1px solid rgba(91, 33, 182, 0.08);
+            overflow: hidden;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: transform 0.2s;
+        }
+        .blog-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .badge-pinned {
+            display: inline-block;
+            background-color: var(--light-purple);
+            color: var(--primary-purple);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .blog-card h2 {
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+        }
+
+        .blog-card h2 a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .blog-card h2 a:hover {
+            color: var(--primary-purple);
+        }
+
+        .blog-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            background-color: var(--primary-purple);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .read-more:hover {
+            background-color: #4C1D95;
+        }
+    </style>
 </head>
 <body>
-    <header style="text-align: center; padding: 40px 20px; background: #f9f9f9;">
-        <h1>Nongkrong & Belajar Bareng 🚀</h1>
-        <p>Tips kece seputar dunia sekolah, ujian, dan trik jago belajar tanpa bikin pusing.</p>
-        <p><a href="index.html">&larr; Balik ke Beranda Utama</a></p>
+
+    <!-- NAVIGASI UTAMA -->
+    <header class="top-nav">
+        <nav>
+            <a href="index.html#hero">Beranda</a>
+            <a href="index.html#tentang">Tentang</a>
+            <a href="index.html#program">Program</a>
+            <a href="index.html#fasilitas">Fasilitas</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#kontak">Kontak</a>
+            <a href="blog.html" class="active">Blog</a>
+        </nav>
     </header>
 
-    <main style="max-width: 800px; margin: 30px auto; padding: 0 20px;">
-        <!-- Kartu Artikel 1 -->
-        <article style="margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 30px;">
-            <!-- FOTO / ILUSTRASI ARTIKEL (Bisa diganti link fotonya di bagian src) -->
-            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173" alt="Ilustrasi Belajar Asik" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
-            
-            <h2><a href="tips-menghadapi-ujian.html" style="text-decoration: none; color: #0066cc;">Cara Santai Taklukkan Ujian Sekolah Tanpa Harus SKS (Sistem Kebut Semalam)</a></h2>
-            <p style="color: #666; font-size: 14px;">Update: 9 September 2026</p>
-            
-            <p>Pernah gak sih ngerasa mendadak panik pas lembar soal ujian dibagikan? Padahal, kalau tahu triknya, ujian tuh bisa dilalui dengan santai tanpa bikin jantungan...</p>
-            
-            <a href="tips-menghadapi-ujian.html" style="display: inline-block; margin-top: 10px; padding: 8px 16px; background: #0066cc; color: #fff; text-decoration: none; border-radius: 4px;">Baca Selengkapnya &rarr;</a>
+    <!-- HEADER BLOG -->
+    <div class="blog-header">
+        <h1>Nongkrong & Belajar Bareng 🚀</h1>
+        <p>Tips kece seputar dunia sekolah, ujian, dan trik jago belajar tanpa bikin pusing.</p>
+    </div>
+
+    <!-- DAFTAR ARTIKEL (GAYA KARTU) -->
+    <main class="blog-container">
+        
+        <article class="blog-card">
+            <span class="badge-pinned">Pinned • Tips Belajar</span>
+            <h2><a href="tips-menghadapi-ujian.html">Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</a></h2>
+            <p>Siapa nih yang kalau denger kata ujian langsung overthinking? Kenali cara jitu hadapi ujian tanpa harus sistem kebut semalam (SKS) yang bikin stres.</p>
+            <a href="tips-menghadapi-ujian.html" class="read-more">Baca Selengkapnya &rarr;</a>
         </article>
+
+        <!-- Kamu bisa tambah artikel lain di bawah sini nanti dengan format yang sama -->
+
     </main>
 
-    <footer style="text-align: center; padding: 20px; color: #888; font-size: 14px;">
-        <p>&copy; 2026 New Primagama Sunter Indah. All rights reserved.</p>
-    </footer>
 </body>
 </html>
