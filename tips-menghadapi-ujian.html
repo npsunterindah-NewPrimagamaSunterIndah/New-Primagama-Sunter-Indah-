@@ -4,77 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</title>
-    <!-- Memanggil CSS utama supaya font, warna, dan gayanya sama persis dengan beranda -->
     <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS Khusus untuk merapikan halaman artikel agar di tengah dan ukurannya pas */
+        :root {
+            --primary-purple: #5B21B6;
+            --light-purple: #F3E8FF;
+            --bg-color: #F8FAFC;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+        }
+
         body {
-            background-color: #f9f9f9;
+            background-color: var(--bg-color);
             margin: 0;
             font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
         }
+
+        /* Navigasi Atas */
         .top-nav {
             background: #ffffff;
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 16px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             text-align: center;
         }
         .top-nav nav a {
-            margin: 0 12px;
+            margin: 0 14px;
             text-decoration: none;
-            color: #333;
+            color: var(--text-muted);
             font-weight: 500;
-            font-size: 15px;
-            transition: color 0.3s;
+            font-size: 14px;
+            transition: color 0.2s;
         }
-        .top-nav nav a:hover {
-            color: #5B21B6;
+        .top-nav nav a:hover, .top-nav nav a.active {
+            color: var(--primary-purple);
+            font-weight: 600;
         }
-        .article-card {
-            max-width: 750px;
+
+        /* Kontainer Utama ala Card */
+        .main-container {
+            max-width: 850px;
             margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .article-card {
             background: #ffffff;
-            padding: 30px 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(91, 33, 182, 0.06);
+            border: 1px solid rgba(91, 33, 182, 0.08);
+            overflow: hidden;
+            padding: 40px;
         }
+
+        /* Badge ala Zenius (Pinned) */
+        .badge-pinned {
+            display: inline-block;
+            background-color: var(--light-purple);
+            color: var(--primary-purple);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
         .article-card h1 {
-            font-size: 1.8rem;
-            color: #222;
-            line-height: 1.4;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            color: var(--text-main);
+            line-height: 1.35;
+            margin-top: 0;
+            margin-bottom: 12px;
         }
+
+        .meta-info {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #F1F5F9;
+        }
+
         .article-card img {
             width: 100%;
-            max-height: 350px;
+            max-height: 400px;
             object-fit: cover;
-            border-radius: 8px;
-            margin: 20px 0;
+            border-radius: 12px;
+            margin-bottom: 30px;
         }
+
         .article-content p {
             font-size: 1rem;
             line-height: 1.8;
-            color: #444;
-            margin-bottom: 15px;
+            color: #334155;
+            margin-bottom: 20px;
         }
+
+        .article-content h3 {
+            color: var(--primary-purple);
+            font-size: 1.25rem;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        /* Tombol Kembali */
         .back-btn {
-            display: inline-block;
-            margin-top: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 35px;
             padding: 10px 20px;
-            background-color: #5B21B6;
+            background-color: var(--primary-purple);
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: 500;
+            font-size: 0.95rem;
+            transition: background 0.2s, transform 0.1s;
         }
         .back-btn:hover {
-            opacity: 0.9;
+            background-color: #4C1D95;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .article-card {
+                padding: 20px;
+            }
+            .article-card h1 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- MENU NAVBAR DI TENGAH DAN RAPI -->
+    <!-- NAVIGASI UTAMA -->
     <header class="top-nav">
         <nav>
             <a href="index.html#hero">Beranda</a>
@@ -83,33 +150,43 @@
             <a href="index.html#fasilitas">Fasilitas</a>
             <a href="index.html#faq">FAQ</a>
             <a href="index.html#kontak">Kontak</a>
-            <a href="blog.html" style="color: #5B21B6; font-weight: bold;">Blog</a>
+            <a href="blog.html" class="active">Blog</a>
         </nav>
     </header>
 
-    <!-- KOTAK KONTENT ARTIKEL (DI TENGAH & UKURAN PAS) -->
-    <main class="article-card">
-        <h1>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</h1>
-        <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Diposting oleh Admin • 9 September 2026</p>
-
-        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Belajar Ujian">
-
-        <div class="article-content">
-            <p>Halo, Sobat! Siapa nih yang kalau denger kata "Ujian" langsung mendadak <em>insecure</em>, keringetan dingin, atau malah overthinking duluan? Tenang, itu manusiawi banget kok. Tapi jangan sampe rasa takut itu bikin nilai kamu boncos, ya!</p>
+    <!-- KONTEN UTAMA DALAM KARTU ELEGAN -->
+    <main class="main-container">
+        <article class="article-card">
             
-            <h3 style="margin-top: 25px; color: #222;">1. Jangan Sistem SKS (Sistem Kebut Semalam)</h3>
-            <p>Udah bukan zamannya lagi begadang semaleman buat ngafalin semua materi pas besoknya mau ujian. Otak kita itu bukan hardisk komputer yang bisa diisi data ribet dalam waktu 5 jam tanpa jeda istirahat. Mulailah cicil belajar dari jauh-jauh hari secara santai tapi konsisten.</p>
+            <span class="badge-pinned">Pinned • Tips Belajar</span>
+            
+            <h1>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</h1>
+            
+            <div class="meta-info">
+                Diposting oleh Admin • 9 September 2026
+            </div>
 
-            <h3 style="margin-top: 25px; color: #222;">2. Pahami Konsep, Bukan Cuma Ngafalin</h3>
-            <p>Kalau kamu cuma ngandelin hafalan, begitu soalnya dibolak-balik sedikit, dijamin bakal <em>blank</em> di tengah jalan. Coba pahami inti materinya, bikin ringkasan atau mind map sendiri pakai bahasa yang gampang kamu ngerti.</p>
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Ilustrasi Belajar">
 
-            <h3 style="margin-top: 25px; color: #222;">3. Jaga Vibe Positif & Istirahat Cukup</h3>
-            <p>Begadang pas mau ujian tuh cuma bikin besoknya kamu ngantuk dan gak fokus. Tidur yang cukup itu penting banget supaya otak bisa "re-charge" dan semua memori yang udah dipelajari bisa tersimpan rapi.</p>
+            <div class="article-content">
+                <p>Halo, Sobat! Siapa nih yang kalau denger kata "Ujian" langsung mendadak <em>insecure</em>, keringetan dingin, atau malah overthinking duluan? Tenang, itu manusiawi banget kok. Tapi jangan sampe rasa takut itu bikin nilai kamu boncos, ya!</p>
+                
+                <h3>1. Jangan Sistem SKS (Sistem Kebut Semalam)</h3>
+                <p>Udah bukan zamannya lagi begadang semaleman buat ngafalin semua materi pas besoknya mau ujian. Otak kita itu bukan hardisk komputer yang bisa diisi data ribet dalam waktu 5 jam tanpa jeda istirahat. Mulailah cicil belajar dari jauh-jauh hari secara santai tapi konsisten.</p>
 
-            <p style="margin-top: 25px; font-weight: 600; color: #222;">Intinya, hadapi ujian dengan kepala dingin, persiapan matang, dan mental juara. Gaskeun raih nilai impianmu! 💪🔥</p>
-        </div>
+                <h3>2. Pahami Konsep, Bukan Cuma Ngafalin</h3>
+                <p>Kalau kamu cuma ngandelin hafalan, begitu soalnya dibolak-balik sedikit, dijamin bakal <em>blank</em> di tengah jalan. Coba pahami inti materinya, bikin ringkasan atau mind map sendiri pakai bahasa yang gampang kamu ngerti.</p>
 
-        <a href="blog.html" class="back-btn">&larr; Kembali ke Blog</a>
+                <h3>3. Jaga Vibe Positif & Istirahat Cukup</h3>
+                <p>Begadang pas mau ujian tuh cuma bikin besoknya kamu ngantuk dan gak fokus. Tidur yang cukup itu penting banget supaya otak bisa "re-charge" dan semua memori yang udah dipelajari bisa tersimpan rapi.</p>
+
+                <p style="margin-top: 30px; font-weight: 600; color: var(--primary-purple);">
+                    Intinya, hadapi ujian dengan kepala dingin, persiapan matang, dan mental juara. Gaskeun raih nilai impianmu! 💪🔥
+                </p>
+            </div>
+
+            <a href="blog.html" class="back-btn">&larr; Kembali ke Blog</a>
+        </article>
     </main>
 
 </body>
