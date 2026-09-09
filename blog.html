@@ -61,28 +61,7 @@
             border: 1px solid rgba(91, 33, 182, 0.08);
             overflow: hidden;
             margin-bottom: 30px;
-        }
-
-        .blog-card-img {
-            width: 100%;
-            height: 220px;
-            overflow: hidden;
-            background-color: #e2e8f0;
-        }
-
-        .blog-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .blog-card:hover .blog-card-img img {
-            transform: scale(1.03);
-        }
-
-        .blog-card-content {
-            padding: 25px;
+            padding: 25px; /* Padding merata karena tidak ada gambar di atasnya */
         }
 
         .badge-pinned {
@@ -164,29 +143,20 @@
 
     <main class="blog-container">
         
-        <!-- ARTIKEL PENDIDIKAN -->
+        <!-- 1. ARTIKEL PENDIDIKAN (TANPA GAMBAR DI HALAMAN UTAMA) -->
         <article class="blog-card">
-            <div class="blog-card-img">
-                <a href="arti-penting-pendidikan.html">
-                    <img src="foto1.jpg" alt="Pendidikan Investasi Masa Depan">
-                </a>
-            </div>
-            <div class="blog-card-content">
-                <span class="badge-pinned">Edukasi & Tips</span>
-                <h2><a href="arti-penting-pendidikan.html">Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!</a></h2>
-                <p>Pendidikan tuh emang key banget buat upgrade skill, ngurangin kebodohan, dan siap survive ngadepin masa depan. Yuk, intip pentingnya belajar!</p>
-                <a href="arti-penting-pendidikan.html" class="read-more">Baca Selengkapnya &rarr;</a>
-            </div>
+            <span class="badge-pinned">Edukasi & Tips</span>
+            <h2><a href="arti-penting-pendidikan.html">Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!</a></h2>
+            <p>Pendidikan tuh emang key banget buat upgrade skill, ngurangin kebodohan, dan siap survive ngadepin masa depan. Yuk, intip pentingnya belajar!</p>
+            <a href="arti-penting-pendidikan.html" class="read-more">Baca Selengkapnya &rarr;</a>
         </article>
 
-        <!-- ARTIKEL LAMA -->
+        <!-- 2. ARTIKEL LAMA -->
         <article class="blog-card">
-            <div class="blog-card-content" style="padding-top: 25px;">
-                <span class="badge-pinned">Tips Belajar</span>
-                <h2><a href="tips-menghadapi-ujian.html">Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</a></h2>
-                <p>Siapa nih yang kalau denger kata ujian langsung overthinking? Kenali cara jitu hadapi ujian tanpa sistem kebut semalam.</p>
-                <a href="tips-menghadapi-ujian.html" class="read-more">Baca Selengkapnya &rarr;</a>
-            </div>
+            <span class="badge-pinned">Tips Belajar</span>
+            <h2><a href="tips-menghadapi-ujian.html">Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</a></h2>
+            <p>Siapa nih yang kalau denger kata ujian langsung overthinking? Kenali cara jitu hadapi ujian tanpa sistem kebut semalam.</p>
+            <a href="tips-menghadapi-ujian.html" class="read-more">Baca Selengkapnya &rarr;</a>
         </article>
 
     </main>
