@@ -2729,22 +2729,4 @@ section{
 
 }
 
-/* PERBAIKAN KHUSUS TAMPILAN HP (MOBILE) */
-        @media (max-width: 768px) {
-            .top-nav nav {
-                display: flex;
-                overflow-x: auto;
-                white-space: nowrap;
-                justify-content: flex-start;
-                padding: 0 15px;
-                -webkit-overflow-scrolling: touch;
-            }
-            .top-nav nav a {
-                display: inline-block;
-                margin: 0 10px;
-                font-size: 13px;
-            }
-            .top-nav nav::-webkit-scrollbar {
-                display: none; /* Menghilangkan scrollbar tapi tetap bisa digeser */
-            }
-        }
+
