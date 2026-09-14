@@ -1,421 +1,780 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua? | New Primagama Sunter Indah</title>
+    <title>
+        Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua? | New Primagama Sunter Indah
+    </title>
 
-    <meta name="description" content="Sekolah, tugas, ekskul, belajar, main, sampai tidur semuanya butuh waktu. Yuk cari tahu cara mengatur waktu yang simpel, realistis, dan tetap punya waktu buat diri sendiri.">
+    <meta name="description"
+        content="Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian. Yuk, cari tahu cara mengatur waktu biar semuanya tetap berjalan tanpa bikin kewalahan.">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+            width: 100%;
+            background: #ffffff;
+            padding: 18px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            width: 145px;
+            height: auto;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #6d28d9;
+        }
+
+
+        /* =========================
+           ARTICLE CONTAINER
+        ========================== */
+
+        .article-container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 55px 30px 80px;
+        }
+
+        .article-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+        }
+
+
+        /* =========================
+           ARTICLE HEADER
+        ========================== */
+
+        .article-header {
+            padding: 42px 45px 30px;
+        }
+
+        .badge-pinned {
+            display: inline-block;
+            background: #ede9fe;
+            color: #6d28d9;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 7px 14px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        .article-header h1 {
+            font-size: 42px;
+            line-height: 1.25;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .article-intro {
+            font-size: 17px;
+            color: #64748b;
+            max-width: 1050px;
+        }
+
+
+        /* =========================
+           ARTICLE IMAGE
+        ========================== */
+
+        .article-image {
+            padding: 0 45px;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            border-radius: 17px;
+        }
+
+        .image-credit {
+            text-align: center;
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 9px;
+        }
+
+
+        /* =========================
+           ARTICLE CONTENT
+        ========================== */
+
+        .article-content {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 45px 55px;
+        }
+
+        .article-content p {
+            font-size: 16px;
+            color: #475569;
+            margin-bottom: 22px;
+        }
+
+        .article-content h2 {
+            font-size: 27px;
+            line-height: 1.35;
+            color: #4c1d95;
+            margin-top: 35px;
+            margin-bottom: 14px;
+        }
+
+        .article-content ul {
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        .article-content li {
+            color: #475569;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           SCHEDULE BOX
+        ========================== */
+
+        .schedule-box {
+            background: #f5f3ff;
+            border-left: 5px solid #7c3aed;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0 30px;
+        }
+
+        .schedule-box h3 {
+            color: #4c1d95;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .schedule-box p {
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================== */
+
+        .article-cta {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #4c1d95, #7c3aed);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .article-cta h2 {
+            color: #ffffff;
+            margin-top: 0;
+        }
+
+        .article-cta p {
+            color: #ede9fe;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #facc15;
+            color: #24104f;
+            text-decoration: none;
+            font-weight: 800;
+            padding: 13px 25px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           BACK TO BLOG
+        ========================== */
+
+        .back-blog {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #6d28d9;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .back-blog:hover {
+            color: #4c1d95;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #24104f;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .logo img {
+                width: 125px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .article-container {
+                padding: 25px 15px 50px;
+            }
+
+            .article-card {
+                border-radius: 18px;
+            }
+
+            .article-header {
+                padding: 30px 25px 25px;
+            }
+
+            .article-header h1 {
+                font-size: 29px;
+            }
+
+            .article-intro {
+                font-size: 15px;
+            }
+
+            .article-image {
+                padding: 0 25px;
+            }
+
+            .article-image img {
+                height: 250px;
+                border-radius: 14px;
+            }
+
+            .article-content {
+                padding: 30px 25px 40px;
+            }
+
+            .article-content h2 {
+                font-size: 23px;
+            }
+
+            .article-content p {
+                font-size: 15px;
+            }
+
+            .schedule-box {
+                padding: 20px;
+            }
+
+            .article-cta {
+                padding: 28px 20px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 
-<header class="navbar">
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
-    <div class="logo">
-        <a href="index.html">
-            <img src="logo primagama png.jpeg" alt="New Primagama Sunter Indah">
+    <header class="navbar">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="logo primagama png.jpeg"
+                    alt="New Primagama Sunter Indah">
+
+            </a>
+
+        </div>
+
+
+        <nav class="nav-menu">
+
+            <a href="index.html">Beranda</a>
+
+            <a href="index.html#tentang">Tentang</a>
+
+            <a href="index.html#program">Program</a>
+
+            <a href="index.html#fasilitas">Fasilitas</a>
+
+            <a href="index.html#faq">FAQ</a>
+
+            <a href="index.html#kontak">Kontak</a>
+
+            <a href="blog.html">Blog</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         ARTICLE
+    ========================== -->
+
+    <main class="article-container">
+
+        <a href="blog.html" class="back-blog">
+            &larr; Kembali ke Blog
         </a>
-    </div>
 
-    <nav>
-        <a href="index.html#hero">Beranda</a>
-        <a href="index.html#tentang">Tentang</a>
-        <a href="index.html#program">Program</a>
-        <a href="index.html#fasilitas">Fasilitas</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#kontak">Kontak</a>
-        <a href="blog.html">Blog</a>
-    </nav>
 
-</header>
+        <article class="article-card">
 
 
-<!-- ================= ARTIKEL ================= -->
+            <!-- ARTICLE HEADER -->
 
-<main class="article-container">
+            <header class="article-header">
 
-    <article class="article-card">
+                <span class="badge-pinned">
+                    Tips Pelajar
+                </span>
 
-        <!-- HEADER ARTIKEL -->
 
-        <header class="article-header">
+                <h1>
+                    Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua? 😭
+                </h1>
 
-            <span class="badge-pinned">
-                Tips Pelajar
-            </span>
 
-            <h1>
-                Sekolah, Tugas, Ekskul, Main, Tidur…
-                Emang Bisa Kebagian Semua? 😭
-            </h1>
-
-            <p class="article-intro">
-                Sekolah, tugas, ekskul, belajar, main, sampai tidur—
-                semuanya pengen kebagian waktu. Tapi emang bisa?
-                Yuk cari tahu cara mengatur waktu yang simpel,
-                realistis, dan tetap bikin kamu punya waktu buat diri sendiri.
-            </p>
-
-        </header>
-
-
-        <!-- ================= FOTO DI DALAM ARTIKEL ================= -->
-
-        <div class="article-image">
-
-            <img
-                src="https://bbpmpjatim.kemendikdasmen.go.id/main/wp-content/uploads/2026/03/2a070058-934b-46fd-ae4d-b76ede5c5353-1024x576.jpg"
-                alt="Siswa sedang mengikuti kegiatan pembelajaran">
-
-            <p class="image-credit">
-                Sumber foto: Dokumentasi BBPMP Provinsi Jawa Timur
-            </p>
-
-        </div>
-
-
-        <!-- ================= ISI ARTIKEL ================= -->
-
-        <div class="article-content">
-
-            <p>
-                Pernah nggak kamu merasa satu hari itu kurang dari 24 jam?
-                Baru selesai sekolah, sudah ada tugas yang menunggu.
-                Belum lagi kegiatan ekskul, belajar untuk ujian,
-                ngobrol bareng teman, scrolling media sosial,
-                dan tentunya… tidur. 😭
-            </p>
-
-            <p>
-                Semua kegiatan tersebut sebenarnya penting dan wajar dilakukan.
-                Masalahnya, kalau nggak diatur dengan baik, semuanya bisa terasa
-                seperti numpuk dalam satu waktu.
-            </p>
-
-            <p>
-                Akhirnya tugas belum selesai, belajar jadi terburu-buru,
-                waktu main berkurang, dan waktu istirahat juga ikut kepotong.
-            </p>
-
-            <p>
-                Jadi, sebenarnya apakah sekolah, tugas, ekskul, main,
-                dan tidur bisa kebagian semua?
-            </p>
-
-            <p>
-                Jawabannya: <strong>bisa.</strong>
-                Tapi kuncinya bukan membuat jadwal yang super padat.
-                Kamu justru perlu belajar mengatur waktu dengan lebih realistis.
-            </p>
-
-
-            <!-- 1 -->
-
-            <h2>1. Tentukan Mana yang Harus Didahulukan 🎯</h2>
-
-            <p>
-                Nggak semua kegiatan harus dikerjakan pada saat yang sama.
-                Ada hal yang memang harus segera diselesaikan,
-                ada juga yang masih bisa ditunda.
-            </p>
-
-            <p>
-                Misalnya besok ada ujian dan tugas dikumpulkan.
-                Tentu belajar dan menyelesaikan tugas menjadi prioritas
-                dibandingkan scrolling media sosial selama berjam-jam.
-            </p>
-
-            <p>
-                Coba tanyakan ke diri sendiri:
-                <strong>"Apa yang paling penting untuk diselesaikan hari ini?"</strong>
-            </p>
-
-            <p>
-                Dari situ kamu bisa menentukan kegiatan mana yang harus
-                dikerjakan lebih dulu.
-            </p>
-
-
-            <!-- 2 -->
-
-            <h2>2. Jangan Berusaha Mengerjakan Semuanya Sekaligus 🧠</h2>
-
-            <p>
-                Multitasking memang terdengar keren, tetapi mengerjakan
-                terlalu banyak hal sekaligus justru bisa membuat fokus terbagi.
-            </p>
-
-            <p>
-                Contohnya belajar sambil membuka media sosial,
-                mengerjakan tugas sambil menonton video,
-                atau membaca materi sambil terus mengecek notifikasi.
-            </p>
-
-            <p>
-                Akibatnya, satu tugas bisa selesai lebih lama
-                karena perhatian terus berpindah-pindah.
-            </p>
-
-            <p>
-                Lebih baik fokus menyelesaikan satu hal terlebih dahulu,
-                kemudian lanjut ke kegiatan berikutnya.
-            </p>
-
-
-            <!-- 3 -->
-
-            <h2>3. Buat To-Do List yang Simpel 📝</h2>
-
-            <p>
-                Kamu nggak perlu membuat jadwal yang panjang sampai satu halaman.
-                Cukup tulis sekitar 3–5 hal yang ingin kamu selesaikan hari itu.
-            </p>
-
-            <p>Contohnya:</p>
-
-            <ul>
-                <li>Mengerjakan tugas Matematika.</li>
-                <li>Membaca materi IPA.</li>
-                <li>Mempersiapkan perlengkapan ekskul.</li>
-                <li>Review materi untuk ujian.</li>
-                <li>Memberikan waktu untuk bersantai.</li>
-            </ul>
-
-            <p>
-                Dengan menulis daftar kegiatan, kamu jadi lebih mudah
-                melihat apa yang harus dilakukan tanpa harus mengingat
-                semuanya di kepala.
-            </p>
-
-
-            <!-- 4 -->
-
-            <h2>4. Jangan Nunggu Mood Buat Belajar 😭</h2>
-
-            <p>
-                Salah satu alasan tugas sering tertunda adalah karena
-                menunggu mood belajar datang.
-            </p>
-
-            <p>
-                Padahal mood nggak selalu muncul saat kita membutuhkannya.
-                Kalau terus menunggu, tugas justru bisa semakin menumpuk.
-            </p>
-
-            <p>
-                Coba mulai dari hal kecil.
-                Misalnya belajar selama 10–20 menit terlebih dahulu.
-                Setelah mulai, biasanya akan terasa lebih mudah untuk melanjutkan.
-            </p>
-
-
-            <!-- 5 -->
-
-            <h2>5. Main Itu Boleh! 🎮</h2>
-
-            <p>
-                Mengatur waktu bukan berarti kamu harus belajar terus-menerus.
-                Bermain, ngobrol dengan teman, menonton film,
-                atau melakukan hobi juga merupakan bagian dari waktu luang.
-            </p>
-
-            <p>
-                Yang penting adalah mengetahui kapan waktunya berhenti.
-            </p>
-
-            <p>
-                Misalnya kamu sudah menentukan waktu untuk bermain selama
-                satu jam. Setelah waktunya selesai, kembali ke kegiatan
-                yang sudah direncanakan.
-            </p>
-
-            <p>
-                Jadi bukan berarti main itu dilarang.
-                Justru waktu santai bisa membuat kegiatan sehari-hari
-                terasa lebih seimbang.
-            </p>
-
-
-            <!-- 6 -->
-
-            <h2>6. Jangan Mengorbankan Waktu Tidur 😴</h2>
-
-            <p>
-                Karena merasa waktu kurang, sebagian pelajar memilih
-                mengurangi waktu tidur untuk menyelesaikan tugas atau belajar.
-            </p>
-
-            <p>
-                Padahal istirahat juga penting agar tubuh dan pikiran
-                tetap siap menjalani aktivitas keesokan harinya.
-            </p>
-
-            <p>
-                Daripada terus-terusan begadang karena pekerjaan menumpuk,
-                lebih baik mulai mengatur tugas sejak lebih awal.
-            </p>
-
-            <p>
-                Jadi kamu nggak perlu menyelesaikan semuanya dalam satu malam.
-            </p>
-
-
-            <!-- 7 -->
-
-            <h2>7. Buat Jadwal yang Realistis 📅</h2>
-
-            <p>
-                Jadwal yang baik bukan jadwal yang penuh dari pagi sampai malam.
-                Jadwal yang baik adalah jadwal yang benar-benar bisa kamu jalankan.
-            </p>
-
-            <p>
-                Contohnya seperti ini:
-            </p>
-
-            <div class="schedule-box">
-
-                <p>
-                    <strong>16.30 – 17.30</strong>
-                    → Istirahat setelah sekolah
+                <p class="article-intro">
+                    Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian.
+                    Tapi kalau nggak diatur, jadwal bisa berantakan dan bikin kewalahan.
+                    Yuk, cari tahu cara mengatur waktu biar sekolah tetap jalan, tugas selesai,
+                    ekskul tetap aktif, dan waktu main tetap ada!
                 </p>
 
-                <p>
-                    <strong>17.30 – 18.15</strong>
-                    → Mengerjakan tugas
-                </p>
+            </header>
 
-                <p>
-                    <strong>18.15 – 19.30</strong>
-                    → Makan, ibadah, dan istirahat
-                </p>
 
-                <p>
-                    <strong>19.30 – 20.15</strong>
-                    → Belajar
-                </p>
 
-                <p>
-                    <strong>20.15 – 20.30</strong>
-                    → Review materi
-                </p>
+            <!-- FOTO -->
 
-                <p>
-                    <strong>Setelah 20.30</strong>
-                    → Waktu santai dan persiapan tidur
+            <div class="article-image">
+
+                <img
+                    src="https://bbpmpjatim.kemdikdasmen.go.id/main/wp-content/uploads/2026/03/2a070058-934b-46fd-ae4d-b76ede5c5353-1024x576.jpg"
+                    alt="Siswa mengikuti kegiatan pembelajaran di sekolah"
+                    loading="lazy">
+
+                <p class="image-credit">
+                    Sumber foto: Dokumentasi BBPMP Provinsi Jawa Timur
                 </p>
 
             </div>
 
 
-            <!-- 8 -->
 
-            <h2>8. Nggak Harus Sempurna, yang Penting Konsisten 🔥</h2>
+            <!-- ARTICLE CONTENT -->
 
-            <p>
-                Ada kalanya jadwal yang sudah dibuat ternyata berantakan.
-                Bisa saja ada tugas tambahan, kegiatan sekolah,
-                atau sesuatu yang nggak direncanakan.
-            </p>
+            <div class="article-content">
 
-            <p>
-                Itu normal.
-            </p>
-
-            <p>
-                Jangan langsung merasa gagal hanya karena satu hari
-                jadwalmu nggak berjalan sesuai rencana.
-            </p>
-
-            <p>
-                Yang penting adalah mencoba mengatur kembali kegiatanmu
-                dan melanjutkannya di hari berikutnya.
-            </p>
-
-
-            <!-- KESIMPULAN -->
-
-            <h2>Jadi, Emang Bisa Kebagian Semua? 👀</h2>
-
-            <p>
-                Sekolah, tugas, ekskul, belajar, main, dan tidur
-                sebenarnya bisa tetap berjalan bersama.
-            </p>
-
-            <p>
-                Kuncinya adalah menentukan prioritas,
-                membuat jadwal yang realistis,
-                mengurangi gangguan saat belajar,
-                dan tetap memberikan waktu untuk istirahat.
-            </p>
-
-            <p>
-                Kamu nggak harus menjadi super sibuk setiap hari
-                untuk dianggap produktif.
-            </p>
-
-            <p>
-                Produktif itu bukan tentang melakukan sebanyak mungkin hal,
-                tetapi tentang menggunakan waktu dengan lebih bijak.
-            </p>
-
-            <p>
-                Jadi, nggak perlu takut ketinggalan waktu buat main.
-                Nggak perlu juga merasa bersalah saat istirahat.
-                Yang penting tahu kapan waktunya belajar,
-                kapan waktunya menyelesaikan tugas,
-                dan kapan waktunya santai. 😎
-            </p>
-
-
-            <!-- ================= CTA ================= -->
-
-            <div class="article-cta">
-
-                <h3>
-                    Mau Belajar Lebih Terarah?
-                </h3>
 
                 <p>
-                    New Primagama Sunter Indah siap membantu kamu
-                    belajar dengan pendampingan yang lebih terarah
-                    dan sesuai kebutuhan.
+                    Jadi pelajar itu sebenarnya bukan cuma soal belajar. Ada sekolah,
+                    tugas, kegiatan ekstrakurikuler, waktu bareng teman, hiburan,
+                    sampai waktu tidur yang juga penting.
                 </p>
 
-                <a
-                    href="https://wa.me/6285285705335"
-                    target="_blank"
-                    class="cta-button">
-                    Konsultasi Gratis
-                </a>
+
+                <p>
+                    Masalahnya, semua kegiatan tersebut kadang terasa seperti rebutan
+                    waktu. Baru selesai sekolah, sudah ada tugas. Belum selesai tugas,
+                    sudah harus ikut ekskul. Setelah itu masih ingin main atau sekadar
+                    rebahan. 
+                </p>
+
+
+                <p>
+                    Kalau semuanya dilakukan tanpa pengaturan waktu yang jelas,
+                    kita bisa gampang kewalahan. Karena itu, bukan berarti harus
+                    menghilangkan salah satu kegiatan, tetapi belajar mengatur
+                    semuanya dengan lebih realistis.
+                </p>
+
+
+
+                <!-- 1 -->
+
+                <h2>
+                    1. Tentukan Mana yang Harus Didahulukan 
+                </h2>
+
+                <p>
+                    Nggak semua kegiatan punya tingkat kepentingan yang sama.
+                    Saat banyak hal harus dilakukan, coba tentukan mana yang
+                    harus diselesaikan lebih dulu.
+                </p>
+
+                <p>
+                    Misalnya ada tugas yang dikumpulkan besok, sementara kegiatan
+                    lain masih bisa dilakukan nanti. Tugas tersebut bisa menjadi
+                    prioritas terlebih dahulu.
+                </p>
+
+                <ul>
+                    <li>Tugas dengan deadline paling dekat.</li>
+                    <li>Belajar untuk ujian yang sudah dekat.</li>
+                    <li>Kegiatan sekolah yang waktunya sudah ditentukan.</li>
+                    <li>Baru kemudian kegiatan yang sifatnya fleksibel.</li>
+                </ul>
+
+
+
+                <!-- 2 -->
+
+                <h2>
+                    2. Jangan Berusaha Mengerjakan Semuanya Sekaligus 
+                </h2>
+
+                <p>
+                    Salah satu hal yang bikin belajar terasa berat adalah mencoba
+                    mengerjakan terlalu banyak hal dalam waktu yang sama.
+                </p>
+
+                <p>
+                    Lebih baik fokus menyelesaikan satu pekerjaan terlebih dahulu.
+                    Setelah selesai, lanjutkan ke pekerjaan berikutnya.
+                    Dengan begitu, perhatian kita tidak terus berpindah-pindah.
+                </p>
+
+
+
+                <!-- 3 -->
+
+                <h2>
+                    3. Buat To-Do List yang Simpel 
+                </h2>
+
+                <p>
+                    To-do list nggak harus ribet. Kamu cukup mencatat beberapa
+                    hal penting yang ingin diselesaikan hari itu.
+                </p>
+
+                <p>
+                    Contohnya:
+                </p>
+
+                <ul>
+                    <li>Mengerjakan tugas Matematika.</li>
+                    <li>Membaca materi untuk pelajaran besok.</li>
+                    <li>Mengikuti kegiatan ekskul.</li>
+                    <li>Menyiapkan perlengkapan sekolah.</li>
+                </ul>
+
+                <p>
+                    Kalau sudah selesai, tinggal beri tanda centang. Sederhana,
+                    tetapi bisa membantu membuat aktivitas terasa lebih teratur.
+                </p>
+
+
+
+                <!-- 4 -->
+
+                <h2>
+                    4. Jangan Nunggu Mood Buat Belajar 
+                </h2>
+
+                <p>
+                    Kadang kita bilang, "Nanti aja belajarnya kalau sudah mood."
+                    Masalahnya, mood belajar bisa saja nggak muncul-muncul. 
+                </p>
+
+                <p>
+                    Daripada menunggu mood, coba mulai dari waktu belajar yang
+                    singkat. Misalnya belajar selama 30–45 menit dengan fokus.
+                    Setelah itu, kamu bisa mengambil waktu istirahat.
+                </p>
+
+
+
+                <!-- 5 -->
+
+                <h2>
+                    5. Main Itu Boleh! 
+                </h2>
+
+                <p>
+                    Mengatur waktu bukan berarti kamu harus belajar terus sepanjang
+                    hari. Waktu bermain, ngobrol dengan teman, menonton film,
+                    atau melakukan hobi juga tetap diperlukan.
+                </p>
+
+                <p>
+                    Yang penting, waktu bermain tidak sampai membuat tugas sekolah
+                    terbengkalai atau waktu tidur menjadi berantakan.
+                </p>
+
+                <p>
+                    Jadi, jangan merasa bersalah ketika ingin bersantai.
+                    Yang penting adalah tahu kapan waktunya belajar dan kapan
+                    waktunya istirahat.
+                </p>
+
+
+
+                <!-- 6 -->
+
+                <h2>
+                    6. Jangan Mengorbankan Waktu Tidur 
+                </h2>
+
+                <p>
+                    Karena terlalu banyak tugas atau kegiatan, sebagian pelajar
+                    akhirnya memilih mengurangi waktu tidur. Padahal, istirahat
+                    yang cukup penting agar tubuh dan pikiran tetap siap
+                    menjalani aktivitas keesokan harinya.
+                </p>
+
+                <p>
+                    Jadi, jangan sampai jadwal belajar dibuat terlalu padat
+                    sampai waktu tidur selalu menjadi korban.
+                </p>
+
+
+
+                <!-- 7 -->
+
+                <h2>
+                    7. Buat Jadwal yang Realistis 
+                </h2>
+
+                <p>
+                    Jadwal yang bagus bukan jadwal yang penuh dari pagi sampai
+                    malam. Jadwal yang bagus adalah jadwal yang memang bisa
+                    kamu jalankan.
+                </p>
+
+                <p>
+                    Misalnya setelah pulang sekolah, jangan langsung memasukkan
+                    banyak aktivitas. Berikan waktu untuk istirahat terlebih dahulu.
+                </p>
+
+
+                <div class="schedule-box">
+
+                    <h3>
+                        Contoh Jadwal Sederhana
+                    </h3>
+
+                    <p>
+                        <strong>16.30–17.30</strong> → Istirahat
+                    </p>
+
+                    <p>
+                        <strong>17.30–18.15</strong> → Mengerjakan tugas
+                    </p>
+
+                    <p>
+                        <strong>19.30–20.15</strong> → Belajar
+                    </p>
+
+                    <p>
+                        <strong>20.15–20.30</strong> → Review materi
+                    </p>
+
+                    <p>
+                        <strong>Setelah 20.30</strong> → Waktu santai
+                    </p>
+
+                </div>
+
+
+                <p>
+                    Jadwal tersebut hanya contoh. Kamu bisa menyesuaikannya
+                    dengan jam sekolah, perjalanan pulang, kegiatan ekskul,
+                    dan kebutuhanmu sendiri.
+                </p>
+
+
+
+                <!-- 8 -->
+
+                <h2>
+                    8. Nggak Harus Sempurna, yang Penting Konsisten 
+                </h2>
+
+                <p>
+                    Kadang kita sudah membuat jadwal, tetapi ternyata ada satu
+                    atau dua kegiatan yang tidak berjalan sesuai rencana.
+                    Itu normal.
+                </p>
+
+                <p>
+                    Jangan langsung merasa gagal hanya karena satu hari
+                    jadwalnya berantakan. Evaluasi saja apa yang membuatnya
+                    tidak berjalan, lalu coba atur kembali keesokan harinya.
+                </p>
+
+                <p>
+                    Yang paling penting bukan membuat jadwal yang sempurna,
+                    tetapi membangun kebiasaan untuk mengatur waktu secara
+                    konsisten.
+                </p>
+
+
+
+                <!-- KESIMPULAN -->
+
+                <h2>
+                    Jadi, Emang Bisa Kebagian Semua? 👀
+                </h2>
+
+                <p>
+                    Jawabannya: <strong>bisa!</strong>
+                </p>
+
+                <p>
+                    Sekolah, tugas, ekskul, main, dan tidur sebenarnya bisa
+                    tetap berjalan bersamaan selama waktunya diatur dengan baik.
+                    Kuncinya adalah menentukan prioritas, membuat jadwal yang
+                    realistis, dan tidak memaksakan terlalu banyak kegiatan
+                    dalam satu waktu.
+                </p>
+
+                <p>
+                    Jadi, jangan sampai hidup sebagai pelajar cuma diisi dengan
+                    belajar sampai lupa istirahat. Sebaliknya, jangan juga terlalu
+                    banyak bersantai sampai tugas menumpuk. Cari keseimbangan
+                    yang paling cocok buat kamu. 
+                </p>
+
+
+
+                <!-- CTA -->
+
+                <div class="article-cta">
+
+                    <h2>
+                        Mau Belajar Lebih Terarah?
+                    </h2>
+
+                    <p>
+                        Kalau kamu butuh pendampingan belajar, persiapan ujian,
+                        atau ingin konsultasi akademik, New Primagama Sunter Indah
+                        siap membantu.
+                    </p>
+
+                    <a
+                        href="https://wa.me/6285285705335"
+                        target="_blank"
+                        class="cta-button">
+
+                        Konsultasi Gratis
+
+                    </a>
+
+                </div>
+
 
             </div>
 
-        </div>
+        </article>
 
-    </article>
-
-</main>
+    </main>
 
 
-<!-- ================= FOOTER ================= -->
 
-<footer>
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-    <p>
-        © 2026 New Primagama Sunter Indah.
-        Semua Hak Dilindungi.
-    </p>
+    <footer>
 
-</footer>
+        <p>
+            © 2026 New Primagama Sunter Indah. All Rights Reserved.
+        </p>
+
+    </footer>
+
 
 </body>
 </html>
