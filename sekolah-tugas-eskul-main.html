@@ -12,9 +12,10 @@
     </title>
 
     <meta name="description"
-        content="Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian. Yuk, cari tahu cara mengatur waktu biar semuanya tetap berjalan tanpa bikin kewalahan.">
+        content="Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian. Yuk, cari tahu cara mengatur waktu biar sekolah tetap jalan, tugas selesai, ekskul tetap aktif, dan waktu main tetap ada!">
 
     <link rel="icon" href="favicon.ico">
+
 
     <style>
 
@@ -27,7 +28,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f8fafc;
-            color: #1e293b;
+            color: #172554;
             line-height: 1.8;
         }
 
@@ -37,20 +38,24 @@
         ========================== */
 
         .navbar {
-            width: 100%;
+            height: 130px;
             background: #ffffff;
-            padding: 18px 6%;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+
+            padding: 0 6%;
+
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         .logo img {
-            width: 145px;
+            width: 210px;
             height: auto;
             display: block;
         }
@@ -58,13 +63,16 @@
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 38px;
         }
 
         .nav-menu a {
             text-decoration: none;
             color: #334155;
-            font-weight: 600;
+
+            font-size: 23px;
+            font-weight: 700;
+
             transition: 0.3s;
         }
 
@@ -74,26 +82,58 @@
 
 
         /* =========================
-           ARTICLE CONTAINER
+           CONTAINER
         ========================== */
 
         .article-container {
             max-width: 1250px;
-            margin: auto;
-            padding: 55px 30px 80px;
-        }
+            margin: 0 auto;
 
-        .article-card {
-            background: #ffffff;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+            padding: 45px 30px 80px;
         }
 
 
         /* =========================
-           ARTICLE HEADER
+           BACK BUTTON
+        ========================== */
+
+        .back-blog {
+            display: inline-block;
+
+            margin-bottom: 22px;
+
+            color: #6d28d9;
+            text-decoration: none;
+
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .back-blog:hover {
+            color: #4c1d95;
+        }
+
+
+        /* =========================
+           ARTICLE CARD
+        ========================== */
+
+        .article-card {
+            background: #ffffff;
+
+            border-radius: 24px;
+
+            border: 1px solid #e2e8f0;
+
+            box-shadow:
+                0 8px 30px rgba(15, 23, 42, 0.06);
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           HEADER
         ========================== */
 
         .article-header {
@@ -102,31 +142,39 @@
 
         .badge-pinned {
             display: inline-block;
-            background: #ede9fe;
+
+            background: #eee9ff;
             color: #6d28d9;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 7px 14px;
+
+            padding: 10px 20px;
+
             border-radius: 50px;
-            margin-bottom: 20px;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            margin-bottom: 22px;
         }
 
         .article-header h1 {
             font-size: 42px;
-            line-height: 1.25;
-            color: #1e293b;
+            line-height: 1.35;
+
+            color: #172554;
+
             margin-bottom: 20px;
         }
 
         .article-intro {
-            font-size: 17px;
-            color: #64748b;
-            max-width: 1050px;
+            font-size: 18px;
+            color: #58708e;
+
+            max-width: 1100px;
         }
 
 
         /* =========================
-           ARTICLE IMAGE
+           IMAGE
         ========================== */
 
         .article-image {
@@ -136,70 +184,93 @@
         .article-image img {
             width: 100%;
             height: 500px;
+
             object-fit: cover;
+
             display: block;
+
             border-radius: 17px;
         }
 
         .image-credit {
             text-align: center;
+
             font-size: 12px;
+
             color: #94a3b8;
+
             margin-top: 9px;
         }
 
 
         /* =========================
-           ARTICLE CONTENT
+           CONTENT
         ========================== */
 
         .article-content {
             max-width: 1100px;
-            margin: auto;
-            padding: 40px 45px 55px;
+
+            margin: 0 auto;
+
+            padding: 40px 45px 60px;
         }
 
         .article-content p {
-            font-size: 16px;
+            font-size: 17px;
+
             color: #475569;
+
             margin-bottom: 22px;
         }
 
         .article-content h2 {
-            font-size: 27px;
-            line-height: 1.35;
+            font-size: 28px;
+
             color: #4c1d95;
-            margin-top: 35px;
-            margin-bottom: 14px;
+
+            line-height: 1.4;
+
+            margin-top: 38px;
+            margin-bottom: 15px;
         }
 
         .article-content ul {
             padding-left: 25px;
+
             margin-bottom: 25px;
         }
 
         .article-content li {
             color: #475569;
-            margin-bottom: 10px;
+
+            font-size: 17px;
+
+            margin-bottom: 9px;
         }
 
 
         /* =========================
-           SCHEDULE BOX
+           SCHEDULE
         ========================== */
 
         .schedule-box {
             background: #f5f3ff;
+
             border-left: 5px solid #7c3aed;
+
             border-radius: 15px;
+
             padding: 25px;
+
             margin: 25px 0 30px;
         }
 
         .schedule-box h3 {
             color: #4c1d95;
+
+            font-size: 21px;
+
             margin-bottom: 15px;
-            font-size: 20px;
         }
 
         .schedule-box p {
@@ -212,31 +283,50 @@
         ========================== */
 
         .article-cta {
-            margin-top: 40px;
-            background: linear-gradient(135deg, #4c1d95, #7c3aed);
+            margin-top: 45px;
+
+            background: linear-gradient(
+                135deg,
+                #4c1d95,
+                #7c3aed
+            );
+
             border-radius: 20px;
-            padding: 35px;
+
+            padding: 38px;
+
             text-align: center;
-            color: #ffffff;
         }
 
         .article-cta h2 {
             color: #ffffff;
+
             margin-top: 0;
+
+            margin-bottom: 12px;
         }
 
         .article-cta p {
             color: #ede9fe;
+
+            margin-bottom: 22px;
         }
 
         .cta-button {
             display: inline-block;
+
             background: #facc15;
+
             color: #24104f;
+
             text-decoration: none;
+
             font-weight: 800;
-            padding: 13px 25px;
+
+            padding: 13px 27px;
+
             border-radius: 50px;
+
             transition: 0.3s;
         }
 
@@ -246,36 +336,21 @@
 
 
         /* =========================
-           BACK TO BLOG
-        ========================== */
-
-        .back-blog {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #6d28d9;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .back-blog:hover {
-            color: #4c1d95;
-        }
-
-
-        /* =========================
            FOOTER
         ========================== */
 
         footer {
             background: #24104f;
-            color: #ffffff;
+
+            color: white;
+
             text-align: center;
+
             padding: 30px 20px;
         }
 
         footer p {
             font-size: 14px;
-            opacity: 0.9;
         }
 
 
@@ -286,61 +361,79 @@
         @media (max-width: 768px) {
 
             .navbar {
-                padding: 15px 20px;
+                height: 80px;
+
+                padding: 0 20px;
             }
 
             .logo img {
-                width: 125px;
+                width: 140px;
             }
 
             .nav-menu {
                 display: none;
             }
 
+
             .article-container {
-                padding: 25px 15px 50px;
+                padding: 25px 15px 55px;
             }
 
+
             .article-card {
-                border-radius: 18px;
+                border-radius: 19px;
             }
+
 
             .article-header {
                 padding: 30px 25px 25px;
             }
 
+
             .article-header h1 {
                 font-size: 29px;
+                line-height: 1.35;
             }
+
 
             .article-intro {
                 font-size: 15px;
+                line-height: 1.7;
             }
+
 
             .article-image {
                 padding: 0 25px;
             }
 
+
             .article-image img {
                 height: 250px;
+
                 border-radius: 14px;
             }
+
 
             .article-content {
                 padding: 30px 25px 40px;
             }
 
+
             .article-content h2 {
                 font-size: 23px;
             }
 
-            .article-content p {
+
+            .article-content p,
+            .article-content li {
                 font-size: 15px;
             }
+
 
             .schedule-box {
                 padding: 20px;
             }
+
 
             .article-cta {
                 padding: 28px 20px;
@@ -403,6 +496,7 @@
 
     <main class="article-container">
 
+
         <a href="blog.html" class="back-blog">
             &larr; Kembali ke Blog
         </a>
@@ -411,7 +505,7 @@
         <article class="article-card">
 
 
-            <!-- ARTICLE HEADER -->
+            <!-- HEADER -->
 
             <header class="article-header">
 
@@ -421,15 +515,15 @@
 
 
                 <h1>
-                    Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua? 😭
+                    Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua? 
                 </h1>
 
 
                 <p class="article-intro">
-                    Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian.
-                    Tapi kalau nggak diatur, jadwal bisa berantakan dan bikin kewalahan.
-                    Yuk, cari tahu cara mengatur waktu biar sekolah tetap jalan, tugas selesai,
-                    ekskul tetap aktif, dan waktu main tetap ada!
+                    Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus
+                    kebagian. Tapi kalau nggak diatur, jadwal bisa berantakan dan bikin
+                    kewalahan. Yuk, cari tahu cara mengatur waktu biar sekolah tetap
+                    jalan, tugas selesai, ekskul tetap aktif, dan waktu main tetap ada!
                 </p>
 
             </header>
@@ -453,15 +547,15 @@
 
 
 
-            <!-- ARTICLE CONTENT -->
+            <!-- CONTENT -->
 
             <div class="article-content">
 
 
                 <p>
                     Jadi pelajar itu sebenarnya bukan cuma soal belajar. Ada sekolah,
-                    tugas, kegiatan ekstrakurikuler, waktu bareng teman, hiburan,
-                    sampai waktu tidur yang juga penting.
+                    tugas, kegiatan ekstrakurikuler, waktu bersama teman, hiburan,
+                    sampai waktu tidur yang juga perlu diperhatikan.
                 </p>
 
 
@@ -476,8 +570,8 @@
                 <p>
                     Kalau semuanya dilakukan tanpa pengaturan waktu yang jelas,
                     kita bisa gampang kewalahan. Karena itu, bukan berarti harus
-                    menghilangkan salah satu kegiatan, tetapi belajar mengatur
-                    semuanya dengan lebih realistis.
+                    menghilangkan salah satu kegiatan, tetapi belajar mengatur semuanya
+                    dengan lebih realistis.
                 </p>
 
 
@@ -490,8 +584,8 @@
 
                 <p>
                     Nggak semua kegiatan punya tingkat kepentingan yang sama.
-                    Saat banyak hal harus dilakukan, coba tentukan mana yang
-                    harus diselesaikan lebih dulu.
+                    Saat banyak hal harus dilakukan, coba tentukan mana yang harus
+                    diselesaikan lebih dulu.
                 </p>
 
                 <p>
@@ -501,10 +595,23 @@
                 </p>
 
                 <ul>
-                    <li>Tugas dengan deadline paling dekat.</li>
-                    <li>Belajar untuk ujian yang sudah dekat.</li>
-                    <li>Kegiatan sekolah yang waktunya sudah ditentukan.</li>
-                    <li>Baru kemudian kegiatan yang sifatnya fleksibel.</li>
+
+                    <li>
+                        Tugas dengan deadline paling dekat.
+                    </li>
+
+                    <li>
+                        Belajar untuk ujian yang sudah dekat.
+                    </li>
+
+                    <li>
+                        Kegiatan sekolah yang waktunya sudah ditentukan.
+                    </li>
+
+                    <li>
+                        Kegiatan lain yang masih bisa dilakukan setelahnya.
+                    </li>
+
                 </ul>
 
 
@@ -522,8 +629,8 @@
 
                 <p>
                     Lebih baik fokus menyelesaikan satu pekerjaan terlebih dahulu.
-                    Setelah selesai, lanjutkan ke pekerjaan berikutnya.
-                    Dengan begitu, perhatian kita tidak terus berpindah-pindah.
+                    Setelah selesai, lanjutkan ke pekerjaan berikutnya. Dengan begitu,
+                    perhatian kita tidak terus berpindah-pindah.
                 </p>
 
 
@@ -535,8 +642,8 @@
                 </h2>
 
                 <p>
-                    To-do list nggak harus ribet. Kamu cukup mencatat beberapa
-                    hal penting yang ingin diselesaikan hari itu.
+                    To-do list nggak harus ribet. Kamu cukup mencatat beberapa hal
+                    penting yang ingin diselesaikan hari itu.
                 </p>
 
                 <p>
@@ -544,10 +651,23 @@
                 </p>
 
                 <ul>
-                    <li>Mengerjakan tugas Matematika.</li>
-                    <li>Membaca materi untuk pelajaran besok.</li>
-                    <li>Mengikuti kegiatan ekskul.</li>
-                    <li>Menyiapkan perlengkapan sekolah.</li>
+
+                    <li>
+                        Mengerjakan tugas Matematika.
+                    </li>
+
+                    <li>
+                        Membaca materi untuk pelajaran besok.
+                    </li>
+
+                    <li>
+                        Mengikuti kegiatan ekskul.
+                    </li>
+
+                    <li>
+                        Menyiapkan perlengkapan sekolah.
+                    </li>
+
                 </ul>
 
                 <p>
@@ -560,7 +680,7 @@
                 <!-- 4 -->
 
                 <h2>
-                    4. Jangan Nunggu Mood Buat Belajar 
+                    4. Jangan Nunggu Mood Buat Belajar 😭
                 </h2>
 
                 <p>
@@ -569,9 +689,9 @@
                 </p>
 
                 <p>
-                    Daripada menunggu mood, coba mulai dari waktu belajar yang
-                    singkat. Misalnya belajar selama 30–45 menit dengan fokus.
-                    Setelah itu, kamu bisa mengambil waktu istirahat.
+                    Daripada menunggu mood, coba mulai dari waktu belajar yang singkat.
+                    Misalnya belajar selama 30–45 menit dengan fokus. Setelah itu,
+                    kamu bisa mengambil waktu istirahat.
                 </p>
 
 
@@ -609,14 +729,14 @@
 
                 <p>
                     Karena terlalu banyak tugas atau kegiatan, sebagian pelajar
-                    akhirnya memilih mengurangi waktu tidur. Padahal, istirahat
-                    yang cukup penting agar tubuh dan pikiran tetap siap
-                    menjalani aktivitas keesokan harinya.
+                    akhirnya memilih mengurangi waktu tidur. Padahal, istirahat yang
+                    cukup membantu tubuh dan pikiran tetap siap menjalani aktivitas
+                    keesokan harinya.
                 </p>
 
                 <p>
-                    Jadi, jangan sampai jadwal belajar dibuat terlalu padat
-                    sampai waktu tidur selalu menjadi korban.
+                    Jadi, jangan sampai jadwal belajar dibuat terlalu padat sampai
+                    waktu tidur selalu menjadi korban.
                 </p>
 
 
@@ -624,13 +744,12 @@
                 <!-- 7 -->
 
                 <h2>
-                    7. Buat Jadwal yang Realistis 
+                    7. Buat Jadwal yang Realistis
                 </h2>
 
                 <p>
-                    Jadwal yang bagus bukan jadwal yang penuh dari pagi sampai
-                    malam. Jadwal yang bagus adalah jadwal yang memang bisa
-                    kamu jalankan.
+                    Jadwal yang bagus bukan jadwal yang penuh dari pagi sampai malam.
+                    Jadwal yang bagus adalah jadwal yang memang bisa kamu jalankan.
                 </p>
 
                 <p>
@@ -669,9 +788,9 @@
 
 
                 <p>
-                    Jadwal tersebut hanya contoh. Kamu bisa menyesuaikannya
-                    dengan jam sekolah, perjalanan pulang, kegiatan ekskul,
-                    dan kebutuhanmu sendiri.
+                    Jadwal tersebut hanya contoh. Kamu bisa menyesuaikannya dengan
+                    jam sekolah, perjalanan pulang, kegiatan ekskul, dan kebutuhanmu
+                    sendiri.
                 </p>
 
 
@@ -683,21 +802,19 @@
                 </h2>
 
                 <p>
-                    Kadang kita sudah membuat jadwal, tetapi ternyata ada satu
-                    atau dua kegiatan yang tidak berjalan sesuai rencana.
-                    Itu normal.
+                    Kadang kita sudah membuat jadwal, tetapi ternyata ada satu atau
+                    dua kegiatan yang tidak berjalan sesuai rencana. Itu normal.
                 </p>
 
                 <p>
-                    Jangan langsung merasa gagal hanya karena satu hari
-                    jadwalnya berantakan. Evaluasi saja apa yang membuatnya
-                    tidak berjalan, lalu coba atur kembali keesokan harinya.
+                    Jangan langsung merasa gagal hanya karena satu hari jadwalnya
+                    berantakan. Evaluasi saja apa yang membuatnya tidak berjalan,
+                    lalu coba atur kembali keesokan harinya.
                 </p>
 
                 <p>
-                    Yang paling penting bukan membuat jadwal yang sempurna,
-                    tetapi membangun kebiasaan untuk mengatur waktu secara
-                    konsisten.
+                    Yang paling penting bukan membuat jadwal yang sempurna, tetapi
+                    membangun kebiasaan untuk mengatur waktu secara konsisten.
                 </p>
 
 
@@ -705,7 +822,7 @@
                 <!-- KESIMPULAN -->
 
                 <h2>
-                    Jadi, Emang Bisa Kebagian Semua? 👀
+                    Jadi, Emang Bisa Kebagian Semua? 
                 </h2>
 
                 <p>
@@ -713,18 +830,17 @@
                 </p>
 
                 <p>
-                    Sekolah, tugas, ekskul, main, dan tidur sebenarnya bisa
-                    tetap berjalan bersamaan selama waktunya diatur dengan baik.
-                    Kuncinya adalah menentukan prioritas, membuat jadwal yang
-                    realistis, dan tidak memaksakan terlalu banyak kegiatan
-                    dalam satu waktu.
+                    Sekolah, tugas, ekskul, main, dan tidur sebenarnya bisa tetap
+                    berjalan bersamaan selama waktunya diatur dengan baik. Kuncinya
+                    adalah menentukan prioritas, membuat jadwal yang realistis,
+                    dan tidak memaksakan terlalu banyak kegiatan dalam satu waktu.
                 </p>
 
                 <p>
                     Jadi, jangan sampai hidup sebagai pelajar cuma diisi dengan
                     belajar sampai lupa istirahat. Sebaliknya, jangan juga terlalu
-                    banyak bersantai sampai tugas menumpuk. Cari keseimbangan
-                    yang paling cocok buat kamu. 
+                    banyak bersantai sampai tugas menumpuk. Cari keseimbangan yang
+                    paling cocok buat kamu. 
                 </p>
 
 
