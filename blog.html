@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Blog & Tips Belajar - New Primagama</title>
-    
+
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
+
     <!-- CSS UTAMA -->
     <link rel="stylesheet" href="./style.css">
 
@@ -39,11 +40,13 @@
             padding: 0 20px;
             text-align: center;
         }
+
         .blog-header h1 {
             font-size: 2rem;
             color: var(--text-main);
             margin-bottom: 8px;
         }
+
         .blog-header p {
             color: var(--text-muted);
             font-size: 0.95rem;
@@ -93,6 +96,7 @@
             color: var(--text-main);
             text-decoration: none;
         }
+
         .blog-card h2 a:hover {
             color: var(--primary-purple);
         }
@@ -119,17 +123,90 @@
         .read-more:hover {
             background-color: #4c1d95;
         }
+
+        /* FOTO ARTIKEL TERBARU */
+        .blog-image {
+            width: 100%;
+            height: 280px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-source {
+            display: block;
+            margin-top: 15px;
+            color: #94a3b8;
+            font-size: 0.7rem;
+            line-height: 1.5;
+        }
+
+        .photo-source a {
+            color: var(--primary-purple);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .photo-source a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+
+            .blog-header {
+                margin-top: 30px;
+            }
+
+            .blog-header h1 {
+                font-size: 1.6rem;
+            }
+
+            .blog-header p {
+                font-size: 0.85rem;
+            }
+
+            .blog-container {
+                padding: 0 15px;
+            }
+
+            .blog-card {
+                padding: 20px;
+            }
+
+            .blog-card h2 {
+                font-size: 1.15rem;
+            }
+
+            .blog-card p {
+                font-size: 0.85rem;
+            }
+
+            .blog-image {
+                height: 210px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- NAVBAR UTAMA -->
     <header class="navbar">
+
         <div class="logo">
             <img src="logo primagama png.jpeg" alt="Logo New Primagama">
         </div>
 
         <nav class="nav-menu">
+
             <a href="index.html#hero">Beranda</a>
             <a href="index.html#tentang">Tentang</a>
             <a href="index.html#program">Program</a>
@@ -137,6 +214,7 @@
             <a href="index.html#faq">FAQ</a>
             <a href="index.html#kontak">Kontak</a>
             <a href="blog.html" class="active">Blog</a>
+
         </nav>
 
         <a href="index.html#kontak" class="btn-navbar">
@@ -148,35 +226,85 @@
             <span></span>
             <span></span>
         </div>
+
     </header>
 
+
+    <!-- HEADER BLOG -->
     <div class="blog-header">
-        <h1>Nongkrong & Belajar Bareng 🚀</h1>
-        <p>Tips kece seputar dunia sekolah, ujian, dan trik jago belajar.</p>
+
+        <h1>
+            Nongkrong & Belajar Bareng 🚀
+        </h1>
+
+        <p>
+            Tips kece seputar dunia sekolah, ujian, dan trik jago belajar.
+        </p>
+
     </div>
 
-    <!-- DAFTAR LIST ARTIKEL (TANPA GAMBAR DI HALAMAN UTAMA) -->
+
+    <!-- DAFTAR ARTIKEL -->
     <main class="blog-container">
-        
+
+
         <!-- 1. ARTIKEL PENDIDIKAN -->
         <article class="blog-card">
-            <span class="badge-pinned">Edukasi & Tips</span>
-            <h2><a href="arti-penting-pendidikan.html">Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!</a></h2>
-            <p>Pendidikan tuh emang key banget buat upgrade skill, ngurangin kebodohan, dan siap survive ngadepin masa depan. Yuk, intip pentingnya belajar!</p>
-            <a href="arti-penting-pendidikan.html" class="read-more">Baca Selengkapnya &rarr;</a>
+
+            <span class="badge-pinned">
+                Edukasi & Tips
+            </span>
+
+            <h2>
+                <a href="arti-penting-pendidikan.html">
+                    Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!
+                </a>
+            </h2>
+
+            <p>
+                Pendidikan tuh emang key banget buat upgrade skill,
+                ngurangin kebodohan, dan siap survive ngadepin masa depan.
+                Yuk, intip pentingnya belajar!
+            </p>
+
+            <a href="arti-penting-pendidikan.html" class="read-more">
+                Baca Selengkapnya &rarr;
+            </a>
+
         </article>
+
 
         <!-- 2. ARTIKEL TIPS UJIAN -->
         <article class="blog-card">
-            <span class="badge-pinned">Tips Belajar</span>
-            <h2><a href="tips-menghadapi-ujian.html">Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</a></h2>
-            <p>Siapa nih yang kalau denger kata ujian langsung overthinking? Kenali cara jitu hadapi ujian tanpa sistem kebut semalam.</p>
-            <a href="tips-menghadapi-ujian.html" class="read-more">Baca Selengkapnya &rarr;</a>
+
+            <span class="badge-pinned">
+                Tips Belajar
+            </span>
+
+            <h2>
+                <a href="tips-menghadapi-ujian.html">
+                    Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!
+                </a>
+            </h2>
+
+            <p>
+                Siapa nih yang kalau denger kata ujian langsung overthinking?
+                Kenali cara jitu hadapi ujian tanpa sistem kebut semalam.
+            </p>
+
+            <a href="tips-menghadapi-ujian.html" class="read-more">
+                Baca Selengkapnya &rarr;
+            </a>
+
         </article>
 
-                <!-- 3. ARTIKEL TKA -->
+
+        <!-- 3. ARTIKEL TKA -->
         <article class="blog-card">
-            <span class="badge-pinned">Persiapan TKA</span>
+
+            <span class="badge-pinned">
+                Persiapan TKA
+            </span>
 
             <h2>
                 <a href="arti-tka-makin-dekat.html">
@@ -185,19 +313,91 @@
             </h2>
 
             <p>
-                TKA mulai makin dekat dan kamu masih bingung harus mulai belajar dari mana?
-                Tenang, yuk siapin strategi belajar, latihan soal, try out, dan evaluasi
-                supaya persiapan TKA kamu lebih terarah.
+                TKA mulai makin dekat dan kamu masih bingung harus mulai
+                belajar dari mana? Tenang, yuk siapin strategi belajar,
+                latihan soal, try out, dan evaluasi supaya persiapan TKA
+                kamu lebih terarah.
             </p>
 
             <a href="arti-tka-makin-dekat.html" class="read-more">
                 Baca Selengkapnya &rarr;
             </a>
+
         </article>
-        
+
+
+        <!-- 4. ARTIKEL TERBARU: MANAJEMEN WAKTU -->
+        <article class="blog-card">
+
+            <!-- FOTO RESMI -->
+            <div class="blog-image">
+
+                <img
+                    src="https://bbpmpjatim.kemendikdasmen.go.id/main/wp-content/uploads/2026/03/2a070058-934b-46fd-ae4d-b76ede5c5353-1024x576.jpg"
+                    alt="Kegiatan siswa di sekolah"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <span class="badge-pinned">
+                Tips Pelajar
+            </span>
+
+
+            <h2>
+                <a href="sekolah-tugas-ekskul-main.html">
+                    Sekolah, Tugas, Ekskul, Main, Tidur…
+                    Emang Bisa Kebagian Semua? 😭
+                </a>
+            </h2>
+
+
+            <p>
+                Sekolah, tugas, ekskul, belajar, main, sampai tidur—
+                semuanya pengen kebagian waktu. Tapi emang bisa?
+                Yuk cari tahu cara mengatur waktu yang simpel,
+                realistis, dan tetap bikin kamu punya waktu buat diri sendiri.
+            </p>
+
+
+            <a
+                href="sekolah-tugas-ekskul-main.html"
+                class="read-more"
+            >
+                Baca Selengkapnya &rarr;
+            </a>
+
+
+            <!-- SUMBER FOTO -->
+            <small class="photo-source">
+
+                Foto:
+                Dokumentasi Kegiatan BBPMP Provinsi Jawa Timur /
+                Kementerian Pendidikan Dasar dan Menengah.
+
+                <br>
+
+                Sumber:
+                <a
+                    href="https://bbpmpjatim.kemendikdasmen.go.id/main/murid-sd-ketintang-1-surabaya-kembali-ke-sekolah-dengan-antusias/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    BBPMP Provinsi Jawa Timur
+                </a>
+
+            </small>
+
+        </article>
+
+
     </main>
+
 
     <!-- SCRIPT JS -->
     <script src="script.js"></script>
+
 </body>
 </html>
