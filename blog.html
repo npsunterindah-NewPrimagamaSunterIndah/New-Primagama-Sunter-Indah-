@@ -3,379 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Blog Belajar | New Primagama Sunter Indah</title>
-
-    <meta name="description" content="Tips belajar, pendidikan, persiapan ujian, dan berbagai informasi untuk pelajar dari New Primagama Sunter Indah.">
-
-    <link rel="icon" href="favicon.ico">
+    <title>Blog & Tips Belajar - New Primagama</title>
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="./style.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-purple: #5B21B6;
+            --light-purple: #F3E8FF;
+            --bg-color: #F8FAFC;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
-            line-height: 1.7;
+            background-color: var(--bg-color);
+            margin: 0;
+            font-family: 'Poppins', sans-serif, Arial, sans-serif;
+            color: var(--text-main);
         }
 
-        /* =========================
-           NAVBAR
-        ========================== */
-
-        .navbar {
-            width: 100%;
-            background: #ffffff;
-            padding: 18px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo img {
-            width: 145px;
-            height: auto;
-            display: block;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: #334155;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: #6d28d9;
-        }
-
-        .nav-menu .blog-active {
-            color: #6d28d9;
-        }
-
-        /* =========================
-           HERO BLOG
-        ========================== */
-
-        .blog-hero {
+        /* HEADER BLOG */
+        .blog-header {
+            max-width: 850px;
+            margin: 40px auto 20px auto;
+            padding: 0 20px;
             text-align: center;
-            padding: 75px 20px 55px;
-            background: linear-gradient(135deg, #f5f3ff, #ffffff);
+        }
+        .blog-header h1 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+        .blog-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
-        .blog-hero h1 {
-            font-size: 42px;
-            color: #4c1d95;
-            margin-bottom: 12px;
+        /* KONTINER ARTIKEL */
+        .blog-container {
+            max-width: 850px;
+            margin: 0 auto 50px auto;
+            padding: 0 20px;
         }
-
-        .blog-hero p {
-            font-size: 17px;
-            color: #64748b;
-            max-width: 700px;
-            margin: auto;
-        }
-
-        /* =========================
-           BLOG CONTAINER
-        ========================== */
-
-        .article-container {
-            max-width: 1250px;
-            margin: auto;
-            padding: 0 30px 80px;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-        }
-
-        /* =========================
-           BLOG CARD
-        ========================== */
 
         .blog-card {
             background: #ffffff;
-            border-radius: 24px;
-            padding: 35px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-            transition: 0.3s ease;
-
-            display: flex;
-            flex-direction: column;
-            min-height: 300px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(91, 33, 182, 0.06);
+            border: 1px solid rgba(91, 33, 182, 0.08);
+            overflow: hidden;
+            margin-bottom: 30px;
+            padding: 25px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.10);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(91, 33, 182, 0.1);
         }
 
         .badge-pinned {
             display: inline-block;
-            width: fit-content;
-            background: #ede9fe;
-            color: #6d28d9;
-            font-size: 13px;
+            background-color: var(--light-purple);
+            color: var(--primary-purple);
+            font-size: 0.75rem;
             font-weight: 700;
-            padding: 7px 14px;
-            border-radius: 50px;
-            margin-bottom: 18px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         .blog-card h2 {
-            font-size: 25px;
-            line-height: 1.35;
-            margin-bottom: 15px;
+            font-size: 1.35rem;
+            margin: 0 0 10px 0;
         }
 
         .blog-card h2 a {
-            color: #1e293b;
+            color: var(--text-main);
             text-decoration: none;
-            transition: 0.3s;
         }
-
         .blog-card h2 a:hover {
-            color: #6d28d9;
+            color: var(--primary-purple);
         }
 
         .blog-card p {
-            color: #64748b;
-            font-size: 15px;
-            margin-bottom: 25px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
         .read-more {
-            margin-top: auto;
+            display: inline-block;
+            background-color: var(--primary-purple);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 8px;
             text-decoration: none;
-            color: #6d28d9;
-            font-weight: 700;
-            transition: 0.3s;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
         }
 
         .read-more:hover {
-            color: #4c1d95;
-            transform: translateX(4px);
-        }
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer {
-            background: #24104f;
-            color: #ffffff;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        footer p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-
-        /* =========================
-           MOBILE
-        ========================== */
-
-        @media (max-width: 768px) {
-
-            .navbar {
-                padding: 15px 20px;
-            }
-
-            .logo img {
-                width: 125px;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .blog-hero {
-                padding: 55px 20px 40px;
-            }
-
-            .blog-hero h1 {
-                font-size: 31px;
-            }
-
-            .blog-hero p {
-                font-size: 15px;
-            }
-
-            .article-container {
-                padding: 0 18px 60px;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .blog-card {
-                padding: 27px;
-                min-height: auto;
-            }
-
-            .blog-card h2 {
-                font-size: 22px;
-            }
+            background-color: #4c1d95;
         }
     </style>
 </head>
-
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-
+    <!-- NAVBAR UTAMA -->
     <header class="navbar">
-
         <div class="logo">
-            <a href="index.html">
-                <img src="logo primagama png.jpeg" alt="New Primagama Sunter Indah">
-            </a>
+            <img src="logo primagama png.jpeg" alt="Logo New Primagama">
         </div>
 
         <nav class="nav-menu">
-            <a href="index.html">Beranda</a>
+            <a href="index.html#hero">Beranda</a>
             <a href="index.html#tentang">Tentang</a>
             <a href="index.html#program">Program</a>
             <a href="index.html#fasilitas">Fasilitas</a>
             <a href="index.html#faq">FAQ</a>
             <a href="index.html#kontak">Kontak</a>
-            <a href="blog.html" class="blog-active">Blog</a>
+            <a href="blog.html" class="active">Blog</a>
         </nav>
 
+        <a href="index.html#kontak" class="btn-navbar">
+            Daftar Sekarang
+        </a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
+    <div class="blog-header">
+        <h1>Nongkrong & Belajar Bareng 🚀</h1>
+        <p>Tips kece seputar dunia sekolah, ujian, dan trik jago belajar.</p>
+    </div>
 
-    <!-- =========================
-         HERO BLOG
-    ========================== -->
+    <!-- DAFTAR LIST ARTIKEL (TANPA GAMBAR DI HALAMAN UTAMA) -->
+    <main class="blog-container">
+        
+        <!-- 1. ARTIKEL PENDIDIKAN -->
+        <article class="blog-card">
+            <span class="badge-pinned">Edukasi & Tips</span>
+            <h2><a href="arti-penting-pendidikan.html">Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!</a></h2>
+            <p>Pendidikan tuh emang key banget buat upgrade skill, ngurangin kebodohan, dan siap survive ngadepin masa depan. Yuk, intip pentingnya belajar!</p>
+            <a href="arti-penting-pendidikan.html" class="read-more">Baca Selengkapnya &rarr;</a>
+        </article>
 
-    <section class="blog-hero">
+        <!-- 2. ARTIKEL TIPS UJIAN -->
+        <article class="blog-card">
+            <span class="badge-pinned">Tips Belajar</span>
+            <h2><a href="tips-menghadapi-ujian.html">Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</a></h2>
+            <p>Siapa nih yang kalau denger kata ujian langsung overthinking? Kenali cara jitu hadapi ujian tanpa sistem kebut semalam.</p>
+            <a href="tips-menghadapi-ujian.html" class="read-more">Baca Selengkapnya &rarr;</a>
+        </article>
 
-        <h1>Nongkrong &amp; Belajar Bareng 🚀</h1>
+                <!-- 3. ARTIKEL TKA -->
+        <article class="blog-card">
+            <span class="badge-pinned">Persiapan TKA</span>
 
-        <p>
-            Tips kece seputar dunia sekolah, ujian, dan trik jago belajar.
-        </p>
-
-    </section>
-
-
-    <!-- =========================
-         BLOG
-    ========================== -->
-
-    <main class="article-container">
-
-        <div class="blog-grid">
-
-
-            <!-- 1. Pendidikan -->
-
-            <article class="blog-card">
-
-                <span class="badge-pinned">
-                    Edukasi &amp; Tips
-                </span>
-
-                <h2>
-                    <a href="arti-penting-pendidikan.html">
-                        Pendidikan: Investasi Masa Depan Biar Gak Kena Mental &amp; Gagal Paham!
-                    </a>
-                </h2>
-
-                <p>
-                    Pendidikan bukan cuma soal nilai dan ranking. Yuk, pahami kenapa pendidikan
-                    penting untuk membentuk masa depan, pola pikir, dan kemampuan kita dalam
-                    menghadapi berbagai tantangan.
-                </p>
-
-                <a href="arti-penting-pendidikan.html" class="read-more">
-                    Baca Selengkapnya &rarr;
+            <h2>
+                <a href="arti-tka-makin-dekat.html">
+                    TKA Makin Dekat? Jangan Panik, Ini yang Harus Kamu Siapin
                 </a>
+            </h2>
 
-            </article>
+            <p>
+                TKA mulai makin dekat dan kamu masih bingung harus mulai belajar dari mana?
+                Tenang, yuk siapin strategi belajar, latihan soal, try out, dan evaluasi
+                supaya persiapan TKA kamu lebih terarah.
+            </p>
 
+            <a href="arti-tka-makin-dekat.html" class="read-more">
+                Baca Selengkapnya &rarr;
+            </a>
+        </article>
 
-            <!-- 2. Tips Ujian -->
-
-            <article class="blog-card">
-
-                <span class="badge-pinned">
-                    Tips Belajar
-                </span>
-
-                <h2>
-                    <a href="tips-menghadapi-ujian.html">
-                        Tips &amp; Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!
-                    </a>
-                </h2>
-
-                <p>
-                    Ujian sering bikin panik? Tenang. Dengan persiapan yang tepat, pola belajar
-                    yang teratur, dan strategi yang efektif, kamu bisa menghadapi ujian dengan
-                    lebih siap dan percaya diri.
-                </p>
-
-                <a href="tips-menghadapi-ujian.html" class="read-more">
-                    Baca Selengkapnya &rarr;
-                </a>
-
-            </article>
-
-
-            <!-- 3. TKA -->
-
-            <article class="blog-card">
-
-                <span class="badge-pinned">
-                    Persiapan TKA
-                </span>
-
-                <h2>
-                    <a href="arti-tka-makin-dekat.html">
-                        TKA Makin Dekat? Jangan Panik, Ini yang Harus Kamu Siapin
-                    </a>
-                </h2>
-
-                <p>
-                    TKA sudah semakin dekat? Jangan sampai baru mulai belajar ketika waktunya
-                    sudah mepet. Kenali apa saja yang perlu disiapkan supaya persiapanmu lebih
-                    terarah dan nggak bikin panik.
-                </p>
-
-                <a href="arti-tka-makin-dekat.html" class="read-more">
-                    Baca Selengkapnya &rarr;
-                </a>
-
-            </article>
-
-
-            <!-- 4. Sekolah, Tugas, Ekskul, Main -->
+          <!-- 4. Sekolah, Tugas, Ekskul, Main -->
 
             <article class="blog-card">
 
@@ -401,23 +221,9 @@
                 </a>
 
             </article>
-
-        </div>
-
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <p>
-            © 2026 New Primagama Sunter Indah. All Rights Reserved.
-        </p>
-
-    </footer>
-
+    <!-- SCRIPT JS -->
+    <script src="script.js"></script>
 </body>
 </html>
