@@ -9,117 +9,46 @@
 
     <title>Blog & Tips Belajar - New Primagama Sunter Indah</title>
 
-    <meta
-        name="description"
-        content="Artikel dan tips belajar seputar pendidikan, sekolah, TKA, ujian, dan persiapan belajar dari New Primagama Sunter Indah."
-    >
+    <meta name="description"
+        content="Artikel seputar tips belajar, TKA, ujian, sekolah, dan pendidikan dari New Primagama Sunter Indah.">
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <link
-        rel="canonical"
-        href="https://newprimagamasunterindah.com/blog.html"
-    >
-
-
-    <!-- =====================================================
-         GOOGLE FONT
-    ====================================================== -->
-
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
-
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
-
+    <!-- FONT AWESOME -->
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-
-    <!-- =====================================================
-         CSS UTAMA WEBSITE
-    ====================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="./style.css"
-    >
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="./style.css">
 
 
     <style>
 
         /* =====================================================
-           WARNA
-        ====================================================== */
-
-        :root {
-
-            --primary-purple: #5B21B6;
-            --purple-dark: #4C1D95;
-
-            --light-purple: #F3E8FF;
-
-            --yellow: #FACC15;
-            --yellow-dark: #EAB308;
-
-            --bg-color: #F8FAFC;
-
-            --text-main: #111827;
-            --text-muted: #64748B;
-
-            --border: #E5E7EB;
-
-        }
-
-
-        /* =====================================================
            RESET
-        ====================================================== */
+        ===================================================== */
 
         * {
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
-
             margin: 0;
-
-            background: var(--bg-color);
-
-            font-family:
-                'Poppins',
-                Arial,
-                sans-serif;
-
-            color: var(--text-main);
-
-            overflow-x: hidden;
-
+            background: #f8fafc;
+            color: #1e293b;
+            font-family: "Poppins", sans-serif;
         }
-
 
         a {
             text-decoration: none;
@@ -127,1080 +56,795 @@
 
 
         /* =====================================================
-           NAVBAR
-        ====================================================== */
+           WARNA
+        ===================================================== */
 
-        .navbar {
-            position: relative;
-            z-index: 1000;
-        }
+        :root {
+            --purple: #5b21b6;
+            --purple-dark: #4c1d95;
+            --purple-light: #f3e8ff;
 
+            --yellow: #facc15;
 
-        /*
-         DESKTOP
-        */
+            --text: #1e293b;
+            --muted: #64748b;
 
-        .navbar .logo img {
-
-            width: 150px;
-
-            height: auto;
-
-            display: block;
-
+            --border: #e2e8f0;
+            --white: #ffffff;
         }
 
 
         /* =====================================================
            BLOG HERO
-        ====================================================== */
+        ===================================================== */
 
         .blog-hero {
+            background: #f8f7ff;
+            border-bottom: 1px solid #eeeaf7;
 
-            background: #F8F7FF;
-
-            border-bottom:
-                1px solid #EEEAF7;
-
-            padding:
-                58px 5% 55px;
-
+            padding: 48px 6% 42px;
         }
-
 
         .hero-inner {
-
             width: 100%;
-
-            max-width: 1280px;
-
-            margin: auto;
-
+            max-width: 1180px;
+            margin: 0 auto;
         }
-
 
         .hero-top {
-
             display: flex;
-
             align-items: center;
-
             gap: 10px;
 
-            margin-bottom: 16px;
-
+            margin-bottom: 13px;
         }
 
-
         .hero-label {
-
-            color:
-                var(--primary-purple);
+            color: var(--purple);
 
             font-size: 11px;
-
             font-weight: 700;
 
             letter-spacing: .7px;
-
         }
-
 
         .hero-line {
-
             width: 35px;
-
             height: 3px;
 
-            background:
-                var(--yellow);
+            background: var(--yellow);
 
             border-radius: 10px;
-
         }
-
 
         .blog-hero h1 {
+            max-width: 750px;
 
-            max-width: 760px;
+            margin: 0 0 13px;
 
-            margin: 0 0 16px;
+            color: #1e1b4b;
 
-            color:
-                #1E1B4B;
-
-            font-size:
-                clamp(34px, 4.5vw, 50px);
-
-            line-height: 1.18;
+            font-size: clamp(34px, 4.2vw, 50px);
+            line-height: 1.16;
 
             font-weight: 800;
-
         }
 
-
         .hero-description {
-
             max-width: 650px;
 
             margin: 0;
 
-            color:
-                var(--text-muted);
+            color: #64748b;
 
             font-size: 14px;
-
-            line-height: 1.8;
-
+            line-height: 1.75;
         }
 
 
         /* =====================================================
-           BLOG CONTAINER
-        ====================================================== */
+           CONTAINER BLOG
+        ===================================================== */
 
         .blog-container {
-
             width: 100%;
-
             max-width: 1585px;
 
-            margin: auto;
+            margin: 0 auto;
 
-            padding:
-                45px 36px 70px;
-
+            padding: 0 6% 45px;
         }
 
 
         /* =====================================================
-           SECTION HEADING
-        ====================================================== */
+           SEMUA SECTION
+        ===================================================== */
 
-        .section-heading {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            margin-bottom: 12px;
-
+        .latest-section {
+            padding-top: 27px;
+            padding-bottom: 15px;
         }
 
+        .category-section {
+            margin: 0;
+            padding: 23px 0 15px;
+
+            scroll-margin-top: 90px;
+        }
+
+
+        /* =====================================================
+           HEADING
+        ===================================================== */
+
+        .section-heading,
+        .category-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin: 0 0 13px;
+        }
 
         .section-heading-left {
-
             display: flex;
-
             align-items: center;
-
             gap: 9px;
-
         }
-
 
         .section-heading-left i {
-
-            color:
-                var(--yellow-dark);
-
-            font-size: 14px;
-
+            color: #eab308;
+            font-size: 13px;
         }
 
-
-        .section-heading h2 {
-
+        .section-heading h2,
+        .category-heading h2 {
             margin: 0;
 
-            color:
-                var(--text-main);
+            color: var(--text);
 
-            font-size: 14px;
+            font-size: 16px;
+            line-height: 1.2;
 
             font-weight: 800;
 
             text-transform: uppercase;
-
         }
-
-
-        /* =====================================================
-           CATEGORY HEADING
-        ====================================================== */
-
-        .category-heading {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            margin-bottom: 12px;
-
-        }
-
 
         .category-heading h2 {
-
             position: relative;
 
-            margin: 0;
-
             padding-left: 12px;
-
-            color:
-                var(--text-main);
-
-            font-size: 14px;
-
-            font-weight: 800;
-
-            text-transform: uppercase;
-
         }
 
-
         .category-heading h2::before {
-
             content: "";
 
             position: absolute;
 
             left: 0;
-
-            top: 2px;
+            top: 1px;
 
             width: 4px;
+            height: 17px;
 
-            height: 16px;
+            background: var(--purple);
 
-            background:
-                var(--primary-purple);
-
-            border-radius: 5px;
-
+            border-radius: 4px;
         }
 
 
         /* =====================================================
            LIHAT SEMUA
-        ====================================================== */
+        ===================================================== */
 
         .see-all {
-
             display: inline-flex;
 
             align-items: center;
+            gap: 6px;
 
-            gap: 7px;
+            color: var(--purple);
 
-            padding:
-                8px 15px;
-
-            border:
-                1px solid #D1D5DB;
-
-            border-radius: 6px;
-
-            background: #FFFFFF;
-
-            color:
-                #374151;
-
-            font-size: 9px;
-
+            font-size: 10px;
             font-weight: 700;
 
             transition: .2s ease;
-
         }
 
+        .see-all i {
+            font-size: 9px;
+
+            transition: transform .2s ease;
+        }
 
         .see-all:hover {
+            color: var(--purple-dark);
+        }
 
-            color: #FFFFFF;
-
-            background:
-                var(--primary-purple);
-
-            border-color:
-                var(--primary-purple);
-
+        .see-all:hover i {
+            transform: translateX(3px);
         }
 
 
         /* =====================================================
            GARIS SECTION
-        ====================================================== */
+        ===================================================== */
 
         .section-line {
-
             width: 100%;
+            height: 2px;
 
-            height: 1px;
-
-            margin-bottom: 26px;
+            margin-bottom: 20px;
 
             background:
-                #E5E7EB;
-
+                linear-gradient(
+                    to right,
+                    var(--yellow) 0,
+                    var(--yellow) 100px,
+                    var(--border) 100px,
+                    var(--border) 100%
+                );
         }
 
 
         /* =====================================================
-           SECTION JARAK
-        ====================================================== */
-
-        .latest-section {
-
-            margin-bottom: 58px;
-
-        }
-
-
-        .category-section {
-
-            margin-bottom: 58px;
-
-            scroll-margin-top: 100px;
-
-        }
-
-
-        /* =====================================================
-           ARTICLE GRID
-        ====================================================== */
+           GRID ARTIKEL
+        ===================================================== */
 
         .article-grid {
-
             display: grid;
 
-            grid-template-columns:
-                repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
 
-            column-gap: 24px;
-
-            row-gap: 0;
-
+            gap: 0;
         }
 
 
         /* =====================================================
-           ARTICLE CARD
-        ====================================================== */
+           CARD ARTIKEL
+        ===================================================== */
 
         .article-card {
-
             position: relative;
 
             min-width: 0;
 
-            padding:
-                0 0 30px;
+            padding: 0 20px;
 
-            margin: 0;
-
-            background: transparent;
-
-            border: none;
-
-            border-radius: 0;
-
+            border-right: 1px solid var(--border);
         }
 
-
-        /*
-         GARIS VERTIKAL
-        */
-
-        .article-card:not(:nth-child(4n + 1)) {
-
-            padding-left: 24px;
-
-            border-left:
-                1px solid #E5E7EB;
-
+        .article-card:first-child {
+            padding-left: 0;
         }
 
+        .article-card:last-child {
+            padding-right: 0;
 
-        .article-card:hover {
-
-            transform: none;
-
-            box-shadow: none;
-
+            border-right: none;
         }
 
 
         /* =====================================================
-           IMAGE
-        ====================================================== */
+           GAMBAR
+        ===================================================== */
 
         .article-image {
-
             position: relative;
 
             display: block;
 
             width: 100%;
+            height: 190px;
 
-            aspect-ratio: 16 / 9;
-
-            height: auto;
+            margin-bottom: 13px;
 
             overflow: hidden;
 
-            background:
-                var(--light-purple);
+            border-radius: 10px;
 
-            border-radius: 0;
-
+            background: #f3e8ff;
         }
 
-
         .article-image img {
-
             display: block;
 
             width: 100%;
-
             height: 100%;
 
             object-fit: cover;
 
-            transition:
-                transform .25s ease;
-
+            transition: transform .3s ease;
         }
 
-
-        .article-card:hover
-        .article-image img {
-
-            transform:
-                scale(1.02);
-
+        .article-card:hover .article-image img {
+            transform: scale(1.04);
         }
 
 
         /* =====================================================
            BADGE TERBARU
-        ====================================================== */
+        ===================================================== */
 
         .new-badge {
-
             position: absolute;
 
-            top: 12px;
-
-            left: 12px;
+            top: 10px;
+            left: 10px;
 
             z-index: 5;
 
-            padding:
-                6px 9px;
+            padding: 5px 8px;
 
-            border-radius: 4px;
+            border-radius: 5px;
 
-            background:
-                var(--yellow);
+            background: var(--yellow);
 
-            color:
-                #422006;
+            color: #422006;
 
             font-size: 8px;
-
             font-weight: 800;
 
             letter-spacing: .3px;
-
         }
 
 
         /* =====================================================
-           CONTENT CARD
-        ====================================================== */
-
-        .article-card-content {
-
-            padding-top: 20px;
-
-        }
-
-
-        /* =====================================================
-           KATEGORI
-        ====================================================== */
+           KATEGORI CARD
+        ===================================================== */
 
         .article-category {
+            margin-bottom: 6px;
 
-            margin:
-                0 0 8px;
-
-            color:
-                var(--primary-purple);
+            color: var(--purple);
 
             font-size: 9px;
-
             font-weight: 700;
 
             text-transform: uppercase;
-
         }
 
 
         /* =====================================================
-           JUDUL
-        ====================================================== */
+           JUDUL ARTIKEL
+        ===================================================== */
 
         .article-card h3 {
+            margin: 0 0 8px;
 
-            margin:
-                0 0 10px;
-
-            color:
-                var(--text-main);
-
-            font-size: 20px;
-
-            line-height: 1.35;
+            font-size: 15px;
+            line-height: 1.45;
 
             font-weight: 700;
-
         }
-
 
         .article-card h3 a {
+            color: var(--text);
 
-            color:
-                inherit;
-
+            transition: .2s ease;
         }
 
-
         .article-card h3 a:hover {
-
-            color:
-                var(--primary-purple);
-
+            color: var(--purple);
         }
 
 
         /* =====================================================
            DESKRIPSI
-        ====================================================== */
+        ===================================================== */
 
         .article-description {
+            margin: 0 0 9px;
 
-            margin:
-                0 0 14px;
+            color: var(--muted);
 
-            color:
-                var(--text-muted);
-
-            font-size: 13px;
-
-            line-height: 1.65;
+            font-size: 10px;
+            line-height: 1.6;
 
             display: -webkit-box;
 
             -webkit-box-orient: vertical;
-
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 3;
 
             overflow: hidden;
-
         }
 
 
         /* =====================================================
            META / TANGGAL
-        ====================================================== */
+        ===================================================== */
 
         .article-meta {
-
             display: flex;
-
             align-items: center;
+            gap: 4px;
 
-            gap: 5px;
+            color: #94a3b8;
 
-            color:
-                #94A3B8;
-
-            font-size: 10px;
-
+            font-size: 9px;
             line-height: 1.5;
-
         }
-
 
         .article-meta i {
+            font-size: 8px;
+        }
 
-            color:
-                var(--primary-purple);
-
+        .article-meta .date {
+            color: #64748b;
+            font-weight: 500;
         }
 
 
-        .article-meta .date {
+        /* =====================================================
+           CTA
+        ===================================================== */
 
-            color:
-                #64748B;
+        .blog-cta {
+            margin-top: 28px;
 
-            font-weight: 500;
+            padding: 34px 35px;
 
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #5b21b6,
+                    #7c3aed
+                );
+
+            color: #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+        .blog-cta-content h2 {
+            margin: 0 0 7px;
+
+            font-size: 23px;
+            line-height: 1.25;
+
+            font-weight: 800;
+        }
+
+        .blog-cta-content p {
+            max-width: 620px;
+
+            margin: 0;
+
+            color: rgba(255,255,255,.85);
+
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .blog-cta-buttons {
+            display: flex;
+            gap: 10px;
+
+            flex-shrink: 0;
+        }
+
+        .cta-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 11px 17px;
+
+            border-radius: 8px;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .cta-primary {
+            background: var(--yellow);
+            color: #422006;
+        }
+
+        .cta-secondary {
+            border: 1px solid rgba(255,255,255,.45);
+
+            color: #ffffff;
         }
 
 
         /* =====================================================
            EMPTY CATEGORY
-        ====================================================== */
+        ===================================================== */
 
         .empty-category {
+            grid-column: 1 / -1;
 
-            grid-column:
-                1 / -1;
-
-            padding: 30px;
+            padding: 25px;
 
             text-align: center;
 
-            border:
-                1px dashed var(--border);
+            border: 1px dashed var(--border);
 
-            color:
-                #94A3B8;
+            color: #94a3b8;
 
             font-size: 11px;
-
         }
 
 
         /* =====================================================
            FOOTER
-        ====================================================== */
+        ===================================================== */
 
         .blog-footer {
+            padding: 25px 20px;
 
-            padding:
-                30px 20px;
+            border-top: 1px solid var(--border);
 
-            border-top:
-                1px solid var(--border);
-
-            background:
-                #FFFFFF;
+            background: #ffffff;
 
             text-align: center;
 
-            color:
-                var(--text-muted);
+            color: var(--muted);
 
             font-size: 11px;
-
         }
 
 
         /* =====================================================
-           MOBILE NAVBAR
-           LOGO KIRI
-           HAMBURGER KANAN
-        ====================================================== */
+           TABLET
+        ===================================================== */
 
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
 
-            .navbar {
+            .article-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
 
-                display: flex !important;
-
-                align-items: center !important;
-
-                justify-content: space-between !important;
-
-                width: 100%;
-
-                height: 80px;
-
-                padding:
-                    0 25px !important;
-
+                row-gap: 25px;
             }
 
-
-            .navbar .logo {
-
-                order: 1 !important;
-
-                margin: 0 !important;
-
-                display: flex !important;
-
-                align-items: center;
-
+            .article-card:nth-child(2n) {
+                padding-right: 0;
+                border-right: none;
             }
 
-
-            .navbar .logo img {
-
-                width: 145px !important;
-
-                height: auto !important;
-
-                display: block;
-
+            .article-card:nth-child(2n + 1) {
+                padding-left: 0;
             }
 
-
-            .navbar .hamburger,
-            #hamburger {
-
-                order: 2 !important;
-
-                position: relative !important;
-
-                left: auto !important;
-
-                right: auto !important;
-
-                top: auto !important;
-
-                margin: 0 !important;
-
-                display: flex !important;
-
-                flex-direction: column;
-
-                justify-content: center;
-
-                gap: 5px;
-
-            }
-
-
-            /*
-             MENU MOBILE
-            */
-
-            .nav-menu {
-
-                position: absolute;
-
-                top: 80px;
-
-                left: 0;
-
-                right: 0;
-
-                width: 100%;
-
-                display: none;
-
-                flex-direction: column;
-
-                background:
-                    #FFFFFF;
-
-                padding:
-                    20px 25px;
-
-                box-shadow:
-                    0 10px 25px rgba(0,0,0,.08);
-
-                z-index: 999;
-
-            }
-
-
-            .nav-menu.active {
-
-                display: flex;
-
-            }
-
-
-            .nav-menu a {
-
-                padding:
-                    12px 0;
-
-            }
-
-
-            .btn-navbar {
-
-                display: none !important;
-
+            .article-card:nth-child(n + 3) {
+                padding-top: 5px;
             }
 
         }
 
 
         /* =====================================================
-           MOBILE BLOG
-        ====================================================== */
+           MOBILE
+        ===================================================== */
 
         @media (max-width: 768px) {
 
             .blog-hero {
-
-                padding:
-                    45px 20px 43px;
-
+                padding: 38px 20px 34px;
             }
-
 
             .hero-inner {
-
-                max-width: none;
-
+                max-width: 100%;
             }
-
 
             .hero-top {
-
-                margin-bottom: 14px;
-
+                margin-bottom: 12px;
             }
-
 
             .hero-label {
-
                 font-size: 10px;
-
             }
 
+            .hero-line {
+                width: 28px;
+                height: 3px;
+            }
 
             .blog-hero h1 {
-
-                max-width: 100%;
-
-                margin-bottom: 14px;
+                margin-bottom: 12px;
 
                 font-size: 33px;
-
-                line-height: 1.18;
-
+                line-height: 1.16;
             }
 
-
             .hero-description {
-
-                max-width: 100%;
-
                 font-size: 12px;
-
                 line-height: 1.75;
-
             }
 
 
             /* CONTAINER */
 
             .blog-container {
-
-                width: 100%;
-
-                max-width: none;
-
-                padding:
-                    34px 36px 55px;
-
+                padding: 0 20px 30px;
             }
 
 
             /* SECTION */
 
             .latest-section {
-
-                margin-bottom: 42px;
-
+                padding-top: 22px;
+                padding-bottom: 4px;
             }
-
 
             .category-section {
+                padding-top: 22px;
+                padding-bottom: 4px;
 
-                margin-bottom: 42px;
-
+                margin: 0;
             }
 
+
+            /* HEADING */
+
+            .section-heading,
+            .category-heading {
+                margin-bottom: 11px;
+            }
 
             .section-heading h2,
             .category-heading h2 {
-
-                font-size: 12px;
-
+                font-size: 13px;
             }
 
+            .category-heading h2 {
+                padding-left: 11px;
+            }
+
+            .category-heading h2::before {
+                width: 3px;
+                height: 15px;
+            }
 
             .see-all {
-
-                padding:
-                    7px 10px;
-
-                font-size: 8px;
-
+                font-size: 9px;
             }
 
 
+            /* GARIS */
+
             .section-line {
-
-                margin-bottom: 34px;
-
+                margin-bottom: 17px;
             }
 
 
             /* GRID */
 
             .article-grid {
+                grid-template-columns: 1fr;
 
-                display: grid;
-
-                grid-template-columns:
-                    1fr !important;
-
-                gap: 0 !important;
-
+                gap: 0;
             }
 
 
             /* CARD */
 
-            .article-card {
+            .article-card,
+            .article-card:first-child,
+            .article-card:last-child,
+            .article-card:nth-child(2n),
+            .article-card:nth-child(2n + 1),
+            .article-card:nth-child(n + 3) {
 
-                width: 100%;
+                padding: 0 0 22px;
 
-                padding:
-                    0 0 34px !important;
+                margin-bottom: 22px;
 
-                margin:
-                    0 0 34px !important;
-
-                background: transparent !important;
-
-                border:
-                    none !important;
-
-                border-bottom:
-                    1px solid #E5E7EB !important;
-
-                border-radius: 0 !important;
-
+                border-right: none;
+                border-bottom: 1px solid var(--border);
             }
-
-
-            /*
-             HAPUS GARIS VERTIKAL
-            */
-
-            .article-card:not(:nth-child(4n + 1)) {
-
-                padding-left: 0 !important;
-
-                border-left: none !important;
-
-            }
-
-
-            /*
-             ARTIKEL TERAKHIR
-            */
 
             .article-card:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
 
-                margin-bottom: 0 !important;
-
+                border-bottom: none;
             }
 
 
             /* IMAGE */
 
             .article-image {
+                width: 100%;
 
-                width: 100% !important;
+                height: auto;
 
-                height: auto !important;
+                aspect-ratio: 16 / 9;
 
-                aspect-ratio:
-                    16 / 9 !important;
+                margin-bottom: 13px;
 
-                border-radius: 0 !important;
-
+                border-radius: 10px;
             }
 
 
-            .article-image img {
+            /* BADGE */
 
-                width: 100% !important;
+            .new-badge {
+                top: 9px;
+                left: 9px;
 
-                height: 100% !important;
-
-                object-fit: cover !important;
-
+                font-size: 8px;
             }
 
 
-            /* CONTENT */
-
-            .article-card-content {
-
-                padding-top:
-                    18px !important;
-
-            }
-
+            /* CATEGORY */
 
             .article-category {
+                margin-bottom: 6px;
 
-                margin-bottom:
-                    8px !important;
-
-                font-size:
-                    9px !important;
-
+                font-size: 9px;
             }
 
+
+            /* TITLE */
 
             .article-card h3 {
+                margin-bottom: 8px;
 
-                margin-bottom:
-                    10px !important;
-
-                font-size:
-                    24px !important;
-
-                line-height:
-                    1.35 !important;
-
-                font-weight:
-                    700 !important;
-
+                font-size: 21px;
+                line-height: 1.35;
             }
 
+
+            /* DESCRIPTION */
 
             .article-description {
+                margin-bottom: 9px;
 
-                margin-bottom:
-                    13px !important;
+                font-size: 12px;
+                line-height: 1.7;
 
-                font-size:
-                    16px !important;
-
-                line-height:
-                    1.65 !important;
-
+                -webkit-line-clamp: 3;
             }
 
 
+            /* META */
+
             .article-meta {
+                font-size: 9px;
+            }
 
-                font-size:
-                    11px !important;
 
+            /* CTA */
+
+            .blog-cta {
+                margin-top: 20px;
+
+                padding: 25px 20px;
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 18px;
+
+                border-radius: 14px;
+            }
+
+            .blog-cta-content h2 {
+                font-size: 20px;
+            }
+
+            .blog-cta-content p {
+                font-size: 11px;
+            }
+
+            .blog-cta-buttons {
+                width: 100%;
+            }
+
+            .cta-button {
+                flex: 1;
+
+                font-size: 10px;
             }
 
         }
@@ -1208,121 +852,20 @@
 
         /* =====================================================
            HP KECIL
-        ====================================================== */
+        ===================================================== */
 
-        @media (max-width: 480px) {
-
-            .navbar {
-
-                height: 76px;
-
-                padding:
-                    0 20px !important;
-
-            }
-
-
-            .navbar .logo img {
-
-                width:
-                    135px !important;
-
-            }
-
-
-            .nav-menu {
-
-                top: 76px;
-
-            }
-
-
-            .blog-container {
-
-                padding:
-                    30px 30px 50px;
-
-            }
-
-
-            .blog-hero {
-
-                padding:
-                    42px 20px 40px;
-
-            }
-
+        @media (max-width: 420px) {
 
             .blog-hero h1 {
-
-                font-size:
-                    30px;
-
+                font-size: 30px;
             }
-
 
             .hero-description {
-
-                font-size:
-                    11.5px;
-
+                font-size: 11.5px;
             }
-
-
-            .article-image {
-
-                aspect-ratio:
-                    16 / 9 !important;
-
-            }
-
-
-            .article-card-content {
-
-                padding-top:
-                    17px !important;
-
-            }
-
 
             .article-card h3 {
-
-                font-size:
-                    21px !important;
-
-                line-height:
-                    1.38 !important;
-
-            }
-
-
-            .article-description {
-
-                font-size:
-                    14px !important;
-
-                line-height:
-                    1.65 !important;
-
-            }
-
-
-            .article-meta {
-
-                font-size:
-                    10px !important;
-
-            }
-
-
-            .article-card {
-
-                padding-bottom:
-                    30px !important;
-
-                margin-bottom:
-                    30px !important;
-
+                font-size: 20px;
             }
 
         }
@@ -1336,25 +879,19 @@
 
 
     <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
+         NAVBAR UTAMA
+    ===================================================== -->
 
     <header class="navbar">
-
-
-        <!-- LOGO -->
 
         <div class="logo">
 
             <img
                 src="logo primagama png.jpeg"
-                alt="Logo New Primagama"
-            >
+                alt="Logo New Primagama Sunter Indah">
 
         </div>
 
-
-        <!-- MENU -->
 
         <nav class="nav-menu">
 
@@ -1382,32 +919,25 @@
                 Kontak
             </a>
 
-            <a
-                href="blog.html"
-                class="active"
-            >
+            <a href="blog.html" class="active">
                 Blog
             </a>
 
         </nav>
 
 
-        <!-- DAFTAR -->
-
         <a
             href="index.html#kontak"
-            class="btn-navbar"
-        >
+            class="btn-navbar">
+
             Daftar Sekarang
+
         </a>
 
 
-        <!-- HAMBURGER -->
-
         <div
             class="hamburger"
-            id="hamburger"
-        >
+            id="hamburger">
 
             <span></span>
             <span></span>
@@ -1415,19 +945,17 @@
 
         </div>
 
-
     </header>
 
 
 
     <!-- =====================================================
-         BLOG HERO
+         HERO BLOG
     ====================================================== -->
 
     <section class="blog-hero">
 
         <div class="hero-inner">
-
 
             <div class="hero-top">
 
@@ -1441,11 +969,8 @@
 
 
             <h1>
-
-                Info belajar, sekolah,
-                <br>
+                Info belajar, sekolah,<br>
                 dan persiapan ujian.
-
             </h1>
 
 
@@ -1457,7 +982,6 @@
 
             </p>
 
-
         </div>
 
     </section>
@@ -1465,7 +989,7 @@
 
 
     <!-- =====================================================
-         BLOG CONTENT
+         BLOG
     ====================================================== -->
 
     <main class="blog-container">
@@ -1476,7 +1000,6 @@
         ================================================== -->
 
         <section class="latest-section">
-
 
             <div class="section-heading">
 
@@ -1498,9 +1021,9 @@
 
             <div
                 class="article-grid"
-                id="latestArticles"
-            ></div>
+                id="latestArticles">
 
+            </div>
 
         </section>
 
@@ -1511,6 +1034,53 @@
         ================================================== -->
 
         <div id="categoryContainer"></div>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="blog-cta">
+
+            <div class="blog-cta-content">
+
+                <h2>
+                    Siap belajar lebih terarah?
+                </h2>
+
+                <p>
+                    Dapatkan pendampingan belajar yang sesuai
+                    dengan kebutuhanmu bersama New Primagama
+                    Sunter Indah.
+                </p>
+
+            </div>
+
+
+            <div class="blog-cta-buttons">
+
+                <a
+                    href="https://wa.me/6285285705335"
+                    class="cta-button cta-primary"
+                    target="_blank">
+
+                    Konsultasi Gratis
+
+                </a>
+
+
+                <a
+                    href="index.html#kontak"
+                    class="cta-button cta-secondary">
+
+                    Daftar Sekarang
+
+                </a>
+
+            </div>
+
+        </section>
 
 
     </main>
@@ -1540,20 +1110,16 @@
         /* =====================================================
            DATABASE ARTIKEL
 
-           UNTUK TAMBAH ARTIKEL:
-           tinggal copy salah satu object
-           lalu ubah datanya.
-        ====================================================== */
+           TAMBAHKAN ARTIKEL BARU DI BAGIAN INI.
+        ===================================================== */
 
         const articles = [
-
 
             /* =================================================
                TKA
             ================================================= */
 
             {
-
                 title:
                     "TKA Makin Dekat? Jangan Panik, Ini yang Harus Kamu Siapin",
 
@@ -1577,7 +1143,6 @@
 
                 link:
                     "arti-tka-makin-dekat.html"
-
             },
 
 
@@ -1586,7 +1151,6 @@
             ================================================== */
 
             {
-
                 title:
                     "Belajar Lama Belum Tentu Efektif, Ini Cara Biar Belajarmu Plus Nempel!",
 
@@ -1610,7 +1174,6 @@
 
                 link:
                     "cara-belajar-efektif.html"
-
             },
 
 
@@ -1619,7 +1182,6 @@
             ================================================== */
 
             {
-
                 title:
                     "Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!",
 
@@ -1643,12 +1205,10 @@
 
                 link:
                     "arti-penting-pendidikan.html"
-
             },
 
 
             {
-
                 title:
                     "Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua?",
 
@@ -1672,7 +1232,6 @@
 
                 link:
                     "sekolah-tugas-eskul-main.html"
-
             },
 
 
@@ -1681,7 +1240,6 @@
             ================================================== */
 
             {
-
                 title:
                     "Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!",
 
@@ -1705,9 +1263,7 @@
 
                 link:
                     "tips-menghadapi-ujian.html"
-
             }
-
 
         ];
 
@@ -1728,7 +1284,7 @@
 
         /* =====================================================
            ARTIKEL TERBARU
-           HANYA 4 ARTIKEL
+           4 ARTIKEL TERBARU
         ====================================================== */
 
         const latestContainer =
@@ -1767,15 +1323,17 @@
 
 
 
+        /* =====================================================
+           CONTAINER KATEGORI
+        ====================================================== */
+
         const categoryContainer =
-            document.getElementById(
-                "categoryContainer"
-            );
+            document.getElementById("categoryContainer");
 
 
 
         /* =====================================================
-           BUAT SECTION KATEGORI
+           MEMBUAT SECTION KATEGORI
         ====================================================== */
 
         categories.forEach(function(category) {
@@ -1811,17 +1369,13 @@
                         ${category}
                     </h2>
 
-
                     <a
                         href="#${slugify(category)}"
-                        class="see-all"
-                    >
+                        class="see-all">
 
                         LIHAT SEMUA
 
-                        <i
-                            class="fa-solid fa-arrow-right"
-                        ></i>
+                        <i class="fa-solid fa-arrow-right"></i>
 
                     </a>
 
@@ -1852,15 +1406,12 @@
                         :
 
                         `
-
                         <div class="empty-category">
 
                             Belum ada artikel dalam kategori ini.
 
                         </div>
-
                         `
-
                     }
 
                 </div>
@@ -1875,7 +1426,7 @@
 
 
         /* =====================================================
-           FUNGSI CARD ARTIKEL
+           CARD ARTIKEL
         ====================================================== */
 
         function createArticleCard(
@@ -1891,13 +1442,9 @@
                 ?
 
                 `
-
                 <span class="new-badge">
-
                     TERBARU
-
                 </span>
-
                 `
 
                 :
@@ -1910,81 +1457,58 @@
 
                 <article class="article-card">
 
-
                     ${latestBadge}
 
 
-                    <!-- GAMBAR -->
-
                     <a
                         href="${article.link}"
-                        class="article-image"
-                    >
+                        class="article-image">
 
                         <img
-
                             src="${article.image}"
-
                             alt="${article.title}"
-
-                            loading="lazy"
-
-                        >
+                            loading="lazy">
 
                     </a>
 
 
+                    <div class="article-category">
 
-                    <!-- CONTENT -->
-
-                    <div class="article-card-content">
-
-
-                        <div class="article-category">
-
-                            ${article.category}
-
-                        </div>
-
-
-                        <h3>
-
-                            <a
-                                href="${article.link}"
-                            >
-
-                                ${article.title}
-
-                            </a>
-
-                        </h3>
-
-
-                        <p class="article-description">
-
-                            ${article.description}
-
-                        </p>
-
-
-                        <div class="article-meta">
-
-                            <i
-                                class="fa-regular fa-calendar"
-                            ></i>
-
-
-                            <span class="date">
-
-                                ${article.dateDisplay}
-
-                            </span>
-
-                        </div>
-
+                        ${article.category}
 
                     </div>
 
+
+                    <h3>
+
+                        <a
+                            href="${article.link}">
+
+                            ${article.title}
+
+                        </a>
+
+                    </h3>
+
+
+                    <p class="article-description">
+
+                        ${article.description}
+
+                    </p>
+
+
+                    <div class="article-meta">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <span class="date">
+
+                            ${article.dateDisplay}
+
+                        </span>
+
+                    </div>
 
                 </article>
 
@@ -1995,7 +1519,7 @@
 
 
         /* =====================================================
-           SLUGIFY
+           SLUG KATEGORI
         ====================================================== */
 
         function slugify(text) {
@@ -2004,39 +1528,26 @@
 
                 .toLowerCase()
 
-                .replace(
-                    /&/g,
-                    "dan"
-                )
+                .replace(/&/g, "dan")
 
-                .replace(
-                    /\s+/g,
-                    "-"
-                )
+                .replace(/\s+/g, "-")
 
-                .replace(
-                    /[^a-z0-9-]/g,
-                    ""
-                );
+                .replace(/[^a-z0-9-]/g, "");
 
         }
 
 
 
         /* =====================================================
-           HAMBURGER
+           HAMBURGER MOBILE
         ====================================================== */
 
         const hamburger =
-            document.getElementById(
-                "hamburger"
-            );
+            document.getElementById("hamburger");
 
 
         const navMenu =
-            document.querySelector(
-                ".nav-menu"
-            );
+            document.querySelector(".nav-menu");
 
 
         if (
@@ -2060,7 +1571,7 @@
 
 
         /* =====================================================
-           TUTUP MENU SETELAH KLIK LINK
+           TUTUP MENU SAAT LINK DIPENCET
         ====================================================== */
 
         const navLinks =
@@ -2087,7 +1598,6 @@
             );
 
         });
-
 
     </script>
 
