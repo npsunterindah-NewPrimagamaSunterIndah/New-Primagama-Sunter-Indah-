@@ -45,13 +45,22 @@
 
         body {
             margin: 0;
+            padding: 0;
+
             background: #f8fafc;
             color: #1e293b;
+
             font-family: "Poppins", sans-serif;
+
+            overflow-x: hidden;
         }
 
         a {
             text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
         }
 
 
@@ -60,6 +69,7 @@
         ===================================================== */
 
         :root {
+
             --purple: #5b21b6;
             --purple-dark: #4c1d95;
             --purple-light: #f3e8ff;
@@ -70,7 +80,9 @@
             --muted: #64748b;
 
             --border: #e2e8f0;
+
             --white: #ffffff;
+
         }
 
 
@@ -79,58 +91,98 @@
         ===================================================== */
 
         .blog-hero {
+
+            position: relative;
+            z-index: 1;
+
+            width: 100%;
+
             background: #f8f7ff;
+
             border-bottom: 1px solid #eeeaf7;
 
-            padding: 48px 6% 42px;
+            /*
+                Navbar desktop = sekitar 80px
+                Navbar mobile = sekitar 70px
+
+                Padding dibuat aman supaya
+                tulisan tidak terasa ketutup navbar.
+            */
+
+            padding: 58px 6% 45px;
+
         }
+
 
         .hero-inner {
+
             width: 100%;
+
             max-width: 1180px;
+
             margin: 0 auto;
+
         }
+
 
         .hero-top {
+
             display: flex;
+
             align-items: center;
+
             gap: 10px;
 
-            margin-bottom: 13px;
+            margin-bottom: 15px;
+
         }
 
+
         .hero-label {
-            color: var(--purple);
+
+            color: #5b21b6;
 
             font-size: 11px;
+
             font-weight: 700;
 
             letter-spacing: .7px;
+
         }
+
 
         .hero-line {
+
             width: 35px;
+
             height: 3px;
 
-            background: var(--yellow);
+            background: #facc15;
 
             border-radius: 10px;
+
         }
 
+
         .blog-hero h1 {
+
             max-width: 750px;
 
-            margin: 0 0 13px;
+            margin: 0 0 15px;
 
             color: #1e1b4b;
 
             font-size: clamp(34px, 4.2vw, 50px);
-            line-height: 1.16;
+
+            line-height: 1.18;
 
             font-weight: 800;
+
         }
 
+
         .hero-description {
+
             max-width: 650px;
 
             margin: 0;
@@ -138,38 +190,54 @@
             color: #64748b;
 
             font-size: 14px;
-            line-height: 1.75;
+
+            line-height: 1.8;
+
         }
 
 
         /* =====================================================
-           CONTAINER BLOG
+           BLOG CONTAINER
         ===================================================== */
 
         .blog-container {
+
             width: 100%;
+
             max-width: 1585px;
 
             margin: 0 auto;
 
             padding: 0 6% 45px;
+
         }
 
 
         /* =====================================================
-           SEMUA SECTION
+           ARTIKEL TERBARU
         ===================================================== */
 
         .latest-section {
+
             padding-top: 27px;
-            padding-bottom: 15px;
+
+            padding-bottom: 7px;
+
         }
 
+
+        /* =====================================================
+           KATEGORI
+        ===================================================== */
+
         .category-section {
+
             margin: 0;
-            padding: 23px 0 15px;
+
+            padding: 23px 0 7px;
 
             scroll-margin-top: 90px;
+
         }
 
 
@@ -179,58 +247,83 @@
 
         .section-heading,
         .category-heading {
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             margin: 0 0 13px;
+
         }
+
 
         .section-heading-left {
+
             display: flex;
+
             align-items: center;
+
             gap: 9px;
+
         }
 
+
         .section-heading-left i {
+
             color: #eab308;
+
             font-size: 13px;
+
         }
+
 
         .section-heading h2,
         .category-heading h2 {
+
             margin: 0;
 
-            color: var(--text);
+            color: #1e293b;
 
             font-size: 16px;
+
             line-height: 1.2;
 
             font-weight: 800;
 
             text-transform: uppercase;
+
         }
 
+
         .category-heading h2 {
+
             position: relative;
 
             padding-left: 12px;
+
         }
 
+
         .category-heading h2::before {
+
             content: "";
 
             position: absolute;
 
             left: 0;
+
             top: 1px;
 
             width: 4px;
+
             height: 17px;
 
-            background: var(--purple);
+            background: #5b21b6;
 
             border-radius: 4px;
+
         }
 
 
@@ -239,103 +332,139 @@
         ===================================================== */
 
         .see-all {
+
             display: inline-flex;
 
             align-items: center;
+
             gap: 6px;
 
-            color: var(--purple);
+            color: #5b21b6;
 
             font-size: 10px;
+
             font-weight: 700;
 
             transition: .2s ease;
+
         }
 
+
         .see-all i {
+
             font-size: 9px;
 
             transition: transform .2s ease;
+
         }
+
 
         .see-all:hover {
-            color: var(--purple-dark);
+
+            color: #4c1d95;
+
         }
 
+
         .see-all:hover i {
+
             transform: translateX(3px);
+
         }
 
 
         /* =====================================================
-           GARIS SECTION
+           GARIS
         ===================================================== */
 
         .section-line {
+
             width: 100%;
+
             height: 2px;
 
             margin-bottom: 20px;
 
             background:
+
                 linear-gradient(
+
                     to right,
-                    var(--yellow) 0,
-                    var(--yellow) 100px,
-                    var(--border) 100px,
-                    var(--border) 100%
+
+                    #facc15 0,
+
+                    #facc15 100px,
+
+                    #e2e8f0 100px,
+
+                    #e2e8f0 100%
+
                 );
+
         }
 
 
         /* =====================================================
-           GRID ARTIKEL
+           GRID
         ===================================================== */
 
         .article-grid {
+
             display: grid;
 
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
 
             gap: 0;
+
         }
 
 
         /* =====================================================
-           CARD ARTIKEL
+           ARTICLE CARD
         ===================================================== */
 
         .article-card {
+
             position: relative;
 
             min-width: 0;
 
             padding: 0 20px;
 
-            border-right: 1px solid var(--border);
+            border-right: 1px solid #e2e8f0;
+
         }
+
 
         .article-card:first-child {
+
             padding-left: 0;
+
         }
 
+
         .article-card:last-child {
+
             padding-right: 0;
 
             border-right: none;
+
         }
 
 
         /* =====================================================
-           GAMBAR
+           IMAGE
         ===================================================== */
 
         .article-image {
+
             position: relative;
 
             display: block;
 
             width: 100%;
+
             height: 190px;
 
             margin-bottom: 13px;
@@ -345,21 +474,30 @@
             border-radius: 10px;
 
             background: #f3e8ff;
+
         }
 
+
         .article-image img {
+
             display: block;
 
             width: 100%;
+
             height: 100%;
 
             object-fit: cover;
 
             transition: transform .3s ease;
+
         }
 
-        .article-card:hover .article-image img {
+
+        .article-card:hover
+        .article-image img {
+
             transform: scale(1.04);
+
         }
 
 
@@ -368,9 +506,11 @@
         ===================================================== */
 
         .new-badge {
+
             position: absolute;
 
             top: 10px;
+
             left: 10px;
 
             z-index: 5;
@@ -379,14 +519,16 @@
 
             border-radius: 5px;
 
-            background: var(--yellow);
+            background: #facc15;
 
             color: #422006;
 
             font-size: 8px;
+
             font-weight: 800;
 
             letter-spacing: .3px;
+
         }
 
 
@@ -395,38 +537,50 @@
         ===================================================== */
 
         .article-category {
+
             margin-bottom: 6px;
 
-            color: var(--purple);
+            color: #5b21b6;
 
             font-size: 9px;
+
             font-weight: 700;
 
             text-transform: uppercase;
+
         }
 
 
         /* =====================================================
-           JUDUL ARTIKEL
+           JUDUL
         ===================================================== */
 
         .article-card h3 {
+
             margin: 0 0 8px;
 
             font-size: 15px;
+
             line-height: 1.45;
 
             font-weight: 700;
+
         }
+
 
         .article-card h3 a {
-            color: var(--text);
+
+            color: #1e293b;
 
             transition: .2s ease;
+
         }
 
+
         .article-card h3 a:hover {
-            color: var(--purple);
+
+            color: #5b21b6;
+
         }
 
 
@@ -435,44 +589,81 @@
         ===================================================== */
 
         .article-description {
+
             margin: 0 0 9px;
 
-            color: var(--muted);
+            color: #64748b;
 
             font-size: 10px;
+
             line-height: 1.6;
 
             display: -webkit-box;
 
             -webkit-box-orient: vertical;
+
             -webkit-line-clamp: 3;
 
             overflow: hidden;
+
         }
 
 
         /* =====================================================
-           META / TANGGAL
+           META
         ===================================================== */
 
         .article-meta {
+
             display: flex;
+
             align-items: center;
+
             gap: 4px;
 
             color: #94a3b8;
 
             font-size: 9px;
+
             line-height: 1.5;
+
         }
+
 
         .article-meta i {
+
             font-size: 8px;
+
         }
 
+
         .article-meta .date {
+
             color: #64748b;
+
             font-weight: 500;
+
+        }
+
+
+        /* =====================================================
+           EMPTY
+        ===================================================== */
+
+        .empty-category {
+
+            grid-column: 1 / -1;
+
+            padding: 25px;
+
+            text-align: center;
+
+            border: 1px dashed #e2e8f0;
+
+            color: #94a3b8;
+
+            font-size: 11px;
+
         }
 
 
@@ -481,6 +672,7 @@
         ===================================================== */
 
         .blog-cta {
+
             margin-top: 28px;
 
             padding: 34px 35px;
@@ -497,22 +689,31 @@
             color: #ffffff;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             gap: 25px;
+
         }
 
+
         .blog-cta-content h2 {
+
             margin: 0 0 7px;
 
             font-size: 23px;
+
             line-height: 1.25;
 
             font-weight: 800;
+
         }
 
+
         .blog-cta-content p {
+
             max-width: 620px;
 
             margin: 0;
@@ -520,20 +721,29 @@
             color: rgba(255,255,255,.85);
 
             font-size: 12px;
+
             line-height: 1.7;
+
         }
 
+
         .blog-cta-buttons {
+
             display: flex;
+
             gap: 10px;
 
             flex-shrink: 0;
+
         }
 
+
         .cta-button {
+
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             padding: 11px 17px;
@@ -541,56 +751,27 @@
             border-radius: 8px;
 
             font-size: 11px;
+
             font-weight: 700;
+
         }
+
 
         .cta-primary {
-            background: var(--yellow);
+
+            background: #facc15;
+
             color: #422006;
+
         }
 
+
         .cta-secondary {
+
             border: 1px solid rgba(255,255,255,.45);
 
             color: #ffffff;
-        }
 
-
-        /* =====================================================
-           EMPTY CATEGORY
-        ===================================================== */
-
-        .empty-category {
-            grid-column: 1 / -1;
-
-            padding: 25px;
-
-            text-align: center;
-
-            border: 1px dashed var(--border);
-
-            color: #94a3b8;
-
-            font-size: 11px;
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        .blog-footer {
-            padding: 25px 20px;
-
-            border-top: 1px solid var(--border);
-
-            background: #ffffff;
-
-            text-align: center;
-
-            color: var(--muted);
-
-            font-size: 11px;
         }
 
 
@@ -601,22 +782,35 @@
         @media (max-width: 1000px) {
 
             .article-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
 
                 row-gap: 25px;
+
             }
+
 
             .article-card:nth-child(2n) {
+
                 padding-right: 0;
+
                 border-right: none;
+
             }
+
 
             .article-card:nth-child(2n + 1) {
+
                 padding-left: 0;
+
             }
 
+
             .article-card:nth-child(n + 3) {
+
                 padding-top: 5px;
+
             }
 
         }
@@ -628,105 +822,183 @@
 
         @media (max-width: 768px) {
 
+
+            /* -------------------------------------------------
+               HERO
+            ------------------------------------------------- */
+
             .blog-hero {
-                padding: 38px 20px 34px;
+
+                padding: 43px 20px 38px;
+
             }
+
 
             .hero-inner {
+
                 max-width: 100%;
+
             }
+
 
             .hero-top {
-                margin-bottom: 12px;
+
+                margin-bottom: 13px;
+
             }
+
 
             .hero-label {
+
                 font-size: 10px;
+
             }
+
 
             .hero-line {
+
                 width: 28px;
+
                 height: 3px;
+
             }
+
 
             .blog-hero h1 {
-                margin-bottom: 12px;
 
-                font-size: 33px;
-                line-height: 1.16;
+                margin-bottom: 13px;
+
+                font-size: 32px;
+
+                line-height: 1.18;
+
             }
+
 
             .hero-description {
+
                 font-size: 12px;
+
                 line-height: 1.75;
+
             }
 
 
-            /* CONTAINER */
+
+            /* -------------------------------------------------
+               CONTAINER
+            ------------------------------------------------- */
 
             .blog-container {
-                padding: 0 20px 30px;
+
+                padding:
+
+                    0
+
+                    20px
+
+                    30px;
+
             }
 
 
-            /* SECTION */
+
+            /* -------------------------------------------------
+               SECTION
+            ------------------------------------------------- */
 
             .latest-section {
+
                 padding-top: 22px;
+
                 padding-bottom: 4px;
+
             }
+
 
             .category-section {
+
                 padding-top: 22px;
+
                 padding-bottom: 4px;
 
-                margin: 0;
             }
 
 
-            /* HEADING */
+
+            /* -------------------------------------------------
+               HEADING
+            ------------------------------------------------- */
 
             .section-heading,
             .category-heading {
+
                 margin-bottom: 11px;
+
             }
+
 
             .section-heading h2,
             .category-heading h2 {
+
                 font-size: 13px;
+
             }
+
 
             .category-heading h2 {
+
                 padding-left: 11px;
+
             }
+
 
             .category-heading h2::before {
+
                 width: 3px;
+
                 height: 15px;
+
             }
+
 
             .see-all {
+
                 font-size: 9px;
+
             }
 
 
-            /* GARIS */
+
+            /* -------------------------------------------------
+               GARIS
+            ------------------------------------------------- */
 
             .section-line {
+
                 margin-bottom: 17px;
+
             }
 
 
-            /* GRID */
+
+            /* -------------------------------------------------
+               GRID
+            ------------------------------------------------- */
 
             .article-grid {
+
                 grid-template-columns: 1fr;
 
                 gap: 0;
+
             }
 
 
-            /* CARD */
+
+            /* -------------------------------------------------
+               CARD MOBILE
+            ------------------------------------------------- */
 
             .article-card,
             .article-card:first-child,
@@ -735,25 +1007,42 @@
             .article-card:nth-child(2n + 1),
             .article-card:nth-child(n + 3) {
 
-                padding: 0 0 22px;
+                padding:
+
+                    0
+
+                    0
+
+                    22px;
 
                 margin-bottom: 22px;
 
                 border-right: none;
-                border-bottom: 1px solid var(--border);
+
+                border-bottom:
+                    1px solid #e2e8f0;
+
             }
 
+
             .article-card:last-child {
+
                 margin-bottom: 0;
+
                 padding-bottom: 0;
 
                 border-bottom: none;
+
             }
 
 
-            /* IMAGE */
+
+            /* -------------------------------------------------
+               IMAGE MOBILE
+            ------------------------------------------------- */
 
             .article-image {
+
                 width: 100%;
 
                 height: auto;
@@ -763,88 +1052,135 @@
                 margin-bottom: 13px;
 
                 border-radius: 10px;
+
             }
 
 
-            /* BADGE */
+
+            /* -------------------------------------------------
+               BADGE
+            ------------------------------------------------- */
 
             .new-badge {
+
                 top: 9px;
+
                 left: 9px;
 
                 font-size: 8px;
+
             }
 
 
-            /* CATEGORY */
+
+            /* -------------------------------------------------
+               CATEGORY
+            ------------------------------------------------- */
 
             .article-category {
+
                 margin-bottom: 6px;
 
                 font-size: 9px;
+
             }
 
 
-            /* TITLE */
+
+            /* -------------------------------------------------
+               TITLE MOBILE
+            ------------------------------------------------- */
 
             .article-card h3 {
+
                 margin-bottom: 8px;
 
                 font-size: 21px;
+
                 line-height: 1.35;
+
             }
 
 
-            /* DESCRIPTION */
+
+            /* -------------------------------------------------
+               DESCRIPTION MOBILE
+            ------------------------------------------------- */
 
             .article-description {
+
                 margin-bottom: 9px;
 
                 font-size: 12px;
+
                 line-height: 1.7;
 
                 -webkit-line-clamp: 3;
+
             }
 
 
-            /* META */
+
+            /* -------------------------------------------------
+               META
+            ------------------------------------------------- */
 
             .article-meta {
+
                 font-size: 9px;
+
             }
 
 
-            /* CTA */
+
+            /* -------------------------------------------------
+               CTA MOBILE
+            ------------------------------------------------- */
 
             .blog-cta {
+
                 margin-top: 20px;
 
                 padding: 25px 20px;
 
                 flex-direction: column;
+
                 align-items: flex-start;
 
                 gap: 18px;
 
                 border-radius: 14px;
+
             }
+
 
             .blog-cta-content h2 {
+
                 font-size: 20px;
+
             }
+
 
             .blog-cta-content p {
+
                 font-size: 11px;
+
             }
+
 
             .blog-cta-buttons {
+
                 width: 100%;
+
             }
 
+
             .cta-button {
+
                 flex: 1;
 
                 font-size: 10px;
+
             }
 
         }
@@ -856,16 +1192,33 @@
 
         @media (max-width: 420px) {
 
-            .blog-hero h1 {
-                font-size: 30px;
+            .blog-hero {
+
+                padding-top: 40px;
+
+                padding-bottom: 35px;
+
             }
+
+
+            .blog-hero h1 {
+
+                font-size: 29px;
+
+            }
+
 
             .hero-description {
+
                 font-size: 11.5px;
+
             }
 
+
             .article-card h3 {
+
                 font-size: 20px;
+
             }
 
         }
@@ -879,10 +1232,11 @@
 
 
     <!-- =====================================================
-         NAVBAR UTAMA
+         NAVBAR
     ===================================================== -->
 
     <header class="navbar">
+
 
         <div class="logo">
 
@@ -893,37 +1247,51 @@
         </div>
 
 
+
         <nav class="nav-menu">
+
 
             <a href="index.html#hero">
                 Beranda
             </a>
 
+
             <a href="index.html#tentang">
                 Tentang
             </a>
+
 
             <a href="index.html#program">
                 Program
             </a>
 
+
             <a href="index.html#fasilitas">
                 Fasilitas
             </a>
+
 
             <a href="index.html#faq">
                 FAQ
             </a>
 
+
             <a href="index.html#kontak">
                 Kontak
             </a>
 
-            <a href="blog.html" class="active">
+
+            <a
+                href="blog.html"
+                class="active">
+
                 Blog
+
             </a>
 
+
         </nav>
+
 
 
         <a
@@ -935,15 +1303,19 @@
         </a>
 
 
+
         <div
             class="hamburger"
             id="hamburger">
 
             <span></span>
+
             <span></span>
+
             <span></span>
 
         </div>
+
 
     </header>
 
@@ -951,27 +1323,38 @@
 
     <!-- =====================================================
          HERO BLOG
-    ====================================================== -->
+    ===================================================== -->
 
     <section class="blog-hero">
 
+
         <div class="hero-inner">
+
 
             <div class="hero-top">
 
+
                 <span class="hero-label">
+
                     BLOG & ARTIKEL
+
                 </span>
 
+
                 <span class="hero-line"></span>
+
 
             </div>
 
 
+
             <h1>
+
                 Info belajar, sekolah,<br>
                 dan persiapan ujian.
+
             </h1>
+
 
 
             <p class="hero-description">
@@ -982,41 +1365,56 @@
 
             </p>
 
+
         </div>
+
 
     </section>
 
 
 
     <!-- =====================================================
-         BLOG
-    ====================================================== -->
+         BLOG CONTENT
+    ===================================================== -->
 
     <main class="blog-container">
+
 
 
         <!-- =================================================
              ARTIKEL TERBARU
         ================================================== -->
 
-        <section class="latest-section">
+        <section
+            class="latest-section"
+            id="latest">
+
 
             <div class="section-heading">
 
+
                 <div class="section-heading-left">
+
 
                     <i class="fa-solid fa-star"></i>
 
+
                     <h2>
+
                         Artikel Terbaru
+
                     </h2>
 
+
                 </div>
+
 
             </div>
 
 
+
             <div class="section-line"></div>
+
 
 
             <div
@@ -1025,12 +1423,13 @@
 
             </div>
 
+
         </section>
 
 
 
         <!-- =================================================
-             KATEGORI
+             KATEGORI AKAN DIBUAT OTOMATIS
         ================================================== -->
 
         <div id="categoryContainer"></div>
@@ -1043,27 +1442,38 @@
 
         <section class="blog-cta">
 
+
             <div class="blog-cta-content">
 
+
                 <h2>
+
                     Siap belajar lebih terarah?
+
                 </h2>
 
+
                 <p>
+
                     Dapatkan pendampingan belajar yang sesuai
                     dengan kebutuhanmu bersama New Primagama
                     Sunter Indah.
+
                 </p>
+
 
             </div>
 
 
+
             <div class="blog-cta-buttons">
+
 
                 <a
                     href="https://wa.me/6285285705335"
                     class="cta-button cta-primary"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener">
 
                     Konsultasi Gratis
 
@@ -1078,7 +1488,9 @@
 
                 </a>
 
+
             </div>
+
 
         </section>
 
@@ -1089,12 +1501,14 @@
 
     <!-- =====================================================
          FOOTER
-    ====================================================== -->
+    ===================================================== -->
 
     <footer class="blog-footer">
 
+
         © 2026 New Primagama Sunter Indah.
         Semua Hak Dilindungi.
+
 
     </footer>
 
@@ -1102,24 +1516,24 @@
 
     <!-- =====================================================
          JAVASCRIPT
-    ====================================================== -->
+    ===================================================== -->
 
     <script>
 
 
         /* =====================================================
-           DATABASE ARTIKEL
-
-           TAMBAHKAN ARTIKEL BARU DI BAGIAN INI.
+           DATA ARTIKEL
         ===================================================== */
 
         const articles = [
+
 
             /* =================================================
                TKA
             ================================================= */
 
             {
+
                 title:
                     "TKA Makin Dekat? Jangan Panik, Ini yang Harus Kamu Siapin",
 
@@ -1143,7 +1557,9 @@
 
                 link:
                     "arti-tka-makin-dekat.html"
+
             },
+
 
 
             /* =================================================
@@ -1151,6 +1567,7 @@
             ================================================== */
 
             {
+
                 title:
                     "Belajar Lama Belum Tentu Efektif, Ini Cara Biar Belajarmu Plus Nempel!",
 
@@ -1174,7 +1591,9 @@
 
                 link:
                     "cara-belajar-efektif.html"
+
             },
+
 
 
             /* =================================================
@@ -1182,6 +1601,7 @@
             ================================================== */
 
             {
+
                 title:
                     "Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!",
 
@@ -1205,10 +1625,12 @@
 
                 link:
                     "arti-penting-pendidikan.html"
+
             },
 
 
             {
+
                 title:
                     "Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua?",
 
@@ -1232,7 +1654,9 @@
 
                 link:
                     "sekolah-tugas-eskul-main.html"
+
             },
+
 
 
             /* =================================================
@@ -1240,6 +1664,7 @@
             ================================================== */
 
             {
+
                 title:
                     "Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!",
 
@@ -1263,6 +1688,7 @@
 
                 link:
                     "tips-menghadapi-ujian.html"
+
             }
 
         ];
@@ -1270,9 +1696,8 @@
 
 
         /* =====================================================
-           URUTKAN ARTIKEL
-           TERBARU → TERLAMA
-        ====================================================== */
+           URUTKAN TERBARU → TERLAMA
+        ===================================================== */
 
         articles.sort(function(a, b) {
 
@@ -1284,11 +1709,14 @@
 
         /* =====================================================
            ARTIKEL TERBARU
-           4 ARTIKEL TERBARU
-        ====================================================== */
+           
+           HANYA 4 ARTIKEL TERBARU
+        ===================================================== */
 
         const latestContainer =
-            document.getElementById("latestArticles");
+            document.getElementById(
+                "latestArticles"
+            );
 
 
         articles
@@ -1306,8 +1734,8 @@
 
 
         /* =====================================================
-           KATEGORI
-        ====================================================== */
+           KATEGORI PERMANEN
+        ===================================================== */
 
         const categories = [
 
@@ -1325,16 +1753,18 @@
 
         /* =====================================================
            CONTAINER KATEGORI
-        ====================================================== */
+        ===================================================== */
 
         const categoryContainer =
-            document.getElementById("categoryContainer");
+            document.getElementById(
+                "categoryContainer"
+            );
 
 
 
         /* =====================================================
-           MEMBUAT SECTION KATEGORI
-        ====================================================== */
+           BUAT SEMUA SECTION KATEGORI
+        ===================================================== */
 
         categories.forEach(function(category) {
 
@@ -1349,7 +1779,9 @@
 
 
             const section =
-                document.createElement("section");
+                document.createElement(
+                    "section"
+                );
 
 
             section.className =
@@ -1363,11 +1795,17 @@
 
             section.innerHTML = `
 
+
                 <div class="category-heading">
 
+
                     <h2>
+
                         ${category}
+
                     </h2>
+
+
 
                     <a
                         href="#${slugify(category)}"
@@ -1379,13 +1817,17 @@
 
                     </a>
 
+
                 </div>
+
 
 
                 <div class="section-line"></div>
 
 
+
                 <div class="article-grid">
+
 
                     ${
                         categoryArticles.length
@@ -1406,20 +1848,28 @@
                         :
 
                         `
-                        <div class="empty-category">
 
-                            Belum ada artikel dalam kategori ini.
+                            <div class="empty-category">
 
-                        </div>
+                                Belum ada artikel dalam kategori ini.
+
+                            </div>
+
                         `
+
                     }
 
+
                 </div>
+
 
             `;
 
 
-            categoryContainer.appendChild(section);
+
+            categoryContainer.appendChild(
+                section
+            );
 
         });
 
@@ -1427,7 +1877,7 @@
 
         /* =====================================================
            CARD ARTIKEL
-        ====================================================== */
+        ===================================================== */
 
         function createArticleCard(
             article,
@@ -1442,9 +1892,13 @@
                 ?
 
                 `
-                <span class="new-badge">
-                    TERBARU
-                </span>
+
+                    <span class="new-badge">
+
+                        TERBARU
+
+                    </span>
+
                 `
 
                 :
@@ -1457,19 +1911,24 @@
 
                 <article class="article-card">
 
+
                     ${latestBadge}
+
 
 
                     <a
                         href="${article.link}"
                         class="article-image">
 
+
                         <img
                             src="${article.image}"
                             alt="${article.title}"
                             loading="lazy">
 
+
                     </a>
+
 
 
                     <div class="article-category">
@@ -1479,7 +1938,9 @@
                     </div>
 
 
+
                     <h3>
+
 
                         <a
                             href="${article.link}">
@@ -1488,7 +1949,9 @@
 
                         </a>
 
+
                     </h3>
+
 
 
                     <p class="article-description">
@@ -1498,9 +1961,14 @@
                     </p>
 
 
+
                     <div class="article-meta">
 
-                        <i class="fa-regular fa-calendar"></i>
+
+                        <i
+                            class="fa-regular fa-calendar">
+                        </i>
+
 
                         <span class="date">
 
@@ -1508,7 +1976,9 @@
 
                         </span>
 
+
                     </div>
+
 
                 </article>
 
@@ -1519,8 +1989,8 @@
 
 
         /* =====================================================
-           SLUG KATEGORI
-        ====================================================== */
+           SLUG
+        ===================================================== */
 
         function slugify(text) {
 
@@ -1539,15 +2009,19 @@
 
 
         /* =====================================================
-           HAMBURGER MOBILE
-        ====================================================== */
+           HAMBURGER
+        ===================================================== */
 
         const hamburger =
-            document.getElementById("hamburger");
+            document.getElementById(
+                "hamburger"
+            );
 
 
         const navMenu =
-            document.querySelector(".nav-menu");
+            document.querySelector(
+                ".nav-menu"
+            );
 
 
         if (
@@ -1555,13 +2029,16 @@
             navMenu
         ) {
 
+
             hamburger.addEventListener(
                 "click",
                 function() {
 
+
                     navMenu.classList.toggle(
                         "active"
                     );
+
 
                 }
             );
@@ -1571,8 +2048,8 @@
 
 
         /* =====================================================
-           TUTUP MENU SAAT LINK DIPENCET
-        ====================================================== */
+           TUTUP NAVBAR MOBILE
+        ===================================================== */
 
         const navLinks =
             document.querySelectorAll(
@@ -1582,9 +2059,11 @@
 
         navLinks.forEach(function(link) {
 
+
             link.addEventListener(
                 "click",
                 function() {
+
 
                     if (navMenu) {
 
@@ -1594,10 +2073,13 @@
 
                     }
 
+
                 }
             );
 
+
         });
+
 
     </script>
 
