@@ -2,467 +2,827 @@
 <html lang="id">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua? | New Primagama Sunter Indah</title>
 
-    <meta name="description"
-        content="Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian. Yuk, cari tahu cara mengatur waktu agar semuanya tetap berjalan dengan baik.">
+    <meta name="description" content="Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian. Yuk, cari tahu cara mengatur waktu agar aktivitas sekolah tetap berjalan tanpa bikin kewalahan.">
 
-    <link rel="icon" href="favicon.ico">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://newprimagamasunterindah.com/sekolah-tugas-eskul-main.html">
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- CSS UTAMA -->
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- OPEN GRAPH -->
+
+    <meta property="og:type" content="article">
+
+    <meta property="og:title" content="Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua?">
+
+    <meta property="og:description" content="Tips mengatur waktu antara sekolah, tugas, ekskul, main, belajar, dan istirahat agar tetap seimbang.">
+
+    <meta property="og:url" content="https://newprimagamasunterindah.com/sekolah-tugas-eskul-main.html">
+
+    <meta property="og:site_name" content="New Primagama Sunter Indah">
+
 
     <style>
 
+        /* =========================================
+           DASAR
+        ========================================== */
+
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f9fc;
-            color: #17213b;
+
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* =========================
+
+        body {
+            margin: 0;
+            padding: 0;
+
+            font-family: 'Poppins', sans-serif;
+
+            background: #f8fafc;
+
+            color: #1e293b;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* =========================================
            NAVBAR
-        ========================= */
+        ========================================== */
 
         .navbar {
-            height: 120px;
-            background: #ffffff;
+            position: sticky;
+
+            top: 0;
+
+            z-index: 9999;
+
+            width: 100%;
+
+            min-height: 80px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
-            padding: 0 70px;
+            padding: 0 6%;
 
-            box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+            background: #ffffff;
 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
         }
+
+
+        .logo {
+            display: flex;
+
+            align-items: center;
+
+            flex-shrink: 0;
+        }
+
 
         .logo img {
-            width: 225px;
+            width: 150px;
+
             height: auto;
+
             display: block;
         }
+
 
         .nav-menu {
             display: flex;
+
             align-items: center;
-            gap: 38px;
-            margin-left: auto;
-            margin-right: 55px;
+
+            justify-content: center;
+
+            gap: 24px;
         }
+
 
         .nav-menu a {
+            color: #334155;
+
             text-decoration: none;
-            color: #344054;
 
-            font-size: 21px;
-            font-weight: 600;
+            font-size: 14px;
 
-            transition: 0.2s;
+            font-weight: 500;
+
+            transition: all 0.3s ease;
         }
+
 
         .nav-menu a:hover {
-            color: #6025c8;
+            color: #5b21b6;
         }
 
+
         .nav-menu a.active {
-            color: #6025c8;
+            color: #5b21b6;
+
             font-weight: 700;
         }
 
-        .nav-button {
-            background: #6025c8;
+
+        .btn-navbar {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #5b21b6;
+
             color: #ffffff !important;
-
-            padding: 17px 30px;
-
-            border-radius: 15px;
-
-            font-size: 18px !important;
-            font-weight: 700 !important;
-
-            white-space: nowrap;
-        }
-
-        .nav-button:hover {
-            background: #4e1eaa;
-        }
-
-
-        /* =========================
-           ARTICLE AREA
-        ========================= */
-
-        .article-wrapper {
-            max-width: 1010px;
-            margin: 0 auto;
-
-            padding: 75px 0 90px;
-        }
-
-
-        /* =========================
-           BACK BUTTON
-        ========================= */
-
-        .back-blog {
-            display: inline-block;
-
-            margin-bottom: 35px;
-
-            color: #6025c8;
 
             text-decoration: none;
 
-            font-size: 17px;
-            font-weight: 700;
+            padding: 11px 20px;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            transition: all 0.3s ease;
         }
 
 
-        /* =========================
-           ARTICLE CARD
-        ========================= */
+        .btn-navbar:hover {
+            background: #4c1d95;
 
-        .article-card {
-            background: #ffffff;
-
-            border-radius: 28px;
-
-            overflow: hidden;
-
-            box-shadow: 0 8px 35px rgba(48, 35, 90, 0.07);
+            transform: translateY(-1px);
         }
 
 
-        /* =========================
-           ARTICLE HEADER
-        ========================= */
+        .hamburger {
+            display: none;
 
-        .article-header {
-            padding: 68px 75px 35px;
-        }
+            flex-direction: column;
 
-        .badge {
-            display: inline-block;
+            justify-content: center;
 
-            background: #f0e6ff;
-            color: #6025c8;
+            gap: 5px;
 
-            padding: 13px 23px;
+            width: 38px;
 
-            border-radius: 50px;
+            height: 38px;
 
-            font-size: 16px;
-            font-weight: 700;
-
-            margin-bottom: 27px;
-
-            text-transform: uppercase;
-        }
-
-        .article-header h1 {
-            font-size: 54px;
-
-            line-height: 1.3;
-
-            letter-spacing: -1.5px;
-
-            color: #18213a;
-
-            margin-bottom: 28px;
+            cursor: pointer;
         }
 
 
-        /* =========================
-           META
-        ========================= */
-
-        .article-meta {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-
-            gap: 25px;
-
-            color: #58708e;
-
-            font-size: 17px;
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .meta-icon {
-            font-size: 20px;
-        }
-
-
-        /* =========================
-           IMAGE
-        ========================= */
-
-        .article-image {
-            padding: 10px 75px 0;
-        }
-
-        .article-image img {
-            width: 100%;
-            height: 450px;
-
-            object-fit: cover;
-
+        .hamburger span {
             display: block;
 
-            border-radius: 18px;
-        }
+            width: 24px;
 
-        .image-credit {
-            text-align: center;
+            height: 3px;
 
-            color: #94a3b8;
+            background: #334155;
 
-            font-size: 12px;
-
-            margin-top: 9px;
+            border-radius: 5px;
         }
 
 
-        /* =========================
-           ARTICLE CONTENT
-        ========================= */
 
-        .article-content {
-            padding: 45px 75px 70px;
-        }
+        /* =========================================
+           ARTICLE HEADER
+        ========================================== */
 
-        .article-content p {
-            color: #52657d;
+        .article-wrapper {
+            width: 100%;
 
-            font-size: 18px;
-
-            line-height: 1.9;
-
-            margin-bottom: 24px;
-        }
-
-        .article-content h2 {
-            color: #4d1daf;
-
-            font-size: 30px;
-
-            line-height: 1.4;
-
-            margin-top: 42px;
-            margin-bottom: 16px;
-        }
-
-        .article-content ul {
-            padding-left: 25px;
-
-            margin-bottom: 25px;
-        }
-
-        .article-content li {
-            color: #52657d;
-
-            font-size: 18px;
-
-            line-height: 1.8;
-
-            margin-bottom: 8px;
+            padding: 50px 20px 70px;
         }
 
 
-        /* =========================
-           SCHEDULE BOX
-        ========================= */
+        .article-container {
+            max-width: 850px;
 
-        .schedule-box {
-            background: #f5efff;
+            margin: 0 auto;
 
-            border-radius: 18px;
-
-            padding: 28px 30px;
-
-            margin: 30px 0;
-        }
-
-        .schedule-box h3 {
-            color: #4d1daf;
-
-            font-size: 22px;
-
-            margin-bottom: 15px;
-        }
-
-        .schedule-box p {
-            margin-bottom: 7px;
-        }
-
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .article-cta {
-            background: #6025c8;
+            background: #ffffff;
 
             border-radius: 20px;
 
-            padding: 38px;
+            overflow: hidden;
 
-            margin-top: 50px;
-
-            text-align: center;
+            box-shadow: 0 5px 30px rgba(91, 33, 182, 0.07);
         }
 
-        .article-cta h2 {
-            color: #ffffff;
 
-            margin: 0 0 12px;
-
-            font-size: 28px;
+        .article-header {
+            padding: 45px 50px 25px;
         }
 
-        .article-cta p {
-            color: #eee7ff;
 
-            margin-bottom: 22px;
-        }
-
-        .cta-button {
+        .article-category {
             display: inline-block;
 
-            background: #ffd21c;
+            padding: 7px 15px;
 
-            color: #30106c;
+            margin-bottom: 15px;
 
-            text-decoration: none;
+            background: #f3e8ff;
 
-            padding: 14px 28px;
+            color: #5b21b6;
 
-            border-radius: 50px;
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.4px;
+        }
+
+
+        .article-header h1 {
+            margin: 0 0 15px;
+
+            color: #172033;
+
+            font-size: 38px;
+
+            line-height: 1.25;
 
             font-weight: 800;
         }
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+        .article-meta {
+            display: flex;
 
-        footer {
-            background: #24104f;
+            align-items: center;
 
-            color: white;
+            gap: 15px;
 
-            text-align: center;
+            color: #64748b;
 
-            padding: 30px 20px;
+            font-size: 13px;
         }
 
-        footer p {
+
+        .article-meta span {
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+        }
+
+
+
+        /* =========================================
+           GAMBAR ARTIKEL
+        ========================================== */
+
+        .article-image {
+            width: 100%;
+
+            background: #f1f5f9;
+        }
+
+
+        .article-image img {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+            max-height: 470px;
+
+            object-fit: cover;
+        }
+
+
+        .image-credit {
+            padding: 9px 20px;
+
+            background: #f8fafc;
+
+            color: #64748b;
+
+            font-size: 11px;
+
+            text-align: center;
+        }
+
+
+        .image-credit a {
+            color: #5b21b6;
+
+            text-decoration: none;
+        }
+
+
+
+        /* =========================================
+           ISI ARTIKEL
+        ========================================== */
+
+        .article-content {
+            padding: 35px 50px 50px;
+        }
+
+
+        .article-content p {
+            margin: 0 0 20px;
+
+            color: #475569;
+
+            font-size: 16px;
+
+            line-height: 1.85;
+        }
+
+
+        .article-content h2 {
+            margin: 38px 0 13px;
+
+            color: #5b21b6;
+
+            font-size: 25px;
+
+            line-height: 1.4;
+        }
+
+
+        .article-content h3 {
+            margin: 28px 0 10px;
+
+            color: #334155;
+
+            font-size: 19px;
+        }
+
+
+        .article-content ul {
+            margin: 10px 0 22px;
+
+            padding-left: 25px;
+
+            color: #475569;
+        }
+
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+
+
+        /* =========================================
+           HIGHLIGHT
+        ========================================== */
+
+        .highlight-box {
+            margin: 25px 0;
+
+            padding: 22px 25px;
+
+            background: #f3e8ff;
+
+            border-left: 5px solid #5b21b6;
+
+            border-radius: 12px;
+        }
+
+
+        .highlight-box p {
+            margin: 0;
+
+            color: #4c1d95;
+
+            font-weight: 500;
+        }
+
+
+
+        /* =========================================
+           JADWAL
+        ========================================== */
+
+        .schedule-box {
+            margin: 30px 0;
+
+            padding: 25px;
+
+            background: #faf5ff;
+
+            border: 1px solid #e9d5ff;
+
+            border-radius: 15px;
+        }
+
+
+        .schedule-box h3 {
+            margin-top: 0;
+
+            color: #5b21b6;
+
+            font-size: 20px;
+        }
+
+
+        .schedule-item {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid #e9d5ff;
+
             font-size: 14px;
         }
 
 
-        /* =========================
-           MOBILE
-        ========================= */
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+
+        .schedule-item strong {
+            color: #334155;
+        }
+
+
+        .schedule-item span {
+            color: #64748b;
+
+            text-align: right;
+        }
+
+
+
+        /* =========================================
+           CTA
+        ========================================== */
+
+        .article-cta {
+            margin-top: 40px;
+
+            padding: 30px;
+
+            background: linear-gradient(
+                135deg,
+                #5b21b6,
+                #7c3aed
+            );
+
+            border-radius: 17px;
+
+            text-align: center;
+        }
+
+
+        .article-cta h2 {
+            margin: 0 0 8px;
+
+            color: #ffffff;
+
+            font-size: 24px;
+        }
+
+
+        .article-cta p {
+            margin-bottom: 20px;
+
+            color: #ede9fe;
+        }
+
+
+        .cta-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 11px 22px;
+
+            background: #ffffff;
+
+            color: #5b21b6;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: 0.3s ease;
+        }
+
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+
+            background: #f8fafc;
+        }
+
+
+
+        /* =========================================
+           BACK TO BLOG
+        ========================================== */
+
+        .back-blog {
+            text-align: center;
+
+            margin-top: 30px;
+        }
+
+
+        .back-blog a {
+            color: #5b21b6;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        .back-blog a:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
+        .article-footer {
+            padding: 25px 20px;
+
+            text-align: center;
+
+            color: #64748b;
+
+            font-size: 12px;
+        }
+
+
+
+        /* =========================================
+           RESPONSIVE TABLET
+        ========================================== */
+
+        @media (max-width: 1000px) {
+
+            .navbar {
+                padding: 0 4%;
+            }
+
+
+            .nav-menu {
+                gap: 15px;
+            }
+
+
+            .nav-menu a {
+                font-size: 13px;
+            }
+
+
+            .logo img {
+                width: 135px;
+            }
+
+        }
+
+
+
+        /* =========================================
+           RESPONSIVE HP
+        ========================================== */
 
         @media (max-width: 768px) {
 
             .navbar {
-                height: 80px;
+                min-height: 70px;
+
                 padding: 0 20px;
             }
 
+
             .logo img {
-                width: 145px;
+                width: 125px;
             }
+
+
+            .btn-navbar {
+                display: none;
+            }
+
+
+            .hamburger {
+                display: flex;
+
+                align-items: center;
+            }
+
 
             .nav-menu {
+                position: absolute;
+
+                top: 70px;
+
+                left: 0;
+
+                width: 100%;
+
                 display: none;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 0;
+
+                padding: 12px 20px 18px;
+
+                background: #ffffff;
+
+                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
             }
 
-            .nav-button {
-                display: none;
+
+            .nav-menu.active {
+                display: flex;
             }
+
+
+            .nav-menu a {
+                width: 100%;
+
+                padding: 11px 0;
+
+                font-size: 14px;
+
+                border-bottom: 1px solid #f1f5f9;
+            }
+
 
             .article-wrapper {
-                padding: 30px 15px 60px;
+                padding: 20px 12px 50px;
             }
 
-            .back-blog {
-                margin-bottom: 20px;
+
+            .article-container {
+                border-radius: 15px;
             }
 
-            .article-card {
-                border-radius: 20px;
-            }
 
             .article-header {
-                padding: 35px 25px 25px;
+                padding: 30px 22px 20px;
             }
 
-            .badge {
-                font-size: 13px;
-                padding: 10px 17px;
-                margin-bottom: 20px;
-            }
 
             .article-header h1 {
-                font-size: 32px;
-                line-height: 1.3;
-                letter-spacing: -0.5px;
+                font-size: 27px;
             }
+
 
             .article-meta {
-                gap: 12px;
-                font-size: 14px;
+                flex-wrap: wrap;
+
+                gap: 8px 15px;
             }
 
-            .article-image {
-                padding: 10px 25px 0;
-            }
 
             .article-image img {
-                height: 250px;
-                border-radius: 14px;
+                max-height: 300px;
             }
+
 
             .article-content {
-                padding: 30px 25px 45px;
+                padding: 25px 22px 35px;
             }
 
+
             .article-content p {
-                font-size: 16px;
+                font-size: 15px;
+
                 line-height: 1.8;
             }
 
+
             .article-content h2 {
+                font-size: 22px;
+
+                margin-top: 32px;
+            }
+
+
+            .schedule-box {
+                padding: 18px;
+            }
+
+
+            .schedule-item {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 3px;
+            }
+
+
+            .schedule-item span {
+                text-align: left;
+            }
+
+
+            .article-cta {
+                padding: 25px 18px;
+            }
+
+
+            .article-cta h2 {
+                font-size: 21px;
+            }
+
+        }
+
+
+
+        /* =========================================
+           HP KECIL
+        ========================================== */
+
+        @media (max-width: 400px) {
+
+            .article-header h1 {
                 font-size: 24px;
             }
 
-            .article-content li {
-                font-size: 16px;
+
+            .article-content {
+                padding-left: 18px;
+
+                padding-right: 18px;
             }
 
-            .article-cta {
-                padding: 28px 20px;
+
+            .article-content p {
+                font-size: 14px;
             }
 
         }
@@ -475,368 +835,679 @@
 <body>
 
 
-    <!-- =========================
-         NAVBAR
-    ========================= -->
+<!-- =========================================
+     NAVBAR
+========================================= -->
 
-    <header class="navbar">
-
-        <div class="logo">
-            <a href="index.html">
-                <img src="logo primagama png.jpeg"
-                     alt="New Primagama Sunter Indah">
-            </a>
-        </div>
+<header class="navbar">
 
 
-        <nav class="nav-menu">
+    <div class="logo">
 
-            <a href="index.html">Beranda</a>
+        <img src="logo primagama png.jpeg"
+             alt="Logo New Primagama Sunter Indah">
 
-            <a href="index.html#tentang">Tentang</a>
-
-            <a href="index.html#program">Program</a>
-
-            <a href="index.html#fasilitas">Fasilitas</a>
-
-            <a href="index.html#faq">FAQ</a>
-
-            <a href="blog.html">Blog</a>
-
-            <a href="index.html#kontak">Kontak</a>
-
-        </nav>
+    </div>
 
 
-        <a href="https://wa.me/6285285705335"
-           target="_blank"
-           class="nav-button">
-
-            Daftar Sekarang
-
-        </a>
-
-    </header>
+    <nav class="nav-menu" id="navMenu">
 
 
-
-    <!-- =========================
-         ARTICLE
-    ========================= -->
-
-    <main class="article-wrapper">
-
-
-        <a href="blog.html" class="back-blog">
-            ← Kembali ke Blog
+        <a href="index.html#hero">
+            Beranda
         </a>
 
 
-        <article class="article-card">
+        <a href="index.html#tentang">
+            Tentang
+        </a>
 
 
-            <!-- HEADER -->
+        <a href="index.html#program">
+            Program
+        </a>
 
-            <header class="article-header">
 
-                <span class="badge">
-                    TIPS PELAJAR
+        <a href="index.html#fasilitas">
+            Fasilitas
+        </a>
+
+
+        <a href="index.html#faq">
+            FAQ
+        </a>
+
+
+        <a href="blog.html" class="active">
+            Blog
+        </a>
+
+
+        <a href="index.html#kontak">
+            Kontak
+        </a>
+
+
+    </nav>
+
+
+    <a href="index.html#kontak" class="btn-navbar">
+        Daftar Sekarang
+    </a>
+
+
+    <div class="hamburger" id="hamburger">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+    </div>
+
+
+</header>
+
+
+
+<!-- =========================================
+     ARTIKEL
+========================================= -->
+
+<main class="article-wrapper">
+
+
+    <article class="article-container">
+
+
+        <!-- HEADER ARTIKEL -->
+
+        <header class="article-header">
+
+
+            <span class="article-category">
+                Tips Pelajar
+            </span>
+
+
+            <h1>
+                Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua? 😭
+            </h1>
+
+
+            <div class="article-meta">
+
+
+                <span>
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    14 September 2026
+
                 </span>
 
 
-                <h1>
-                    Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua? 😭
-                </h1>
+                <span>
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    Tips Pelajar
+
+                </span>
 
 
-                <div class="article-meta">
+                <span>
 
-                    <div class="meta-item">
-                        <span class="meta-icon">📅</span>
-                        <span>14 September 2026</span>
-                    </div>
+                    <i class="fa-solid fa-school"></i>
 
-                    <div class="meta-item">
-                        <span class="meta-icon">◷</span>
-                        <span>Tips Pelajar</span>
-                    </div>
+                    New Primagama Sunter Indah
 
-                    <div class="meta-item">
-                        <span class="meta-icon">🏫</span>
-                        <span>New Primagama Sunter Indah</span>
-                    </div>
+                </span>
 
-                </div>
 
-            </header>
+            </div>
+
+
+        </header>
 
 
 
-            <!-- FOTO -->
+        <!-- FOTO ARTIKEL -->
 
-            <div class="article-image">
+        <div class="article-image">
 
-                <img
-                    src="https://bbpmpjatim.kemdikdasmen.go.id/main/wp-content/uploads/2026/03/2a070058-934b-46fd-ae4d-b76ede5c5353-1024x576.jpg"
-                    alt="Siswa mengikuti kegiatan pembelajaran di sekolah">
+            <img
+                src="foto-sekolah.jpg"
+                alt="Siswa mengikuti kegiatan pembelajaran di sekolah">
 
-                <p class="image-credit">
-                    Sumber foto: Dokumentasi BBPMP Provinsi Jawa Timur
+        </div>
+
+
+        <div class="image-credit">
+
+            Sumber foto: Dokumentasi BBPMP Provinsi Jawa Timur
+
+        </div>
+
+
+
+        <!-- ISI ARTIKEL -->
+
+        <div class="article-content">
+
+
+            <p>
+                Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus
+                kebagian. Tapi kalau nggak diatur, jadwal bisa berantakan dan
+                bikin kewalahan.
+            </p>
+
+
+            <p>
+                Kadang baru pulang sekolah udah ada tugas yang harus dikerjakan.
+                Belum lagi kegiatan ekskul, belajar buat ujian, dan tentunya
+                masih pengen punya waktu buat main atau sekadar rebahan. 😭
+            </p>
+
+
+            <p>
+                Tenang, sebenarnya semua aktivitas itu tetap bisa jalan kok.
+                Kuncinya bukan punya waktu lebih banyak, tapi tahu cara
+                mengatur waktu yang ada.
+            </p>
+
+
+
+            <!-- 1 -->
+
+            <h2>
+                1. Tentukan Mana yang Harus Didahulukan 🎯
+            </h2>
+
+
+            <p>
+                Nggak semua kegiatan harus dikerjakan dalam waktu yang sama.
+                Coba tentukan dulu mana yang paling penting dan punya batas
+                waktu paling dekat.
+            </p>
+
+
+            <p>
+                Misalnya besok ada tugas yang harus dikumpulkan, sementara
+                latihan ekskul masih beberapa hari lagi. Berarti tugas sekolah
+                bisa kamu prioritaskan terlebih dahulu.
+            </p>
+
+
+            <div class="highlight-box">
+
+                <p>
+                    💡 Intinya: kerjakan yang paling penting dan paling
+                    mendesak terlebih dahulu, baru lanjut ke kegiatan lainnya.
                 </p>
 
             </div>
 
 
 
-            <!-- CONTENT -->
+            <!-- 2 -->
 
-            <div class="article-content">
-
-                <p>
-                    Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus
-                    kebagian. Tapi kalau nggak diatur, jadwal bisa berantakan dan bikin
-                    kewalahan.
-                </p>
-
-                <p>
-                    Sebagai pelajar, rasanya memang ada saja yang harus dikerjakan.
-                    Setelah sekolah masih ada tugas, belum lagi kegiatan ekskul,
-                    belajar untuk ujian, dan tentunya ingin punya waktu untuk main
-                    atau sekadar istirahat.
-                </p>
-
-                <p>
-                    Tapi tenang, kamu nggak harus memilih salah satunya. Dengan
-                    pengaturan waktu yang lebih baik, semuanya tetap bisa dilakukan
-                    tanpa membuat hari terasa terlalu penuh.
-                </p>
+            <h2>
+                2. Jangan Berusaha Mengerjakan Semuanya Sekaligus 🧠
+            </h2>
 
 
-                <h2>
-                    1. Tentukan Mana yang Harus Didahulukan 🎯
-                </h2>
-
-                <p>
-                    Ketika banyak tugas dan kegiatan datang bersamaan, tentukan dulu
-                    mana yang paling penting dan punya deadline paling dekat.
-                </p>
-
-                <ul>
-
-                    <li>
-                        Tugas dengan deadline paling dekat.
-                    </li>
-
-                    <li>
-                        Persiapan ujian yang sudah dekat.
-                    </li>
-
-                    <li>
-                        Kegiatan sekolah yang sudah terjadwal.
-                    </li>
-
-                    <li>
-                        Aktivitas lain yang masih bisa dilakukan setelahnya.
-                    </li>
-
-                </ul>
+            <p>
+                Salah satu hal yang bikin capek adalah mencoba melakukan banyak
+                hal dalam waktu yang bersamaan.
+            </p>
 
 
-                <h2>
-                    2. Jangan Berusaha Mengerjakan Semuanya Sekaligus 🧠
-                </h2>
-
-                <p>
-                    Mengerjakan banyak hal sekaligus memang kelihatannya cepat,
-                    tetapi justru bisa membuat konsentrasi terbagi.
-                </p>
-
-                <p>
-                    Lebih baik fokus menyelesaikan satu pekerjaan terlebih dahulu.
-                    Setelah selesai, baru lanjut ke pekerjaan berikutnya.
-                </p>
+            <p>
+                Lagi ngerjain tugas sambil buka media sosial, sambil mikirin
+                latihan ekskul, sambil kepikiran ujian. Akhirnya tugas nggak
+                selesai-selesai dan kepala malah makin penuh. 😭
+            </p>
 
 
-                <h2>
-                    3. Buat To-Do List yang Simpel 📝
-                </h2>
-
-                <p>
-                    Kamu nggak perlu membuat jadwal yang ribet. Cukup tulis beberapa
-                    hal penting yang ingin diselesaikan hari itu.
-                </p>
-
-                <ul>
-
-                    <li>
-                        Mengerjakan tugas sekolah.
-                    </li>
-
-                    <li>
-                        Belajar materi pelajaran.
-                    </li>
-
-                    <li>
-                        Mengikuti kegiatan ekskul.
-                    </li>
-
-                    <li>
-                        Menyiapkan perlengkapan sekolah.
-                    </li>
-
-                </ul>
+            <p>
+                Lebih baik fokus menyelesaikan satu kegiatan terlebih dahulu.
+                Setelah selesai, baru pindah ke kegiatan berikutnya.
+            </p>
 
 
-                <h2>
-                    4. Jangan Nunggu Mood Buat Belajar 😭
-                </h2>
 
-                <p>
-                    Kalau selalu menunggu mood, waktu belajar bisa terus tertunda.
-                    Coba mulai dengan waktu yang singkat, misalnya 30–45 menit,
-                    tetapi benar-benar fokus.
-                </p>
+            <!-- 3 -->
+
+            <h2>
+                3. Buat To-Do List yang Simpel 📝
+            </h2>
 
 
-                <h2>
-                    5. Main Itu Boleh! 🎮
-                </h2>
+            <p>
+                Kamu nggak perlu membuat jadwal yang ribet. Cukup tuliskan
+                beberapa hal yang memang harus dilakukan hari itu.
+            </p>
 
-                <p>
-                    Mengatur waktu bukan berarti harus belajar sepanjang hari.
-                    Waktu bermain dan melakukan hobi juga penting untuk membuat
-                    pikiran lebih rileks.
-                </p>
+
+            <ul>
+
+                <li>
+                    Menyelesaikan tugas sekolah.
+                </li>
+
+                <li>
+                    Belajar materi yang akan diujikan.
+                </li>
+
+                <li>
+                    Mengikuti kegiatan ekskul.
+                </li>
+
+                <li>
+                    Menyiapkan perlengkapan sekolah untuk besok.
+                </li>
+
+            </ul>
+
+
+            <p>
+                Setelah satu kegiatan selesai, tinggal beri tanda centang.
+                Kelihatannya sederhana, tapi cara ini bisa membantu kamu
+                melihat apa saja yang sudah dan belum dikerjakan.
+            </p>
+
+
+
+            <!-- 4 -->
+
+            <h2>
+                4. Jangan Nunggu Mood Buat Belajar 😭
+            </h2>
+
+
+            <p>
+                Kalau selalu menunggu mood datang baru mulai belajar, bisa-bisa
+                tugas dan materi malah terus tertunda.
+            </p>
+
+
+            <p>
+                Coba mulai dari waktu yang singkat terlebih dahulu. Misalnya
+                belajar selama 30–45 menit dengan fokus, lalu istirahat sebentar.
+            </p>
+
+
+            <p>
+                Yang penting bukan selalu belajar dalam waktu yang sangat lama,
+                tetapi punya kebiasaan belajar yang konsisten.
+            </p>
+
+
+
+            <!-- 5 -->
+
+            <h2>
+                5. Main Itu Boleh! 🎮
+            </h2>
+
+
+            <p>
+                Belajar bukan berarti kamu harus berhenti main sama sekali.
+                Waktu untuk hiburan juga tetap penting supaya pikiran nggak
+                terlalu penuh.
+            </p>
+
+
+            <p>
+                Setelah tugas selesai dan target belajar sudah terpenuhi,
+                kamu bisa menggunakan waktu luang untuk bermain, ngobrol
+                dengan teman, menonton, atau melakukan kegiatan yang kamu suka.
+            </p>
+
+
+            <div class="highlight-box">
 
                 <p>
-                    Yang penting, jangan sampai waktu bermain membuat tugas
-                    terbengkalai atau mengganggu waktu istirahat.
+                    🎮 Main boleh, asal tahu waktunya. Jangan sampai waktu
+                    bermain mengambil alih waktu belajar dan istirahat.
                 </p>
-
-
-                <h2>
-                    6. Jangan Mengorbankan Waktu Tidur 😴
-                </h2>
-
-                <p>
-                    Jangan sampai semua kegiatan akhirnya membuat waktu tidur
-                    terus berkurang. Istirahat yang cukup membantu tubuh dan
-                    pikiran tetap siap untuk menjalani aktivitas berikutnya.
-                </p>
-
-
-                <h2>
-                    7. Buat Jadwal yang Realistis 📅
-                </h2>
-
-                <p>
-                    Jadwal yang baik bukan jadwal yang penuh dari pagi sampai malam.
-                    Jadwal yang baik adalah jadwal yang benar-benar bisa kamu jalankan.
-                </p>
-
-
-                <div class="schedule-box">
-
-                    <h3>
-                        Contoh Jadwal Sederhana
-                    </h3>
-
-                    <p>
-                        <strong>16.30–17.30</strong> → Istirahat
-                    </p>
-
-                    <p>
-                        <strong>17.30–18.15</strong> → Mengerjakan tugas
-                    </p>
-
-                    <p>
-                        <strong>19.30–20.15</strong> → Belajar
-                    </p>
-
-                    <p>
-                        <strong>20.15–20.30</strong> → Review materi
-                    </p>
-
-                    <p>
-                        <strong>Setelah 20.30</strong> → Waktu santai
-                    </p>
-
-                </div>
-
-
-                <h2>
-                    8. Nggak Harus Sempurna, yang Penting Konsisten 🔥
-                </h2>
-
-                <p>
-                    Nggak masalah kalau suatu hari jadwalmu tidak berjalan sesuai
-                    rencana. Yang penting, coba evaluasi dan atur kembali untuk
-                    hari berikutnya.
-                </p>
-
-                <p>
-                    Jangan mengejar jadwal yang sempurna. Lebih baik punya jadwal
-                    sederhana yang bisa dilakukan secara konsisten.
-                </p>
-
-
-                <h2>
-                    Jadi, Emang Bisa Kebagian Semua? 👀
-                </h2>
-
-                <p>
-                    Jawabannya: bisa!
-                </p>
-
-                <p>
-                    Sekolah, tugas, ekskul, main, dan tidur tetap bisa berjalan
-                    bersamaan kalau waktunya diatur dengan baik. Kuncinya adalah
-                    menentukan prioritas, membuat jadwal yang realistis, dan
-                    memberikan waktu untuk belajar sekaligus beristirahat.
-                </p>
-
-
-                <!-- CTA -->
-
-                <div class="article-cta">
-
-                    <h2>
-                        Mau Belajar Lebih Terarah?
-                    </h2>
-
-                    <p>
-                        New Primagama Sunter Indah siap membantu kamu belajar
-                        lebih terarah dan menghadapi berbagai tantangan akademik.
-                    </p>
-
-                    <a
-                        href="https://wa.me/6285285705335"
-                        target="_blank"
-                        class="cta-button">
-
-                        Konsultasi Gratis
-
-                    </a>
-
-                </div>
 
             </div>
 
-        </article>
-
-    </main>
 
 
+            <!-- 6 -->
 
-    <!-- FOOTER -->
+            <h2>
+                6. Jangan Mengorbankan Waktu Tidur 😴
+            </h2>
 
-    <footer>
 
-        <p>
-            © 2026 New Primagama Sunter Indah. All Rights Reserved.
-        </p>
+            <p>
+                Karena banyak aktivitas, jangan sampai waktu tidur justru
+                selalu dikorbankan.
+            </p>
 
-    </footer>
+
+            <p>
+                Kalau tubuh kurang istirahat, kamu bisa merasa lebih lelah
+                dan sulit berkonsentrasi ketika belajar maupun mengikuti
+                kegiatan sekolah.
+            </p>
+
+
+            <p>
+                Jadi, selain mengatur waktu belajar dan tugas, pastikan kamu
+                tetap menyediakan waktu yang cukup untuk beristirahat.
+            </p>
+
+
+
+            <!-- 7 -->
+
+            <h2>
+                7. Buat Jadwal yang Realistis 📅
+            </h2>
+
+
+            <p>
+                Jadwal yang bagus bukan jadwal yang penuh dari pagi sampai
+                malam. Jadwal yang bagus adalah jadwal yang memang bisa kamu
+                jalankan.
+            </p>
+
+
+            <p>
+                Contohnya, setelah pulang sekolah kamu bisa memberikan waktu
+                untuk istirahat terlebih dahulu sebelum mulai mengerjakan tugas.
+            </p>
+
+
+            <div class="schedule-box">
+
+
+                <h3>
+                    📅 Contoh Pembagian Waktu
+                </h3>
+
+
+                <div class="schedule-item">
+
+                    <strong>
+                        16.30 – 17.30
+                    </strong>
+
+                    <span>
+                        Istirahat setelah pulang sekolah
+                    </span>
+
+                </div>
+
+
+                <div class="schedule-item">
+
+                    <strong>
+                        17.30 – 18.15
+                    </strong>
+
+                    <span>
+                        Mengerjakan tugas sekolah
+                    </span>
+
+                </div>
+
+
+                <div class="schedule-item">
+
+                    <strong>
+                        19.30 – 20.15
+                    </strong>
+
+                    <span>
+                        Belajar dan latihan soal
+                    </span>
+
+                </div>
+
+
+                <div class="schedule-item">
+
+                    <strong>
+                        20.15 – 20.30
+                    </strong>
+
+                    <span>
+                        Review materi
+                    </span>
+
+                </div>
+
+
+                <div class="schedule-item">
+
+                    <strong>
+                        Setelah 20.30
+                    </strong>
+
+                    <span>
+                        Waktu santai dan persiapan tidur
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- 8 -->
+
+            <h2>
+                8. Nggak Harus Sempurna, yang Penting Konsisten 🔥
+            </h2>
+
+
+            <p>
+                Kadang kita membuat jadwal yang terlalu sempurna. Semua kegiatan
+                dimasukkan sampai akhirnya jadwal tersebut malah sulit
+                dijalankan.
+            </p>
+
+
+            <p>
+                Kalau suatu hari ada kegiatan tambahan atau jadwal berubah,
+                nggak perlu langsung merasa gagal. Tinggal atur ulang jadwal
+                dan lanjutkan lagi.
+            </p>
+
+
+            <p>
+                Yang paling penting adalah konsisten berusaha mengatur waktu
+                dan memperbaikinya sedikit demi sedikit.
+            </p>
+
+
+
+            <!-- 9 -->
+
+            <h2>
+                9. Jadi, Emang Bisa Kebagian Semua? 👀
+            </h2>
+
+
+            <p>
+                Jawabannya: bisa.
+            </p>
+
+
+            <p>
+                Sekolah tetap bisa jalan, tugas bisa selesai, ekskul tetap
+                aktif, waktu main tetap ada, dan kamu juga tetap punya waktu
+                untuk istirahat.
+            </p>
+
+
+            <p>
+                Tapi semuanya memang membutuhkan pengaturan waktu yang baik.
+                Kamu nggak harus mengikuti jadwal orang lain. Cari pola yang
+                paling cocok dengan aktivitas dan kebutuhanmu sendiri.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Tentukan prioritas.
+                </li>
+
+                <li>
+                    Buat daftar kegiatan.
+                </li>
+
+                <li>
+                    Kerjakan satu per satu.
+                </li>
+
+                <li>
+                    Sediakan waktu untuk belajar.
+                </li>
+
+                <li>
+                    Tetap punya waktu untuk bermain.
+                </li>
+
+                <li>
+                    Jangan lupakan waktu istirahat.
+                </li>
+
+            </ul>
+
+
+
+            <!-- PENUTUP -->
+
+            <h2>
+                Penutup
+            </h2>
+
+
+            <p>
+                Menjadi pelajar memang bukan cuma soal belajar. Ada tugas,
+                kegiatan sekolah, ekskul, teman, keluarga, dan tentunya waktu
+                untuk diri sendiri.
+            </p>
+
+
+            <p>
+                Karena itu, kamu nggak perlu memaksakan semuanya harus selesai
+                dalam satu waktu. Atur prioritas, buat jadwal yang realistis,
+                dan jalani satu per satu.
+            </p>
+
+
+            <p>
+                Ingat, produktif bukan berarti harus sibuk terus setiap saat.
+                Yang penting kamu bisa menjalankan kewajiban, tetap punya waktu
+                untuk hal yang kamu suka, dan tetap menjaga waktu istirahat. 🚀
+            </p>
+
+
+
+            <!-- CTA -->
+
+            <div class="article-cta">
+
+
+                <h2>
+                    Mau Belajar Lebih Terarah?
+                </h2>
+
+
+                <p>
+                    Yuk, belajar dan atur strategi belajar bareng New Primagama
+                    Sunter Indah.
+                </p>
+
+
+                <a href="index.html#kontak" class="cta-button">
+                    Konsultasi Sekarang →
+                </a>
+
+
+            </div>
+
+
+
+            <!-- KEMBALI -->
+
+            <div class="back-blog">
+
+                <a href="blog.html">
+                    ← Kembali ke Blog
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </article>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="article-footer">
+
+    © 2026 New Primagama Sunter Indah.
+    Semua hak dilindungi.
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT NAVBAR
+========================================= -->
+
+<script>
+
+    const hamburger = document.getElementById("hamburger");
+
+    const navMenu = document.getElementById("navMenu");
+
+
+    hamburger.addEventListener("click", function () {
+
+        navMenu.classList.toggle("active");
+
+    });
+
+
+    /* Tutup menu setelah memilih link */
+
+    const navLinks = document.querySelectorAll(".nav-menu a");
+
+
+    navLinks.forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navMenu.classList.remove("active");
+
+        });
+
+    });
+
+</script>
 
 
 </body>
