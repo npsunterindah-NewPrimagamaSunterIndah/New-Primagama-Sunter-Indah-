@@ -1,71 +1,168 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog | New Primagama Sunter Indah</title>
+    <title>Blog & Artikel | New Primagama Sunter Indah</title>
 
     <meta name="description"
-        content="Artikel dan tips belajar New Primagama Sunter Indah seputar pendidikan, sekolah, belajar, ujian, TKA, dan persiapan akademik.">
+        content="Artikel seputar TKA, tips belajar, sekolah, ujian, dan pendidikan dari New Primagama Sunter Indah.">
 
     <link rel="icon" href="favicon.ico">
 
-    <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- FONT AWESOME -->
-    <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- CSS UTAMA -->
-    <link rel="stylesheet" href="style.css">
-
+    >
 
     <style>
 
-        /* =========================================
-           BLOG
-        ========================================= */
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
-            background: #f8fafc;
             font-family: "Poppins", sans-serif;
+            background: #ffffff;
             color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
 
-        /* =========================================
-           BLOG HEADER
-        ========================================= */
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
 
-        .blog-header {
+        .navbar {
+            width: 100%;
+            height: 78px;
 
-            max-width: 850px;
+            background: #ffffff;
 
-            margin: 65px auto 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-            padding: 0 20px;
+            padding: 0 6%;
 
-            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .logo img {
+            width: 145px;
+            height: auto;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-menu a {
+            font-size: 13px;
+            font-weight: 600;
+            color: #475569;
+
+            transition: 0.25s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #5b21b6;
+        }
+
+        .nav-button {
+            background: #5b21b6;
+            color: #ffffff !important;
+
+            padding: 10px 18px;
+            border-radius: 9px;
+        }
+
+        .nav-button:hover {
+            background: #4c1d95 !important;
         }
 
 
-        .blog-label {
+        /* =====================================================
+           HAMBURGER
+        ===================================================== */
 
-            display: inline-block;
+        .hamburger {
+            display: none;
+
+            width: 38px;
+            height: 38px;
+
+            border: none;
+            border-radius: 9px;
 
             background: #f3e8ff;
+            color: #5b21b6;
 
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .blog-hero {
+            background:
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(124, 58, 237, 0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 5% 90%,
+                    rgba(250, 204, 21, 0.12),
+                    transparent 25%
+                ),
+                #faf9ff;
+
+            padding: 70px 6% 65px;
+        }
+
+        .hero-inner {
+            max-width: 1180px;
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            background: #f3e8ff;
             color: #5b21b6;
 
             padding: 7px 14px;
@@ -73,272 +170,220 @@
             border-radius: 50px;
 
             font-size: 11px;
-
             font-weight: 700;
 
-            letter-spacing: .5px;
-
-            margin-bottom: 15px;
-
+            margin-bottom: 18px;
         }
 
+        .hero-dot {
+            width: 7px;
+            height: 7px;
 
-        .blog-header h1 {
+            background: #facc15;
 
-            margin: 0;
+            border-radius: 50%;
+        }
 
-            font-size: 38px;
+        .blog-hero h1 {
+            max-width: 780px;
+
+            font-size: clamp(36px, 5vw, 58px);
+
+            line-height: 1.12;
 
             font-weight: 800;
 
-            color: #1e293b;
+            color: #1e1b4b;
 
+            margin-bottom: 18px;
         }
 
+        .blog-hero h1 span {
+            color: #6d28d9;
+        }
 
-        .blog-header p {
-
-            margin-top: 12px;
+        .hero-description {
+            max-width: 680px;
 
             color: #64748b;
 
-            font-size: 14px;
+            font-size: 15px;
 
-            line-height: 1.7;
-
+            line-height: 1.8;
         }
 
 
-        /* =========================================
-           CONTAINER
-        ========================================= */
+        /* =====================================================
+           BLOG WRAPPER
+        ===================================================== */
 
-        .blog-container {
-
-            max-width: 1100px;
+        .blog-wrapper {
+            max-width: 1180px;
 
             margin: auto;
 
-            padding: 0 20px 70px;
-
+            padding: 65px 20px 90px;
         }
 
 
-        /* =========================================
-           SECTION
-        ========================================= */
+        /* =====================================================
+           BLOG SECTION
+        ===================================================== */
 
-        .latest-section,
-        .category-section {
-
-            margin-bottom: 55px;
-
+        .blog-section {
+            margin-bottom: 65px;
         }
 
-
-        .section-heading,
-        .category-heading {
-
+        .section-header {
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
-            margin-bottom: 15px;
-
+            margin-bottom: 23px;
         }
 
-
-        .section-heading-left {
-
+        .section-title-wrap {
             display: flex;
-
             align-items: center;
 
-            gap: 10px;
-
+            gap: 12px;
         }
 
+        .section-line {
+            width: 5px;
+            height: 27px;
 
-        .section-heading-left i {
+            background: #facc15;
 
-            color: #facc15;
-
-            font-size: 18px;
-
+            border-radius: 20px;
         }
 
-
-        .section-heading h2,
-        .category-heading h2 {
-
-            margin: 0;
-
-            font-size: 20px;
+        .section-title {
+            font-size: 23px;
 
             font-weight: 800;
 
-            color: #1e293b;
-
+            color: #1e1b4b;
         }
 
+        .section-subtitle {
+            margin-top: 5px;
 
-        .section-line {
+            font-size: 11px;
 
-            width: 100%;
-
-            height: 2px;
-
-            background: #e2e8f0;
-
-            margin-bottom: 25px;
-
+            color: #94a3b8;
         }
-
-
-        /* =========================================
-           LIHAT SEMUA
-        ========================================= */
 
         .see-all {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 7px;
-
-            text-decoration: none;
+            border: 1px solid #ddd6fe;
 
             color: #5b21b6;
+
+            padding: 8px 14px;
+
+            border-radius: 7px;
 
             font-size: 10px;
 
             font-weight: 700;
 
-            background: #f3e8ff;
-
-            padding: 7px 12px;
-
-            border-radius: 50px;
-
-            transition: .2s;
-
+            transition: 0.25s ease;
         }
-
 
         .see-all:hover {
-
             background: #5b21b6;
 
-            color: white;
+            border-color: #5b21b6;
 
+            color: #ffffff;
         }
 
 
-        /* =========================================
+        /* =====================================================
            ARTICLE GRID
-        ========================================= */
+        ===================================================== */
 
         .article-grid {
-
             display: grid;
 
-            grid-template-columns:
-                repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(4, 1fr);
 
-            gap: 22px;
-
+            gap: 24px;
         }
 
 
-        /* =========================================
+        /* =====================================================
            ARTICLE CARD
-        ========================================= */
+        ===================================================== */
 
         .article-card {
+            background: #ffffff;
 
-            min-width: 0;
+            border: 1px solid #e8e5ef;
 
-            padding-right: 20px;
-
-            border-right: 1px solid #e2e8f0;
-
-        }
-
-
-        .article-card:last-child {
-
-            border-right: none;
-
-        }
-
-
-        .article-card a {
-
-            text-decoration: none;
-
-            color: inherit;
-
-        }
-
-
-        /* =========================================
-           IMAGE
-        ========================================= */
-
-        .article-image {
-
-            width: 100%;
-
-            height: 155px;
+            border-radius: 14px;
 
             overflow: hidden;
 
-            border-radius: 12px;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
 
-            background: #e2e8f0;
+        .article-card:hover {
+            transform: translateY(-5px);
 
-            margin-bottom: 14px;
+            border-color: #d8c9f5;
 
+            box-shadow:
+                0 12px 30px rgba(91, 33, 182, 0.11);
         }
 
 
-        .article-image img {
+        /* =====================================================
+           ARTICLE IMAGE
+        ===================================================== */
 
+        .article-image {
             width: 100%;
+            height: 185px;
 
+            overflow: hidden;
+
+            background: #f1ecff;
+        }
+
+        .article-image img {
+            width: 100%;
             height: 100%;
-
-            object-fit: cover;
 
             display: block;
 
-            transition: transform .35s ease;
+            object-fit: cover;
 
+            transition: transform 0.4s ease;
         }
 
-
-        .article-card:hover
-        .article-image img {
-
+        .article-card:hover .article-image img {
             transform: scale(1.05);
-
         }
 
 
-        /* =========================================
-           CATEGORY
-        ========================================= */
+        /* =====================================================
+           ARTICLE CONTENT
+        ===================================================== */
+
+        .article-content {
+            padding: 17px 17px 19px;
+        }
 
         .article-category {
-
             display: inline-block;
 
-            color: #5b21b6;
-
             background: #f3e8ff;
+
+            color: #6d28d9;
 
             padding: 4px 8px;
 
@@ -348,259 +393,503 @@
 
             font-weight: 700;
 
-            margin-bottom: 8px;
-
+            margin-bottom: 10px;
         }
 
-
-        /* =========================================
-           TITLE
-        ========================================= */
-
-        .article-card h3 {
-
-            margin: 0 0 8px;
-
+        .article-title {
             font-size: 15px;
 
             line-height: 1.45;
 
-            font-weight: 700;
-
             color: #1e293b;
 
-            transition: .2s;
+            font-weight: 700;
 
+            margin-bottom: 9px;
         }
-
-
-        .article-card:hover h3 {
-
-            color: #5b21b6;
-
-        }
-
-
-        /* =========================================
-           DESCRIPTION
-        ========================================= */
 
         .article-description {
-
-            margin: 0 0 10px;
-
             color: #64748b;
 
             font-size: 11px;
 
-            line-height: 1.6;
+            line-height: 1.7;
 
+            margin-bottom: 14px;
+
+            display: -webkit-box;
+
+            -webkit-line-clamp: 3;
+
+            -webkit-box-orient: vertical;
+
+            overflow: hidden;
         }
 
-
-        /* =========================================
-           META
-        ========================================= */
-
         .article-meta {
-
             display: flex;
 
             align-items: center;
 
-            gap: 7px;
+            gap: 6px;
 
             color: #94a3b8;
 
             font-size: 9px;
-
         }
 
+        .meta-dot {
+            width: 3px;
+            height: 3px;
 
-        .article-meta i {
+            background: #cbd5e1;
+
+            border-radius: 50%;
+        }
+
+        .read-more {
+            display: inline-block;
+
+            margin-top: 12px;
 
             color: #5b21b6;
 
+            font-size: 10px;
+
+            font-weight: 700;
+
+            transition: 0.2s ease;
+        }
+
+        .read-more:hover {
+            color: #7c3aed;
         }
 
 
-        /* =========================================
-           FOOTER
-        ========================================= */
+        /* =====================================================
+           LATEST
+        ===================================================== */
 
-        .blog-footer {
+        .latest-section {
+            margin-bottom: 70px;
+        }
 
-            background: #5b21b6;
-
-            color: white;
-
-            text-align: center;
-
-            padding: 25px 20px;
+        .latest-description {
+            margin-top: 5px;
 
             font-size: 11px;
 
+            color: #94a3b8;
         }
 
 
-        /* =========================================
-           MOBILE
-        ========================================= */
+        /* =====================================================
+           CTA
+        ===================================================== */
 
-        @media (max-width: 900px) {
+        .blog-cta {
+            max-width: 1180px;
 
-            .article-grid {
+            margin: 0 auto 75px;
 
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
+            padding: 43px 50px;
 
-            }
+            border-radius: 20px;
 
-            .article-card:nth-child(2n) {
+            background:
+                linear-gradient(
+                    115deg,
+                    #4c1d95,
+                    #7c3aed
+                );
 
-                border-right: none;
+            color: #ffffff;
 
-            }
+            position: relative;
 
+            overflow: hidden;
+        }
+
+        .blog-cta::after {
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background: rgba(250, 204, 21, 0.15);
+
+            right: -65px;
+            top: -90px;
+        }
+
+        .cta-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 650px;
+        }
+
+        .cta-content h2 {
+            font-size: 27px;
+
+            margin-bottom: 9px;
+        }
+
+        .cta-content p {
+            color: #ede9fe;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+
+            background: #facc15;
+
+            color: #422006;
+
+            padding: 11px 18px;
+
+            border-radius: 8px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            transition: 0.25s ease;
+        }
+
+        .cta-button:hover {
+            background: #fde047;
+
+            transform: translateY(-2px);
         }
 
 
-        @media (max-width: 600px) {
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
-            .blog-header {
+        footer {
+            background: #17132b;
 
-                margin: 40px auto 35px;
+            color: #ffffff;
 
-                padding: 0 20px;
+            padding: 50px 6% 25px;
+        }
 
-            }
+        .footer-container {
+            max-width: 1180px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr 1fr;
+
+            gap: 60px;
+        }
+
+        .footer-logo img {
+            width: 145px;
+
+            background: #ffffff;
+
+            padding: 5px;
+
+            border-radius: 7px;
+
+            margin-bottom: 15px;
+        }
+
+        .footer-description {
+            max-width: 360px;
+
+            color: #aaa6bd;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+        }
+
+        .footer-column h4 {
+            font-size: 13px;
+
+            margin-bottom: 16px;
+        }
+
+        .footer-column a {
+            display: block;
+
+            color: #aaa6bd;
+
+            font-size: 11px;
+
+            margin-bottom: 10px;
+
+            transition: 0.2s ease;
+        }
+
+        .footer-column a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            max-width: 1180px;
+
+            margin: 38px auto 0;
+
+            padding-top: 18px;
+
+            border-top: 1px solid rgba(255,255,255,0.08);
+
+            text-align: center;
+
+            color: #817c98;
+
+            font-size: 10px;
+        }
 
 
-            .blog-header h1 {
+        /* =====================================================
+           TABLET
+        ===================================================== */
 
-                font-size: 25px;
-
-            }
-
-
-            .blog-header p {
-
-                font-size: 12px;
-
-            }
-
-
-            .blog-container {
-
-                padding: 0 20px 60px;
-
-            }
-
-
-            .section-heading h2,
-            .category-heading h2 {
-
-                font-size: 15px;
-
-            }
-
-
-            .see-all {
-
-                padding: 6px 9px;
-
-                font-size: 7px;
-
-            }
-
+        @media (max-width: 1000px) {
 
             .article-grid {
-
-                grid-template-columns: 1fr;
-
-                gap: 25px;
-
+                grid-template-columns: repeat(2, 1fr);
             }
-
-
-            .article-card,
-            .article-card:nth-child(2n) {
-
-                padding: 0 0 25px;
-
-                border-right: none;
-
-                border-bottom: 1px solid #e2e8f0;
-
-            }
-
-
-            .article-card:last-child {
-
-                padding-bottom: 0;
-
-                border-bottom: none;
-
-            }
-
 
             .article-image {
+                height: 220px;
+            }
 
-                height: 190px;
+        }
 
-                border-radius: 10px;
 
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                height: 70px;
+
+                padding: 0 18px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .logo {
+                margin-left: auto;
+            }
+
+            .logo img {
+                width: 125px;
+            }
+
+            .nav-menu {
+                position: absolute;
+
+                top: 70px;
+
+                left: 0;
+                right: 0;
+
+                background: #ffffff;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 0;
+
+                padding: 10px 20px 20px;
+
+                box-shadow:
+                    0 10px 25px rgba(0,0,0,0.08);
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 13px 5px;
+            }
+
+            .nav-button {
+                text-align: center;
+
+                margin-top: 5px;
             }
 
 
-            .article-card h3 {
+            /* HERO */
 
-                font-size: 16px;
+            .blog-hero {
+                padding: 55px 20px 50px;
+            }
 
+            .blog-hero h1 {
+                font-size: 37px;
+            }
+
+            .hero-description {
+                font-size: 13px;
             }
 
 
-            .article-description {
+            /* CONTENT */
 
-                font-size: 11px;
-
+            .blog-wrapper {
+                padding: 50px 18px 65px;
             }
 
+            .section-title {
+                font-size: 20px;
+            }
 
-            .article-meta {
+            .section-subtitle,
+            .latest-description {
+                font-size: 10px;
+            }
 
+            .see-all {
                 font-size: 9px;
 
+                padding: 7px 10px;
+            }
+
+
+            /* CARDS */
+
+            .article-grid {
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 15px;
+            }
+
+            .article-image {
+                height: 150px;
+            }
+
+            .article-content {
+                padding: 13px;
+            }
+
+            .article-title {
+                font-size: 13px;
+            }
+
+            .article-description {
+                font-size: 10px;
+            }
+
+
+            /* CTA */
+
+            .blog-cta {
+                margin-left: 18px;
+                margin-right: 18px;
+
+                padding: 32px 24px;
+            }
+
+            .cta-content h2 {
+                font-size: 22px;
+            }
+
+
+            /* FOOTER */
+
+            .footer-container {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+            footer {
+                padding: 40px 25px 20px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-image {
+                height: 210px;
+            }
+
+            .article-title {
+                font-size: 15px;
+            }
+
+            .article-description {
+                font-size: 11px;
             }
 
         }
 
     </style>
-
 </head>
 
 
 <body>
 
 
-    <!-- =========================================
+    <!-- =====================================================
          NAVBAR
-    ========================================== -->
+    ===================================================== -->
 
     <header class="navbar">
 
-        <div class="logo">
+        <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Buka menu"
+        >
+            ☰
+        </button>
+
+
+        <a href="index.html" class="logo">
 
             <img
                 src="logo primagama png.jpeg"
-                alt="Logo New Primagama">
+                alt="New Primagama Sunter Indah"
+            >
 
-        </div>
+        </a>
 
 
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="navMenu">
 
-            <a href="index.html#hero">
+            <a href="index.html">
                 Beranda
             </a>
 
@@ -620,99 +909,371 @@
                 FAQ
             </a>
 
-            <a href="index.html#kontak">
-                Kontak
-            </a>
-
             <a href="blog.html" class="active">
                 Blog
             </a>
 
+            <a
+                href="index.html#kontak"
+                class="nav-button"
+            >
+                Hubungi Kami
+            </a>
+
         </nav>
-
-
-        <a
-            href="index.html#kontak"
-            class="btn-navbar">
-
-            Daftar Sekarang
-
-        </a>
-
-
-        <div
-            class="hamburger"
-            id="hamburger">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </div>
 
     </header>
 
 
 
-    <!-- =========================================
-         HEADER BLOG
-    ========================================== -->
+    <!-- =====================================================
+         HERO BLOG
+    ===================================================== -->
 
-    <section class="blog-header">
+    <section class="blog-hero">
 
-        <span class="blog-label">
-            BLOG NEW PRIMAGAMA
-        </span>
+        <div class="hero-inner">
+
+            <div class="hero-label">
+
+                <span class="hero-dot"></span>
+
+                BLOG NEW PRIMAGAMA
+
+            </div>
 
 
-        <h1>
-            Ruang Belajar & Inspirasi
-        </h1>
+            <h1>
+                Belajar lebih <span>ngerti.</span><br>
+                Bukan cuma lebih lama.
+            </h1>
 
 
-        <p>
-            Temukan berbagai artikel seputar pendidikan,
-            sekolah, belajar, ujian, dan persiapan TKA.
-        </p>
+            <p class="hero-description">
+                Temukan berbagai artikel seputar tips belajar,
+                TKA, ujian, sekolah, dan pendidikan untuk membantu
+                kamu belajar lebih efektif dan siap menghadapi
+                tantangan akademik.
+            </p>
+
+        </div>
 
     </section>
 
 
 
-    <!-- =========================================
-         BLOG
-    ========================================== -->
+    <!-- =====================================================
+         BLOG CONTENT
+    ===================================================== -->
 
-    <main class="blog-container">
+    <main class="blog-wrapper">
 
 
-        <!-- =====================================
-             ARTIKEL TERBARU
-        ====================================== -->
+        <!-- =================================================
+             LATEST — PALING ATAS
+        ================================================= -->
 
-        <section class="latest-section">
+        <section class="blog-section latest-section">
 
-            <div class="section-heading">
+            <div class="section-header">
 
-                <div class="section-heading-left">
+                <div>
 
-                    <i class="fa-solid fa-star"></i>
+                    <div class="section-title-wrap">
 
-                    <h2>
-                        Artikel Terbaru
-                    </h2>
+                        <div class="section-line"></div>
+
+                        <h2 class="section-title">
+                            LATEST
+                        </h2>
+
+                    </div>
+
+                    <p class="latest-description">
+                        Artikel terbaru dari New Primagama Sunter Indah.
+                    </p>
 
                 </div>
+
+
+                <a
+                    href="#"
+                    class="see-all"
+                >
+                    LIHAT SEMUA →
+                </a>
 
             </div>
 
 
-            <div class="section-line"></div>
+            <div class="article-grid">
 
 
-            <div
-                class="article-grid"
-                id="latestArticles">
+                <!-- LATEST 1 -->
+
+                <article class="article-card">
+
+                    <a href="cara-belajar-efektif.html">
+
+                        <div class="article-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80"
+                                alt="Belajar efektif"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="article-content">
+
+                        <span class="article-category">
+                            Tips Belajar
+                        </span>
+
+
+                        <h3 class="article-title">
+                            Belajar Lama Belum Tentu Efektif,
+                            Ini Cara Biar Belajarmu Plus Nempel!
+                        </h3>
+
+
+                        <p class="article-description">
+                            Belajar berjam-jam belum tentu membuat
+                            materi benar-benar masuk. Kenali cara
+                            belajar yang lebih efektif agar waktu
+                            belajarmu tidak terbuang percuma.
+                        </p>
+
+
+                        <div class="article-meta">
+
+                            <span>
+                                New Primagama
+                            </span>
+
+                            <span class="meta-dot"></span>
+
+                            <span>
+                                20 Agustus 2026
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="cara-belajar-efektif.html"
+                            class="read-more"
+                        >
+                            Baca selengkapnya →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LATEST 2 -->
+
+                <article class="article-card">
+
+                    <a href="sekolah-tugas-eskul-main.html">
+
+                        <div class="article-image">
+
+                            <img
+                                src="https://www.kemendikdasmen.go.id/mendikbud/image/14495"
+                                alt="Kegiatan siswa di sekolah"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="article-content">
+
+                        <span class="article-category">
+                            Edukasi & Sekolah
+                        </span>
+
+
+                        <h3 class="article-title">
+                            Sekolah, Tugas, Ekskul, Main,
+                            Tidur… Emang Bisa Kebagian Semua?
+                        </h3>
+
+
+                        <p class="article-description">
+                            Sekolah bukan cuma soal tugas dan nilai.
+                            Yuk, belajar mengatur waktu antara sekolah,
+                            ekskul, istirahat, dan waktu untuk diri sendiri.
+                        </p>
+
+
+                        <div class="article-meta">
+
+                            <span>
+                                New Primagama
+                            </span>
+
+                            <span class="meta-dot"></span>
+
+                            <span>
+                                18 Agustus 2026
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="sekolah-tugas-eskul-main.html"
+                            class="read-more"
+                        >
+                            Baca selengkapnya →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LATEST 3 -->
+
+                <article class="article-card">
+
+                    <a href="arti-tka-makin-dekat.html">
+
+                        <div class="article-image">
+
+                            <img
+                                src="https://www.kemendikdasmen.go.id/mendikbud/image/15891"
+                                alt="Persiapan TKA"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="article-content">
+
+                        <span class="article-category">
+                            TKA
+                        </span>
+
+
+                        <h3 class="article-title">
+                            TKA Makin Dekat?
+                            Jangan Panik, Ini yang Harus Kamu Siapin
+                        </h3>
+
+
+                        <p class="article-description">
+                            TKA sudah semakin dekat? Jangan panik.
+                            Kenali apa saja yang perlu dipersiapkan
+                            supaya kamu bisa menghadapi TKA dengan
+                            lebih siap.
+                        </p>
+
+
+                        <div class="article-meta">
+
+                            <span>
+                                New Primagama
+                            </span>
+
+                            <span class="meta-dot"></span>
+
+                            <span>
+                                15 Agustus 2026
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="arti-tka-makin-dekat.html"
+                            class="read-more"
+                        >
+                            Baca selengkapnya →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- LATEST 4 -->
+
+                <article class="article-card">
+
+                    <a href="tips-menghadapi-ujian.html">
+
+                        <div class="article-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=900&q=80"
+                                alt="Persiapan menghadapi ujian"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="article-content">
+
+                        <span class="article-category">
+                            Ujian & Persiapan
+                        </span>
+
+
+                        <h3 class="article-title">
+                            Tips & Trik Gaskeun Hadapi
+                            Ujian Tanpa Beban Mental!
+                        </h3>
+
+
+                        <p class="article-description">
+                            Ujian tidak harus selalu bikin stres.
+                            Dengan persiapan dan strategi yang tepat,
+                            kamu bisa menghadapi ujian dengan lebih
+                            tenang dan percaya diri.
+                        </p>
+
+
+                        <div class="article-meta">
+
+                            <span>
+                                New Primagama
+                            </span>
+
+                            <span class="meta-dot"></span>
+
+                            <span>
+                                12 Agustus 2026
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tips-menghadapi-ujian.html"
+                            class="read-more"
+                        >
+                            Baca selengkapnya →
+                        </a>
+
+                    </div>
+
+                </article>
+
 
             </div>
 
@@ -720,462 +1281,581 @@
 
 
 
-        <!-- =====================================
-             KATEGORI OTOMATIS
-        ====================================== -->
+        <!-- =================================================
+             TKA
+        ================================================= -->
 
-        <div id="categoryContainer"></div>
+        <section class="blog-section">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-line"></div>
+
+                    <h2 class="section-title">
+                        TKA
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="see-all"
+                    data-category="TKA"
+                >
+                    LIHAT SEMUA →
+                </a>
+
+            </div>
+
+
+            <div class="article-grid">
+
+
+                <article class="article-card">
+
+                    <a href="arti-tka-makin-dekat.html">
+
+                        <div class="article-image">
+
+                            <img
+                                src="https://www.kemendikdasmen.go.id/mendikbud/image/15891"
+                                alt="Persiapan TKA"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="article-content">
+
+                        <span class="article-category">
+                            TKA
+                        </span>
+
+                        <h3 class="article-title">
+                            TKA Makin Dekat?
+                            Jangan Panik, Ini yang Harus Kamu Siapin
+                        </h3>
+
+                        <p class="article-description">
+                            Persiapan penting yang bisa dilakukan
+                            sebelum menghadapi TKA agar lebih siap.
+                        </p>
+
+                        <div class="article-meta">
+
+                            <span>New Primagama</span>
+
+                            <span class="meta-dot"></span>
+
+                            <span>15 Agustus 2026</span>
+
+                        </div>
+
+                        <a
+                            href="arti-tka-makin-dekat.html"
+                            class="read-more"
+                        >
+                            Baca selengkapnya →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TIPS BELAJAR
+        ================================================= -->
+
+        <section class="blog-section">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-line"></div>
+
+                    <h2 class="section-title">
+                        TIPS BELAJAR
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="see-all"
+                    data-category="Tips Belajar"
+                >
+                    LIHAT SEMUA →
+                </a>
+
+            </div>
+
+
+            <div class="article-grid">
+
+
+                <article class="article-card">
+
+                    <a href="cara-belajar-efektif.html">
+
+                        <div class="article-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80"
+                                alt="Belajar efektif"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="article-content">
+
+                        <span class="article-category">
+                            Tips Belajar
+                        </span>
+
+                        <h3 class="article-title">
+                            Belajar Lama Belum Tentu Efektif,
+                            Ini Cara Biar Belajarmu Plus Nempel!
+                        </h3>
+
+                        <p class="article-description">
+                            Kenali cara belajar yang lebih efektif
+                            agar waktu belajar kamu benar-benar
+                            menghasilkan.
+                        </p>
+
+                        <div class="article-meta">
+
+                            <span>New Primagama</span>
+
+                            <span class="meta-dot"></span>
+
+                            <span>20 Agustus 2026</span>
+
+                        </div>
+
+                        <a
+                            href="cara-belajar-efektif.html"
+                            class="read-more"
+                        >
+                            Baca selengkapnya →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EDUKASI & SEKOLAH
+        ================================================= -->
+
+        <section class="blog-section">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-line"></div>
+
+                    <h2 class="section-title">
+                        EDUKASI & SEKOLAH
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="see-all"
+                    data-category="Edukasi & Sekolah"
+                >
+                    LIHAT SEMUA →
+                </a>
+
+            </div>
+
+
+            <div class="article-grid">
+
+
+                <!-- ARTIKEL 1 -->
+
+                <article class="article-card">
+
+                    <a href="sekolah-tugas-eskul-main.html">
+
+                        <div class="article-image">
+
+                            <img
+                                src="https://www.kemendikdasmen.go.id/mendikbud/image/14495"
+                                alt="Kegiatan siswa di sekolah"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="article-content">
+
+                        <span class="article-category">
+                            Edukasi & Sekolah
+                        </span>
+
+                        <h3 class="article-title">
+                            Sekolah, Tugas, Ekskul, Main,
+                            Tidur… Emang Bisa Kebagian Semua?
+                        </h3>
+
+                        <p class="article-description">
+                            Cara mengatur waktu antara sekolah,
+                            tugas, ekskul, istirahat, dan bermain.
+                        </p>
+
+                        <div class="article-meta">
+
+                            <span>New Primagama</span>
+
+                            <span class="meta-dot"></span>
+
+                            <span>18 Agustus 2026</span>
+
+                        </div>
+
+                        <a
+                            href="sekolah-tugas-eskul-main.html"
+                            class="read-more"
+                        >
+                            Baca selengkapnya →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ARTIKEL 2 -->
+
+                <article class="article-card">
+
+                    <a href="arti-penting-pendidikan.html">
+
+                        <div class="article-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80"
+                                alt="Pendidikan dan sekolah"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="article-content">
+
+                        <span class="article-category">
+                            Edukasi & Sekolah
+                        </span>
+
+                        <h3 class="article-title">
+                            Pendidikan: Investasi Masa Depan
+                            Biar Gak Kena Mental & Gagal Paham!
+                        </h3>
+
+                        <p class="article-description">
+                            Pendidikan bukan hanya tentang nilai,
+                            tetapi juga bagian penting dari masa depan.
+                        </p>
+
+                        <div class="article-meta">
+
+                            <span>New Primagama</span>
+
+                            <span class="meta-dot"></span>
+
+                            <span>10 Agustus 2026</span>
+
+                        </div>
+
+                        <a
+                            href="arti-penting-pendidikan.html"
+                            class="read-more"
+                        >
+                            Baca selengkapnya →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             UJIAN & PERSIAPAN
+        ================================================= -->
+
+        <section class="blog-section">
+
+            <div class="section-header">
+
+                <div class="section-title-wrap">
+
+                    <div class="section-line"></div>
+
+                    <h2 class="section-title">
+                        UJIAN & PERSIAPAN
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="#"
+                    class="see-all"
+                    data-category="Ujian & Persiapan"
+                >
+                    LIHAT SEMUA →
+                </a>
+
+            </div>
+
+
+            <div class="article-grid">
+
+
+                <article class="article-card">
+
+                    <a href="tips-menghadapi-ujian.html">
+
+                        <div class="article-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=900&q=80"
+                                alt="Persiapan menghadapi ujian"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="article-content">
+
+                        <span class="article-category">
+                            Ujian & Persiapan
+                        </span>
+
+                        <h3 class="article-title">
+                            Tips & Trik Gaskeun Hadapi
+                            Ujian Tanpa Beban Mental!
+                        </h3>
+
+                        <p class="article-description">
+                            Strategi menghadapi ujian supaya
+                            lebih tenang dan percaya diri.
+                        </p>
+
+                        <div class="article-meta">
+
+                            <span>New Primagama</span>
+
+                            <span class="meta-dot"></span>
+
+                            <span>12 Agustus 2026</span>
+
+                        </div>
+
+                        <a
+                            href="tips-menghadapi-ujian.html"
+                            class="read-more"
+                        >
+                            Baca selengkapnya →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
 
 
     </main>
 
 
 
-    <!-- =========================================
+    <!-- =====================================================
+         CTA
+    ===================================================== -->
+
+    <section class="blog-cta">
+
+        <div class="cta-content">
+
+            <h2>
+                Mau belajar lebih terarah?
+            </h2>
+
+            <p>
+                Konsultasikan kebutuhan belajar kamu bersama
+                New Primagama Sunter Indah.
+            </p>
+
+            <a
+                href="https://wa.me/6285285705335"
+                target="_blank"
+                class="cta-button"
+            >
+                Konsultasi Gratis →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
          FOOTER
-    ========================================== -->
+    ===================================================== -->
 
-    <footer class="blog-footer">
+    <footer>
 
-        © 2026 New Primagama Sunter Indah.
-        Semua Hak Dilindungi.
+        <div class="footer-container">
+
+
+            <div>
+
+                <div class="footer-logo">
+
+                    <img
+                        src="logo primagama png.jpeg"
+                        alt="New Primagama Sunter Indah"
+                    >
+
+                </div>
+
+
+                <p class="footer-description">
+                    Bimbingan belajar untuk membantu siswa SD,
+                    SMP, dan SMA belajar lebih terarah,
+                    percaya diri, dan siap menghadapi
+                    tantangan akademik.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Menu
+                </h4>
+
+                <a href="index.html">
+                    Beranda
+                </a>
+
+                <a href="index.html#tentang">
+                    Tentang
+                </a>
+
+                <a href="index.html#program">
+                    Program
+                </a>
+
+                <a href="index.html#fasilitas">
+                    Fasilitas
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Hubungi Kami
+                </h4>
+
+                <a
+                    href="https://wa.me/6285285705335"
+                    target="_blank"
+                >
+                    WhatsApp
+                </a>
+
+                <a
+                    href="https://www.instagram.com/newprimagamasunterindah/"
+                    target="_blank"
+                >
+                    Instagram
+                </a>
+
+                <a href="index.html#kontak">
+                    Lokasi & Kontak
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 New Primagama Sunter Indah.
+            All Rights Reserved.
+
+        </div>
 
     </footer>
 
 
 
-    <!-- =========================================
-         SCRIPT
-    ========================================== -->
-
-    <script src="script.js"></script>
-
-
-    <script>
-
-        /* =====================================================
-           DATA ARTIKEL
-        ===================================================== */
-
-        const articles = [
-
-            /* =========================================
-               TKA
-            ========================================= */
-
-            {
-                title:
-                    "TKA Makin Dekat? Jangan Panik, Ini yang Harus Kamu Siapin",
-
-                category:
-                    "TKA",
-
-                publishedAt:
-                    "2026-09-11T09:00:00+07:00",
-
-                author:
-                    "New Primagama Sunter Indah",
-
-                description:
-                    "Persiapan TKA nggak harus bikin panik. Yuk, mulai susun strategi belajar yang lebih terarah dari sekarang.",
-
-                image:
-                    "https://www.kemendikdasmen.go.id/mendikbud/image/15891",
-
-                link:
-                    "arti-tka-makin-dekat.html"
-            },
-
-
-            /* =========================================
-               TIPS BELAJAR
-            ========================================= */
-
-            {
-                title:
-                    "Belajar Lama Belum Tentu Efektif, Ini Cara Biar Belajarmu Plus Nempel!",
-
-                category:
-                    "Tips Belajar",
-
-                publishedAt:
-                    "2026-08-20T09:00:00+07:00",
-
-                author:
-                    "New Primagama Sunter Indah",
-
-                description:
-                    "Belajar berjam-jam belum tentu bikin materi masuk. Kenali cara belajar yang lebih efektif dan nyaman.",
-
-                image:
-                    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
-
-                link:
-                    "cara-belajar-efektif.html"
-            },
-
-
-            /* =========================================
-               EDUKASI & SEKOLAH
-            ========================================= */
-
-            {
-                title:
-                    "Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!",
-
-                category:
-                    "Edukasi & Sekolah",
-
-                publishedAt:
-                    "2026-08-15T09:00:00+07:00",
-
-                author:
-                    "New Primagama Sunter Indah",
-
-                description:
-                    "Kenapa pendidikan penting untuk masa depan? Yuk, pahami peran pendidikan dalam membentuk kemampuan dan karakter.",
-
-                image:
-                    "https://www.kemendikdasmen.go.id/mendikbud/image/14495",
-
-                link:
-                    "arti-penting-pendidikan.html"
-            },
-
-
-            {
-                title:
-                    "Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua?",
-
-                category:
-                    "Edukasi & Sekolah",
-
-                publishedAt:
-                    "2026-08-10T09:00:00+07:00",
-
-                author:
-                    "New Primagama Sunter Indah",
-
-                description:
-                    "Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian. Yuk, cari tahu cara mengatur waktu.",
-
-                image:
-                    "https://www.kemendikdasmen.go.id/mendikbud/image/14495",
-
-                link:
-                    "sekolah-tugas-eskul-main.html"
-            },
-
-
-            /* =========================================
-               UJIAN & PERSIAPAN
-            ========================================= */
-
-            {
-                title:
-                    "Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!",
-
-                category:
-                    "Ujian & Persiapan",
-
-                publishedAt:
-                    "2026-08-05T09:00:00+07:00",
-
-                author:
-                    "New Primagama Sunter Indah",
-
-                description:
-                    "Kenali cara mempersiapkan diri menghadapi ujian tanpa harus menggunakan sistem kebut semalam.",
-
-                image:
-                    "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80",
-
-                link:
-                    "tips-menghadapi-ujian.html"
-            }
-
-        ];
-
-
-
-        /* =====================================================
-           FORMAT TANGGAL OTOMATIS
-        ===================================================== */
-
-        function formatDate(dateString) {
-
-            const date =
-                new Date(dateString);
-
-            return date.toLocaleDateString(
-                "id-ID",
-                {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric"
-                }
-            );
-
-        }
-
-
-
-        /* =====================================================
-           BUAT CARD ARTIKEL
-        ===================================================== */
-
-        function createArticleCard(article) {
-
-            return `
-
-                <article class="article-card">
-
-                    <a href="${article.link}">
-
-                        <div class="article-image">
-
-                            <img
-                                src="${article.image}"
-                                alt="${article.title}"
-                                loading="lazy">
-
-                        </div>
-
-
-                        <span class="article-category">
-
-                            ${article.category}
-
-                        </span>
-
-
-                        <h3>
-
-                            ${article.title}
-
-                        </h3>
-
-
-                        <p class="article-description">
-
-                            ${article.description}
-
-                        </p>
-
-
-                        <div class="article-meta">
-
-                            <span>
-
-                                <i class="fa-regular fa-calendar"></i>
-
-                                ${formatDate(article.publishedAt)}
-
-                            </span>
-
-                            <span>•</span>
-
-                            <span>
-
-                                ${article.author}
-
-                            </span>
-
-                        </div>
-
-                    </a>
-
-                </article>
-
-            `;
-
-        }
-
-
-
-        /* =====================================================
-           URUTKAN ARTIKEL
-           TERBARU → TERLAMA
-        ===================================================== */
-
-        articles.sort(function(a, b) {
-
-            return new Date(b.publishedAt)
-                 - new Date(a.publishedAt);
-
-        });
-
-
-
-        /* =====================================================
-           ARTIKEL TERBARU
-           MENAMPILKAN 4 TERBARU
-        ===================================================== */
-
-        const latestContainer =
-            document.getElementById(
-                "latestArticles"
-            );
-
-
-        articles
-            .slice(0, 4)
-            .forEach(function(article) {
-
-                latestContainer.innerHTML +=
-
-                    createArticleCard(article);
-
-            });
-
-
-
-        /* =====================================================
-           KATEGORI
-        ===================================================== */
-
-        const categories = [
-
-            "TKA",
-
-            "Tips Belajar",
-
-            "Edukasi & Sekolah",
-
-            "Ujian & Persiapan"
-
-        ];
-
-
-
-        /* =====================================================
-           SLUG KATEGORI
-        ===================================================== */
-
-        function slugify(text) {
-
-            return text
-
-                .toLowerCase()
-
-                .replace(/&/g, "dan")
-
-                .replace(/\s+/g, "-")
-
-                .replace(/[^\w-]+/g, "");
-
-        }
-
-
-
-        /* =====================================================
-           CONTAINER KATEGORI
-        ===================================================== */
-
-        const categoryContainer =
-            document.getElementById(
-                "categoryContainer"
-            );
-
-
-
-        /* =====================================================
-           BUAT KATEGORI OTOMATIS
-        ===================================================== */
-
-        categories.forEach(function(category) {
-
-
-            const categoryArticles =
-                articles.filter(function(article) {
-
-                    return article.category === category;
-
-                });
-
-
-
-            const section =
-                document.createElement("section");
-
-
-            section.className =
-                "category-section";
-
-
-            section.id =
-                slugify(category);
-
-
-
-            section.innerHTML = `
-
-                <div class="category-heading">
-
-                    <h2>
-
-                        ${category}
-
-                    </h2>
-
-
-                    <a
-                        href="#${slugify(category)}"
-                        class="see-all">
-
-                        LIHAT SEMUA
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
-
-                <div class="section-line"></div>
-
-
-                <div class="article-grid">
-
-                    ${
-                        categoryArticles.length
-
-                        ?
-
-                        categoryArticles
-                            .map(function(article) {
-
-                                return createArticleCard(article);
-
-                            })
-                            .join("")
-
-                        :
-
-                        `
-                        <p style="
-                            color:#94a3b8;
-                            font-size:12px;
-                        ">
-                            Belum ada artikel di kategori ini.
-                        </p>
-                        `
-
-                    }
-
-                </div>
-
-            `;
-
-
-
-            categoryContainer.appendChild(section);
-
-        });
-
-    </script>
-
+    <!-- =====================================================
+         JAVASCRIPT
+         NANTI KITA PISAH KE blog.js
+    ===================================================== -->
+
+    <script src="blog.js"></script>
 
 </body>
-
 </html>
