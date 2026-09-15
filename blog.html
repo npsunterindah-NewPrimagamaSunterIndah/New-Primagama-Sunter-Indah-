@@ -336,7 +336,7 @@
             display: block;
 
             width: 100%;
-            height: 190px;
+            height: 220px;
 
             margin-bottom: 13px;
 
@@ -413,7 +413,7 @@
         .article-card h3 {
             margin: 0 0 8px;
 
-            font-size: 15px;
+            font-size: 18px;
             line-height: 1.45;
 
             font-weight: 700;
@@ -439,7 +439,7 @@
 
             color: var(--muted);
 
-            font-size: 10px;
+            font-size: 12px;
             line-height: 1.6;
 
             display: -webkit-box;
@@ -870,12 +870,75 @@
 
         }
 
+        /* =====================================================
+           FIX JUDUL BLOG AGAR TIDAK TERTUTUP NAVBAR
+        ====================================================== */
+        body.blog-page .navbar {
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 9999 !important;
+            width: 100% !important;
+            height: 80px !important;
+            min-height: 80px !important;
+            padding: 0 6% !important;
+            margin: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            transform: none !important;
+        }
+
+        body.blog-page .logo img {
+            width: 150px !important;
+            height: auto !important;
+            max-height: 55px !important;
+            display: block !important;
+        }
+
+        body.blog-page .blog-hero {
+            position: relative !important;
+            top: auto !important;
+            transform: none !important;
+            margin: 0 !important;
+            padding: 58px 6% 55px !important;
+            overflow: visible !important;
+        }
+
+        @media (max-width: 768px) {
+            body.blog-page .navbar {
+                position: sticky !important;
+                top: 0 !important;
+                height: 70px !important;
+                min-height: 70px !important;
+                padding: 0 20px !important;
+            }
+
+            body.blog-page .logo img {
+                width: 125px !important;
+                max-height: 48px !important;
+            }
+
+            body.blog-page .hamburger {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin-left: auto !important;
+            }
+
+            body.blog-page .nav-menu {
+                top: 70px !important;
+            }
+
+            body.blog-page .blog-hero {
+                padding: 45px 20px 45px !important;
+            }
+        }
     </style>
 
 </head>
 
 
-<body>
+<body class="blog-page">
 
 
     <!-- =====================================================
