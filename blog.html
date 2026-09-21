@@ -353,13 +353,17 @@
             width: 100%;
             height: 100%;
 
-            object-fit: cover;
+            /* Menampilkan seluruh gambar tanpa memotong bagian mana pun */
+            object-fit: contain;
+            object-position: center center;
 
-            transition: transform .3s ease;
+            /* Ruang aman jika rasio foto berbeda dengan rasio card */
+            background: #f8fafc;
         }
 
+        /* Tidak menggunakan zoom agar tepi gambar tetap utuh */
         .article-card:hover .article-image img {
-            transform: scale(1.04);
+            transform: none;
         }
 
 
@@ -1673,6 +1677,37 @@
 
                 link:
                     "checklist-persiapan-tka.html"
+            },
+
+
+            /* =================================================
+               ARTIKEL BARU — EDUKASI & SEKOLAH
+            ================================================== */
+
+            {
+                title:
+                    "Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu",
+
+                category:
+                    "Edukasi & Sekolah",
+
+                date:
+                    "2026-09-21",
+
+                dateDisplay:
+                    "21 September 2026",
+
+                author:
+                    "New Primagama Sunter Indah",
+
+                description:
+                    "Bercanda bersama teman memang menyenangkan, tetapi tetap ada batasnya. Kenali cara membedakan candaan yang sehat dan perilaku yang bisa membuat teman tidak nyaman.",
+
+                image:
+                    "https://ditsmp.kemendikdasmen.go.id/storage/posts/Pfk96i2W3fjEvvPzzAdflmukBl3vabHXsR80tK5P.png",
+
+                link:
+                    "bercanda-sama-teman-ada-batasnya.html"
             },
 
 
