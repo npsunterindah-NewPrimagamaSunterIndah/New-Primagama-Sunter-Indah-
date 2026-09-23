@@ -1,99 +1,152 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya - New Primagama Sunter Indah</title>
-    <meta name="description" content="Sering mengantuk saat belajar bisa membuat fokus berkurang. Kenali beberapa penyebabnya dan coba kebiasaan sederhana agar waktu belajarmu lebih terarah.">
+    <title>
+        Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya - New Primagama Sunter Indah
+    </title>
 
-    <meta property="og:title" content="Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya">
-    <meta property="og:description" content="Sering mengantuk saat belajar bisa membuat fokus berkurang. Kenali beberapa penyebabnya dan coba kebiasaan sederhana agar waktu belajarmu lebih terarah.">
+    <meta name="description"
+        content="Sering mengantuk saat belajar bisa membuat fokus berkurang. Kenali beberapa penyebabnya dan coba kebiasaan sederhana agar waktu belajarmu lebih terarah.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+        href="https://newprimagamasunterindah.com/sering-ngantuk-saat-belajar.html">
+
+    <meta property="og:title"
+        content="Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya">
+
+    <meta property="og:description"
+        content="Sering mengantuk saat belajar bisa membuat fokus berkurang. Kenali beberapa penyebabnya dan coba kebiasaan sederhana agar waktu belajarmu lebih terarah.">
+
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://newprimagamasunterindah.com/sering-ngantuk-saat-belajar.html">
-    <meta property="og:image" content="https://ditsmp.kemendikdasmen.go.id/storage/posts/088PzOnTuyRjfHQPh2cNKibaTHQKwhiFyKJxQVvZ.png">
 
-    <link rel="canonical" href="https://newprimagamasunterindah.com/sering-ngantuk-saat-belajar.html">
+    <meta property="og:url"
+        content="https://newprimagamasunterindah.com/sering-ngantuk-saat-belajar.html">
+
+    <meta property="og:image"
+        content="https://ditsmp.kemendikdasmen.go.id/storage/posts/088PzOnTuyRjfHQPh2cNKibaTHQKwhiFyKJxQVvZ.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
 
     <style>
-        * { box-sizing: border-box; }
 
-        html { scroll-behavior: smooth; }
+        :root {
+            --purple: #5b21b6;
+            --purple-dark: #1e1b4b;
+            --purple-light: #f3e8ff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --bg: #f8fafc;
+            --yellow: #facc15;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             margin: 0;
-            background: #f8fafc;
-            color: #1e293b;
+            background: var(--bg);
+            color: var(--text);
             font-family: "Poppins", sans-serif;
             line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        a { text-decoration: none; }
+        a {
+            text-decoration: none;
+        }
 
-        .article-navbar {
+        .navbar {
             position: sticky;
             top: 0;
             z-index: 9999;
             width: 100%;
             min-height: 80px;
+            padding: 0 6%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 6%;
+            gap: 24px;
             background: #fff;
             box-shadow: 0 2px 15px rgba(0,0,0,.06);
         }
 
-        .article-logo img {
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo img {
             width: 150px;
             height: auto;
             display: block;
         }
 
-        .article-nav-links {
+        .nav-menu {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 24px;
+            margin-left: auto;
         }
 
-        .article-nav-links a {
+        .nav-menu a {
             color: #334155;
             font-size: 14px;
             font-weight: 500;
+            white-space: nowrap;
         }
 
-        .article-nav-links a.active {
-            color: #5b21b6;
-            font-weight: 700;
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            color: var(--purple);
         }
 
-        .article-nav-button {
-            background: #5b21b6;
+        .btn-navbar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--purple);
             color: #fff !important;
             padding: 11px 20px;
             border-radius: 9px;
-            font-size: 13px !important;
-            font-weight: 600 !important;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
-        .article-hamburger {
+        .hamburger {
             display: none;
             width: 38px;
             height: 38px;
+            border: 0;
+            background: transparent;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
             gap: 5px;
             cursor: pointer;
         }
 
-        .article-hamburger span {
+        .hamburger span {
             display: block;
             width: 24px;
             height: 3px;
@@ -121,42 +174,50 @@
 
         .article-category {
             display: inline-block;
-            margin-bottom: 13px;
-            padding: 7px 12px;
+            margin-bottom: 16px;
+            padding: 6px 12px;
             border-radius: 999px;
-            background: #f3e8ff;
-            color: #5b21b6;
+            background: var(--purple-light);
+            color: var(--purple);
             font-size: 11px;
             font-weight: 700;
         }
 
         .article-header h1 {
-            margin: 0 0 13px;
-            color: #1e1b4b;
+            margin: 0 0 14px;
+            color: var(--purple-dark);
             font-size: 38px;
             line-height: 1.25;
             font-weight: 800;
         }
 
         .article-meta {
-            color: #94a3b8;
+            color: var(--muted);
             font-size: 13px;
         }
 
+        .article-image {
+            padding: 0 50px;
+        }
+
         .article-image img {
+            display: block;
             width: 100%;
             height: auto;
-            display: block;
+            max-width: 100%;
             object-fit: contain;
-            object-position: center center;
+            object-position: center;
+            border-radius: 17px;
+            background: #f8fafc;
         }
 
         .image-credit {
             margin-top: 8px;
-            padding: 0 20px;
+            padding: 0 10px;
             text-align: center;
             color: #94a3b8;
             font-size: 11px;
+            line-height: 1.5;
         }
 
         .article-content {
@@ -170,98 +231,98 @@
         }
 
         .article-content h2 {
-            margin: 32px 0 12px;
-            color: #5b21b6;
+            color: var(--purple);
             font-size: 25px;
             line-height: 1.35;
+            margin: 30px 0 13px;
         }
 
-        .article-content h3 {
-            margin: 25px 0 9px;
-            font-size: 19px;
-        }
-
-        .article-content ul,
-        .article-content ol {
+        .article-content ul {
+            padding-left: 22px;
             margin: 0 0 22px;
-            padding-left: 23px;
         }
 
-        .article-content li { margin-bottom: 9px; }
+        .article-content li {
+            margin-bottom: 9px;
+        }
 
         .highlight {
-            margin: 25px 0;
-            padding: 18px 20px;
-            border-left: 4px solid #facc15;
-            border-radius: 10px;
             background: #fffbeb;
+            border-left: 4px solid var(--yellow);
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin: 25px 0;
         }
 
         .article-cta {
             margin-top: 35px;
             padding: 25px;
-            border-radius: 15px;
+            border-radius: 16px;
             background: linear-gradient(135deg,#5b21b6,#7c3aed);
             color: #fff;
         }
 
         .article-cta h2 {
-            margin: 0 0 8px;
             color: #fff;
+            margin: 0 0 8px;
             font-size: 22px;
         }
 
         .article-cta p {
+            color: #fff;
             margin-bottom: 15px;
-            color: rgba(255,255,255,.88);
             font-size: 14px;
         }
 
         .article-cta a {
             display: inline-block;
-            padding: 10px 15px;
+            background: #fff;
+            color: var(--purple);
+            padding: 10px 17px;
             border-radius: 8px;
-            background: #facc15;
-            color: #422006;
-            font-size: 12px;
             font-weight: 700;
+            font-size: 13px;
         }
 
         .back-blog {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            margin-top: 25px;
-            color: #5b21b6;
+            display: block;
+            width: max-content;
+            margin: 30px auto 0;
+            color: var(--purple);
             font-size: 13px;
             font-weight: 700;
         }
 
         .article-footer {
-            padding: 25px 20px;
-            border-top: 1px solid #e2e8f0;
-            background: #fff;
+            background: var(--purple-dark);
+            color: #cbd5e1;
             text-align: center;
-            color: #64748b;
-            font-size: 11px;
+            padding: 28px 20px;
+            font-size: 12px;
         }
 
-        @media (max-width: 768px) {
-            .article-navbar {
-                min-height: auto;
+        @media (max-width:900px) {
+
+            .navbar {
+                min-height: 70px;
                 padding: 0 20px;
+                gap: 0;
             }
 
-            .article-logo img { width: 125px; }
+            .logo img {
+                width: 125px;
+            }
 
-            .article-nav-button { display: none; }
+            .btn-navbar {
+                display: none;
+            }
 
-            .article-hamburger {
+            .hamburger {
                 display: flex;
                 margin-left: auto;
             }
 
-            .article-nav-links {
+            .nav-menu {
                 position: absolute;
                 top: 70px;
                 left: 0;
@@ -271,47 +332,79 @@
                 align-items: flex-start;
                 gap: 0;
                 padding: 12px 20px 18px;
+                margin: 0;
                 background: #fff;
                 box-shadow: 0 8px 18px rgba(0,0,0,.08);
             }
 
-            .article-nav-links.active { display: flex; }
+            .nav-menu.active {
+                display: flex;
+            }
 
-            .article-nav-links a {
+            .nav-menu a {
                 width: 100%;
                 padding: 11px 0;
                 border-bottom: 1px solid #f1f5f9;
+                font-size: 14px;
             }
 
-            .article-wrapper { padding: 25px 12px 45px; }
+            .article-wrapper {
+                padding: 30px 12px 50px;
+            }
 
-            .article-container { border-radius: 15px; }
+            .article-container {
+                border-radius: 15px;
+            }
 
-            .article-header { padding: 30px 25px 20px; }
+            .article-header {
+                padding: 32px 25px 20px;
+            }
 
-            .article-header h1 { font-size: 29px; }
+            .article-header h1 {
+                font-size: 30px;
+            }
 
-            .article-image img { height: auto;
-            object-fit: contain;
-            object-position: center center; }
+            .article-image {
+                padding: 0 25px;
+            }
 
-            .article-content { padding: 28px 25px 35px; }
+            .article-image img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                border-radius: 13px;
+            }
 
-            .article-content p { font-size: 15px; }
+            .article-content {
+                padding: 28px 25px 40px;
+            }
 
-            .article-content h2 { font-size: 22px; }
+            .article-content p {
+                font-size: 15px;
+            }
+
+            .article-content h2 {
+                font-size: 22px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header class="article-navbar">
-    <a href="index.html" class="article-logo">
-        <img src="logo primagama png.jpeg" alt="Logo New Primagama Sunter Indah">
-    </a>
 
-    <nav class="article-nav-links" id="articleNav">
+<header class="navbar">
+
+    <div class="logo">
+        <img src="logo primagama png.jpeg" alt="Logo New Primagama">
+    </div>
+
+    <nav class="nav-menu">
+
         <a href="index.html#hero">Beranda</a>
         <a href="index.html#tentang">Tentang</a>
         <a href="index.html#program">Program</a>
@@ -319,122 +412,254 @@
         <a href="index.html#faq">FAQ</a>
         <a href="index.html#kontak">Kontak</a>
         <a href="blog.html" class="active">Blog</a>
+
     </nav>
 
-    <a href="index.html#kontak" class="article-nav-button">Daftar Sekarang</a>
+    <a href="index.html#kontak" class="btn-navbar">
+        Daftar Sekarang
+    </a>
 
-    <div class="article-hamburger" id="articleHamburger">
+    <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
     </div>
+
 </header>
 
+
 <main class="article-wrapper">
+
     <article class="article-container">
 
         <header class="article-header">
-            <div class="article-category">Tips Belajar</div>
-            <h1>Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya</h1>
-            <div class="article-meta">22 September 2026 • New Primagama Sunter Indah</div>
+
+            <span class="article-category">
+                Tips Belajar
+            </span>
+
+            <h1>
+                Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya
+            </h1>
+
+            <div class="article-meta">
+                22 September 2026 • New Primagama Sunter Indah
+            </div>
+
         </header>
 
+
         <div class="article-image">
-            <img src="https://ditsmp.kemendikdasmen.go.id/storage/posts/088PzOnTuyRjfHQPh2cNKibaTHQKwhiFyKJxQVvZ.png" alt="Kegiatan belajar siswa" loading="eager" referrerpolicy="no-referrer">
-            <div class="image-credit">Sumber gambar: Direktorat Sekolah Menengah Pertama, Kementerian Pendidikan Dasar dan Menengah</div>
+
+            <img
+                src="https://ditsmp.kemendikdasmen.go.id/storage/posts/088PzOnTuyRjfHQPh2cNKibaTHQKwhiFyKJxQVvZ.png"
+                alt="Siswa sedang belajar"
+                loading="eager"
+                referrerpolicy="no-referrer">
+
+            <div class="image-credit">
+                Sumber foto: Direktorat SMP Kemendikdasmen
+            </div>
+
         </div>
+
 
         <div class="article-content">
+
             <p>
-                Pernah baru beberapa menit belajar tetapi mata sudah terasa berat? Rasa
-                mengantuk saat belajar bisa membuat konsentrasi menurun dan materi jadi
-                lebih sulit dipahami. Sebelum memaksa diri terus belajar, coba lihat dulu
-                kebiasaan yang mungkin membuat waktu belajarmu kurang nyaman.
+                Pernah baru mulai belajar tetapi mata sudah terasa berat?
+                Rasa ngantuk saat belajar memang bisa membuat konsentrasi
+                berkurang dan materi jadi lebih sulit dipahami.
             </p>
 
-            <h2>1. Cek waktu tidurmu</h2>
             <p>
-                Kurang tidur bisa membuat tubuh terasa lelah ketika waktunya belajar.
-                Karena itu, jangan hanya mengatur jadwal belajar, tetapi perhatikan juga
-                waktu tidur supaya tubuh mendapat kesempatan untuk beristirahat.
+                Mengantuk juga bisa muncul karena berbagai kebiasaan sehari-
+                hari. Karena itu, penting untuk melihat apa yang biasanya
+                terjadi sebelum waktu belajar dimulai.
             </p>
 
-            <h2>2. Jangan belajar terlalu lama tanpa jeda</h2>
+
+            <h2>
+                Perhatikan waktu dan pola tidur
+            </h2>
+
             <p>
-                Duduk dan membaca materi terus-menerus bisa membuat perhatian menurun.
-                Coba bagi waktu belajar menjadi beberapa sesi dan gunakan jeda singkat
-                untuk beristirahat sebelum kembali belajar.
+                Salah satu hal yang perlu diperhatikan adalah waktu tidur.
+                Kalau tubuh belum mendapatkan waktu istirahat yang cukup,
+                rasa kantuk bisa muncul ketika kamu mulai belajar.
             </p>
 
-            <h2>3. Perhatikan tempat belajar</h2>
             <p>
-                Tempat yang terlalu nyaman, seperti belajar sambil rebahan di tempat tidur,
-                bisa membuatmu semakin mudah mengantuk. Gunakan tempat belajar yang cukup
-                terang, rapi, dan membuatmu lebih siap untuk fokus.
+                Coba buat jadwal tidur yang lebih teratur sehingga tubuh
+                mendapatkan waktu istirahat sebelum menjalani aktivitas
+                sekolah dan belajar.
             </p>
 
-            <h2>4. Minum air dan siapkan kebutuhan belajar</h2>
+
+            <h2>
+                Jangan belajar terlalu lama tanpa jeda
+            </h2>
+
             <p>
-                Sebelum mulai, siapkan buku, alat tulis, dan air minum agar kamu tidak
-                perlu sering meninggalkan meja. Kebiasaan sederhana ini bisa membantu sesi
-                belajar berjalan lebih lancar.
+                Belajar dalam waktu panjang tanpa istirahat bisa membuat
+                konsentrasi menurun. Setelah beberapa waktu, otak bisa
+                terasa lelah dan akhirnya rasa kantuk muncul.
             </p>
 
-            <h2>5. Buat target belajar yang jelas</h2>
             <p>
-                Jangan hanya menargetkan "belajar matematika". Buat target yang lebih jelas,
-                misalnya menyelesaikan satu materi dan mengerjakan sejumlah latihan soal.
-                Target yang spesifik membuat waktu belajar lebih mudah diarahkan.
+                Kamu bisa membagi waktu belajar menjadi beberapa sesi
+                dan memberikan jeda singkat di antara sesi tersebut.
             </p>
 
-            <h2>6. Kurangi gangguan dari HP</h2>
-            <p>
-                Notifikasi dan kebiasaan membuka aplikasi saat belajar bisa membuat fokus
-                terpecah. Kalau sedang belajar, coba jauhkan HP atau matikan notifikasi yang
-                tidak diperlukan agar perhatian tetap pada materi.
-            </p>
 
             <div class="highlight">
-                <strong>Ingat:</strong> kalau mulai mengantuk, jangan langsung memaksa diri
-                belajar tanpa jeda. Cek tidur, tempat belajar, durasi belajar, dan gangguan
-                yang mungkin membuat fokusmu menurun.
+
+                <strong>
+                    Coba cara sederhana:
+                </strong>
+
+                tentukan satu target belajar, kerjakan dalam satu sesi,
+                kemudian ambil jeda sebelum melanjutkan ke materi berikutnya.
+
             </div>
+
+
+            <h2>
+                Perhatikan suasana tempat belajar
+            </h2>
+
+            <p>
+                Tempat belajar juga bisa memengaruhi fokus. Ruangan yang
+                terlalu nyaman untuk bersantai atau posisi belajar yang
+                membuat tubuh mudah rileks bisa membuat rasa kantuk semakin
+                terasa.
+            </p>
+
+            <p>
+                Coba pilih tempat yang cukup terang, rapi, dan memang
+                digunakan untuk belajar agar tubuh lebih mudah mengenali
+                bahwa waktunya sedang belajar.
+            </p>
+
+
+            <h2>
+                Kurangi gangguan saat belajar
+            </h2>
+
+            <p>
+                Notifikasi HP, media sosial, atau suara dari sekitar bisa
+                membuat fokus terpecah. Ketika konsentrasi terus terganggu,
+                belajar bisa terasa lebih berat dan melelahkan.
+            </p>
+
+            <p>
+                Simpan HP terlebih dahulu atau matikan notifikasi yang tidak
+                diperlukan selama sesi belajar.
+            </p>
+
+
+            <h2>
+                Buat waktu belajar lebih terarah
+            </h2>
+
+            <p>
+                Jangan hanya menentukan bahwa kamu akan belajar selama
+                beberapa jam. Tentukan juga materi apa yang ingin selesai
+                dipelajari.
+            </p>
+
+            <ul>
+                <li>Tentukan materi yang akan dipelajari.</li>
+                <li>Buat target sederhana.</li>
+                <li>Gunakan sesi belajar dan waktu istirahat.</li>
+                <li>Jauhkan gangguan yang tidak diperlukan.</li>
+                <li>Evaluasi kembali materi yang sudah dipelajari.</li>
+            </ul>
+
+
+            <h2>
+                Intinya, dengarkan kondisi tubuhmu
+            </h2>
+
+            <p>
+                Kalau rasa ngantuk terus muncul, jangan langsung menganggap
+                bahwa kamu malas belajar. Coba perhatikan pola tidur,
+                waktu belajar, suasana belajar, dan kebiasaan sehari-hari.
+            </p>
+
+            <p>
+                Dengan membuat waktu belajar lebih teratur dan tidak
+                memaksakan diri tanpa jeda, kegiatan belajar bisa terasa
+                lebih nyaman dan terarah.
+            </p>
+
 
             <div class="article-cta">
-                <h2>Siap belajar lebih terarah?</h2>
+
+                <h2>
+                    Siap belajar lebih terarah?
+                </h2>
+
                 <p>
-                    Kalau kamu butuh pendampingan belajar yang lebih terarah,
-                    kamu bisa konsultasi bersama New Primagama Sunter Indah.
+                    Dapatkan pendampingan belajar yang sesuai dengan
+                    kebutuhanmu bersama New Primagama Sunter Indah.
                 </p>
-                <a href="https://wa.me/6285285705335" target="_blank">
+
+                <a
+                    href="https://wa.me/6285285705335"
+                    target="_blank"
+                    rel="noopener">
+
                     Konsultasi Gratis
+
                 </a>
+
             </div>
 
-            <a href="blog.html" class="back-blog">← Kembali ke Blog</a>
+
+            <a href="blog.html" class="back-blog">
+                ← Kembali ke Blog
+            </a>
+
         </div>
+
     </article>
+
 </main>
 
+
 <footer class="article-footer">
-    © 2026 New Primagama Sunter Indah. Semua Hak Dilindungi.
+
+    © 2026 New Primagama Sunter Indah.
+    Semua Hak Dilindungi.
+
 </footer>
 
+
 <script>
-    const articleHamburger = document.getElementById("articleHamburger");
-    const articleNav = document.getElementById("articleNav");
 
-    if (articleHamburger && articleNav) {
-        articleHamburger.addEventListener("click", function () {
-            articleNav.classList.toggle("active");
+    const hamburger =
+        document.getElementById("hamburger");
+
+    const navMenu =
+        document.querySelector(".nav-menu");
+
+    if (hamburger && navMenu) {
+
+        hamburger.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
         });
 
-        articleNav.querySelectorAll("a").forEach(function (link) {
+        navMenu.querySelectorAll("a").forEach(function (link) {
+
             link.addEventListener("click", function () {
-                articleNav.classList.remove("active");
+                navMenu.classList.remove("active");
             });
+
         });
+
     }
+
 </script>
 
 </body>
