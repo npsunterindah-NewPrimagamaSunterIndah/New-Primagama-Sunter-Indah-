@@ -1,105 +1,177 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Belajar Kelompok: Biar Nggak Malah Jadi Ajang Ngobrol - New Primagama Sunter Indah</title>
-    <meta name="description" content="Belajar bareng teman bisa bikin materi lebih mudah dipahami. Yuk, atur cara belajar kelompok supaya tetap fokus dan nggak malah jadi ajang ngobrol.">
+    <title>
+        Belajar Kelompok: Biar Nggak Malah Jadi Ajang Ngobrol - New Primagama Sunter Indah
+    </title>
 
-    <meta property="og:title" content="Belajar Kelompok: Biar Nggak Malah Jadi Ajang Ngobrol">
-    <meta property="og:description" content="Belajar bareng teman bisa bikin materi lebih mudah dipahami. Yuk, atur cara belajar kelompok supaya tetap fokus dan nggak malah jadi ajang ngobrol.">
+    <meta
+        name="description"
+        content="Belajar bareng teman bisa bikin materi lebih mudah dipahami. Yuk, atur cara belajar kelompok supaya tetap fokus dan nggak malah jadi ajang ngobrol.">
+
+    <meta name="robots" content="index, follow">
+
+    <link
+        rel="canonical"
+        href="https://newprimagamasunterindah.com/belajar-kelompok.html">
+
+    <meta
+        property="og:title"
+        content="Belajar Kelompok: Biar Nggak Malah Jadi Ajang Ngobrol">
+
+    <meta
+        property="og:description"
+        content="Belajar bareng teman bisa bikin materi lebih mudah dipahami. Yuk, atur cara belajar kelompok supaya tetap fokus dan nggak malah jadi ajang ngobrol.">
+
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://newprimagamasunterindah.com/belajar-kelompok.html">
-    <meta property="og:image" content="https://ditsmp.kemendikdasmen.go.id/storage/posts/hAlt6Ed7cvMAyZ39eQDQjKluOiWLTfAe5shqIP9M.png">
 
-    <link rel="canonical" href="https://newprimagamasunterindah.com/belajar-kelompok.html">
+    <meta
+        property="og:url"
+        content="https://newprimagamasunterindah.com/belajar-kelompok.html">
+
+    <meta
+        property="og:image"
+        content="https://ditsmp.kemendikdasmen.go.id/storage/posts/hAlt6Ed7cvMAyZ39eQDQjKluOiWLTfAe5shqIP9M.png">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./style.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
 
     <style>
-        * { box-sizing: border-box; }
 
-        html { scroll-behavior: smooth; }
+        :root {
+            --purple: #5b21b6;
+            --purple-dark: #1e1b4b;
+            --purple-light: #f3e8ff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --bg: #f8fafc;
+            --yellow: #facc15;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             margin: 0;
-            background: #f8fafc;
-            color: #1e293b;
+            background: var(--bg);
+            color: var(--text);
             font-family: "Poppins", sans-serif;
             line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        a { text-decoration: none; }
+        a {
+            text-decoration: none;
+        }
 
-        .article-navbar {
+
+        /* NAVBAR */
+
+        .navbar {
             position: sticky;
             top: 0;
             z-index: 9999;
             width: 100%;
             min-height: 80px;
+            padding: 0 6%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 6%;
+            gap: 24px;
             background: #fff;
             box-shadow: 0 2px 15px rgba(0,0,0,.06);
         }
 
-        .article-logo img {
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo img {
             width: 150px;
             height: auto;
             display: block;
         }
 
-        .article-nav-links {
+        .nav-menu {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 24px;
+            margin-left: auto;
         }
 
-        .article-nav-links a {
+        .nav-menu a {
             color: #334155;
             font-size: 14px;
             font-weight: 500;
+            white-space: nowrap;
         }
 
-        .article-nav-links a.active {
-            color: #5b21b6;
-            font-weight: 700;
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            color: var(--purple);
         }
 
-        .article-nav-button {
-            background: #5b21b6;
+        .btn-navbar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--purple);
             color: #fff !important;
             padding: 11px 20px;
             border-radius: 9px;
-            font-size: 13px !important;
-            font-weight: 600 !important;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
-        .article-hamburger {
+        .hamburger {
             display: none;
             width: 38px;
             height: 38px;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            background: transparent;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
             gap: 5px;
             cursor: pointer;
         }
 
-        .article-hamburger span {
+        .hamburger span {
             display: block;
             width: 24px;
             height: 3px;
             background: #334155;
             border-radius: 5px;
         }
+
+
+        /* ARTICLE */
 
         .article-wrapper {
             padding: 50px 20px 70px;
@@ -121,43 +193,57 @@
 
         .article-category {
             display: inline-block;
-            margin-bottom: 13px;
-            padding: 7px 12px;
+            margin-bottom: 16px;
+            padding: 6px 12px;
             border-radius: 999px;
-            background: #f3e8ff;
-            color: #5b21b6;
+            background: var(--purple-light);
+            color: var(--purple);
             font-size: 11px;
             font-weight: 700;
         }
 
         .article-header h1 {
-            margin: 0 0 13px;
-            color: #1e1b4b;
+            margin: 0 0 14px;
+            color: var(--purple-dark);
             font-size: 38px;
             line-height: 1.25;
             font-weight: 800;
         }
 
         .article-meta {
-            color: #94a3b8;
+            color: var(--muted);
             font-size: 13px;
         }
 
+
+        /* IMAGE */
+
+        .article-image {
+            padding: 0 50px;
+        }
+
         .article-image img {
+            display: block;
             width: 100%;
             height: auto;
-            display: block;
+            max-width: 100%;
             object-fit: contain;
-            object-position: center center;
+            object-position: center;
+            border-radius: 17px;
+            background: #f8fafc;
         }
 
         .image-credit {
             margin-top: 8px;
-            padding: 0 20px;
+            padding: 0 10px;
             text-align: center;
             color: #94a3b8;
             font-size: 11px;
+            line-height: 1.5;
         }
+
+
+        /* CONTENT */
 
         .article-content {
             padding: 35px 50px 50px;
@@ -170,98 +256,120 @@
         }
 
         .article-content h2 {
-            margin: 32px 0 12px;
-            color: #5b21b6;
+            color: var(--purple);
             font-size: 25px;
             line-height: 1.35;
+            margin: 30px 0 13px;
         }
 
         .article-content h3 {
-            margin: 25px 0 9px;
+            color: var(--purple-dark);
             font-size: 19px;
+            line-height: 1.4;
+            margin: 25px 0 10px;
         }
 
-        .article-content ul,
         .article-content ol {
+            padding-left: 22px;
             margin: 0 0 22px;
-            padding-left: 23px;
         }
 
-        .article-content li { margin-bottom: 9px; }
+        .article-content li {
+            margin-bottom: 9px;
+        }
+
+
+        /* HIGHLIGHT */
 
         .highlight {
-            margin: 25px 0;
-            padding: 18px 20px;
-            border-left: 4px solid #facc15;
-            border-radius: 10px;
             background: #fffbeb;
+            border-left: 4px solid var(--yellow);
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin: 25px 0;
         }
+
+
+        /* CTA */
 
         .article-cta {
             margin-top: 35px;
             padding: 25px;
-            border-radius: 15px;
+            border-radius: 16px;
             background: linear-gradient(135deg,#5b21b6,#7c3aed);
             color: #fff;
         }
 
         .article-cta h2 {
-            margin: 0 0 8px;
             color: #fff;
+            margin: 0 0 8px;
             font-size: 22px;
         }
 
         .article-cta p {
+            color: #fff;
             margin-bottom: 15px;
-            color: rgba(255,255,255,.88);
             font-size: 14px;
         }
 
         .article-cta a {
             display: inline-block;
-            padding: 10px 15px;
+            background: #fff;
+            color: var(--purple);
+            padding: 10px 17px;
             border-radius: 8px;
-            background: #facc15;
-            color: #422006;
-            font-size: 12px;
             font-weight: 700;
+            font-size: 13px;
         }
 
+
+        /* BACK */
+
         .back-blog {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            margin-top: 25px;
-            color: #5b21b6;
+            display: block;
+            width: max-content;
+            margin: 30px auto 0;
+            color: var(--purple);
             font-size: 13px;
             font-weight: 700;
         }
 
+
+        /* FOOTER */
+
         .article-footer {
-            padding: 25px 20px;
-            border-top: 1px solid #e2e8f0;
-            background: #fff;
+            background: var(--purple-dark);
+            color: #cbd5e1;
             text-align: center;
-            color: #64748b;
-            font-size: 11px;
+            padding: 28px 20px;
+            font-size: 12px;
         }
 
-        @media (max-width: 768px) {
-            .article-navbar {
-                min-height: auto;
+
+        /* MOBILE */
+
+        @media (max-width:900px) {
+
+            .navbar {
+                min-height: 70px;
                 padding: 0 20px;
+                gap: 0;
             }
 
-            .article-logo img { width: 125px; }
+            .logo img {
+                width: 125px;
+            }
 
-            .article-nav-button { display: none; }
+            .btn-navbar {
+                display: none;
+            }
 
-            .article-hamburger {
+            .hamburger {
                 display: flex;
                 margin-left: auto;
             }
 
-            .article-nav-links {
+            .nav-menu {
                 position: absolute;
                 top: 70px;
                 left: 0;
@@ -271,171 +379,372 @@
                 align-items: flex-start;
                 gap: 0;
                 padding: 12px 20px 18px;
+                margin: 0;
                 background: #fff;
                 box-shadow: 0 8px 18px rgba(0,0,0,.08);
             }
 
-            .article-nav-links.active { display: flex; }
+            .nav-menu.active {
+                display: flex;
+            }
 
-            .article-nav-links a {
+            .nav-menu a {
                 width: 100%;
                 padding: 11px 0;
                 border-bottom: 1px solid #f1f5f9;
+                font-size: 14px;
             }
 
-            .article-wrapper { padding: 25px 12px 45px; }
+            .article-wrapper {
+                padding: 30px 12px 50px;
+            }
 
-            .article-container { border-radius: 15px; }
+            .article-container {
+                border-radius: 15px;
+            }
 
-            .article-header { padding: 30px 25px 20px; }
+            .article-header {
+                padding: 32px 25px 20px;
+            }
 
-            .article-header h1 { font-size: 29px; }
+            .article-header h1 {
+                font-size: 30px;
+            }
 
-            .article-image img { height: auto;
-            object-fit: contain;
-            object-position: center center; }
+            .article-image {
+                padding: 0 25px;
+            }
 
-            .article-content { padding: 28px 25px 35px; }
+            .article-image img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                border-radius: 13px;
+            }
 
-            .article-content p { font-size: 15px; }
+            .article-content {
+                padding: 28px 25px 40px;
+            }
 
-            .article-content h2 { font-size: 22px; }
+            .article-content p {
+                font-size: 15px;
+            }
+
+            .article-content h2 {
+                font-size: 22px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header class="article-navbar">
-    <a href="index.html" class="article-logo">
-        <img src="logo primagama png.jpeg" alt="Logo New Primagama Sunter Indah">
-    </a>
 
-    <nav class="article-nav-links" id="articleNav">
-        <a href="index.html#hero">Beranda</a>
-        <a href="index.html#tentang">Tentang</a>
-        <a href="index.html#program">Program</a>
-        <a href="index.html#fasilitas">Fasilitas</a>
-        <a href="index.html#faq">FAQ</a>
-        <a href="index.html#kontak">Kontak</a>
-        <a href="blog.html" class="active">Blog</a>
+<header class="navbar">
+
+    <div class="logo">
+        <img src="logo primagama png.jpeg" alt="Logo New Primagama">
+    </div>
+
+
+    <nav class="nav-menu">
+
+        <a href="index.html#hero">
+            Beranda
+        </a>
+
+        <a href="index.html#tentang">
+            Tentang
+        </a>
+
+        <a href="index.html#program">
+            Program
+        </a>
+
+        <a href="index.html#fasilitas">
+            Fasilitas
+        </a>
+
+        <a href="index.html#faq">
+            FAQ
+        </a>
+
+        <a href="index.html#kontak">
+            Kontak
+        </a>
+
+        <a href="blog.html" class="active">
+            Blog
+        </a>
+
     </nav>
 
-    <a href="index.html#kontak" class="article-nav-button">Daftar Sekarang</a>
 
-    <div class="article-hamburger" id="articleHamburger">
+    <a href="index.html#kontak" class="btn-navbar">
+        Daftar Sekarang
+    </a>
+
+
+    <div class="hamburger" id="hamburger">
+
         <span></span>
         <span></span>
         <span></span>
+
     </div>
+
 </header>
 
+
 <main class="article-wrapper">
+
     <article class="article-container">
 
+
         <header class="article-header">
-            <div class="article-category">Tips Belajar</div>
-            <h1>Belajar Kelompok: Biar Nggak Malah Jadi Ajang Ngobrol</h1>
-            <div class="article-meta">23 September 2026 • New Primagama Sunter Indah</div>
+
+            <span class="article-category">
+                Tips Belajar
+            </span>
+
+            <h1>
+                Belajar Kelompok: Biar Nggak Malah Jadi Ajang Ngobrol
+            </h1>
+
+            <div class="article-meta">
+                23 September 2026 • New Primagama Sunter Indah
+            </div>
+
         </header>
 
+
         <div class="article-image">
-            <img src="https://ditsmp.kemendikdasmen.go.id/storage/posts/hAlt6Ed7cvMAyZ39eQDQjKluOiWLTfAe5shqIP9M.png" alt="Kegiatan siswa belajar dan berdiskusi bersama" loading="eager" referrerpolicy="no-referrer">
-            <div class="image-credit">Sumber gambar: Direktorat Sekolah Menengah Pertama, Kementerian Pendidikan Dasar dan Menengah</div>
+
+            <img
+                src="https://ditsmp.kemendikdasmen.go.id/storage/posts/hAlt6Ed7cvMAyZ39eQDQjKluOiWLTfAe5shqIP9M.png"
+                alt="Kegiatan belajar kelompok"
+                loading="eager"
+                referrerpolicy="no-referrer">
+
+            <div class="image-credit">
+                Sumber foto: Direktorat SMP Kemendikdasmen
+            </div>
+
         </div>
 
+
         <div class="article-content">
+
+
             <p>
-                Belajar bareng teman sebenarnya bisa jadi cara yang menyenangkan untuk
-                memahami materi. Kamu bisa saling menjelaskan, bertanya, dan membahas
-                soal yang masih terasa sulit. Tapi kalau tidak punya tujuan yang jelas,
-                sesi belajar kelompok juga gampang berubah jadi ajang ngobrol.
+                Belajar kelompok bisa jadi salah satu cara yang seru untuk
+                memahami materi. Kamu bisa bertanya kepada teman, berdiskusi,
+                dan saling membantu ketika menemukan bagian yang sulit.
             </p>
 
-            <h2>1. Tentukan tujuan sebelum mulai</h2>
             <p>
-                Sebelum berkumpul, tentukan dulu apa yang ingin diselesaikan. Misalnya
-                membahas satu bab, mengerjakan beberapa soal, atau mempersiapkan materi
-                untuk ujian. Dengan target yang jelas, pembahasan jadi lebih terarah.
+                Tapi ada satu masalah klasik: niat awalnya belajar, ujung-
+                ujungnya malah ngobrol ke mana-mana. Baru lima menit buka
+                buku, sudah ada cerita baru yang lebih menarik.
             </p>
 
-            <h2>2. Bagi tugas setiap anggota</h2>
+
+            <h2>
+                Tentukan tujuan sebelum mulai
+            </h2>
+
             <p>
-                Jangan sampai hanya satu orang yang menjelaskan atau mengerjakan semuanya.
-                Setiap anggota bisa mendapat bagian untuk membaca materi, membuat soal,
-                menjelaskan konsep, atau memeriksa jawaban. Cara ini membuat semua orang
-                ikut terlibat.
+                Sebelum belajar, tentukan dulu apa yang ingin diselesaikan.
+                Jangan hanya berkumpul tanpa tujuan yang jelas karena
+                pembahasannya bisa mudah melebar.
             </p>
 
-            <h2>3. Tentukan waktu belajar</h2>
             <p>
-                Belajar kelompok tidak harus berlangsung berjam-jam. Tentukan durasi yang
-                realistis, lalu sisihkan waktu untuk istirahat. Contohnya, belajar fokus
-                selama 45 menit kemudian istirahat sebentar sebelum lanjut ke sesi berikutnya.
+                Misalnya, target kelompok hari ini adalah menyelesaikan
+                latihan soal matematika, memahami satu bab IPA, atau
+                mempersiapkan presentasi.
             </p>
 
-            <h2>4. Bedakan waktu belajar dan ngobrol</h2>
+
+            <h2>
+                Bagi tugas supaya semua ikut berperan
+            </h2>
+
             <p>
-                Ngobrol sebentar tentu tidak masalah. Yang penting, jangan sampai obrolan
-                membuat target belajar terlupakan. Kalau pembicaraan sudah terlalu jauh dari
-                materi, kembali lagi ke tujuan yang sudah disepakati.
+                Kalau semua orang hanya menunggu satu orang menjelaskan,
+                belajar kelompok bisa menjadi kurang efektif.
             </p>
 
-            <h2>5. Saling menjelaskan materi</h2>
             <p>
-                Salah satu manfaat belajar kelompok adalah bisa melihat materi dari sudut
-                pandang teman. Coba bergantian menjelaskan materi dengan bahasa sendiri.
-                Kalau ada yang belum paham, anggota lain bisa membantu menjelaskan ulang.
+                Coba bagi peran. Ada yang menyiapkan soal, ada yang
+                menjelaskan materi, ada yang mencatat poin penting, dan
+                ada yang mengecek jawaban.
             </p>
 
-            <h2>6. Tutup dengan review singkat</h2>
+
+            <h2>
+                Tetapkan waktu untuk ngobrol
+            </h2>
+
             <p>
-                Sebelum selesai, cek kembali apa saja yang sudah dipelajari. Catat bagian
-                yang masih belum dipahami dan tentukan apa yang perlu dipelajari lagi secara
-                mandiri setelah sesi kelompok selesai.
+                Ngobrol bersama teman sebenarnya tidak selalu menjadi
+                masalah. Yang penting adalah tahu kapan waktunya belajar
+                dan kapan waktunya santai.
+            </p>
+
+            <p>
+                Kamu bisa membuat sesi belajar terlebih dahulu, kemudian
+                memberikan waktu istirahat singkat untuk ngobrol.
+            </p>
+
+
+            <div class="highlight">
+
+                <strong>
+                    Contoh sesi 90 menit:
+                </strong>
+
+                10 menit menentukan target, 30 menit belajar atau mengerjakan
+                soal, 10 menit membahas jawaban, 10 menit istirahat,
+                25 menit membahas bagian sulit, lalu 5 menit membuat
+                kesimpulan.
+
+            </div>
+
+
+            <h2>
+                Jangan takut bertanya
+            </h2>
+
+            <p>
+                Salah satu keuntungan belajar kelompok adalah kamu bisa
+                langsung bertanya ketika ada materi yang belum dipahami.
+            </p>
+
+            <p>
+                Tidak perlu malu kalau belum mengerti. Justru pertanyaan
+                tersebut bisa membuka diskusi dan membantu anggota kelompok
+                lain memahami materi yang sama.
+            </p>
+
+
+            <h2>
+                Tetap fokus pada materi
+            </h2>
+
+            <p>
+                Kalau pembicaraan mulai keluar dari topik, coba kembali
+                mengingat target yang sudah dibuat di awal.
+            </p>
+
+            <p>
+                Tidak harus langsung memotong pembicaraan teman. Cukup
+                arahkan kembali pembahasan ke materi yang sedang dipelajari.
+            </p>
+
+
+            <h2>
+                Intinya, belajar bareng tetap harus punya arah
+            </h2>
+
+            <p>
+                Belajar kelompok bisa terasa lebih menyenangkan kalau setiap
+                orang tahu apa yang harus dicapai. Jadi, ngobrol boleh,
+                tetapi jangan sampai kegiatan belajar berubah menjadi ajang
+                ngobrol sepanjang waktu.
             </p>
 
             <div class="highlight">
-                <strong>Tips singkat:</strong> tentukan target ✓ bagi tugas ✓ batasi distraksi ✓
-                fokus berdiskusi ✓ review sebelum selesai ✓
+
+                <strong>
+                    Kunci belajar kelompok:
+                </strong>
+
+                punya target, bagi peran, atur waktu, saling membantu,
+                dan tetap kembali ke tujuan utama.
+
             </div>
+
 
             <div class="article-cta">
-                <h2>Siap belajar lebih terarah?</h2>
+
+                <h2>
+                    Siap belajar lebih terarah?
+                </h2>
+
                 <p>
-                    Kalau kamu butuh pendampingan belajar yang lebih terarah,
-                    kamu bisa konsultasi bersama New Primagama Sunter Indah.
+                    Dapatkan pendampingan belajar yang sesuai dengan
+                    kebutuhanmu bersama New Primagama Sunter Indah.
                 </p>
-                <a href="https://wa.me/6285285705335" target="_blank">
+
+                <a
+                    href="https://wa.me/6285285705335"
+                    target="_blank"
+                    rel="noopener">
+
                     Konsultasi Gratis
+
                 </a>
+
             </div>
 
-            <a href="blog.html" class="back-blog">← Kembali ke Blog</a>
+
+            <a href="blog.html" class="back-blog">
+                ← Kembali ke Blog
+            </a>
+
+
         </div>
+
     </article>
+
 </main>
 
+
 <footer class="article-footer">
-    © 2026 New Primagama Sunter Indah. Semua Hak Dilindungi.
+
+    © 2026 New Primagama Sunter Indah.
+    Semua Hak Dilindungi.
+
 </footer>
 
+
 <script>
-    const articleHamburger = document.getElementById("articleHamburger");
-    const articleNav = document.getElementById("articleNav");
 
-    if (articleHamburger && articleNav) {
-        articleHamburger.addEventListener("click", function () {
-            articleNav.classList.toggle("active");
+    const hamburger =
+        document.getElementById("hamburger");
+
+    const navMenu =
+        document.querySelector(".nav-menu");
+
+
+    if (hamburger && navMenu) {
+
+        hamburger.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+
         });
 
-        articleNav.querySelectorAll("a").forEach(function (link) {
+
+        navMenu.querySelectorAll("a").forEach(function (link) {
+
             link.addEventListener("click", function () {
-                articleNav.classList.remove("active");
+
+                navMenu.classList.remove("active");
+
             });
+
         });
+
     }
+
 </script>
+
 
 </body>
 </html>
