@@ -1,193 +1,829 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental! - New Primagama Sunter Indah</title>
+
+    <meta name="description" content="Kenali cara mempersiapkan diri menghadapi ujian tanpa harus menggunakan sistem kebut semalam.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://newprimagamasunterindah.com/tips-menghadapi-ujian.html">
+
+    <meta property="og:title" content="Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!">
+    <meta property="og:description" content="Kenali cara mempersiapkan diri menghadapi ujian tanpa harus menggunakan sistem kebut semalam.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://newprimagamasunterindah.com/tips-menghadapi-ujian.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=85">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
     <style>
+
         :root {
-            --primary-purple: #5B21B6;
-            --light-purple: #F3E8FF;
-            --bg-color: #F8FAFC;
-            --text-main: #1E293B;
-            --text-muted: #64748B;
+            --purple: #5b21b6;
+            --purple-dark: #1e1b4b;
+            --purple-light: #f3e8ff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --bg: #f8fafc;
+            --yellow: #facc15;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-color);
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-main);
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Poppins", sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        /* Navigasi Atas */
-        .top-nav {
-            background: #ffffff;
-            padding: 16px 0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        .top-nav nav a {
-            margin: 0 14px;
+        a {
             text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-        .top-nav nav a:hover, .top-nav nav a.active {
-            color: var(--primary-purple);
-            font-weight: 600;
         }
 
-        /* Kontainer Utama ala Card */
-        .main-container {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
 
-        .article-card {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(91, 33, 182, 0.06);
-            border: 1px solid rgba(91, 33, 182, 0.08);
-            overflow: hidden;
-            padding: 40px;
-        }
+        /* =========================
+           NAVBAR
+        ========================= */
 
-        /* Badge ala Zenius (Pinned) */
-        .badge-pinned {
-            display: inline-block;
-            background-color: var(--light-purple);
-            color: var(--primary-purple);
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 6px 14px;
-            border-radius: 20px;
-            letter-spacing: 0.5px;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 9999;
 
-        .article-card h1 {
-            font-size: 2rem;
-            color: var(--text-main);
-            line-height: 1.35;
-            margin-top: 0;
-            margin-bottom: 12px;
-        }
-
-        .meta-info {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #F1F5F9;
-        }
-
-        .article-card img {
             width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 30px;
+            min-height: 80px;
+
+            padding: 0 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 24px;
+
+            background: #ffffff;
+
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 24px;
+            margin-left: auto;
+        }
+
+        .nav-menu a {
+            color: #334155;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            white-space: nowrap;
+        }
+
+        .nav-menu a.active,
+        .nav-menu a:hover {
+            color: var(--purple);
+        }
+
+        .btn-navbar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--purple);
+            color: #ffffff !important;
+
+            padding: 11px 20px;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            white-space: nowrap;
+        }
+
+        .hamburger {
+            display: none;
+
+            width: 38px;
+            height: 38px;
+
+            border: 0;
+            background: transparent;
+
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 5px;
+
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+
+            width: 24px;
+            height: 3px;
+
+            background: #334155;
+
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           ARTICLE
+        ========================= */
+
+        .article-wrapper {
+            padding: 50px 20px 70px;
+        }
+
+        .article-container {
+            width: 100%;
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            overflow: hidden;
+
+            background: #ffffff;
+
+            border-radius: 20px;
+
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+        }
+
+        .article-header {
+            padding: 45px 50px 25px;
+        }
+
+        .article-category {
+            display: inline-block;
+
+            margin-bottom: 16px;
+
+            padding: 6px 12px;
+
+            border-radius: 999px;
+
+            background: var(--purple-light);
+            color: var(--purple);
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .article-header h1 {
+            margin: 0 0 14px;
+
+            color: var(--purple-dark);
+
+            font-size: 38px;
+            line-height: 1.25;
+            font-weight: 800;
+        }
+
+        .article-meta {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           IMAGE
+        ========================= */
+
+        .article-image {
+            padding: 0 50px;
+        }
+
+        .article-image img {
+            display: block;
+
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+
+            object-fit: contain;
+            object-position: center;
+
+            border-radius: 17px;
+
+            background: #f8fafc;
+        }
+
+        .image-credit {
+            margin-top: 8px;
+
+            padding: 0 10px;
+
+            text-align: center;
+
+            color: #94a3b8;
+
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .article-content {
+            padding: 35px 50px 50px;
         }
 
         .article-content p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #334155;
-            margin-bottom: 20px;
+            margin: 0 0 20px;
+
+            font-size: 16px;
+            line-height: 1.85;
         }
 
-        .article-content h3 {
-            color: var(--primary-purple);
-            font-size: 1.25rem;
-            margin-top: 30px;
-            margin-bottom: 10px;
+        .article-content h2 {
+            margin: 30px 0 13px;
+
+            color: var(--purple);
+
+            font-size: 25px;
+            line-height: 1.35;
         }
 
-        /* Tombol Kembali */
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+
+        /* =========================
+           HIGHLIGHT
+        ========================= */
+
+        .highlight {
+            margin: 25px 0;
+
+            padding: 18px 20px;
+
+            background: #fffbeb;
+
+            border-left: 4px solid var(--yellow);
+
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .article-cta {
             margin-top: 35px;
-            padding: 10px 20px;
-            background-color: var(--primary-purple);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: background 0.2s, transform 0.1s;
-        }
-        .back-btn:hover {
-            background-color: #4C1D95;
-            transform: translateY(-1px);
+
+            padding: 25px;
+
+            border-radius: 16px;
+
+            background: linear-gradient(
+                135deg,
+                #5b21b6,
+                #7c3aed
+            );
+
+            color: #ffffff;
         }
 
-        @media (max-width: 768px) {
-            .article-card {
-                padding: 20px;
-            }
-            .article-card h1 {
-                font-size: 1.5rem;
-            }
+        .article-cta h2 {
+            margin: 0 0 8px;
+
+            color: #ffffff;
+
+            font-size: 22px;
         }
+
+        .article-cta p {
+            margin-bottom: 15px;
+
+            color: #ffffff;
+
+            font-size: 14px;
+        }
+
+        .article-cta a {
+            display: inline-block;
+
+            padding: 10px 17px;
+
+            background: #ffffff;
+            color: var(--purple);
+
+            border-radius: 8px;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           BACK BLOG
+        ========================= */
+
+        .back-blog {
+            display: block;
+
+            width: max-content;
+
+            margin: 30px auto 0;
+
+            color: var(--purple);
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .article-footer {
+            padding: 28px 20px;
+
+            background: var(--purple-dark);
+
+            color: #cbd5e1;
+
+            text-align: center;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                min-height: 70px;
+                padding: 0 20px;
+                gap: 0;
+            }
+
+            .logo img {
+                width: 125px;
+            }
+
+            .btn-navbar {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+                margin-left: auto;
+            }
+
+            .nav-menu {
+                position: absolute;
+
+                top: 70px;
+                left: 0;
+
+                width: 100%;
+
+                display: none;
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 0;
+
+                padding: 12px 20px 18px;
+                margin: 0;
+
+                background: #ffffff;
+
+                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                width: 100%;
+
+                padding: 11px 0;
+
+                border-bottom: 1px solid #f1f5f9;
+
+                font-size: 14px;
+            }
+
+            .article-wrapper {
+                padding: 30px 12px 50px;
+            }
+
+            .article-container {
+                border-radius: 15px;
+            }
+
+            .article-header {
+                padding: 32px 25px 20px;
+            }
+
+            .article-header h1 {
+                font-size: 30px;
+            }
+
+            .article-image {
+                padding: 0 25px;
+            }
+
+            .article-image img {
+                width: 100%;
+                height: auto;
+
+                object-fit: contain;
+
+                border-radius: 13px;
+            }
+
+            .article-content {
+                padding: 28px 25px 40px;
+            }
+
+            .article-content p {
+                font-size: 15px;
+            }
+
+            .article-content h2 {
+                font-size: 22px;
+            }
+
+        }
+
     </style>
+
 </head>
+
+
 <body>
 
-    <!-- NAVIGASI UTAMA -->
-    <header class="top-nav">
-        <nav>
-            <a href="index.html#hero">Beranda</a>
-            <a href="index.html#tentang">Tentang</a>
-            <a href="index.html#program">Program</a>
-            <a href="index.html#fasilitas">Fasilitas</a>
-            <a href="index.html#faq">FAQ</a>
-            <a href="index.html#kontak">Kontak</a>
-            <a href="blog.html" class="active">Blog</a>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <img
+                src="logo primagama png.jpeg"
+                alt="Logo New Primagama">
+
+        </div>
+
+
+        <nav class="nav-menu">
+
+            <a href="index.html#hero">
+                Beranda
+            </a>
+
+            <a href="index.html#tentang">
+                Tentang
+            </a>
+
+            <a href="index.html#program">
+                Program
+            </a>
+
+            <a href="index.html#fasilitas">
+                Fasilitas
+            </a>
+
+            <a href="index.html#faq">
+                FAQ
+            </a>
+
+            <a href="index.html#kontak">
+                Kontak
+            </a>
+
+            <a href="blog.html" class="active">
+                Blog
+            </a>
+
         </nav>
+
+
+        <a
+            href="index.html#kontak"
+            class="btn-navbar">
+
+            Daftar Sekarang
+
+        </a>
+
+
+        <button
+            class="hamburger"
+            id="hamburger"
+            type="button"
+            aria-label="Buka menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
     </header>
 
-    <!-- KONTEN UTAMA DALAM KARTU ELEGAN -->
-    <main class="main-container">
-        <article class="article-card">
-            
-            <span class="badge-pinned">Pinned • Tips Belajar</span>
-            
-            <h1>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!</h1>
-            
-            <div class="meta-info">
-                Diposting oleh Admin • 9 September 2026
+
+    <!-- =========================
+         ARTICLE
+    ========================== -->
+
+    <main class="article-wrapper">
+
+        <article class="article-container">
+
+
+            <header class="article-header">
+
+                <span class="article-category">
+                    Ujian & Persiapan
+                </span>
+
+                <h1>
+                    Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!
+                </h1>
+
+                <div class="article-meta">
+                    5 Agustus 2026 • New Primagama Sunter Indah
+                </div>
+
+            </header>
+
+
+            <div class="article-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=85"
+                    alt="Siswa sedang mempersiapkan ujian"
+                    loading="eager"
+                    referrerpolicy="no-referrer">
+
+                <div class="image-credit">
+                    Sumber foto: Unsplash
+                </div>
+
             </div>
 
-            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Ilustrasi Belajar">
 
             <div class="article-content">
-                <p>Halo, Sobat! Siapa nih yang kalau denger kata "Ujian" langsung mendadak <em>insecure</em>, keringetan dingin, atau malah overthinking duluan? Tenang, itu manusiawi banget kok. Tapi jangan sampe rasa takut itu bikin nilai kamu boncos, ya!</p>
-                
-                <h3>1. Jangan Sistem SKS (Sistem Kebut Semalam)</h3>
-                <p>Udah bukan zamannya lagi begadang semaleman buat ngafalin semua materi pas besoknya mau ujian. Otak kita itu bukan hardisk komputer yang bisa diisi data ribet dalam waktu 5 jam tanpa jeda istirahat. Mulailah cicil belajar dari jauh-jauh hari secara santai tapi konsisten.</p>
 
-                <h3>2. Pahami Konsep, Bukan Cuma Ngafalin</h3>
-                <p>Kalau kamu cuma ngandelin hafalan, begitu soalnya dibolak-balik sedikit, dijamin bakal <em>blank</em> di tengah jalan. Coba pahami inti materinya, bikin ringkasan atau mind map sendiri pakai bahasa yang gampang kamu ngerti.</p>
 
-                <h3>3. Jaga Vibe Positif & Istirahat Cukup</h3>
-                <p>Begadang pas mau ujian tuh cuma bikin besoknya kamu ngantuk dan gak fokus. Tidur yang cukup itu penting banget supaya otak bisa "re-charge" dan semua memori yang udah dipelajari bisa tersimpan rapi.</p>
-
-                <p style="margin-top: 30px; font-weight: 600; color: var(--primary-purple);">
-                    Intinya, hadapi ujian dengan kepala dingin, persiapan matang, dan mental juara. Gaskeun raih nilai impianmu! 💪🔥
+                <p>
+                    Ujian sering membuat siswa merasa tertekan, apalagi kalau
+                    persiapannya baru dimulai ketika hari ujian sudah dekat.
+                    Padahal, persiapan yang dilakukan secara bertahap bisa
+                    membuat proses belajar terasa lebih terarah.
                 </p>
+
+
+                <p>
+                    Daripada menggunakan sistem kebut semalam, lebih baik
+                    mulai menyiapkan materi dan latihan dari jauh-jauh hari.
+                </p>
+
+
+                <h2>
+                    Kenali materi yang akan diujikan
+                </h2>
+
+                <p>
+                    Langkah pertama adalah mengetahui materi apa saja yang
+                    kemungkinan akan muncul. Dengan begitu, kamu bisa
+                    menentukan bagian mana yang perlu dipelajari terlebih
+                    dahulu.
+                </p>
+
+
+                <h2>
+                    Buat jadwal belajar
+                </h2>
+
+                <p>
+                    Jadwal belajar membantu membagi materi menjadi beberapa
+                    bagian. Tidak perlu membuat jadwal yang terlalu padat.
+                    Yang penting jadwal tersebut realistis dan bisa
+                    dijalankan.
+                </p>
+
+
+                <div class="highlight">
+
+                    <strong>Tips:</strong>
+                    lebih baik belajar secara rutin dalam beberapa sesi
+                    daripada memaksakan semua materi selesai dalam satu malam.
+
+                </div>
+
+
+                <h2>
+                    Perbanyak latihan soal
+                </h2>
+
+                <p>
+                    Setelah memahami materi, coba kerjakan latihan soal.
+                    Latihan membantu kamu mengetahui bagian mana yang masih
+                    belum dikuasai.
+                </p>
+
+
+                <h2>
+                    Jangan takut salah
+                </h2>
+
+                <p>
+                    Jawaban yang salah saat latihan bukan berarti kamu gagal.
+                    Justru dari kesalahan tersebut kamu bisa mengetahui
+                    bagian yang perlu diperbaiki.
+                </p>
+
+
+                <h2>
+                    Gunakan try out sebagai evaluasi
+                </h2>
+
+                <p>
+                    Try out bisa digunakan untuk melihat kesiapan sebelum
+                    menghadapi ujian sebenarnya. Selain mengukur pemahaman,
+                    latihan seperti ini juga bisa membantu membiasakan diri
+                    dengan suasana pengerjaan soal.
+                </p>
+
+
+                <h2>
+                    Jaga waktu istirahat
+                </h2>
+
+                <p>
+                    Belajar memang penting, tetapi istirahat juga tidak boleh
+                    diabaikan. Tubuh dan pikiran membutuhkan waktu untuk
+                    beristirahat agar kegiatan belajar tetap nyaman.
+                </p>
+
+
+                <h2>
+                    Hindari belajar dengan sistem kebut semalam
+                </h2>
+
+                <p>
+                    Memaksakan banyak materi dalam satu malam bisa membuat
+                    kamu merasa semakin lelah dan sulit fokus. Lebih baik
+                    membagi materi dan mengerjakannya secara bertahap.
+                </p>
+
+
+                <h2>
+                    Buat persiapanmu lebih tenang
+                </h2>
+
+                <p>
+                    Ujian memang perlu dipersiapkan, tetapi kamu tidak perlu
+                    menghadapi semuanya sekaligus. Tentukan target, belajar
+                    secara bertahap, latihan, dan evaluasi hasilnya.
+                </p>
+
+
+                <div class="highlight">
+
+                    <strong>Intinya:</strong>
+                    persiapan ujian bukan tentang belajar sebanyak-banyaknya
+                    dalam satu waktu, tetapi membangun kebiasaan belajar yang
+                    teratur dan konsisten.
+
+                </div>
+
+
+                <div class="article-cta">
+
+                    <h2>
+                        Siap belajar lebih terarah?
+                    </h2>
+
+                    <p>
+                        Dapatkan pendampingan belajar yang sesuai dengan
+                        kebutuhanmu bersama New Primagama Sunter Indah.
+                    </p>
+
+                    <a
+                        href="https://wa.me/6285285705335"
+                        target="_blank"
+                        rel="noopener">
+
+                        Konsultasi Gratis
+
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="blog.html"
+                    class="back-blog">
+
+                    ← Kembali ke Blog
+
+                </a>
+
+
             </div>
 
-            <a href="blog.html" class="back-btn">&larr; Kembali ke Blog</a>
         </article>
+
     </main>
+
+
+    <footer class="article-footer">
+
+        © 2026 New Primagama Sunter Indah.
+        Semua Hak Dilindungi.
+
+    </footer>
+
+
+    <script>
+
+        const hamburger =
+            document.getElementById("hamburger");
+
+        const navMenu =
+            document.querySelector(".nav-menu");
+
+
+        if (hamburger && navMenu) {
+
+            hamburger.addEventListener("click", function () {
+
+                navMenu.classList.toggle("active");
+
+            });
+
+
+            navMenu
+                .querySelectorAll("a")
+                .forEach(function (link) {
+
+                    link.addEventListener("click", function () {
+
+                        navMenu.classList.remove("active");
+
+                    });
+
+                });
+
+        }
+
+    </script>
 
 </body>
 </html>
