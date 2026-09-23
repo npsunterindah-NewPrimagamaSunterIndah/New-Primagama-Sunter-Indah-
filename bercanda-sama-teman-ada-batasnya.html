@@ -1,1451 +1,661 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu |
-        New Primagama Sunter Indah
-    </title>
-
-    <meta
-        name="description"
-        content="Bercanda bersama teman memang menyenangkan, tetapi tetap ada batasnya. Kenali cara membedakan candaan yang sehat dan perilaku yang bisa membuat teman tidak nyaman."
-    >
-
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <link
-        rel="canonical"
-        href="https://newprimagamasunterindah.com/bercanda-sama-teman-ada-batasnya.html"
-    >
-
-
-    <!-- OPEN GRAPH -->
-
-    <meta
-        property="og:type"
-        content="article"
-    >
-
-    <meta
-        property="og:title"
-        content="Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu"
-    >
-
-    <meta
-        property="og:description"
-        content="Bercanda bersama teman memang menyenangkan, tetapi tetap ada batasnya. Kenali cara membedakan candaan yang sehat dan perilaku yang bisa membuat teman tidak nyaman."
-    >
-
-    <meta
-        property="og:url"
-        content="https://newprimagamasunterindah.com/bercanda-sama-teman-ada-batasnya.html"
-    >
-
-    <meta
-        property="og:image"
-        content="https://ditsmp.kemendikdasmen.go.id/storage/posts/Pfk96i2W3fjEvvPzzAdflmukBl3vabHXsR80tK5P.png"
-    >
-
-
-    <!-- FONT -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- FONT AWESOME -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
-
-
-    <style>
-
-        /* =====================================================
-           RESET
-        ===================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Poppins", sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
-            line-height: 1.7;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-
-        /* =====================================================
-           NAVBAR
-        ===================================================== */
-
-        .navbar {
-
-            position: sticky;
-            top: 0;
-
-            z-index: 9999;
-
-            width: 100%;
-            min-height: 80px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 6%;
-
-            background: #ffffff;
-
-            box-shadow:
-                0 2px 15px rgba(0, 0, 0, 0.06);
-
-        }
-
-
-        .logo {
-
-            display: flex;
-            align-items: center;
-
-            flex-shrink: 0;
-
-        }
-
-
-        .logo img {
-
-            width: 150px;
-            height: auto;
-
-            display: block;
-
-        }
-
-
-        .nav-menu {
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            gap: 24px;
-
-        }
-
-
-        .nav-menu a {
-
-            color: #334155;
-
-            font-size: 14px;
-            font-weight: 500;
-
-            transition: all 0.3s ease;
-
-        }
-
-
-        .nav-menu a:hover {
-
-            color: #5b21b6;
-
-        }
-
-
-        .nav-menu a.active {
-
-            color: #5b21b6;
-
-            font-weight: 700;
-
-        }
-
-
-        .btn-navbar {
-
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            background: #5b21b6;
-
-            color: #ffffff !important;
-
-            padding: 11px 20px;
-
-            border-radius: 9px;
-
-            font-size: 13px;
-
-            font-weight: 600;
-
-            white-space: nowrap;
-
-        }
-
-
-        /* =====================================================
-           HAMBURGER
-        ===================================================== */
-
-        .hamburger {
-
-            display: none;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-            align-items: flex-end;
-
-            gap: 5px;
-
-            width: 38px;
-            height: 38px;
-
-            cursor: pointer;
-
-        }
-
-
-        .hamburger span {
-
-            display: block;
-
-            width: 24px;
-            height: 3px;
-
-            background: #334155;
-
-            border-radius: 5px;
-
-        }
-
-
-        /* =====================================================
-           ARTICLE WRAPPER
-        ===================================================== */
-
-        .article-wrapper {
-
-            width: 100%;
-
-            padding: 50px 20px 70px;
-
-        }
-
-
-        /* =====================================================
-           ARTICLE CARD
-        ===================================================== */
-
-        .article-container {
-
-            width: 100%;
-
-            max-width: 850px;
-
-            margin: 0 auto;
-
-            background: #ffffff;
-
-            border-radius: 20px;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 10px 35px rgba(30, 41, 59, 0.08);
-
-        }
-
-
-        /* =====================================================
-           ARTICLE HEADER
-        ===================================================== */
-
-        .article-header {
-
-            padding: 45px 50px 25px;
-
-        }
-
-
-        .article-category {
-
-            display: inline-block;
-
-            margin-bottom: 16px;
-
-            padding: 7px 12px;
-
-            background: #f3e8ff;
-
-            color: #5b21b6;
-
-            border-radius: 999px;
-
-            font-size: 11px;
-
-            font-weight: 700;
-
-        }
-
-
-        .article-header h1 {
-
-            margin-bottom: 14px;
-
-            color: #1e1b4b;
-
-            font-size: 38px;
-
-            line-height: 1.25;
-
-            font-weight: 800;
-
-        }
-
-
-        .article-meta {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            align-items: center;
-
-            gap: 8px;
-
-            color: #94a3b8;
-
-            font-size: 13px;
-
-        }
-
-
-        .article-meta i {
-
-            color: #5b21b6;
-
-        }
-
-
-        /* =====================================================
-           ARTICLE IMAGE
-
-           PENTING:
-           GAMBAR TIDAK DIPOTONG
-        ===================================================== */
-
-        .article-image {
-
-            width: 100%;
-
-            padding: 0 50px;
-
-        }
-
-
-        .article-image img {
-
-            display: block;
-
-            width: 100%;
-
-            height: auto;
-
-            max-width: 100%;
-
-            object-fit: contain;
-
-            object-position: center center;
-
-            border-radius: 17px;
-
-            background: #f8fafc;
-
-        }
-
-
-        .image-credit {
-
-            margin-top: 8px;
-
-            text-align: center;
-
-            color: #94a3b8;
-
-            font-size: 11px;
-
-            line-height: 1.5;
-
-        }
-
-
-        /* =====================================================
-           ARTICLE CONTENT
-        ===================================================== */
-
-        .article-content {
-
-            padding: 35px 50px 50px;
-
-        }
-
-
-        .article-content p {
-
-            margin-bottom: 20px;
-
-            color: #334155;
-
-            font-size: 16px;
-
-            line-height: 1.85;
-
-        }
-
-
-        .article-content h2 {
-
-            margin-top: 32px;
-
-            margin-bottom: 14px;
-
-            color: #5b21b6;
-
-            font-size: 25px;
-
-            line-height: 1.35;
-
-        }
-
-
-        .article-content h3 {
-
-            margin-top: 25px;
-
-            margin-bottom: 12px;
-
-            color: #1e293b;
-
-            font-size: 19px;
-
-        }
-
-
-        /* =====================================================
-           HIGHLIGHT
-        ===================================================== */
-
-        .highlight-box {
-
-            margin: 28px 0;
-
-            padding: 20px 22px;
-
-            background: #f8f7ff;
-
-            border-left: 4px solid #5b21b6;
-
-            border-radius: 10px;
-
-        }
-
-
-        .highlight-box p {
-
-            margin: 0;
-
-            color: #334155;
-
-            font-size: 15px;
-
-        }
-
-
-        .highlight-box strong {
-
-            color: #5b21b6;
-
-        }
-
-
-        /* =====================================================
-           CHECKLIST
-        ===================================================== */
-
-        .check-list {
-
-            margin: 15px 0 25px;
-
-            padding-left: 20px;
-
-        }
-
-
-        .check-list li {
-
-            margin-bottom: 10px;
-
-            padding-left: 5px;
-
-            color: #334155;
-
-            font-size: 15px;
-
-            line-height: 1.7;
-
-        }
-
-
-        /* =====================================================
-           SOURCE
-        ===================================================== */
-
-        .article-source {
-
-            margin-top: 35px;
-
-            padding-top: 22px;
-
-            border-top: 1px solid #e2e8f0;
-
-        }
-
-
-        .article-source h3 {
-
-            margin-top: 0;
-
-            margin-bottom: 12px;
-
-            color: #1e293b;
-
-            font-size: 17px;
-
-        }
-
-
-        .article-source p {
-
-            margin-bottom: 7px;
-
-            color: #64748b;
-
-            font-size: 13px;
-
-            line-height: 1.7;
-
-        }
-
-
-        /* =====================================================
-           CTA
-        ===================================================== */
-
-        .article-cta {
-
-            margin-top: 35px;
-
-            padding: 28px;
-
-            border-radius: 15px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #5b21b6,
-                    #7c3aed
-                );
-
-            color: #ffffff;
-
-        }
-
-
-        .article-cta h2 {
-
-            margin: 0 0 8px;
-
-            color: #ffffff;
-
-            font-size: 21px;
-
-        }
-
-
-        .article-cta p {
-
-            margin-bottom: 17px;
-
-            color: rgba(255, 255, 255, 0.88);
-
-            font-size: 13px;
-
-        }
-
-
-        .cta-button {
-
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            padding: 10px 16px;
-
-            border-radius: 8px;
-
-            background: #facc15;
-
-            color: #422006;
-
-            font-size: 12px;
-
-            font-weight: 700;
-
-        }
-
-
-        /* =====================================================
-           BACK TO BLOG
-        ===================================================== */
-
-        .back-blog {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 7px;
-
-            margin-top: 27px;
-
-            color: #5b21b6;
-
-            font-size: 13px;
-
-            font-weight: 700;
-
-        }
-
-
-        .back-blog:hover {
-
-            color: #4c1d95;
-
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        .blog-footer {
-
-            padding: 30px 20px;
-
-            border-top: 1px solid #e2e8f0;
-
-            background: #ffffff;
-
-            text-align: center;
-
-            color: #64748b;
-
-            font-size: 11px;
-
-        }
-
-
-        /* =====================================================
-           MOBILE
-        ===================================================== */
-
-        @media (max-width: 768px) {
-
-            .navbar {
-
-                min-height: 70px;
-
-                padding: 0 20px;
-
-            }
-
-
-            .logo img {
-
-                width: 125px;
-
-            }
-
-
-            .btn-navbar {
-
-                display: none;
-
-            }
-
-
-            .hamburger {
-
-                display: flex;
-
-            }
-
-
-            .nav-menu {
-
-                position: absolute;
-
-                top: 70px;
-
-                left: 0;
-
-                width: 100%;
-
-                display: none;
-
-                flex-direction: column;
-
-                align-items: flex-start;
-
-                gap: 0;
-
-                padding: 12px 20px 18px;
-
-                background: #ffffff;
-
-                box-shadow:
-                    0 8px 18px rgba(0, 0, 0, 0.08);
-
-            }
-
-
-            .nav-menu.active {
-
-                display: flex;
-
-            }
-
-
-            .nav-menu a {
-
-                width: 100%;
-
-                padding: 11px 0;
-
-                font-size: 14px;
-
-                border-bottom: 1px solid #f1f5f9;
-
-            }
-
-
-            /* ARTICLE */
-
-            .article-wrapper {
-
-                padding: 25px 10px 45px;
-
-            }
-
-
-            .article-container {
-
-                border-radius: 15px;
-
-            }
-
-
-            .article-header {
-
-                padding: 30px 25px 20px;
-
-            }
-
-
-            .article-header h1 {
-
-                font-size: 29px;
-
-                line-height: 1.3;
-
-            }
-
-
-            .article-meta {
-
-                font-size: 11px;
-
-            }
-
-
-            /* =================================================
-               GAMBAR MOBILE
-
-               TIDAK DIPAKSA 250px
-               AGAR TIDAK TERPOTONG
-            ================================================= */
-
-            .article-image {
-
-                padding: 0 25px;
-
-            }
-
-
-            .article-image img {
-
-                width: 100%;
-
-                height: auto;
-
-                max-width: 100%;
-
-                object-fit: contain;
-
-                object-position: center center;
-
-                border-radius: 13px;
-
-            }
-
-
-            .article-content {
-
-                padding: 28px 25px 35px;
-
-            }
-
-
-            .article-content p {
-
-                font-size: 15px;
-
-                line-height: 1.8;
-
-            }
-
-
-            .article-content h2 {
-
-                font-size: 22px;
-
-            }
-
-
-            .article-content h3 {
-
-                font-size: 18px;
-
-            }
-
-
-            .highlight-box {
-
-                padding: 17px;
-
-            }
-
-
-            .highlight-box p {
-
-                font-size: 14px;
-
-            }
-
-
-            .check-list li {
-
-                font-size: 14px;
-
-            }
-
-
-            .article-cta {
-
-                padding: 22px;
-
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu - New Primagama Sunter Indah
+</title>
+
+<meta
+    name="description"
+    content="Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu">
+
+<link
+    rel="canonical"
+    href="https://newprimagamasunterindah.com/bercanda-sama-teman-ada-batasnya.html">
+
+<meta property="og:type" content="article">
+
+<meta
+    property="og:title"
+    content="Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu">
+
+<meta
+    property="og:description"
+    content="Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu">
+
+<meta
+    property="og:url"
+    content="https://newprimagamasunterindah.com/bercanda-sama-teman-ada-batasnya.html">
+
+<meta
+    property="og:image"
+    content="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=85">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+<style>
+
+:root {
+    --purple: #5b21b6;
+    --purple-dark: #1e1b4b;
+    --purple-light: #f3e8ff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --bg: #f8fafc;
+    --yellow: #facc15;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    min-height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0,0,0,.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-left: auto;
+}
+
+.nav-menu a {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav-menu a.active,
+.nav-menu a:hover {
+    color: var(--purple);
+}
+
+.btn-navbar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--purple);
+    color: #fff !important;
+    padding: 11px 20px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.hamburger {
+    display: none;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #334155;
+    border-radius: 5px;
+}
+
+.article-wrapper {
+    padding: 50px 20px 70px;
+}
+
+.article-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(15,23,42,.07);
+}
+
+.article-header {
+    padding: 45px 50px 25px;
+}
+
+.article-category {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--purple-light);
+    color: var(--purple);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.article-header h1 {
+    margin: 0 0 14px;
+    color: var(--purple-dark);
+    font-size: 38px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.article-meta {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.article-image {
+    padding: 0 50px;
+}
+
+.article-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 17px;
+    background: #f8fafc;
+}
+
+.image-credit {
+    margin-top: 8px;
+    padding: 0 10px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.article-content {
+    padding: 35px 50px 50px;
+}
+
+.article-content p {
+    font-size: 16px;
+    line-height: 1.85;
+    margin: 0 0 20px;
+}
+
+.article-content h2 {
+    color: var(--purple);
+    font-size: 25px;
+    line-height: 1.35;
+    margin: 30px 0 13px;
+}
+
+.article-content h3 {
+    color: var(--purple-dark);
+    font-size: 19px;
+    line-height: 1.4;
+    margin: 25px 0 10px;
+}
+
+.article-content ul,
+.article-content ol {
+    padding-left: 22px;
+    margin: 0 0 22px;
+}
+
+.article-content li {
+    margin-bottom: 9px;
+}
+
+.highlight {
+    background: #fffbeb;
+    border-left: 4px solid var(--yellow);
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.data-box,
+.source-box {
+    background: #faf5ff;
+    border-left: 4px solid var(--purple);
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.article-cta {
+    margin-top: 35px;
+    padding: 25px;
+    border-radius: 16px;
+    background: linear-gradient(
+        135deg,
+        #5b21b6,
+        #7c3aed
+    );
+    color: #fff;
+}
+
+.article-cta h2 {
+    color: #fff;
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+.article-cta p {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.article-cta a {
+    display: inline-block;
+    background: #fff;
+    color: var(--purple);
+    padding: 10px 17px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.back-blog {
+    display: block;
+    width: max-content;
+    margin: 30px auto 0;
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.article-footer {
+    background: #1e1b4b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 12px;
+}
+
+@media(max-width:900px) {
+
+    .navbar {
+        min-height: 70px;
+        padding: 0 20px;
+        gap: 0;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .btn-navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 12px 20px 18px;
+        margin: 0;
+        background: #fff;
+        box-shadow: 0 8px 18px rgba(0,0,0,.08);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        padding: 11px 0;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 14px;
+    }
+
+    .article-wrapper {
+        padding: 30px 12px 50px;
+    }
+
+    .article-container {
+        border-radius: 15px;
+    }
+
+    .article-header {
+        padding: 32px 25px 20px;
+    }
+
+    .article-header h1 {
+        font-size: 30px;
+    }
+
+    .article-image {
+        padding: 0 25px;
+    }
+
+    .article-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 13px;
+    }
+
+    .article-content {
+        padding: 28px 25px 40px;
+    }
+
+    .article-content p {
+        font-size: 15px;
+    }
+
+    .article-content h2 {
+        font-size: 22px;
+    }
+
+}
+
+</style>
 </head>
-
 
 <body>
 
+<header class="navbar">
 
-    <!-- =====================================================
-         NAVBAR
-    ===================================================== -->
+    <a
+        class="logo"
+        href="index.html#hero">
 
-    <header class="navbar">
+        <img
+            src="logo primagama png.jpeg"
+            alt="Logo New Primagama Sunter Indah">
 
-
-        <!-- LOGO -->
-
-        <div class="logo">
-
-            <img
-                src="logo primagama png.jpeg"
-                alt="Logo New Primagama Sunter Indah"
-            >
-
-        </div>
+    </a>
 
 
-        <!-- MENU -->
+    <nav
+        class="nav-menu"
+        id="navMenu">
 
-        <nav
-            class="nav-menu"
-            id="navMenu"
-        >
-
-            <a href="index.html#hero">
-                Beranda
-            </a>
-
-            <a href="index.html#tentang">
-                Tentang
-            </a>
-
-            <a href="index.html#program">
-                Program
-            </a>
-
-            <a href="index.html#fasilitas">
-                Fasilitas
-            </a>
-
-            <a href="index.html#faq">
-                FAQ
-            </a>
-
-            <a href="index.html#kontak">
-                Kontak
-            </a>
-
-            <a
-                href="blog.html"
-                class="active"
-            >
-                Blog
-            </a>
-
-        </nav>
-
-
-        <!-- BUTTON DESKTOP -->
-
-        <a
-            href="index.html#kontak"
-            class="btn-navbar"
-        >
-            Daftar Sekarang
+        <a href="index.html#hero">
+            Beranda
         </a>
 
+        <a href="index.html#tentang">
+            Tentang
+        </a>
 
-        <!-- HAMBURGER -->
+        <a href="index.html#program">
+            Program
+        </a>
 
-        <div
-            class="hamburger"
-            id="hamburger"
-        >
+        <a href="index.html#fasilitas">
+            Fasilitas
+        </a>
 
-            <span></span>
-            <span></span>
-            <span></span>
+        <a href="index.html#faq">
+            FAQ
+        </a>
+
+        <a href="index.html#kontak">
+            Kontak
+        </a>
+
+        <a
+            href="blog.html"
+            class="active">
+            Blog
+        </a>
+
+    </nav>
+
+
+    <a
+        href="index.html#kontak"
+        class="btn-navbar">
+
+        Daftar Sekarang
+
+    </a>
+
+
+    <button
+        class="hamburger"
+        id="hamburger"
+        type="button"
+        aria-label="Buka menu"
+        aria-expanded="false">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+</header>
+
+
+<main class="article-wrapper">
+
+    <article class="article-container">
+
+        <header class="article-header">
+
+            <div class="article-category">
+                Edukasi & Sekolah
+            </div>
+
+            <h1>
+                Bercanda Sama Teman Ada Batasnya?
+                Ini yang Perlu Kamu Tahu
+            </h1>
+
+            <div class="article-meta">
+                21 September 2026 • New Primagama Sunter Indah
+            </div>
+
+        </header>
+
+
+        <div class="article-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=85"
+                alt="Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu"
+                loading="eager"
+                referrerpolicy="no-referrer">
+
+            <div class="image-credit">
+                Sumber foto: Kementerian Pendidikan Dasar dan Menengah / sumber gambar artikel
+            </div>
 
         </div>
 
 
-    </header>
+        <div class="article-content">
+
+            <h2>
+                Bercanda tidak selalu terasa sama
+            </h2>
+
+            <p>
+                Sesuatu yang dianggap lucu oleh satu orang belum tentu terasa nyaman bagi orang lain. Karena itu, penting memperhatikan respons teman.
+            </p>
 
 
+            <h2>
+                Perhatikan topiknya
+            </h2>
 
-    <!-- =====================================================
-         ARTICLE
-    ===================================================== -->
-
-    <main class="article-wrapper">
-
-
-        <article class="article-container">
+            <p>
+                Hindari menjadikan kondisi pribadi, keluarga, fisik, atau hal sensitif seseorang sebagai bahan candaan.
+            </p>
 
 
-            <!-- =================================================
-                 HEADER ARTIKEL
-            ================================================= -->
+            <h2>
+                Kalau teman terlihat tidak nyaman
+            </h2>
 
-            <header class="article-header">
-
-
-                <span class="article-category">
-                    Edukasi &amp; Sekolah
-                </span>
+            <p>
+                Berhenti dan beri ruang. Meminta maaf dengan tulus juga bisa membantu memperbaiki situasi.
+            </p>
 
 
-                <h1>
-                    Bercanda Sama Teman Ada Batasnya?
-                    Ini yang Perlu Kamu Tahu
-                </h1>
+            <h2>
+                Buat suasana tetap aman
+            </h2>
+
+            <p>
+                Humor yang baik tidak harus membuat orang lain merasa dipermalukan. Bercanda tetap bisa seru ketika semua orang merasa dihargai.
+            </p>
 
 
-                <div class="article-meta">
-
-                    <span>
-                        <i class="fa-regular fa-calendar"></i>
-                        21 September 2026
-                    </span>
-
-                    <span>
-                        •
-                    </span>
-
-                    <span>
-                        New Primagama Sunter Indah
-                    </span>
-
-                </div>
-
-
-            </header>
-
-
-
-            <!-- =================================================
-                 GAMBAR ARTIKEL
-            ================================================= -->
-
-            <div class="article-image">
-
-
-                <img
-                    src="https://ditsmp.kemendikdasmen.go.id/storage/posts/Pfk96i2W3fjEvvPzzAdflmukBl3vabHXsR80tK5P.png"
-                    alt="Kegiatan siswa di lingkungan sekolah"
-                    loading="eager"
-                    referrerpolicy="no-referrer"
-                >
-
-
-                <div class="image-credit">
-
-                    Sumber foto:
-                    Direktorat SMP,
-                    Kementerian Pendidikan Dasar dan Menengah
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 ISI ARTIKEL
-            ================================================= -->
-
-            <div class="article-content">
-
-
-                <p>
-
-                    Bercanda bersama teman memang menyenangkan.
-                    Suasana sekolah bisa terasa lebih santai dan
-                    hubungan pertemanan juga bisa menjadi lebih dekat.
-
-                    Tapi, bercanda juga tetap punya batas.
-
-                </p>
-
-
-                <p>
-
-                    Kadang sesuatu yang dianggap lucu oleh satu orang
-                    belum tentu terasa lucu bagi orang lain.
-
-                    Karena itu, penting untuk mengetahui kapan sebuah
-                    candaan masih sehat dan kapan sudah membuat
-                    teman merasa tidak nyaman.
-
-                </p>
-
-
+            <div class="article-cta">
 
                 <h2>
-                    Bedakan Candaan dan Perilaku yang Menyakiti
+                    Siap belajar lebih terarah?
                 </h2>
 
-
                 <p>
-
-                    Candaan yang sehat seharusnya tidak membuat orang
-                    lain merasa takut, dipermalukan, direndahkan,
-                    atau disakiti.
-
+                    Dapatkan pendampingan belajar yang sesuai dengan kebutuhanmu bersama New Primagama Sunter Indah.
                 </p>
-
-
-                <p>
-
-                    Misalnya, menarik kursi teman sebagai lelucon
-                    mungkin terlihat sepele bagi pelaku.
-
-                    Tetapi tindakan seperti itu bisa membuat orang lain
-                    jatuh atau mengalami cedera.
-
-                </p>
-
-
-                <div class="highlight-box">
-
-                    <p>
-
-                        <strong>Intinya:</strong>
-
-                        kalau sebuah candaan membuat teman merasa
-                        tidak nyaman atau meminta kamu berhenti,
-                        itu tanda bahwa batasnya perlu dihormati.
-
-                    </p>
-
-                </div>
-
-
-
-                <h2>
-                    Tanda Candaan Sudah Kelewatan
-                </h2>
-
-
-                <p>
-
-                    Ada beberapa tanda yang bisa kamu perhatikan
-                    ketika sebuah candaan sudah melewati batas.
-
-                </p>
-
-
-                <ul class="check-list">
-
-                    <li>
-                        Teman terlihat malu atau dipermalukan.
-                    </li>
-
-                    <li>
-                        Teman merasa takut atau tidak nyaman.
-                    </li>
-
-                    <li>
-                        Candaan menyebabkan rasa sakit secara fisik.
-                    </li>
-
-                    <li>
-                        Teman merasa direndahkan.
-                    </li>
-
-                    <li>
-                        Teman secara langsung meminta kamu berhenti.
-                    </li>
-
-                </ul>
-
-
-
-                <h2>
-                    Jangan Jadikan Kekurangan Teman sebagai Bahan Lelucon
-                </h2>
-
-
-                <p>
-
-                    Setiap orang memiliki kondisi dan pengalaman
-                    yang berbeda.
-
-                    Karena itu, hindari menjadikan kekurangan,
-                    kondisi pribadi, atau hal sensitif yang dimiliki
-                    teman sebagai bahan candaan.
-
-                </p>
-
-
-                <p>
-
-                    Candaan mungkin terdengar biasa bagi orang lain,
-                    tetapi bisa terasa berbeda bagi orang yang menjadi
-                    sasaran candaan tersebut.
-
-                </p>
-
-
-
-                <h2>
-                    Perhatikan Reaksi Teman
-                </h2>
-
-
-                <p>
-
-                    Jangan hanya melihat apakah teman-teman lain
-                    ikut tertawa.
-
-                    Perhatikan juga reaksi orang yang menjadi sasaran
-                    candaan.
-
-                </p>
-
-
-                <p>
-
-                    Kalau ekspresinya terlihat tidak nyaman atau
-                    dia meminta kamu berhenti, sebaiknya candaan
-                    tersebut dihentikan.
-
-                </p>
-
-
-
-                <h2>
-                    Menghargai Batas Bukan Berarti Jadi Kaku
-                </h2>
-
-
-                <p>
-
-                    Menjaga batas dalam bercanda bukan berarti
-                    harus selalu serius.
-
-                    Justru dengan saling menghargai, bercanda bisa
-                    tetap seru tanpa membuat orang lain merasa
-                    tertekan.
-
-                </p>
-
-
-
-                <h3>
-                    Coba tanyakan tiga hal ini sebelum bercanda:
-                </h3>
-
-
-                <ul class="check-list">
-
-                    <li>
-                        Apakah candaan ini bisa membuat teman malu?
-                    </li>
-
-                    <li>
-                        Apakah candaan ini bisa menyakiti secara
-                        fisik atau perasaan?
-                    </li>
-
-                    <li>
-                        Kalau saya berada di posisi dia,
-                        apakah saya tetap merasa nyaman?
-                    </li>
-
-                </ul>
-
-
-
-                <p>
-
-                    Lingkungan sekolah yang aman dan nyaman dibangun
-                    dari kebiasaan sederhana, termasuk menghargai
-                    batas satu sama lain.
-
-                    Bercanda boleh, tetapi tetap perlu memperhatikan
-                    perasaan dan keselamatan teman.
-
-                </p>
-
-
-
-                <!-- =================================================
-                     SUMBER
-                ================================================= -->
-
-                <div class="article-source">
-
-
-                    <h3>
-                        Sumber
-                    </h3>
-
-
-                    <p>
-
-                        Direktorat SMP Kemendikdasmen —
-                        “Bercanda Boleh, Tapi Tetap Ada Batasnya!”
-
-                    </p>
-
-
-                    <p>
-
-                        Cerdas Berkarakter Kemendikdasmen —
-                        “Budaya Sekolah Aman dan Nyaman”
-
-                    </p>
-
-
-                    <p>
-
-                        FAQ Permendikdasmen No. 6 Tahun 2026
-
-                    </p>
-
-
-                </div>
-
-
-
-                <!-- =================================================
-                     CTA
-                ================================================= -->
-
-                <div class="article-cta">
-
-
-                    <h2>
-                        Siap belajar lebih terarah?
-                    </h2>
-
-
-                    <p>
-
-                        Dapatkan pendampingan belajar yang sesuai
-                        dengan kebutuhanmu bersama
-                        New Primagama Sunter Indah.
-
-                    </p>
-
-
-                    <a
-                        href="https://wa.me/6285285705335"
-                        class="cta-button"
-                        target="_blank"
-                    >
-
-                        Konsultasi Gratis
-
-                    </a>
-
-
-                </div>
-
-
-
-                <!-- =================================================
-                     BACK BLOG
-                ================================================= -->
 
                 <a
-                    href="blog.html"
-                    class="back-blog"
-                >
-
-                    <i class="fa-solid fa-arrow-left"></i>
-
-                    Kembali ke Blog
-
+                    href="https://wa.me/6285285705335"
+                    target="_blank"
+                    rel="noopener">
+                    Konsultasi Gratis
                 </a>
-
 
             </div>
 
 
-        </article>
+            <a
+                class="back-blog"
+                href="blog.html">
+                ← Kembali ke Blog
+            </a>
+
+        </div>
+
+    </article>
+
+</main>
 
 
-    </main>
+<footer class="article-footer">
+
+    © 2026 New Primagama Sunter Indah.
+    Semua Hak Dilindungi.
+
+</footer>
 
 
+<script>
 
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
+document.addEventListener("DOMContentLoaded", function () {
 
-    <footer class="blog-footer">
+    const hamburger =
+        document.getElementById("hamburger");
 
-        © 2026 New Primagama Sunter Indah.
-        Semua Hak Dilindungi.
+    const navMenu =
+        document.getElementById("navMenu");
 
-    </footer>
+    if (!hamburger || !navMenu) {
+        return;
+    }
 
+    hamburger.addEventListener("click", function () {
 
+        const open =
+            navMenu.classList.toggle("active");
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ===================================================== -->
-
-    <script>
-
-        const hamburger =
-            document.getElementById("hamburger");
-
-        const navMenu =
-            document.getElementById("navMenu");
-
-
-        hamburger.addEventListener(
-            "click",
-            function () {
-
-                navMenu.classList.toggle("active");
-
-            }
+        hamburger.setAttribute(
+            "aria-expanded",
+            open ? "true" : "false"
         );
 
-    </script>
+    });
 
+    navMenu
+        .querySelectorAll("a")
+        .forEach(function (a) {
+
+            a.addEventListener("click", function () {
+
+                navMenu.classList.remove("active");
+
+                hamburger.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+        });
+
+});
+
+</script>
 
 </body>
-
 </html>
