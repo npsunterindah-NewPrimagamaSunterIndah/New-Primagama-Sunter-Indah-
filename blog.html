@@ -9,879 +9,885 @@
 
     <title>Blog & Tips Belajar - New Primagama Sunter Indah</title>
 
-    <meta name="description"
-        content="Artikel seputar tips belajar, TKA, ujian, sekolah, dan pendidikan dari New Primagama Sunter Indah.">
+    <meta
+        name="description"
+        content="Artikel seputar tips belajar, TKA, ujian, sekolah, dan pendidikan dari New Primagama Sunter Indah."
+    >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            background: #f8fafc;
-            color: #1e293b;
-            font-family: "Poppins", sans-serif;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        :root {
-            --purple: #5b21b6;
-            --purple-dark: #1e1b4b;
-            --purple-light: #f3e8ff;
-            --yellow: #facc15;
-            --text: #1e293b;
-            --muted: #64748b;
-            --border: #e2e8f0;
-            --white: #ffffff;
-        }
-
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:#f8fafc;
+    color:#1e293b;
+    font-family:"Poppins",sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+:root{
+    --purple:#5b21b6;
+    --purple-dark:#1e1b4b;
+    --purple-light:#f3e8ff;
+    --yellow:#facc15;
+    --text:#1e293b;
+    --muted:#64748b;
+    --border:#e2e8f0;
+    --white:#ffffff;
+}
 
-        /* =========================
-           NAVBAR
-        ========================= */
 
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 9999;
+/* =========================
+   NAVBAR
+========================= */
 
-            width: 100%;
-            min-height: 80px;
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:9999;
 
-            padding: 0 6%;
+    width:100%;
+    min-height:80px;
 
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
+    padding:0 6%;
 
-            background: #ffffff;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
 
-            box-shadow:
-                0 2px 15px rgba(0, 0, 0, .06);
-        }
+    background:#ffffff;
 
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            min-width: 0;
-        }
+    box-shadow:
+        0 2px 15px rgba(0,0,0,.06);
+}
 
-        .logo img {
-            width: 150px;
-            height: auto;
-            display: block;
-        }
+.logo{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    min-width:0;
+}
 
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-            margin: 0;
-        }
+.logo img{
+    width:150px;
+    height:auto;
+    display:block;
+}
 
-        .nav-menu a {
-            color: #334155;
-            font-size: 14px;
-            font-weight: 500;
-            white-space: nowrap;
-            transition: .2s ease;
-        }
+.nav-menu{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:24px;
+    margin:0;
+}
 
-        .nav-menu a:hover,
-        .nav-menu a.active {
-            color: var(--purple);
-        }
+.nav-menu a{
+    color:#334155;
+    font-size:14px;
+    font-weight:500;
+    white-space:nowrap;
+    transition:.2s ease;
+}
 
-        .btn-navbar {
-            justify-self: end;
+.nav-menu a:hover,
+.nav-menu a.active{
+    color:var(--purple);
+}
 
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
+.btn-navbar{
+    justify-self:end;
 
-            background: var(--purple);
-            color: #ffffff;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-            padding: 11px 20px;
+    background:var(--purple);
+    color:#ffffff;
 
-            border-radius: 9px;
+    padding:11px 20px;
 
-            font-size: 13px;
-            font-weight: 600;
+    border-radius:9px;
 
-            white-space: nowrap;
-        }
+    font-size:13px;
+    font-weight:600;
 
-        .hamburger {
-            display: none;
+    white-space:nowrap;
+}
 
-            width: 40px;
-            height: 40px;
+.hamburger{
+    display:none;
 
-            border: 0;
-            background: transparent;
+    width:40px;
+    height:40px;
 
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+    border:0;
+    background:transparent;
 
-            gap: 5px;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 
-            cursor: pointer;
-        }
+    gap:5px;
 
-        .hamburger span {
-            display: block;
+    cursor:pointer;
+}
 
-            width: 24px;
-            height: 3px;
+.hamburger span{
+    display:block;
 
-            background: #334155;
+    width:24px;
+    height:3px;
 
-            border-radius: 5px;
-        }
+    background:#334155;
 
+    border-radius:5px;
+}
 
-        /* =========================
-           HERO
-        ========================= */
 
-        .blog-hero {
-            background: #f8f7ff;
+/* =========================
+   HERO
+========================= */
 
-            border-bottom: 1px solid #eeeaf7;
+.blog-hero{
+    background:#f8f7ff;
 
-            padding: 58px 6% 55px;
-        }
+    border-bottom:1px solid #eeeaf7;
 
-        .hero-inner {
-            width: 100%;
-            max-width: 1180px;
-            margin: auto;
-        }
+    padding:58px 6% 55px;
+}
 
-        .hero-top {
-            display: flex;
-            align-items: center;
+.hero-inner{
+    width:100%;
+    max-width:1180px;
+    margin:auto;
+}
 
-            gap: 10px;
+.hero-top{
+    display:flex;
+    align-items:center;
 
-            margin-bottom: 16px;
-        }
+    gap:10px;
 
-        .hero-label {
-            color: var(--purple);
+    margin-bottom:16px;
+}
 
-            font-size: 11px;
-            font-weight: 700;
+.hero-label{
+    color:var(--purple);
 
-            letter-spacing: .7px;
-        }
+    font-size:11px;
+    font-weight:700;
 
-        .hero-line {
-            width: 35px;
-            height: 3px;
+    letter-spacing:.7px;
+}
 
-            background: var(--yellow);
+.hero-line{
+    width:35px;
+    height:3px;
 
-            border-radius: 10px;
-        }
+    background:var(--yellow);
 
-        .blog-hero h1 {
-            max-width: 750px;
+    border-radius:10px;
+}
 
-            margin: 0 0 16px;
+.blog-hero h1{
+    max-width:750px;
 
-            color: var(--purple-dark);
+    margin:0 0 16px;
 
-            font-size: clamp(34px, 4.5vw, 50px);
-            line-height: 1.18;
+    color:var(--purple-dark);
 
-            font-weight: 800;
-        }
+    font-size:clamp(34px,4.5vw,50px);
+    line-height:1.18;
 
-        .hero-description {
-            max-width: 650px;
+    font-weight:800;
+}
 
-            margin: 0;
+.hero-description{
+    max-width:650px;
 
-            color: var(--muted);
+    margin:0;
 
-            font-size: 14px;
-            line-height: 1.8;
-        }
+    color:var(--muted);
 
+    font-size:14px;
+    line-height:1.8;
+}
 
-        /* =========================
-           BLOG CONTAINER
-        ========================= */
 
-        .blog-container {
-            width: 100%;
-            max-width: 1585px;
+/* =========================
+   BLOG CONTAINER
+========================= */
 
-            margin: auto;
+.blog-container{
+    width:100%;
+    max-width:1585px;
 
-            padding: 0 6% 50px;
-        }
+    margin:auto;
 
+    padding:0 6% 50px;
+}
 
-        /* =========================
-           SECTION
-        ========================= */
 
-        .latest-section {
-            padding-top: 30px;
-            padding-bottom: 18px;
-        }
+/* =========================
+   SECTION
+========================= */
 
-        .category-section {
-            padding: 25px 0 18px;
+.latest-section{
+    padding-top:30px;
+    padding-bottom:18px;
+}
 
-            scroll-margin-top: 90px;
-        }
+.category-section{
+    padding:25px 0 18px;
 
-        .section-heading,
-        .category-heading {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    scroll-margin-top:90px;
+}
 
-            margin-bottom: 13px;
-        }
+.section-heading,
+.category-heading{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-        .section-heading-left {
-            display: flex;
-            align-items: center;
+    margin-bottom:13px;
+}
 
-            gap: 9px;
-        }
+.section-heading-left{
+    display:flex;
+    align-items:center;
 
-        .section-heading-left i {
-            color: #eab308;
-            font-size: 13px;
-        }
+    gap:9px;
+}
 
-        .section-heading h2,
-        .category-heading h2 {
-            margin: 0;
+.section-heading-left i{
+    color:#eab308;
+    font-size:13px;
+}
 
-            color: var(--text);
+.section-heading h2,
+.category-heading h2{
+    margin:0;
 
-            font-size: 16px;
-            line-height: 1.2;
+    color:var(--text);
 
-            font-weight: 800;
+    font-size:16px;
+    line-height:1.2;
 
-            text-transform: uppercase;
-        }
+    font-weight:800;
 
-        .category-heading h2 {
-            position: relative;
+    text-transform:uppercase;
+}
 
-            padding-left: 12px;
-        }
+.category-heading h2{
+    position:relative;
 
-        .category-heading h2::before {
-            content: "";
+    padding-left:12px;
+}
 
-            position: absolute;
+.category-heading h2::before{
+    content:"";
 
-            left: 0;
-            top: 1px;
+    position:absolute;
 
-            width: 4px;
-            height: 17px;
+    left:0;
+    top:1px;
 
-            background: var(--purple);
+    width:4px;
+    height:17px;
 
-            border-radius: 4px;
-        }
+    background:var(--purple);
 
-        .see-all {
-            display: inline-flex;
-            align-items: center;
+    border-radius:4px;
+}
 
-            gap: 6px;
+.see-all{
+    display:inline-flex;
+    align-items:center;
 
-            color: var(--purple);
+    gap:6px;
 
-            font-size: 10px;
-            font-weight: 700;
-        }
+    color:var(--purple);
 
-        .see-all i {
-            font-size: 9px;
-        }
+    font-size:10px;
+    font-weight:700;
+}
 
-        .section-line {
-            width: 100%;
-            height: 2px;
+.see-all i{
+    font-size:9px;
+}
 
-            margin-bottom: 20px;
+.section-line{
+    width:100%;
+    height:2px;
 
-            background:
-                linear-gradient(
-                    to right,
-                    var(--yellow) 0,
-                    var(--yellow) 100px,
-                    var(--border) 100px,
-                    var(--border) 100%
-                );
-        }
+    margin-bottom:20px;
 
+    background:
+        linear-gradient(
+            to right,
+            var(--yellow) 0,
+            var(--yellow) 100px,
+            var(--border) 100px,
+            var(--border) 100%
+        );
+}
 
-        /* =========================
-           GRID
-        ========================= */
 
-        .article-grid {
-            display: grid;
+/* =========================
+   GRID
+========================= */
 
-            grid-template-columns:
-                repeat(4, minmax(0, 1fr));
+.article-grid{
+    display:grid;
 
-            gap: 0;
-        }
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
 
+    gap:0;
+}
 
-        /* =========================
-           CARD
-        ========================= */
 
-        .article-card {
-            position: relative;
+/* =========================
+   CARD
+========================= */
 
-            min-width: 0;
+.article-card{
+    position:relative;
 
-            padding: 0 20px;
+    min-width:0;
 
-            border-right: 1px solid var(--border);
-        }
+    padding:0 20px;
 
-        .article-card:first-child {
-            padding-left: 0;
-        }
+    border-right:1px solid var(--border);
+}
 
-        .article-card:last-child {
-            padding-right: 0;
-            border-right: none;
-        }
+.article-card:first-child{
+    padding-left:0;
+}
 
+.article-card:last-child{
+    padding-right:0;
+    border-right:none;
+}
 
-        /* =========================
-           IMAGE
-        ========================= */
 
-        .article-image {
-            position: relative;
+/* =========================
+   IMAGE
+========================= */
 
-            display: block;
+.article-image{
+    position:relative;
 
-            width: 100%;
-            height: 190px;
+    display:block;
 
-            margin-bottom: 13px;
+    width:100%;
+    height:190px;
 
-            overflow: hidden;
+    margin-bottom:13px;
 
-            border-radius: 10px;
+    overflow:hidden;
 
-            background: #f3e8ff;
-        }
+    border-radius:10px;
 
-        .article-image img {
-            display: block;
+    background:#f3e8ff;
+}
 
-            width: 100%;
-            height: 100%;
+.article-image img{
+    display:block;
 
-            object-fit: cover;
-            object-position: center;
+    width:100%;
+    height:100%;
 
-            background: #f8fafc;
+    object-fit:contain;
+    object-position:center;
 
-            opacity: 1;
-            visibility: visible;
-        }
+    background:#f8fafc;
+}
 
-        .article-card:hover .article-image img {
-            transform: none;
-        }
+.article-card:hover .article-image img{
+    transform:none;
+}
 
 
-        /* =========================
-           BADGE
-        ========================= */
+/* =========================
+   BADGE
+========================= */
 
-        .new-badge {
-            position: absolute;
+.new-badge{
+    position:absolute;
 
-            top: 10px;
-            left: 10px;
+    top:10px;
+    left:10px;
 
-            z-index: 5;
+    z-index:5;
 
-            padding: 5px 8px;
+    padding:5px 8px;
 
-            border-radius: 5px;
+    border-radius:5px;
 
-            background: var(--yellow);
+    background:var(--yellow);
 
-            color: #422006;
+    color:#422006;
 
-            font-size: 8px;
-            font-weight: 800;
-        }
+    font-size:8px;
+    font-weight:800;
+}
 
 
-        /* =========================
-           CARD TEXT
-        ========================= */
+/* =========================
+   CARD TEXT
+========================= */
 
-        .article-category {
-            margin-bottom: 6px;
+.article-category{
+    margin-bottom:6px;
 
-            color: var(--purple);
+    color:var(--purple);
 
-            font-size: 9px;
-            font-weight: 700;
+    font-size:9px;
+    font-weight:700;
 
-            text-transform: uppercase;
-        }
+    text-transform:uppercase;
+}
 
-        .article-card h3 {
-            margin: 0 0 8px;
+.article-card h3{
+    margin:0 0 8px;
 
-            font-size: 15px;
-            line-height: 1.45;
+    font-size:15px;
+    line-height:1.45;
 
-            font-weight: 700;
-        }
+    font-weight:700;
+}
 
-        .article-card h3 a {
-            color: var(--text);
-        }
+.article-card h3 a{
+    color:var(--text);
+}
 
-        .article-card h3 a:hover {
-            color: var(--purple);
-        }
+.article-card h3 a:hover{
+    color:var(--purple);
+}
 
-        .article-description {
-            margin: 0 0 9px;
+.article-description{
+    margin:0 0 9px;
 
-            color: var(--muted);
+    color:var(--muted);
 
-            font-size: 10px;
-            line-height: 1.6;
+    font-size:10px;
+    line-height:1.6;
 
-            display: -webkit-box;
+    display:-webkit-box;
 
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
 
-            overflow: hidden;
-        }
+    overflow:hidden;
+}
 
-        .article-meta {
-            display: flex;
-            align-items: center;
+.article-meta{
+    display:flex;
+    align-items:center;
 
-            gap: 4px;
+    gap:4px;
 
-            color: #94a3b8;
+    color:#94a3b8;
 
-            font-size: 9px;
-        }
+    font-size:9px;
+}
 
-        .article-meta .date {
-            color: #64748b;
-            font-weight: 500;
-        }
+.article-meta .date{
+    color:#64748b;
+    font-weight:500;
+}
 
 
-        /* =========================
-           CTA
-        ========================= */
+/* =========================
+   CTA
+========================= */
 
-        .blog-cta {
-            margin-top: 30px;
+.blog-cta{
+    margin-top:30px;
 
-            padding: 34px 35px;
+    padding:34px 35px;
 
-            border-radius: 16px;
+    border-radius:16px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #5b21b6,
-                    #7c3aed
-                );
+    background:
+        linear-gradient(
+            135deg,
+            #5b21b6,
+            #7c3aed
+        );
 
-            color: #ffffff;
+    color:#ffffff;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-            gap: 25px;
-        }
+    gap:25px;
+}
 
-        .blog-cta-content h2 {
-            margin: 0 0 7px;
+.blog-cta-content h2{
+    margin:0 0 7px;
 
-            font-size: 23px;
-            line-height: 1.25;
+    font-size:23px;
+    line-height:1.25;
 
-            font-weight: 800;
-        }
+    font-weight:800;
+}
 
-        .blog-cta-content p {
-            max-width: 620px;
+.blog-cta-content p{
+    max-width:620px;
 
-            margin: 0;
+    margin:0;
 
-            color: rgba(255,255,255,.85);
+    color:rgba(255,255,255,.85);
 
-            font-size: 12px;
-            line-height: 1.7;
-        }
+    font-size:12px;
+    line-height:1.7;
+}
 
-        .blog-cta-buttons {
-            display: flex;
+.blog-cta-buttons{
+    display:flex;
 
-            gap: 10px;
+    gap:10px;
 
-            flex-shrink: 0;
-        }
+    flex-shrink:0;
+}
 
-        .cta-button {
-            display: inline-flex;
+.cta-button{
+    display:inline-flex;
 
-            align-items: center;
-            justify-content: center;
+    align-items:center;
+    justify-content:center;
 
-            padding: 11px 17px;
+    padding:11px 17px;
 
-            border-radius: 8px;
+    border-radius:8px;
 
-            font-size: 11px;
-            font-weight: 700;
-        }
+    font-size:11px;
+    font-weight:700;
+}
 
-        .cta-primary {
-            background: var(--yellow);
-            color: #422006;
-        }
+.cta-primary{
+    background:var(--yellow);
+    color:#422006;
+}
 
-        .cta-secondary {
-            color: #ffffff;
+.cta-secondary{
+    color:#ffffff;
 
-            border: 1px solid rgba(255,255,255,.45);
-        }
+    border:1px solid rgba(255,255,255,.45);
+}
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+/* =========================
+   FOOTER
+========================= */
 
-        .blog-footer {
-            padding: 25px 20px;
+.blog-footer{
+    padding:25px 20px;
 
-            border-top: 1px solid var(--border);
+    border-top:1px solid var(--border);
 
-            background: #ffffff;
+    background:#ffffff;
 
-            text-align: center;
+    text-align:center;
 
-            color: var(--muted);
+    color:var(--muted);
 
-            font-size: 11px;
-        }
+    font-size:11px;
+}
 
 
-        /* =========================
-           TABLET
-        ========================= */
+/* =========================
+   TABLET
+========================= */
 
-        @media (max-width: 1000px) {
+@media(max-width:1000px){
 
-            .article-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
+    .article-grid{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
 
-                row-gap: 25px;
-            }
+        row-gap:25px;
+    }
 
-            .article-card:nth-child(2n) {
-                padding-right: 0;
-                border-right: none;
-            }
+    .article-card:nth-child(2n){
+        padding-right:0;
+        border-right:none;
+    }
 
-            .article-card:nth-child(2n + 1) {
-                padding-left: 0;
-            }
+    .article-card:nth-child(2n+1){
+        padding-left:0;
+    }
 
-        }
+}
 
 
-        /* =========================
-           MOBILE
-        ========================= */
+/* =========================
+   MOBILE
+========================= */
 
-        @media (max-width: 768px) {
+@media(max-width:768px){
 
-            .navbar {
-                min-height: 70px;
-                height: 70px;
+    .navbar{
+        min-height:70px;
+        height:70px;
 
-                padding: 0 20px;
+        padding:0 20px;
 
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
 
-            .logo img {
-                width: 125px;
-            }
+    .logo img{
+        width:125px;
+    }
 
-            .btn-navbar {
-                display: none;
-            }
+    .btn-navbar{
+        display:none;
+    }
 
-            .hamburger {
-                display: flex;
+    .hamburger{
+        display:flex;
 
-                margin-left: auto;
-            }
+        margin-left:auto;
+    }
 
-            .nav-menu {
-                position: absolute;
+    .nav-menu{
+        position:absolute;
 
-                top: 70px;
-                left: 0;
+        top:70px;
+        left:0;
 
-                width: 100%;
+        width:100%;
 
-                display: none;
+        display:none;
 
-                flex-direction: column;
-                align-items: flex-start;
+        flex-direction:column;
+        align-items:flex-start;
 
-                gap: 0;
+        gap:0;
 
-                padding: 12px 20px 18px;
+        padding:12px 20px 18px;
 
-                background: #ffffff;
+        background:#ffffff;
 
-                box-shadow:
-                    0 8px 18px rgba(0,0,0,.08);
-            }
+        box-shadow:
+            0 8px 18px rgba(0,0,0,.08);
+    }
 
-            .nav-menu.active {
-                display: flex;
-            }
+    .nav-menu.active{
+        display:flex;
+    }
 
-            .nav-menu a {
-                width: 100%;
+    .nav-menu a{
+        width:100%;
 
-                padding: 11px 0;
+        padding:11px 0;
 
-                border-bottom:
-                    1px solid #f1f5f9;
+        border-bottom:
+            1px solid #f1f5f9;
 
-                font-size: 14px;
-            }
+        font-size:14px;
+    }
 
 
-            /* HERO */
+    /* HERO */
 
-            .blog-hero {
-                padding: 45px 20px 43px;
-            }
+    .blog-hero{
+        padding:45px 20px 43px;
+    }
 
-            .blog-hero h1 {
-                font-size: 33px;
-            }
+    .blog-hero h1{
+        font-size:33px;
+    }
 
-            .hero-description {
-                font-size: 12px;
-                line-height: 1.75;
-            }
+    .hero-description{
+        font-size:12px;
+        line-height:1.75;
+    }
 
 
-            /* CONTAINER */
+    /* CONTAINER */
 
-            .blog-container {
-                padding: 0 20px 30px;
-            }
+    .blog-container{
+        padding:0 20px 30px;
+    }
 
 
-            /* SECTION */
+    /* SECTION */
 
-            .latest-section {
-                padding-top: 22px;
-                padding-bottom: 4px;
-            }
+    .latest-section{
+        padding-top:22px;
+        padding-bottom:4px;
+    }
 
-            .category-section {
-                padding-top: 22px;
-                padding-bottom: 4px;
-            }
+    .category-section{
+        padding-top:22px;
+        padding-bottom:4px;
+    }
 
 
-            /* HEADING */
+    /* HEADING */
 
-            .section-heading,
-            .category-heading {
-                margin-bottom: 11px;
-            }
+    .section-heading,
+    .category-heading{
+        margin-bottom:11px;
+    }
 
-            .section-heading h2,
-            .category-heading h2 {
-                font-size: 13px;
-            }
+    .section-heading h2,
+    .category-heading h2{
+        font-size:13px;
+    }
 
-            .see-all {
-                font-size: 9px;
-            }
+    .see-all{
+        font-size:9px;
+    }
 
-            .section-line {
-                margin-bottom: 17px;
-            }
+    .section-line{
+        margin-bottom:17px;
+    }
 
 
-            /* GRID */
+    /* GRID */
 
-            .article-grid {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
+    .article-grid{
+        grid-template-columns:1fr;
+        gap:0;
+    }
 
 
-            /* CARD */
+    /* CARD */
 
-            .article-card,
-            .article-card:first-child,
-            .article-card:last-child,
-            .article-card:nth-child(2n),
-            .article-card:nth-child(2n + 1) {
+    .article-card,
+    .article-card:first-child,
+    .article-card:last-child,
+    .article-card:nth-child(2n),
+    .article-card:nth-child(2n+1){
 
-                padding: 0 0 22px;
+        padding:0 0 22px;
 
-                margin-bottom: 22px;
+        margin-bottom:22px;
 
-                border-right: none;
+        border-right:none;
 
-                border-bottom:
-                    1px solid var(--border);
-            }
+        border-bottom:
+            1px solid var(--border);
+    }
 
-            .article-card:last-child {
-                margin-bottom: 0;
-                padding-bottom: 0;
+    .article-card:last-child{
+        margin-bottom:0;
+        padding-bottom:0;
 
-                border-bottom: none;
-            }
+        border-bottom:none;
+    }
 
 
-            /* IMAGE */
+    /* IMAGE */
 
-            .article-image {
-                width: 100%;
-                height: auto;
+    .article-image{
+        width:100%;
+        height:auto;
 
-                aspect-ratio: 16 / 9;
+        aspect-ratio:16/9;
 
-                margin-bottom: 13px;
+        margin-bottom:13px;
 
-                border-radius: 10px;
-            }
+        border-radius:10px;
+    }
 
 
-            /* TEXT */
+    /* TEXT */
 
-            .article-category {
-                font-size: 9px;
-            }
+    .article-category{
+        font-size:9px;
+    }
 
-            .article-card h3 {
-                margin-bottom: 8px;
+    .article-card h3{
+        margin-bottom:8px;
 
-                font-size: 21px;
-                line-height: 1.35;
-            }
+        font-size:21px;
+        line-height:1.35;
+    }
 
-            .article-description {
-                font-size: 12px;
-                line-height: 1.7;
-            }
+    .article-description{
+        font-size:12px;
+        line-height:1.7;
+    }
 
-            .article-meta {
-                font-size: 9px;
-            }
+    .article-meta{
+        font-size:9px;
+    }
 
 
-            /* CTA */
+    /* CTA */
 
-            .blog-cta {
-                margin-top: 20px;
+    .blog-cta{
+        margin-top:20px;
 
-                padding: 25px 20px;
+        padding:25px 20px;
 
-                flex-direction: column;
-                align-items: flex-start;
+        flex-direction:column;
+        align-items:flex-start;
 
-                gap: 18px;
+        gap:18px;
 
-                border-radius: 14px;
-            }
+        border-radius:14px;
+    }
 
-            .blog-cta-content h2 {
-                font-size: 20px;
-            }
+    .blog-cta-content h2{
+        font-size:20px;
+    }
 
-            .blog-cta-content p {
-                font-size: 11px;
-            }
+    .blog-cta-content p{
+        font-size:11px;
+    }
 
-            .blog-cta-buttons {
-                width: 100%;
-            }
+    .blog-cta-buttons{
+        width:100%;
+    }
 
-            .cta-button {
-                flex: 1;
+    .cta-button{
+        flex:1;
 
-                font-size: 10px;
-            }
+        font-size:10px;
+    }
 
-        }
+}
 
-    </style>
+</style>
 
 </head>
 
@@ -889,935 +895,867 @@
 <body>
 
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
-    <header class="navbar">
+<header class="navbar">
 
-        <div class="logo">
+    <div class="logo">
 
-            <img
-                src="logo primagama png.jpeg"
-                alt="Logo New Primagama Sunter Indah">
+        <img
+            src="logo primagama png.jpeg"
+            alt="Logo New Primagama Sunter Indah"
+        >
+
+    </div>
+
+
+    <nav class="nav-menu">
+
+        <a href="index.html#hero">
+            Beranda
+        </a>
+
+        <a href="index.html#tentang">
+            Tentang
+        </a>
+
+        <a href="index.html#program">
+            Program
+        </a>
+
+        <a href="index.html#fasilitas">
+            Fasilitas
+        </a>
+
+        <a href="index.html#faq">
+            FAQ
+        </a>
+
+        <a href="index.html#kontak">
+            Kontak
+        </a>
+
+        <a
+            href="blog.html"
+            class="active"
+        >
+            Blog
+        </a>
+
+    </nav>
+
+
+    <a
+        href="index.html#kontak"
+        class="btn-navbar"
+    >
+        Daftar Sekarang
+    </a>
+
+
+    <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Buka menu"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="blog-hero">
+
+    <div class="hero-inner">
+
+        <div class="hero-top">
+
+            <span class="hero-label">
+                BLOG & ARTIKEL
+            </span>
+
+            <span class="hero-line"></span>
 
         </div>
 
 
-        <nav class="nav-menu">
-
-            <a href="index.html#hero">
-                Beranda
-            </a>
-
-            <a href="index.html#tentang">
-                Tentang
-            </a>
-
-            <a href="index.html#program">
-                Program
-            </a>
-
-            <a href="index.html#fasilitas">
-                Fasilitas
-            </a>
-
-            <a href="index.html#faq">
-                FAQ
-            </a>
-
-            <a href="index.html#kontak">
-                Kontak
-            </a>
-
-            <a
-                href="blog.html"
-                class="active">
-                Blog
-            </a>
-
-        </nav>
+        <h1>
+            Info belajar, sekolah,<br>
+            dan persiapan ujian.
+        </h1>
 
 
-        <a
-            href="index.html#kontak"
-            class="btn-navbar">
+        <p class="hero-description">
 
-            Daftar Sekarang
+            Temukan artikel seputar tips belajar, TKA, ujian,
+            sekolah, dan informasi pendidikan lainnya dari
+            New Primagama Sunter Indah.
 
-        </a>
+        </p>
+
+    </div>
+
+</section>
 
 
-        <button
-            class="hamburger"
-            id="hamburger"
-            aria-label="Buka menu">
 
-            <span></span>
-            <span></span>
-            <span></span>
+<!-- =========================
+     BLOG
+========================= -->
 
-        </button>
-
-    </header>
-
+<main class="blog-container">
 
 
     <!-- =========================
-         HERO
+         ARTIKEL TERBARU
     ========================== -->
 
-    <section class="blog-hero">
+    <section class="latest-section">
 
-        <div class="hero-inner">
+        <div class="section-heading">
 
-            <div class="hero-top">
+            <div class="section-heading-left">
 
-                <span class="hero-label">
-                    BLOG & ARTIKEL
-                </span>
+                <i class="fa-solid fa-star"></i>
 
-                <span class="hero-line"></span>
+                <h2>
+                    Artikel Terbaru
+                </h2>
 
             </div>
 
-
-            <h1>
-                Info belajar, sekolah,<br>
-                dan persiapan ujian.
-            </h1>
-
-
-            <p class="hero-description">
-
-                Temukan artikel seputar tips belajar, TKA, ujian,
-                sekolah, dan informasi pendidikan lainnya dari
-                New Primagama Sunter Indah.
-
-            </p>
-
         </div>
+
+
+        <div class="section-line"></div>
+
+
+        <div
+            class="article-grid"
+            id="latestArticles"
+        ></div>
 
     </section>
 
 
 
     <!-- =========================
-         BLOG
+         KATEGORI
     ========================== -->
 
-    <main class="blog-container">
-
-
-        <!-- =========================
-             ARTIKEL TERBARU
-        ========================== -->
-
-        <section class="latest-section">
-
-            <div class="section-heading">
-
-                <div class="section-heading-left">
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <h2>
-                        Artikel Terbaru
-                    </h2>
-
-                </div>
-
-            </div>
-
-
-            <div class="section-line"></div>
-
-
-            <div
-                class="article-grid"
-                id="latestArticles">
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             KATEGORI
-        ========================== -->
-
-        <div id="categoryContainer"></div>
-
-
-
-        <!-- =========================
-             CTA
-        ========================== -->
-
-        <section class="blog-cta">
-
-            <div class="blog-cta-content">
-
-                <h2>
-                    Siap belajar lebih terarah?
-                </h2>
-
-                <p>
-                    Dapatkan pendampingan belajar yang sesuai
-                    dengan kebutuhanmu bersama New Primagama
-                    Sunter Indah.
-                </p>
-
-            </div>
-
-
-            <div class="blog-cta-buttons">
-
-                <a
-                    href="https://wa.me/6285285705335"
-                    class="cta-button cta-primary"
-                    target="_blank">
-
-                    Konsultasi Gratis
-
-                </a>
-
-
-                <a
-                    href="index.html#kontak"
-                    class="cta-button cta-secondary">
-
-                    Daftar Sekarang
-
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
+    <div id="categoryContainer"></div>
 
 
 
     <!-- =========================
-         FOOTER
+         CTA
     ========================== -->
 
-    <footer class="blog-footer">
+    <section class="blog-cta">
 
-        © 2026 New Primagama Sunter Indah.
-        Semua Hak Dilindungi.
+        <div class="blog-cta-content">
 
-    </footer>
+            <h2>
+                Siap belajar lebih terarah?
+            </h2>
 
+            <p>
+                Dapatkan pendampingan belajar yang sesuai
+                dengan kebutuhanmu bersama New Primagama
+                Sunter Indah.
+            </p>
 
+        </div>
 
-    <script>
 
-        /* =====================================================
-           DATABASE SELURUH ARTIKEL
-        ===================================================== */
+        <div class="blog-cta-buttons">
 
-        const articles = [
+            <a
+                href="https://wa.me/6285285705335"
+                class="cta-button cta-primary"
+                target="_blank"
+                rel="noopener"
+            >
+                Konsultasi Gratis
+            </a>
 
-            {
-                title:
-                    "Belajar Kelompok: Biar Nggak Malah Jadi Ajang Ngobrol",
 
-                category:
-                    "Tips Belajar",
+            <a
+                href="index.html#kontak"
+                class="cta-button cta-secondary"
+            >
+                Daftar Sekarang
+            </a>
 
-                date:
-                    "2026-09-23",
+        </div>
 
-                dateDisplay:
-                    "23 September 2026",
+    </section>
 
-                description:
-                    "Belajar bareng teman bisa bikin materi lebih mudah dipahami. Yuk, atur cara belajar kelompok supaya tetap fokus dan nggak malah jadi ajang ngobrol.",
+</main>
 
-                image:
-                    "https://ditsmp.kemendikdasmen.go.id/storage/posts/hAlt6Ed7cvMAyZ39eQDQjKluOiWLTfAe5shqIP9M.png",
 
-                link:
-                    "belajar-kelompok.html"
-            },
 
+<!-- =========================
+     FOOTER
+========================= -->
 
-            {
-                title:
-                    "Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya",
+<footer class="blog-footer">
 
-                category:
-                    "Tips Belajar",
+    © 2026 New Primagama Sunter Indah.
+    Semua Hak Dilindungi.
 
-                date:
-                    "2026-09-22",
+</footer>
 
-                dateDisplay:
-                    "22 September 2026",
 
-                description:
-                    "Sering mengantuk saat belajar bisa membuat fokus berkurang. Kenali beberapa penyebabnya dan coba kebiasaan sederhana agar waktu belajarmu lebih terarah.",
 
-                image:
-                    "https://ditsmp.kemendikdasmen.go.id/storage/posts/088PzOnTuyRjfHQPh2cNKibaTHQKwhiFyKJxQVvZ.png",
+<script>
 
-                link:
-                    "sering-ngantuk-saat-belajar.html"
-            },
+/* =====================================================
+   DATABASE SELURUH ARTIKEL
+===================================================== */
 
+const articles = [
 
-            {
-                title:
-                    "Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu",
+    {
+        title:
+            "Belajar Kelompok: Biar Nggak Malah Jadi Ajang Ngobrol",
 
-                category:
-                    "Edukasi & Sekolah",
+        category:
+            "Tips Belajar",
 
-                date:
-                    "2026-09-21",
+        date:
+            "2026-09-23",
 
-                dateDisplay:
-                    "21 September 2026",
+        dateDisplay:
+            "23 September 2026",
 
-                description:
-                    "Bercanda bersama teman memang menyenangkan, tetapi tetap ada batasnya. Kenali cara membedakan candaan yang sehat dan perilaku yang bisa membuat teman tidak nyaman.",
+        description:
+            "Belajar bareng teman bisa bikin materi lebih mudah dipahami. Yuk, atur cara belajar kelompok supaya tetap fokus dan nggak malah jadi ajang ngobrol.",
 
-                image:
-                    "https://ditsmp.kemendikdasmen.go.id/storage/posts/Pfk96i2W3fjEvvPzzAdflmukBl3vabHXsR80tK5P.png",
+        image:
+            "https://ditsmp.kemendikdasmen.go.id/storage/posts/hAlt6Ed7cvMAyZ39eQDQjKluOiWLTfAe5shqIP9M.png",
 
-                link:
-                    "bercanda-sama-teman-ada-batasnya.html"
-            },
+        link:
+            "belajar-kelompok.html"
+    },
 
 
-            {
-                title:
-                    "Bukan Cuma Nilai, Ini Skill yang Wajib Kamu Punya di Sekolah",
+    {
+        title:
+            "Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya",
 
-                category:
-                    "Edukasi & Sekolah",
+        category:
+            "Tips Belajar",
 
-                date:
-                    "2026-09-18",
+        date:
+            "2026-09-22",
 
-                dateDisplay:
-                    "18 September 2026",
+        dateDisplay:
+            "22 September 2026",
 
-                description:
-                    "Sekolah bukan cuma soal nilai. Ada banyak skill penting yang bisa membantu kamu belajar, berkomunikasi, bekerja sama, dan menghadapi tantangan.",
+        description:
+            "Sering mengantuk saat belajar bisa membuat fokus berkurang. Kenali beberapa penyebabnya dan coba kebiasaan sederhana agar waktu belajarmu lebih terarah.",
 
-                image:
-                    "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://ditsmp.kemendikdasmen.go.id/storage/posts/088PzOnTuyRjfHQPh2cNKibaTHQKwhiFyKJxQVvZ.png",
 
-                link:
-                    "skill-wajib-di-sekolah.html"
-            },
+        link:
+            "sering-ngantuk-saat-belajar.html"
+    },
 
 
-            {
-                title:
-                    "Susah Fokus Belajar? Coba 7 Cara Ini Biar Nggak Gampang Terdistraksi",
+    {
+        title:
+            "Bercanda Sama Teman Ada Batasnya? Ini yang Perlu Kamu Tahu",
 
-                category:
-                    "Tips Belajar",
+        category:
+            "Edukasi & Sekolah",
 
-                date:
-                    "2026-09-17",
+        date:
+            "2026-09-21",
 
-                dateDisplay:
-                    "17 September 2026",
+        dateDisplay:
+            "21 September 2026",
 
-                description:
-                    "HP bunyi dikit, buka sosmed. Baru belajar sebentar, malah bengong. Coba beberapa cara sederhana ini supaya waktu belajarmu lebih terarah.",
+        description:
+            "Bercanda bersama teman memang menyenangkan, tetapi tetap ada batasnya. Kenali cara membedakan candaan yang sehat dan perilaku yang bisa membuat teman tidak nyaman.",
 
-                image:
-                    "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://ditsmp.kemendikdasmen.go.id/storage/posts/Pfk96i2W3fjEvvPzzAdflmukBl3vabHXsR80tK5P.png",
 
-                link:
-                    "cara-fokus-belajar.html"
-            },
+        link:
+            "bercanda-sama-teman-ada-batasnya.html"
+    },
 
 
-            {
-                title:
-                    "TKA Tinggal Menghitung Hari? Ini Checklist Persiapan yang Wajib Kamu Cek",
+    {
+        title:
+            "Bukan Cuma Nilai, Ini Skill yang Wajib Kamu Punya di Sekolah",
 
-                category:
-                    "TKA",
+        category:
+            "Edukasi & Sekolah",
 
-                date:
-                    "2026-09-16",
+        date:
+            "2026-09-18",
 
-                dateDisplay:
-                    "16 September 2026",
+        dateDisplay:
+            "18 September 2026",
 
-                description:
-                    "Biar persiapan TKA nggak berantakan, mulai cek materi, jadwal belajar, latihan soal, try out, sampai waktu istirahat.",
+        description:
+            "Sekolah bukan cuma soal nilai. Ada banyak skill penting yang bisa membantu kamu belajar, berkomunikasi, bekerja sama, dan menghadapi tantangan.",
 
-                image:
-                    "https://www.kemendikdasmen.go.id/mendikbud/image/15891",
+        image:
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80",
 
-                link:
-                    "checklist-persiapan-tka.html"
-            },
+        link:
+            "skill-wajib-di-sekolah.html"
+    },
 
 
-            {
-                title:
-                    "TKA Makin Dekat? Jangan Panik, Ini yang Harus Kamu Siapin",
+    {
+        title:
+            "Susah Fokus Belajar? Coba 7 Cara Ini Biar Nggak Gampang Terdistraksi",
 
-                category:
-                    "TKA",
+        category:
+            "Tips Belajar",
 
-                date:
-                    "2026-08-27",
+        date:
+            "2026-09-17",
 
-                dateDisplay:
-                    "27 Agustus 2026",
+        dateDisplay:
+            "17 September 2026",
 
-                description:
-                    "TKA mulai makin dekat dan kamu masih bingung harus mulai belajar dari mana? Yuk, siapkan strategi belajar, latihan soal, try out, dan evaluasi.",
+        description:
+            "HP bunyi dikit, buka sosmed. Baru belajar sebentar, malah bengong. Coba beberapa cara sederhana ini supaya waktu belajarmu lebih terarah.",
 
-                image:
-                    "https://www.kemendikdasmen.go.id/mendikbud/image/15891",
+        image:
+            "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80",
 
-                link:
-                    "arti-tka-makin-dekat.html"
-            },
+        link:
+            "cara-fokus-belajar.html"
+    },
 
 
-            {
-                title:
-                    "Belajar Lama Belum Tentu Efektif, Ini Cara Biar Belajarmu Plus Nempel!",
+    {
+        title:
+            "TKA Tinggal Menghitung Hari? Ini Checklist Persiapan yang Wajib Kamu Cek",
 
-                category:
-                    "Tips Belajar",
+        category:
+            "TKA",
 
-                date:
-                    "2026-08-20",
+        date:
+            "2026-09-16",
 
-                dateDisplay:
-                    "20 Agustus 2026",
+        dateDisplay:
+            "16 September 2026",
 
-                description:
-                    "Belajar lebih lama belum tentu membuat materi lebih mudah dipahami. Yuk, cari cara belajar yang lebih efektif dan sesuai dengan kebutuhanmu.",
+        description:
+            "Biar persiapan TKA nggak berantakan, mulai cek materi, jadwal belajar, latihan soal, try out, sampai waktu istirahat.",
 
-                image:
-                    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://www.kemendikdasmen.go.id/mendikbud/image/15891",
 
-                link:
-                    "cara-belajar-efektif.html"
-            },
+        link:
+            "checklist-persiapan-tka.html"
+    },
 
 
-            {
-                title:
-                    "Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!",
+    {
+        title:
+            "TKA Makin Dekat? Jangan Panik, Ini yang Harus Kamu Siapin",
 
-                category:
-                    "Edukasi & Sekolah",
+        category:
+            "TKA",
 
-                date:
-                    "2026-08-15",
+        date:
+            "2026-08-27",
 
-                dateDisplay:
-                    "15 Agustus 2026",
+        dateDisplay:
+            "27 Agustus 2026",
 
-                description:
-                    "Pendidikan menjadi salah satu bekal penting untuk menghadapi masa depan. Yuk, pahami kenapa belajar punya peran penting dalam perkembangan diri.",
+        description:
+            "TKA mulai makin dekat dan kamu masih bingung harus mulai belajar dari mana? Yuk, siapkan strategi belajar, latihan soal, try out, dan evaluasi.",
 
-                image:
-                    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+        image:
+            "https://www.kemendikdasmen.go.id/mendikbud/image/15891",
 
-                link:
-                    "arti-penting-pendidikan.html"
-            },
+        link:
+            "arti-tka-makin-dekat.html"
+    },
 
 
-            {
-                title:
-                    "Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua?",
+    {
+        title:
+            "Belajar Lama Belum Tentu Efektif, Ini Cara Biar Belajarmu Plus Nempel!",
 
-                category:
-                    "Edukasi & Sekolah",
+        category:
+            "Tips Belajar",
 
-                date:
-                    "2026-08-10",
+        date:
+            "2026-08-20",
 
-                dateDisplay:
-                    "10 Agustus 2026",
+        dateDisplay:
+            "20 Agustus 2026",
 
-                description:
-                    "Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian. Yuk, cari tahu cara mengatur waktu agar aktivitas tetap berjalan dengan seimbang.",
+        description:
+            "Belajar lebih lama belum tentu membuat materi lebih mudah dipahami. Yuk, cari cara belajar yang lebih efektif dan sesuai dengan kebutuhanmu.",
 
-                image:
-                    "https://www.kemendikdasmen.go.id/mendikbud/image/14495",
+        image:
+            "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
 
-                link:
-                    "sekolah-tugas-eskul-main.html"
-            },
+        link:
+            "cara-belajar-efektif.html"
+    },
 
 
-            {
-                title:
-                    "Kenapa Kita Bisa Lupa Padahal Baru Belajar? Ini Penjelasan Sederhananya",
+    {
+        title:
+            "Pendidikan: Investasi Masa Depan Biar Gak Kena Mental & Gagal Paham!",
 
-                category:
-                    "Fun Edukasi",
+        category:
+            "Edukasi & Sekolah",
 
-                date:
-                    "2026-09-28",
+        date:
+            "2026-08-15",
 
-                dateDisplay:
-                    "28 September 2026",
+        dateDisplay:
+            "15 Agustus 2026",
 
-                description:
-                    "Kenapa materi yang baru dipelajari bisa cepat lupa? Kenali cara kerja memori dan kebiasaan belajar yang membantu informasi lebih mudah diingat.",
+        description:
+            "Pendidikan menjadi salah satu bekal penting untuk menghadapi masa depan. Yuk, pahami kenapa belajar punya peran penting dalam perkembangan diri.",
 
-                image:
-                    "https://commons.wikimedia.org/wiki/Special:FilePath/Pupils_studying_a_book.jpg",
+        image:
+            "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
 
-                link:
-                    "kenapa-kita-bisa-lupa.html"
-            },
+        link:
+            "arti-penting-pendidikan.html"
+    },
 
 
-            {
-                title:
-                    "Kenapa Langit Berwarna Biru? Ternyata Ada Alasannya",
+    {
+        title:
+            "Sekolah, Tugas, Ekskul, Main, Tidur… Emang Bisa Kebagian Semua?",
 
-                category:
-                    "Fun Edukasi",
+        category:
+            "Edukasi & Sekolah",
 
-                date:
-                    "2026-09-28",
+        date:
+            "2026-08-10",
 
-                dateDisplay:
-                    "28 September 2026",
+        dateDisplay:
+            "10 Agustus 2026",
 
-                description:
-                    "Langit terlihat biru pada siang hari yang cerah. Ternyata warna tersebut berkaitan dengan cahaya Matahari dan atmosfer Bumi.",
+        description:
+            "Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian. Yuk, cari tahu cara mengatur waktu agar aktivitas tetap berjalan dengan seimbang.",
 
-                image:
-                    "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Sky_with_Clouds.jpg",
+        image:
+            "https://www.kemendikdasmen.go.id/mendikbud/image/14495",
 
-                link:
-                    "kenapa-langit-berwarna-biru.html"
-            },
+        link:
+            "sekolah-tugas-eskul-main.html"
+    },
 
 
-            {
-                title:
-                    "Kenapa Kita Menguap Saat Ngantuk?",
+    {
+        title:
+            "Kenapa Kita Bisa Lupa Padahal Baru Belajar? Ini Penjelasan Sederhananya",
 
-                category:
-                    "Fun Edukasi",
+        category:
+            "Fun Edukasi",
 
-                date:
-                    "2026-09-28",
+        date:
+            "2026-09-28",
 
-                dateDisplay:
-                    "28 September 2026",
+        dateDisplay:
+            "28 September 2026",
 
-                description:
-                    "Kenapa kita sering menguap saat mengantuk? Yuk, kenali beberapa penjelasan ilmiah tentang menguap dengan bahasa yang gampang dipahami.",
+        description:
+            "Kenapa materi yang baru dipelajari bisa cepat lupa? Kenali cara kerja memori dan kebiasaan belajar yang membantu informasi lebih mudah diingat.",
 
-                image:
-                    "https://commons.wikimedia.org/wiki/Special:FilePath/Yawning.jpg",
+        image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Pupils_studying_a_book.jpg",
 
-                link:
-                    "kenapa-kita-menguap.html"
-            },
+        link:
+            "kenapa-kita-bisa-lupa.html"
+    },
 
 
-            {
-                title:
-                    "Kenapa Waktu Terasa Cepat Saat Lagi Seru-Serunya?",
+    {
+        title:
+            "Kenapa Langit Berwarna Biru? Ternyata Ada Alasannya",
 
-                category:
-                    "Fun Edukasi",
+        category:
+            "Fun Edukasi",
 
-                date:
-                    "2026-09-28",
+        date:
+            "2026-09-28",
 
-                dateDisplay:
-                    "28 September 2026",
+        dateDisplay:
+            "28 September 2026",
 
-                description:
-                    "Pernah merasa waktu berjalan cepat saat sedang seru-serunya? Yuk, cari tahu kenapa persepsi kita terhadap waktu bisa terasa berbeda.",
+        description:
+            "Langit terlihat biru pada siang hari yang cerah. Ternyata warna tersebut berkaitan dengan cahaya Matahari dan atmosfer Bumi.",
 
-                image:
-                    "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=85",
+        image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Sky_with_Clouds.jpg",
 
-                link:
-                    "kenapa-waktu-terasa-cepat.html"
-            },
+        link:
+            "kenapa-langit-berwarna-biru.html"
+    },
 
 
-            {
-                title:
-                    "Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!",
+    /* =====================================================
+       FOTO ARTIKEL MENGUAP SUDAH DIGANTI
+    ===================================================== */
 
-                category:
-                    "Ujian & Persiapan",
+    {
+        title:
+            "Kenapa Kita Menguap Saat Ngantuk?",
 
-                date:
-                    "2026-08-05",
+        category:
+            "Fun Edukasi",
 
-                dateDisplay:
-                    "5 Agustus 2026",
+        date:
+            "2026-09-28",
 
-                description:
-                    "Kenali cara mempersiapkan diri menghadapi ujian tanpa harus menggunakan sistem kebut semalam.",
+        dateDisplay:
+            "28 September 2026",
 
-                image:
-                    "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=85",
+        description:
+            "Kenapa kita sering menguap saat mengantuk? Yuk, kenali beberapa penjelasan ilmiah tentang menguap dengan bahasa yang gampang dipahami.",
 
-                link:
-                    "tips-menghadapi-ujian.html"
-            }
+        image:
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Yawning%20Image.jpg",
 
-        ];
+        link:
+            "kenapa-kita-menguap.html"
+    },
 
 
-        /* =====================================================
-           URUTKAN TERBARU → TERLAMA
-        ===================================================== */
+    {
+        title:
+            "Kenapa Waktu Terasa Cepat Saat Lagi Seru-Serunya?",
 
-        articles.sort(function(a, b) {
+        category:
+            "Fun Edukasi",
 
-            return new Date(b.date) - new Date(a.date);
+        date:
+            "2026-09-28",
+
+        dateDisplay:
+            "28 September 2026",
+
+        description:
+            "Pernah merasa waktu berjalan cepat saat sedang seru-serunya? Yuk, cari tahu kenapa persepsi kita terhadap waktu bisa terasa berbeda.",
+
+        image:
+            "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=85",
+
+        link:
+            "kenapa-waktu-terasa-cepat.html"
+    },
+
+
+    {
+        title:
+            "Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!",
+
+        category:
+            "Ujian & Persiapan",
+
+        date:
+            "2026-08-05",
+
+        dateDisplay:
+            "5 Agustus 2026",
+
+        description:
+            "Kenali cara mempersiapkan diri menghadapi ujian tanpa harus menggunakan sistem kebut semalam.",
+
+        image:
+            "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=85",
+
+        link:
+            "tips-menghadapi-ujian.html"
+    }
+
+];
+
+
+/* =====================================================
+   URUTKAN TERBARU → TERLAMA
+===================================================== */
+
+articles.sort(function(a,b){
+
+    return new Date(b.date) - new Date(a.date);
+
+});
+
+
+/* =====================================================
+   BUAT CARD
+===================================================== */
+
+function createArticleCard(article,isLatest){
+
+    const badge = isLatest
+        ? `
+            <span class="new-badge">
+                TERBARU
+            </span>
+          `
+        : "";
+
+
+    return `
+
+        <article class="article-card">
+
+            ${badge}
+
+
+            <a
+                href="${article.link}"
+                class="article-image"
+            >
+
+                <img
+                    src="${article.image}"
+                    alt="${article.title}"
+                    loading="lazy"
+                >
+
+            </a>
+
+
+            <div class="article-category">
+
+                ${article.category}
+
+            </div>
+
+
+            <h3>
+
+                <a href="${article.link}">
+
+                    ${article.title}
+
+                </a>
+
+            </h3>
+
+
+            <p class="article-description">
+
+                ${article.description}
+
+            </p>
+
+
+            <div class="article-meta">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                <span class="date">
+
+                    ${article.dateDisplay}
+
+                </span>
+
+            </div>
+
+        </article>
+
+    `;
+
+}
+
+
+/* =====================================================
+   ARTIKEL TERBARU
+===================================================== */
+
+const latestContainer =
+    document.getElementById("latestArticles");
+
+
+articles
+    .slice(0,4)
+    .forEach(function(article){
+
+        latestContainer.innerHTML +=
+            createArticleCard(article,true);
+
+    });
+
+
+/* =====================================================
+   KATEGORI
+===================================================== */
+
+const categories = [
+
+    "TKA",
+
+    "Tips Belajar",
+
+    "Edukasi & Sekolah",
+
+    "Ujian & Persiapan",
+
+    "Fun Edukasi"
+
+];
+
+
+const categoryContainer =
+    document.getElementById("categoryContainer");
+
+
+/* =====================================================
+   SLUG KATEGORI
+===================================================== */
+
+function slugify(text){
+
+    return text
+        .toLowerCase()
+        .replace(/&/g,"dan")
+        .replace(/\s+/g,"-")
+        .replace(/[^a-z0-9-]/g,"");
+
+}
+
+
+/* =====================================================
+   BUAT SECTION KATEGORI
+===================================================== */
+
+categories.forEach(function(category){
+
+    const categoryArticles =
+        articles.filter(function(article){
+
+            return article.category === category;
 
         });
 
 
-        /* =====================================================
-           GAMBAR FALLBACK
-        ===================================================== */
+    const section =
+        document.createElement("section");
 
-        const defaultArticleImage =
-            "data:image/svg+xml;charset=UTF-8," +
-            encodeURIComponent(`
-                <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-                    <rect width="1200" height="675" fill="#f3e8ff"/>
-                    <rect x="70" y="70" width="1060" height="535" rx="28" fill="#5b21b6"/>
-                    <circle cx="190" cy="180" r="52" fill="#facc15"/>
-                    <rect x="290" y="150" width="610" height="34" rx="17" fill="#ffffff" opacity="0.95"/>
-                    <rect x="290" y="215" width="430" height="24" rx="12" fill="#ffffff" opacity="0.72"/>
-                    <rect x="150" y="330" width="900" height="18" rx="9" fill="#ffffff" opacity="0.25"/>
-                    <rect x="150" y="375" width="760" height="18" rx="9" fill="#ffffff" opacity="0.25"/>
-                    <text x="150" y="500" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">New Primagama Sunter Indah</text>
-                    <text x="150" y="550" font-family="Arial, sans-serif" font-size="27" fill="#facc15">BLOG &amp; ARTIKEL</text>
-                </svg>
-            `);
-
-
-        /* =====================================================
-           BUAT CARD
-        ===================================================== */
 
-        function createArticleCard(article, isLatest) {
-
-            const badge = isLatest
-                ? `
-                    <span class="new-badge">
-                        TERBARU
-                    </span>
-                  `
-                : "";
-
-            const image =
-                article.image && article.image.trim() !== ""
-                    ? article.image
-                    : defaultArticleImage;
-
-            return `
-
-                <article class="article-card">
-
-                    ${badge}
-
-                    <a
-                        href="${article.link}"
-                        class="article-image">
-
-                        <img
-                            src="${image}"
-                            alt="${article.title}"
-                            loading="eager"
-                            decoding="async"
-                            referrerpolicy="no-referrer"
-                            onerror="this.onerror=null;this.src='${defaultArticleImage}';">
-
-                    </a>
+    section.className =
+        "category-section";
 
-                    <div class="article-category">
-                        ${article.category}
-                    </div>
 
-                    <h3>
-                        <a href="${article.link}">
-                            ${article.title}
-                        </a>
-                    </h3>
+    section.id =
+        slugify(category);
 
-                    <p class="article-description">
-                        ${article.description}
-                    </p>
 
-                    <div class="article-meta">
+    section.innerHTML = `
 
-                        <i class="fa-regular fa-calendar"></i>
+        <div class="category-heading">
 
-                        <span class="date">
-                            ${article.dateDisplay}
-                        </span>
+            <h2>
+                ${category}
+            </h2>
 
-                    </div>
+            <a
+                href="#${slugify(category)}"
+                class="see-all"
+            >
 
-                </article>
+                LIHAT SEMUA
 
-            `;
+                <i class="fa-solid fa-arrow-right"></i>
 
-        }
+            </a>
 
+        </div>
 
-        /* =====================================================
-           KATEGORI → URL SLUG
-        ===================================================== */
 
-        const categorySlugs = {
-            "TKA": "tka",
-            "Tips Belajar": "tips-belajar",
-            "Edukasi & Sekolah": "edukasi-sekolah",
-            "Ujian & Persiapan": "ujian-persiapan",
-            "Fun Edukasi": "fun-edukasi"
-        };
+        <div class="section-line"></div>
 
-        const categoryNames = {
-            "tka": "TKA",
-            "tips-belajar": "Tips Belajar",
-            "edukasi-sekolah": "Edukasi & Sekolah",
-            "ujian-persiapan": "Ujian & Persiapan",
-            "fun-edukasi": "Fun Edukasi"
-        };
 
-        function categorySlug(category) {
-            return categorySlugs[category] || "";
-        }
+        <div class="article-grid">
 
+            ${categoryArticles
+                .map(function(article){
 
-        /* =====================================================
-           ARTIKEL TERBARU
-           4 ARTIKEL TERBARU
-        ===================================================== */
+                    return createArticleCard(
+                        article,
+                        false
+                    );
 
-        const latestContainer =
-            document.getElementById("latestArticles");
+                })
+                .join("")}
 
-        articles
-            .slice(0, 4)
-            .forEach(function(article) {
-                latestContainer.innerHTML +=
-                    createArticleCard(article, true);
-            });
+        </div>
 
+    `;
 
-        /* =====================================================
-           KATEGORI
-        ===================================================== */
 
-        const categories = [
-            "TKA",
-            "Tips Belajar",
-            "Edukasi & Sekolah",
-            "Ujian & Persiapan",
-            "Fun Edukasi"
-        ];
+    categoryContainer.appendChild(section);
 
-        const categoryContainer =
-            document.getElementById("categoryContainer");
+});
 
 
-        /* =====================================================
-           BUAT SECTION KATEGORI
-        ===================================================== */
+/* =====================================================
+   HAMBURGER
+===================================================== */
 
-        function renderCategorySection(category) {
+const hamburger =
+    document.getElementById("hamburger");
 
-            const categoryArticles =
-                articles.filter(function(article) {
-                    return article.category === category;
-                });
 
-            const section =
-                document.createElement("section");
+const navMenu =
+    document.querySelector(".nav-menu");
 
-            section.className = "category-section";
-            section.id = categorySlug(category);
 
-            section.innerHTML = `
+hamburger.addEventListener(
+    "click",
+    function(){
 
-                <div class="category-heading">
+        navMenu.classList.toggle("active");
 
-                    <h2>
-                        ${category}
-                    </h2>
+    }
+);
 
-                    <a
-                        href="blog.html?kategori=${categorySlug(category)}"
-                        class="see-all">
 
-                        LIHAT SEMUA
+/* =====================================================
+   TUTUP MENU SAAT LINK DIKLIK
+===================================================== */
 
-                        <i class="fa-solid fa-arrow-right"></i>
+document
+    .querySelectorAll(".nav-menu a")
+    .forEach(function(link){
 
-                    </a>
-
-                </div>
-
-                <div class="section-line"></div>
-
-                <div class="article-grid">
-
-                    ${categoryArticles
-                        .map(function(article) {
-                            return createArticleCard(article, false);
-                        })
-                        .join("")}
-
-                </div>
-
-            `;
-
-            categoryContainer.appendChild(section);
-
-        }
-
-
-        /* =====================================================
-           MODE HALAMAN KATEGORI
-           Contoh: blog.html?kategori=tka
-        ===================================================== */
-
-        const urlParams =
-            new URLSearchParams(window.location.search);
-
-        const selectedCategorySlug =
-            urlParams.get("kategori");
-
-        const selectedCategory =
-            categoryNames[selectedCategorySlug];
-
-
-        if (selectedCategory) {
-
-            /* Sembunyikan artikel terbaru */
-            document.querySelector(".latest-section").style.display = "none";
-
-            /* Ubah hero sesuai kategori */
-            document.querySelector(".blog-hero").innerHTML = `
-
-                <div class="hero-inner">
-
-                    <div class="hero-top">
-
-                        <span class="hero-label">
-                            KATEGORI ARTIKEL
-                        </span>
-
-                        <span class="hero-line"></span>
-
-                    </div>
-
-                    <h1>
-                        ${selectedCategory}
-                    </h1>
-
-                    <p class="hero-description">
-                        Kumpulan artikel ${selectedCategory} dari New Primagama Sunter Indah.
-                    </p>
-
-                </div>
-
-            `;
-
-            /* Tombol kembali */
-            const backButton =
-                document.createElement("div");
-
-            backButton.style.marginBottom = "18px";
-
-            backButton.innerHTML = `
-                <a
-                    href="blog.html"
-                    style="display:inline-flex;align-items:center;gap:7px;color:#5b21b6;font-size:11px;font-weight:700;">
-
-                    <i class="fa-solid fa-arrow-left"></i>
-
-                    KEMBALI KE SEMUA ARTIKEL
-
-                </a>
-            `;
-
-            categoryContainer.appendChild(backButton);
-
-            /* Tampilkan hanya kategori yang dipilih */
-            renderCategorySection(selectedCategory);
-
-            document.title =
-                selectedCategory +
-                " - Blog New Primagama Sunter Indah";
-
-        } else {
-
-            /* Halaman utama blog: tampilkan semua kategori */
-            categories.forEach(function(category) {
-                renderCategorySection(category);
-            });
-
-        }
-
-
-        /* =====================================================
-           HAMBURGER
-        ===================================================== */
-
-        const hamburger =
-            document.getElementById("hamburger");
-
-        const navMenu =
-            document.querySelector(".nav-menu");
-
-        hamburger.addEventListener(
+        link.addEventListener(
             "click",
-            function() {
-                navMenu.classList.toggle("active");
+            function(){
+
+                navMenu.classList.remove("active");
+
             }
         );
 
+    });
 
-        /* =====================================================
-           TUTUP MENU SAAT LINK DIKLIK
-        ===================================================== */
-
-        document
-            .querySelectorAll(".nav-menu a")
-            .forEach(function(link) {
-
-                link.addEventListener(
-                    "click",
-                    function() {
-                        navMenu.classList.remove("active");
-                    }
-                );
-
-            });
-
-    </script>
+</script>
 
 
 </body>
