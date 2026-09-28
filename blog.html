@@ -882,28 +882,28 @@
 
 </head>
 
-
 <body>
 
-
-    <!-- =========================
+    <!-- =========================================
          NAVBAR
-    ========================== -->
+    ========================================== -->
 
     <header class="navbar">
 
+        <!-- LOGO -->
         <div class="logo">
-
-            <img
-                src="logo primagama png.jpeg"
-                alt="Logo New Primagama Sunter Indah">
-
+            <a href="index.html">
+                <img
+                    src="logo primagama png.jpeg"
+                    alt="Logo New Primagama">
+            </a>
         </div>
 
 
+        <!-- NAVIGATION -->
         <nav class="nav-menu">
 
-            <a href="index.html#hero">
+            <a href="index.html">
                 Beranda
             </a>
 
@@ -919,6 +919,10 @@
                 Fasilitas
             </a>
 
+            <a href="blog.html" class="active">
+                Blog
+            </a>
+
             <a href="index.html#faq">
                 FAQ
             </a>
@@ -927,15 +931,10 @@
                 Kontak
             </a>
 
-            <a
-                href="blog.html"
-                class="active">
-                Blog
-            </a>
-
         </nav>
 
 
+        <!-- DAFTAR SEKARANG -->
         <a
             href="index.html#kontak"
             class="btn-navbar">
@@ -945,6 +944,7 @@
         </a>
 
 
+        <!-- HAMBURGER -->
         <button
             class="hamburger"
             id="hamburger"
@@ -960,9 +960,9 @@
 
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- =========================================
+         HERO BLOG
+    ========================================== -->
 
     <section class="blog-hero">
 
@@ -971,7 +971,7 @@
             <div class="hero-top">
 
                 <span class="hero-label">
-                    BLOG & ARTIKEL
+                    BLOG NEW PRIMAGAMA
                 </span>
 
                 <span class="hero-line"></span>
@@ -980,17 +980,15 @@
 
 
             <h1>
-                Info belajar, sekolah,<br>
-                dan persiapan ujian.
+                Nongkrong & Belajar Bareng
             </h1>
 
 
             <p class="hero-description">
-
-                Temukan artikel seputar tips belajar, TKA, ujian,
-                sekolah, dan informasi pendidikan lainnya dari
-                New Primagama Sunter Indah.
-
+                Bahas hal-hal seputar sekolah, belajar,
+                ujian, TKA, sampai tips menghadapi
+                kehidupan sekolah dengan cara yang
+                lebih santai dan mudah dipahami.
             </p>
 
         </div>
@@ -999,16 +997,16 @@
 
 
 
-    <!-- =========================
-         BLOG
-    ========================== -->
+    <!-- =========================================
+         BLOG CONTENT
+    ========================================== -->
 
     <main class="blog-container">
 
 
-        <!-- =========================
+        <!-- =====================================
              ARTIKEL TERBARU
-        ========================== -->
+        ====================================== -->
 
         <section class="latest-section">
 
@@ -1016,10 +1014,10 @@
 
                 <div class="section-heading-left">
 
-                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-bolt"></i>
 
                     <h2>
-                        Artikel Terbaru
+                        ARTIKEL TERBARU
                     </h2>
 
                 </div>
@@ -1034,23 +1032,37 @@
                 class="article-grid"
                 id="latestArticles">
 
+                <!--
+                    Artikel terbaru
+                    akan dimasukkan
+                    melalui JavaScript
+                -->
+
             </div>
 
         </section>
 
 
 
-        <!-- =========================
-             KATEGORI
-        ========================== -->
+        <!-- =====================================
+             SEMUA KATEGORI
+        ====================================== -->
 
-        <div id="categoryContainer"></div>
+        <div id="categoryContainer">
+
+            <!--
+                Semua kategori artikel
+                akan dibuat otomatis
+                melalui JavaScript
+            -->
+
+        </div>
 
 
 
-        <!-- =========================
+        <!-- =====================================
              CTA
-        ========================== -->
+        ====================================== -->
 
         <section class="blog-cta">
 
@@ -1061,9 +1073,9 @@
                 </h2>
 
                 <p>
-                    Dapatkan pendampingan belajar yang sesuai
-                    dengan kebutuhanmu bersama New Primagama
-                    Sunter Indah.
+                    Dapatkan pendampingan belajar
+                    yang sesuai dengan kebutuhanmu
+                    bersama New Primagama Sunter Indah.
                 </p>
 
             </div>
@@ -1073,8 +1085,9 @@
 
                 <a
                     href="https://wa.me/6285285705335"
-                    class="cta-button cta-primary"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cta-button cta-primary">
 
                     Konsultasi Gratis
 
@@ -1097,9 +1110,9 @@
 
 
 
-    <!-- =========================
+    <!-- =========================================
          FOOTER
-    ========================== -->
+    ========================================== -->
 
     <footer class="blog-footer">
 
@@ -1108,13 +1121,15 @@
 
     </footer>
 
-
+        <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
 
     <script>
 
-        /* =====================================================
-           DATABASE SELURUH ARTIKEL
-        ===================================================== */
+        /* =========================================
+           DATABASE ARTIKEL
+        ========================================== */
 
         const articles = [
 
@@ -1128,14 +1143,11 @@
                 date:
                     "2026-09-23",
 
-                dateDisplay:
-                    "23 September 2026",
-
-                description:
-                    "Belajar bareng teman bisa bikin materi lebih mudah dipahami. Yuk, atur cara belajar kelompok supaya tetap fokus dan nggak malah jadi ajang ngobrol.",
+                source:
+                    "Ditsmp",
 
                 image:
-                    "https://ditsmp.kemendikdasmen.go.id/storage/posts/hAlt6Ed7cvMAyZ39eQDQjKluOiWLTfAe5shqIP9M.png",
+                    "https://ditsmp.kemdikbud.go.id/wp-content/uploads/2024/08/Belajar-Kelompok.jpg",
 
                 link:
                     "belajar-kelompok.html"
@@ -1152,14 +1164,11 @@
                 date:
                     "2026-09-22",
 
-                dateDisplay:
-                    "22 September 2026",
-
-                description:
-                    "Sering mengantuk saat belajar bisa membuat fokus berkurang. Kenali beberapa penyebabnya dan coba kebiasaan sederhana agar waktu belajarmu lebih terarah.",
+                source:
+                    "Ditsmp",
 
                 image:
-                    "https://ditsmp.kemendikdasmen.go.id/storage/posts/088PzOnTuyRjfHQPh2cNKibaTHQKwhiFyKJxQVvZ.png",
+                    "https://ditsmp.kemdikbud.go.id/wp-content/uploads/2024/08/Mengantuk-Saat-Belajar.jpg",
 
                 link:
                     "sering-ngantuk-saat-belajar.html"
@@ -1176,14 +1185,11 @@
                 date:
                     "2026-09-21",
 
-                dateDisplay:
-                    "21 September 2026",
-
-                description:
-                    "Bercanda bersama teman memang menyenangkan, tetapi tetap ada batasnya. Kenali cara membedakan candaan yang sehat dan perilaku yang bisa membuat teman tidak nyaman.",
+                source:
+                    "Ditsmp",
 
                 image:
-                    "https://ditsmp.kemendikdasmen.go.id/storage/posts/Pfk96i2W3fjEvvPzzAdflmukBl3vabHXsR80tK5P.png",
+                    "https://ditsmp.kemdikbud.go.id/wp-content/uploads/2024/08/Perundungan.jpg",
 
                 link:
                     "bercanda-sama-teman-ada-batasnya.html"
@@ -1200,14 +1206,11 @@
                 date:
                     "2026-09-18",
 
-                dateDisplay:
-                    "18 September 2026",
-
-                description:
-                    "Sekolah bukan cuma soal nilai. Ada banyak skill penting yang bisa membantu kamu belajar, berkomunikasi, bekerja sama, dan menghadapi tantangan.",
+                source:
+                    "Unsplash",
 
                 image:
-                    "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80",
+                    "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
 
                 link:
                     "skill-wajib-di-sekolah.html"
@@ -1224,14 +1227,11 @@
                 date:
                     "2026-09-17",
 
-                dateDisplay:
-                    "17 September 2026",
-
-                description:
-                    "HP bunyi dikit, buka sosmed. Baru belajar sebentar, malah bengong. Coba beberapa cara sederhana ini supaya waktu belajarmu lebih terarah.",
+                source:
+                    "Unsplash",
 
                 image:
-                    "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80",
+                    "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1200&q=80",
 
                 link:
                     "cara-fokus-belajar.html"
@@ -1240,7 +1240,7 @@
 
             {
                 title:
-                    "TKA Tinggal Menghitung Hari? Ini Checklist Persiapan yang Wajib Kamu Cek",
+                    "TKA Tinggal Menghitung Hari?! Ini Checklist Persiapan yang Wajib Kamu Cek",
 
                 category:
                     "TKA",
@@ -1248,14 +1248,11 @@
                 date:
                     "2026-09-16",
 
-                dateDisplay:
-                    "16 September 2026",
-
-                description:
-                    "Biar persiapan TKA nggak berantakan, mulai cek materi, jadwal belajar, latihan soal, try out, sampai waktu istirahat.",
+                source:
+                    "Ditsmp",
 
                 image:
-                    "https://www.kemendikdasmen.go.id/mendikbud/image/15891",
+                    "https://ditsmp.kemdikbud.go.id/wp-content/uploads/2024/08/15891.jpg",
 
                 link:
                     "checklist-persiapan-tka.html"
@@ -1272,14 +1269,11 @@
                 date:
                     "2026-08-27",
 
-                dateDisplay:
-                    "27 Agustus 2026",
-
-                description:
-                    "TKA mulai makin dekat dan kamu masih bingung harus mulai belajar dari mana? Yuk, siapkan strategi belajar, latihan soal, try out, dan evaluasi.",
+                source:
+                    "Ditsmp",
 
                 image:
-                    "https://www.kemendikdasmen.go.id/mendikbud/image/15891",
+                    "https://ditsmp.kemdikbud.go.id/wp-content/uploads/2024/08/15891.jpg",
 
                 link:
                     "arti-tka-makin-dekat.html"
@@ -1288,7 +1282,7 @@
 
             {
                 title:
-                    "Belajar Lama Belum Tentu Efektif, Ini Cara Biar Belajarmu Plus Nempel!",
+                    "Belajar Lama Belum Tentu Efektif, Ini Cara Biar Belajarmu Nempel!",
 
                 category:
                     "Tips Belajar",
@@ -1296,14 +1290,11 @@
                 date:
                     "2026-08-20",
 
-                dateDisplay:
-                    "20 Agustus 2026",
-
-                description:
-                    "Belajar lebih lama belum tentu membuat materi lebih mudah dipahami. Yuk, cari cara belajar yang lebih efektif dan sesuai dengan kebutuhanmu.",
+                source:
+                    "Unsplash",
 
                 image:
-                    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+                    "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
 
                 link:
                     "cara-belajar-efektif.html"
@@ -1320,14 +1311,11 @@
                 date:
                     "2026-08-15",
 
-                dateDisplay:
-                    "15 Agustus 2026",
-
-                description:
-                    "Pendidikan menjadi salah satu bekal penting untuk menghadapi masa depan. Yuk, pahami kenapa belajar punya peran penting dalam perkembangan diri.",
+                source:
+                    "Unsplash",
 
                 image:
-                    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+                    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
 
                 link:
                     "arti-penting-pendidikan.html"
@@ -1344,14 +1332,11 @@
                 date:
                     "2026-08-10",
 
-                dateDisplay:
-                    "10 Agustus 2026",
-
-                description:
-                    "Sekolah, tugas, ekskul, main, sampai waktu tidur semuanya harus kebagian. Yuk, cari tahu cara mengatur waktu agar aktivitas tetap berjalan dengan seimbang.",
+                source:
+                    "Ditsmp",
 
                 image:
-                    "https://www.kemendikdasmen.go.id/mendikbud/image/14495",
+                    "https://ditsmp.kemdikbud.go.id/wp-content/uploads/2024/08/14495.jpg",
 
                 link:
                     "sekolah-tugas-eskul-main.html"
@@ -1360,7 +1345,7 @@
 
             {
                 title:
-                    "Kenapa Kita Bisa Lupa Padahal Baru Belajar? Ini Penjelasan Sederhananya",
+                    "Kenapa Kita Bisa Lupa?",
 
                 category:
                     "Fun Edukasi",
@@ -1368,14 +1353,11 @@
                 date:
                     "2026-09-28",
 
-                dateDisplay:
-                    "28 September 2026",
-
-                description:
-                    "Kenapa materi yang baru dipelajari bisa cepat lupa? Kenali cara kerja memori dan kebiasaan belajar yang membantu informasi lebih mudah diingat.",
+                source:
+                    "New Primagama Sunter Indah",
 
                 image:
-                    "https://commons.wikimedia.org/wiki/Special:FilePath/Pupils_studying_a_book.jpg",
+                    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1200&q=80",
 
                 link:
                     "kenapa-kita-bisa-lupa.html"
@@ -1384,7 +1366,7 @@
 
             {
                 title:
-                    "Kenapa Langit Berwarna Biru? Ternyata Ada Alasannya",
+                    "Kenapa Langit Berwarna Biru?",
 
                 category:
                     "Fun Edukasi",
@@ -1392,14 +1374,11 @@
                 date:
                     "2026-09-28",
 
-                dateDisplay:
-                    "28 September 2026",
-
-                description:
-                    "Langit terlihat biru pada siang hari yang cerah. Ternyata warna tersebut berkaitan dengan cahaya Matahari dan atmosfer Bumi.",
+                source:
+                    "New Primagama Sunter Indah",
 
                 image:
-                    "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Sky_with_Clouds.jpg",
+                    "https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=1200&q=80",
 
                 link:
                     "kenapa-langit-berwarna-biru.html"
@@ -1408,7 +1387,7 @@
 
             {
                 title:
-                    "Kenapa Kita Menguap Saat Ngantuk?",
+                    "Kenapa Kita Menguap?",
 
                 category:
                     "Fun Edukasi",
@@ -1416,14 +1395,11 @@
                 date:
                     "2026-09-28",
 
-                dateDisplay:
-                    "28 September 2026",
-
-                description:
-                    "Kenapa kita sering menguap saat mengantuk? Yuk, kenali beberapa penjelasan ilmiah tentang menguap dengan bahasa yang gampang dipahami.",
+                source:
+                    "New Primagama Sunter Indah",
 
                 image:
-                    "https://commons.wikimedia.org/wiki/Special:FilePath/Yawning.jpg",
+                    "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&q=80",
 
                 link:
                     "kenapa-kita-menguap.html"
@@ -1432,7 +1408,7 @@
 
             {
                 title:
-                    "Kenapa Waktu Terasa Cepat Saat Lagi Seru-Serunya?",
+                    "Kenapa Waktu Terasa Cepat?",
 
                 category:
                     "Fun Edukasi",
@@ -1440,14 +1416,11 @@
                 date:
                     "2026-09-28",
 
-                dateDisplay:
-                    "28 September 2026",
-
-                description:
-                    "Pernah merasa waktu berjalan cepat saat sedang seru-serunya? Yuk, cari tahu kenapa persepsi kita terhadap waktu bisa terasa berbeda.",
+                source:
+                    "New Primagama Sunter Indah",
 
                 image:
-                    "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=85",
+                    "https://images.unsplash.com/photo-1501139083538-0139583c060f?auto=format&fit=crop&w=1200&q=80",
 
                 link:
                     "kenapa-waktu-terasa-cepat.html"
@@ -1464,14 +1437,11 @@
                 date:
                     "2026-08-05",
 
-                dateDisplay:
-                    "5 Agustus 2026",
-
-                description:
-                    "Kenali cara mempersiapkan diri menghadapi ujian tanpa harus menggunakan sistem kebut semalam.",
+                source:
+                    "New Primagama Sunter Indah",
 
                 image:
-                    "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=85",
+                    "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
 
                 link:
                     "tips-menghadapi-ujian.html"
@@ -1479,43 +1449,52 @@
 
         ];
 
+                /* =========================================
+           SORTING ARTIKEL
+        ========================================== */
 
-        /* =====================================================
-           URUTKAN TERBARU → TERLAMA
-        ===================================================== */
-
-        articles.sort(function(a, b) {
-
+        articles.sort((a, b) => {
             return new Date(b.date) - new Date(a.date);
-
         });
 
 
-        /* =====================================================
-           BUAT CARD
-        ===================================================== */
 
-        function createArticleCard(article, isLatest) {
+        /* =========================================
+           FORMAT TANGGAL
+        ========================================== */
 
-            const badge = isLatest
-                ? `
-                    <span class="new-badge">
-                        TERBARU
-                    </span>
-                  `
-                : "";
+        function formatDate(dateString) {
 
+            const date = new Date(dateString);
+
+            const day = String(date.getDate()).padStart(2, "0");
+            const month = String(date.getMonth() + 1).padStart(2, "0");
+            const year = date.getFullYear();
+
+            return `${day}-${month}-${year}`;
+
+        }
+
+
+
+        /* =========================================
+           MEMBUAT CARD ARTIKEL
+        ========================================== */
+
+        function createArticleCard(article, showNewBadge = false) {
 
             return `
-
                 <article class="article-card">
-
-                    ${badge}
-
 
                     <a
                         href="${article.link}"
                         class="article-image">
+
+                        ${showNewBadge ? `
+                            <span class="new-badge">
+                                TERBARU
+                            </span>
+                        ` : ""}
 
                         <img
                             src="${article.image}"
@@ -1526,71 +1505,50 @@
 
 
                     <div class="article-category">
-
                         ${article.category}
-
                     </div>
 
 
                     <h3>
-
                         <a href="${article.link}">
-
                             ${article.title}
-
                         </a>
-
                     </h3>
 
 
                     <p class="article-description">
-
-                        ${article.description}
-
+                        Baca artikel selengkapnya dan temukan
+                        informasi yang bisa membantu kamu
+                        dalam belajar dan menjalani kehidupan sekolah.
                     </p>
 
 
                     <div class="article-meta">
 
-                        <i class="fa-regular fa-calendar"></i>
-
                         <span class="date">
+                            ${formatDate(article.date)}
+                        </span>
 
-                            ${article.dateDisplay}
+                        <span>
+                            •
+                        </span>
 
+                        <span>
+                            ${article.source}
                         </span>
 
                     </div>
 
                 </article>
-
             `;
 
         }
 
 
-        /* =====================================================
-           ARTIKEL TERBARU
-           4 ARTIKEL TERBARU
-        ===================================================== */
 
-        const latestContainer =
-            document.getElementById("latestArticles");
-
-
-        articles
-            .slice(0, 4)
-            .forEach(function(article) {
-
-                latestContainer.innerHTML +=
-                    createArticleCard(article, true);
-
-            });
-
-
-        /* =====================================================
-           KATEGORI
-        ===================================================== */
+        /* =========================================
+           DAFTAR KATEGORI
+        ========================================== */
 
         const categories = [
 
@@ -1607,22 +1565,112 @@
         ];
 
 
+
+        /* =========================================
+           SLUG KATEGORI
+           Digunakan untuk URL
+        ========================================== */
+
+        const categorySlugs = {
+
+            "TKA":
+                "tka",
+
+            "Tips Belajar":
+                "tips-belajar",
+
+            "Edukasi & Sekolah":
+                "edukasi-sekolah",
+
+            "Ujian & Persiapan":
+                "ujian-persiapan",
+
+            "Fun Edukasi":
+                "fun-edukasi"
+
+        };
+
+
+
+        const categoryNames = {
+
+            "tka":
+                "TKA",
+
+            "tips-belajar":
+                "Tips Belajar",
+
+            "edukasi-sekolah":
+                "Edukasi & Sekolah",
+
+            "ujian-persiapan":
+                "Ujian & Persiapan",
+
+            "fun-edukasi":
+                "Fun Edukasi"
+
+        };
+
+
+
+        function categorySlug(category) {
+
+            return categorySlugs[category] || "";
+
+        }
+
+
+
+        /* =========================================
+           RENDER ARTIKEL TERBARU
+        ========================================== */
+
+        const latestContainer =
+            document.getElementById("latestArticles");
+
+
+        if (latestContainer) {
+
+            latestContainer.innerHTML =
+                articles
+                    .slice(0, 4)
+                    .map((article, index) =>
+                        createArticleCard(
+                            article,
+                            index === 0
+                        )
+                    )
+                    .join("");
+
+        }
+
+
+
+        /* =========================================
+           CONTAINER KATEGORI
+        ========================================== */
+
         const categoryContainer =
             document.getElementById("categoryContainer");
 
 
-        /* =====================================================
-           BUAT SECTION KATEGORI
-        ===================================================== */
 
-        categories.forEach(function(category) {
+        /* =========================================
+           RENDER SATU KATEGORI
+        ========================================== */
+
+        function renderCategorySection(category) {
 
             const categoryArticles =
-                articles.filter(function(article) {
+                articles.filter(
+                    article =>
+                        article.category === category
+                );
 
-                    return article.category === category;
 
-                });
+            if (categoryArticles.length === 0) {
+                return;
+            }
 
 
             const section =
@@ -1634,7 +1682,7 @@
 
 
             section.id =
-                slugify(category);
+                categorySlug(category);
 
 
             section.innerHTML = `
@@ -1644,6 +1692,7 @@
                     <h2>
                         ${category}
                     </h2>
+
 
                     <a
                         href="blog.html?kategori=${categorySlug(category)}"
@@ -1664,14 +1713,9 @@
                 <div class="article-grid">
 
                     ${categoryArticles
-                        .map(function(article) {
-
-                            return createArticleCard(
-                                article,
-                                false
-                            );
-
-                        })
+                        .map(article =>
+                            createArticleCard(article, false)
+                        )
                         .join("")}
 
                 </div>
@@ -1681,27 +1725,183 @@
 
             categoryContainer.appendChild(section);
 
-        });
+        }
 
 
-        /* =====================================================
-           SLUG KATEGORI
-        ===================================================== */
 
-        function slugify(text) {
+        /* =========================================
+           CEK MODE KATEGORI
+        ========================================== */
 
-            return text
-                .toLowerCase()
-                .replace(/&/g, "dan")
-                .replace(/\s+/g, "-")
-                .replace(/[^a-z0-9-]/g, "");
+        const urlParams =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const selectedCategorySlug =
+            urlParams.get("kategori");
+
+
+        const selectedCategory =
+            categoryNames[selectedCategorySlug];
+
+
+
+        /* =========================================
+           MODE: HALAMAN KATEGORI
+        ========================================== */
+
+        if (selectedCategory) {
+
+            /*
+             * Sembunyikan artikel terbaru
+             */
+
+            const latestSection =
+                document.querySelector(
+                    ".latest-section"
+                );
+
+
+            if (latestSection) {
+
+                latestSection.style.display =
+                    "none";
+
+            }
+
+
+
+            /*
+             * Ubah hero
+             */
+
+            const hero =
+                document.querySelector(
+                    ".blog-hero"
+                );
+
+
+            if (hero) {
+
+                hero.innerHTML = `
+
+                    <div class="hero-inner">
+
+                        <div class="hero-top">
+
+                            <span class="hero-label">
+                                KATEGORI ARTIKEL
+                            </span>
+
+                            <span class="hero-line"></span>
+
+                        </div>
+
+
+                        <h1>
+                            ${selectedCategory}
+                        </h1>
+
+
+                        <p class="hero-description">
+                            Kumpulan artikel
+                            ${selectedCategory}
+                            dari New Primagama Sunter Indah.
+                        </p>
+
+                    </div>
+
+                `;
+
+            }
+
+
+
+            /*
+             * Tombol kembali
+             */
+
+            const backButton =
+                document.createElement("div");
+
+
+            backButton.style.marginBottom =
+                "18px";
+
+
+            backButton.innerHTML = `
+
+                <a
+                    href="blog.html"
+                    style="
+                        display:inline-flex;
+                        align-items:center;
+                        gap:7px;
+                        color:#5b21b6;
+                        font-size:11px;
+                        font-weight:700;
+                    ">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    KEMBALI KE SEMUA ARTIKEL
+
+                </a>
+
+            `;
+
+
+            categoryContainer.appendChild(
+                backButton
+            );
+
+
+
+            /*
+             * Tampilkan kategori yang dipilih
+             */
+
+            renderCategorySection(
+                selectedCategory
+            );
+
+
+
+            /*
+             * Ubah title browser
+             */
+
+            document.title =
+                `${selectedCategory} - Blog New Primagama Sunter Indah`;
 
         }
 
 
-        /* =====================================================
-           HAMBURGER
-        ===================================================== */
+        /* =========================================
+           MODE: SEMUA ARTIKEL
+        ========================================== */
+
+        else {
+
+            categories.forEach(
+                category => {
+
+                    renderCategorySection(
+                        category
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =========================================
+           HAMBURGER MENU
+        ========================================== */
 
         const hamburger =
             document.getElementById("hamburger");
@@ -1711,37 +1911,45 @@
             document.querySelector(".nav-menu");
 
 
-        hamburger.addEventListener(
-            "click",
-            function() {
+        if (hamburger && navMenu) {
 
-                navMenu.classList.toggle("active");
+            hamburger.addEventListener(
+                "click",
+                () => {
 
-            }
-        );
+                    navMenu.classList.toggle(
+                        "active"
+                    );
+
+                }
+            );
 
 
-        /* =====================================================
-           TUTUP MENU SAAT LINK DIKLIK
-        ===================================================== */
+            /*
+             * Tutup menu setelah
+             * memilih navigasi
+             */
 
-        document
-            .querySelectorAll(".nav-menu a")
-            .forEach(function(link) {
+            navMenu
+                .querySelectorAll("a")
+                .forEach(link => {
 
-                link.addEventListener(
-                    "click",
-                    function() {
+                    link.addEventListener(
+                        "click",
+                        () => {
 
-                        navMenu.classList.remove("active");
+                            navMenu.classList.remove(
+                                "active"
+                            );
 
-                    }
-                );
+                        }
+                    );
 
-            });
+                });
+
+        }
 
     </script>
-
 
 </body>
 
