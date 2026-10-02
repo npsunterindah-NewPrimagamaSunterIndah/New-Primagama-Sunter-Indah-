@@ -198,6 +198,27 @@
     <link rel="stylesheet"
           href="./style.css">
 
+    <style>
+        /* Ukuran logo navbar: dikembalikan seperti ukuran logo sebelumnya */
+        .navbar > img{
+            width:150px !important;
+            max-width:150px !important;
+            height:auto !important;
+            max-height:55px !important;
+            object-fit:contain !important;
+            display:block !important;
+        }
+
+        @media (max-width:768px){
+            .navbar > img{
+                width:125px !important;
+                max-width:125px !important;
+                height:auto !important;
+                max-height:45px !important;
+            }
+        }
+    </style>
+
 </head>
 
 <!--=========================================
@@ -1045,7 +1066,7 @@
 
         <div class="footer-logo">
 
-            <img src="logo primagama png.jpeg"
+            <img src="logo-primagama-transparan.png"
                  alt="New Primagama">
 
             <h2>New Primagama Sunter Indah</h2>
