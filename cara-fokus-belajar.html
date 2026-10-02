@@ -1,860 +1,599 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Susah Fokus Belajar? Coba 7 Cara Ini Biar Nggak Gampang Terdistraksi - New Primagama Sunter Indah
-    </title>
-
-    <meta
-        name="description"
-        content="HP bunyi dikit, buka sosmed. Baru belajar sebentar, malah bengong. Coba beberapa cara sederhana ini supaya waktu belajarmu lebih terarah.">
-
-    <meta name="robots" content="index, follow">
-
-    <link
-        rel="canonical"
-        href="https://newprimagamasunterindah.com/cara-fokus-belajar.html">
-
-    <meta
-        property="og:title"
-        content="Susah Fokus Belajar? Coba 7 Cara Ini Biar Nggak Gampang Terdistraksi">
-
-    <meta
-        property="og:description"
-        content="HP bunyi dikit, buka sosmed. Baru belajar sebentar, malah bengong. Coba beberapa cara sederhana ini supaya waktu belajarmu lebih terarah.">
-
-    <meta property="og:type" content="article">
-
-    <meta
-        property="og:url"
-        content="https://newprimagamasunterindah.com/cara-fokus-belajar.html">
-
-    <meta
-        property="og:image"
-        content="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-
-    <style>
-
-        :root {
-            --purple: #5b21b6;
-            --purple-dark: #1e1b4b;
-            --purple-light: #f3e8ff;
-            --text: #1e293b;
-            --muted: #64748b;
-            --bg: #f8fafc;
-            --yellow: #facc15;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            background: var(--bg);
-            color: var(--text);
-            font-family: "Poppins", sans-serif;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-
-        /* ===============================
-           NAVBAR
-        =============================== */
-
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-            width: 100%;
-            min-height: 80px;
-            padding: 0 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-            background: #fff;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, .06);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        .logo img {
-            width: 150px;
-            height: auto;
-            display: block;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-            margin-left: auto;
-        }
-
-        .nav-menu a {
-            color: #334155;
-            font-size: 14px;
-            font-weight: 500;
-            white-space: nowrap;
-            transition: .3s ease;
-        }
-
-        .nav-menu a:hover,
-        .nav-menu a.active {
-            color: var(--purple);
-        }
-
-        .btn-navbar {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--purple);
-            color: #fff !important;
-            padding: 11px 20px;
-            border-radius: 9px;
-            font-size: 13px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .hamburger {
-            display: none;
-            width: 38px;
-            height: 38px;
-            padding: 0;
-            margin: 0;
-            border: 0;
-            background: transparent;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 3px;
-            background: #334155;
-            border-radius: 5px;
-        }
-
-
-        /* ===============================
-           ARTICLE
-        =============================== */
-
-        .article-wrapper {
-            padding: 50px 20px 70px;
-        }
-
-        .article-container {
-            width: 100%;
-            max-width: 850px;
-            margin: 0 auto;
-            overflow: hidden;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, .07);
-        }
-
-        .article-header {
-            padding: 45px 50px 25px;
-        }
-
-        .article-category {
-            display: inline-block;
-            margin-bottom: 16px;
-            padding: 6px 12px;
-            border-radius: 999px;
-            background: var(--purple-light);
-            color: var(--purple);
-            font-size: 11px;
-            font-weight: 700;
-        }
-
-        .article-header h1 {
-            margin: 0 0 14px;
-            color: var(--purple-dark);
-            font-size: 38px;
-            line-height: 1.25;
-            font-weight: 800;
-        }
-
-        .article-meta {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-
-        /* ===============================
-           IMAGE
-        =============================== */
-
-        .article-image {
-            padding: 0 50px;
-        }
-
-        .article-image img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            object-fit: contain;
-            object-position: center center;
-            border-radius: 17px;
-            background: #f8fafc;
-        }
-
-        .image-credit {
-            margin-top: 8px;
-            padding: 0 10px;
-            text-align: center;
-            color: #94a3b8;
-            font-size: 11px;
-            line-height: 1.5;
-        }
-
-
-        /* ===============================
-           CONTENT
-        =============================== */
-
-        .article-content {
-            padding: 35px 50px 50px;
-        }
-
-        .article-content p {
-            margin: 0 0 20px;
-            font-size: 16px;
-            line-height: 1.85;
-        }
-
-        .article-content h2 {
-            margin: 30px 0 13px;
-            color: var(--purple);
-            font-size: 25px;
-            line-height: 1.35;
-        }
-
-        .article-content h3 {
-            margin: 25px 0 10px;
-            color: var(--purple-dark);
-            font-size: 19px;
-            line-height: 1.4;
-        }
-
-        .article-content ul,
-        .article-content ol {
-            margin: 0 0 22px;
-            padding-left: 22px;
-        }
-
-        .article-content li {
-            margin-bottom: 9px;
-        }
-
-
-        /* ===============================
-           HIGHLIGHT
-        =============================== */
-
-        .highlight {
-            margin: 25px 0;
-            padding: 18px 20px;
-            border-left: 4px solid var(--yellow);
-            border-radius: 10px;
-            background: #fffbeb;
-        }
-
-
-        /* ===============================
-           CTA
-        =============================== */
-
-        .article-cta {
-            margin-top: 35px;
-            padding: 25px;
-            border-radius: 16px;
-            background: linear-gradient(
-                135deg,
-                #5b21b6,
-                #7c3aed
-            );
-            color: #fff;
-        }
-
-        .article-cta h2 {
-            margin: 0 0 8px;
-            color: #fff;
-            font-size: 22px;
-        }
-
-        .article-cta p {
-            margin-bottom: 15px;
-            color: #fff;
-            font-size: 14px;
-        }
-
-        .article-cta a {
-            display: inline-block;
-            background: #fff;
-            color: var(--purple);
-            padding: 10px 17px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 13px;
-        }
-
-
-        /* ===============================
-           BACK BLOG
-        =============================== */
-
-        .back-blog {
-            display: block;
-            width: max-content;
-            margin: 30px auto 0;
-            color: var(--purple);
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-
-        /* ===============================
-           FOOTER
-        =============================== */
-
-        .article-footer {
-            background: var(--purple-dark);
-            color: #cbd5e1;
-            text-align: center;
-            padding: 28px 20px;
-            font-size: 12px;
-        }
-
-
-        /* ===============================
-           MOBILE
-        =============================== */
-
-        @media (max-width: 900px) {
-
-            .navbar {
-                min-height: 70px;
-                padding: 0 20px;
-                gap: 0;
-            }
-
-            .logo img {
-                width: 125px;
-            }
-
-            .btn-navbar {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-                margin-left: auto;
-            }
-
-            .nav-menu {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                display: none;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0;
-                padding: 12px 20px 18px;
-                margin: 0;
-                background: #fff;
-                box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-menu a {
-                width: 100%;
-                padding: 11px 0;
-                border-bottom: 1px solid #f1f5f9;
-                font-size: 14px;
-            }
-
-            .article-wrapper {
-                padding: 30px 12px 50px;
-            }
-
-            .article-container {
-                border-radius: 15px;
-            }
-
-            .article-header {
-                padding: 32px 25px 20px;
-            }
-
-            .article-header h1 {
-                font-size: 30px;
-            }
-
-            .article-image {
-                padding: 0 25px;
-            }
-
-            .article-image img {
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-                object-fit: contain;
-                object-position: center center;
-                border-radius: 13px;
-            }
-
-            .article-content {
-                padding: 28px 25px 40px;
-            }
-
-            .article-content p {
-                font-size: 15px;
-            }
-
-            .article-content h2 {
-                font-size: 22px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Susah Fokus Belajar? Coba 7 Cara Ini Biar Nggak Gampang Terdistraksi | New Primagama Sunter Indah</title>
+
+<meta name="description" content="Susah fokus ketika belajar? Coba beberapa cara sederhana untuk membuat kegiatan belajar lebih terarah dan mengurangi gangguan.">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://newprimagamasunterindah.com/cara-fokus-belajar.html">
+
+<meta property="og:title" content="Susah Fokus Belajar? Coba 7 Cara Ini Biar Nggak Gampang Terdistraksi">
+<meta property="og:description" content="Beberapa cara sederhana agar belajar lebih fokus dan tidak gampang terdistraksi.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://newprimagamasunterindah.com/cara-fokus-belajar.html">
+
+<link rel="icon" href="LOGO_SUNTER_INDAH-removebg-preview.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+font-family:"Poppins",sans-serif;
+background:#f8fafc;
+color:#1e293b;
+line-height:1.8;
+}
+
+.navbar{
+width:100%;
+height:106px;
+background:#fff;
+border-bottom:1px solid #f1f1f1;
+position:relative;
+z-index:1000;
+}
+
+.navbar-inner{
+width:100%;
+max-width:1700px;
+height:100%;
+margin:auto;
+padding:0 44px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+display:flex;
+align-items:center;
+text-decoration:none;
+flex-shrink:0;
+}
+
+.logo img{
+width:185px;
+height:auto;
+display:block;
+}
+
+.nav-menu{
+display:flex;
+align-items:center;
+gap:34px;
+margin-left:auto;
+margin-right:60px;
+}
+
+.nav-menu a{
+color:#334155;
+text-decoration:none;
+font-size:19px;
+font-weight:500;
+white-space:nowrap;
+transition:.2s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active{
+color:#5b21b6;
+}
+
+.nav-button{
+display:flex;
+align-items:center;
+justify-content:center;
+min-width:200px;
+height:57px;
+padding:0 28px;
+background:#5b21b6;
+color:#fff!important;
+border-radius:14px;
+text-decoration:none;
+font-size:18px;
+font-weight:700;
+}
+
+.hamburger{
+display:none;
+border:0;
+background:transparent;
+padding:5px;
+cursor:pointer;
+}
+
+.hamburger span{
+display:block;
+width:25px;
+height:3px;
+margin:5px 0;
+border-radius:5px;
+background:#5b21b6;
+}
+
+.article-wrapper{
+max-width:1510px;
+margin:auto;
+padding:0 80px 90px;
+background:#fff;
+}
+
+.article-header{
+padding-top:38px;
+}
+
+.category-badge{
+display:inline-flex;
+background:#f3e8ff;
+color:#5b21b6;
+padding:9px 20px;
+border-radius:10px;
+font-size:14px;
+font-weight:700;
+text-transform:uppercase;
+}
+
+.article-title{
+max-width:1250px;
+margin-top:28px;
+color:#201d55;
+font-size:clamp(46px,5vw,78px);
+line-height:1.18;
+letter-spacing:-2.5px;
+font-weight:800;
+}
+
+.article-meta{
+display:flex;
+align-items:center;
+gap:12px;
+margin-top:25px;
+color:#8aa0c0;
+font-size:16px;
+}
+
+.article-meta i{color:#7d9bc4}
+
+.article-image{
+width:100%;
+margin-top:40px;
+overflow:hidden;
+border-radius:20px;
+background:#f1f5f9;
+}
+
+.article-image img{
+display:block;
+width:100%;
+max-height:650px;
+object-fit:cover;
+}
+
+.article-content{
+max-width:920px;
+margin:55px auto 0;
+}
+
+.article-content p{
+margin-bottom:25px;
+color:#475569;
+font-size:17px;
+}
+
+.article-content h2{
+margin:45px 0 18px;
+color:#201d55;
+font-size:30px;
+line-height:1.35;
+font-weight:750;
+}
+
+.article-content ul{
+margin:0 0 25px 25px;
+color:#475569;
+}
+
+.article-content li{
+margin-bottom:10px;
+}
+
+.article-highlight{
+margin:35px 0;
+padding:25px 30px;
+background:#f5efff;
+border-left:5px solid #5b21b6;
+border-radius:12px;
+color:#4c1d95;
+font-size:17px;
+font-weight:600;
+}
+
+.article-cta{
+max-width:920px;
+margin:70px auto 0;
+padding:38px;
+background:#5b21b6;
+border-radius:20px;
+text-align:center;
+color:#fff;
+}
+
+.article-cta h2{
+margin:0 0 10px;
+color:#fff;
+font-size:28px;
+}
+
+.article-cta p{
+margin-bottom:22px;
+color:#ede9fe;
+}
+
+.cta-button{
+display:inline-flex;
+align-items:center;
+gap:9px;
+padding:13px 25px;
+border-radius:10px;
+background:#fff;
+color:#5b21b6;
+text-decoration:none;
+font-weight:700;
+}
+
+.back-blog{
+max-width:920px;
+margin:40px auto 0;
+}
+
+.back-blog a{
+display:inline-flex;
+align-items:center;
+gap:9px;
+color:#5b21b6;
+text-decoration:none;
+font-weight:600;
+}
+
+footer{
+background:#17143d;
+color:#fff;
+text-align:center;
+padding:28px 20px;
+font-size:14px;
+}
+
+@media(max-width:1100px){
+
+.navbar-inner{padding:0 28px}
+.logo img{width:165px}
+
+.nav-menu{
+gap:20px;
+margin-right:25px;
+}
+
+.nav-menu a{font-size:16px}
+
+.nav-button{
+min-width:160px;
+height:52px;
+font-size:16px;
+}
+
+.article-wrapper{
+padding-left:50px;
+padding-right:50px;
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{height:76px}
+
+.navbar-inner{padding:0 20px}
+
+.logo img{width:125px}
+
+.hamburger{
+display:block;
+margin-left:auto;
+}
+
+.nav-menu{
+position:absolute;
+top:76px;
+left:0;
+width:100%;
+display:none;
+flex-direction:column;
+gap:0;
+margin:0;
+background:#fff;
+border-top:1px solid #eee;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.nav-menu.active{display:flex}
+
+.nav-menu a{
+width:100%;
+padding:16px 22px;
+font-size:16px;
+border-bottom:1px solid #f1f1f1;
+}
+
+.nav-menu a.active{
+background:#faf7ff;
+}
+
+.nav-button{display:none}
+
+.article-wrapper{
+padding:0 20px 60px;
+}
+
+.article-header{padding-top:25px}
+
+.category-badge{
+padding:7px 14px;
+font-size:11px;
+}
+
+.article-title{
+margin-top:20px;
+font-size:36px;
+line-height:1.18;
+letter-spacing:-1.3px;
+}
+
+.article-meta{
+flex-wrap:wrap;
+font-size:13px;
+gap:8px;
+}
+
+.article-image{
+margin-top:28px;
+border-radius:14px;
+}
+
+.article-image img{
+width:100%;
+height:auto;
+max-height:none;
+}
+
+.article-content{
+margin-top:35px;
+}
+
+.article-content p{font-size:15px}
+
+.article-content h2{font-size:25px}
+
+.article-highlight{
+padding:20px;
+font-size:15px;
+}
+
+.article-cta{
+margin-top:50px;
+padding:28px 20px;
+}
+
+}
+</style>
 </head>
-
 
 <body>
 
+<header class="navbar">
+<div class="navbar-inner">
 
-    <!-- ===============================
-         NAVBAR
-    =============================== -->
+<a href="index.html" class="logo">
+<img src="Logo-NP-Zenius-transparan.png" alt="New Primagama Sunter Indah">
+</a>
 
-    <header class="navbar">
+<nav class="nav-menu">
+<a href="index.html">Beranda</a>
+<a href="index.html#tentang">Tentang</a>
+<a href="index.html#program">Program</a>
+<a href="index.html#fasilitas">Fasilitas</a>
+<a href="index.html#faq">FAQ</a>
+<a href="index.html#kontak">Kontak</a>
+<a href="blog.html" class="active">Blog</a>
+</nav>
 
-        <div class="logo">
+<a href="index.html#kontak" class="nav-button">Daftar Sekarang</a>
 
-         <img src="Logo-NP-Zenius-transparan.png" alt="Logo New Primagama">
-        </div>
+<button class="hamburger" id="hamburger" aria-label="Menu">
+<span></span>
+<span></span>
+<span></span>
+</button>
 
+</div>
+</header>
 
-        <nav class="nav-menu">
+<main class="article-wrapper">
 
-            <a href="index.html#hero">
-                Beranda
-            </a>
+<header class="article-header">
 
-            <a href="index.html#tentang">
-                Tentang
-            </a>
+<span class="category-badge">Tips Belajar</span>
 
-            <a href="index.html#program">
-                Program
-            </a>
+<h1 class="article-title">
+Susah Fokus Belajar? Coba 7 Cara Ini Biar Nggak Gampang Terdistraksi
+</h1>
 
-            <a href="index.html#fasilitas">
-                Fasilitas
-            </a>
+<div class="article-meta">
 
-            <a href="index.html#faq">
-                FAQ
-            </a>
+<span>
+<i class="fa-regular fa-calendar"></i>
+20 September 2026
+</span>
 
-            <a href="index.html#kontak">
-                Kontak
-            </a>
+<span>•</span>
 
-            <a
-                href="blog.html"
-                class="active">
-                Blog
-            </a>
+<span>New Primagama Sunter Indah</span>
 
-        </nav>
+</div>
 
+</header>
 
-        <a
-            href="index.html#kontak"
-            class="btn-navbar">
-            Daftar Sekarang
-        </a>
+<div class="article-image">
+<img
+src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=85"
+alt="Pelajar sedang fokus belajar"
+loading="eager">
+</div>
 
+<article class="article-content">
 
-        <div
-            class="hamburger"
-            id="hamburger">
+<p>
+Pernah duduk di depan buku dengan niat belajar, tetapi beberapa menit
+kemudian malah membuka HP, melihat notifikasi, atau memikirkan hal lain?
+</p>
 
-            <span></span>
-            <span></span>
-            <span></span>
+<p>
+Susah fokus saat belajar itu cukup umum. Daripada langsung merasa tidak bisa
+belajar, coba perhatikan kebiasaan yang mungkin membuat konsentrasi gampang
+terpecah.
+</p>
 
-        </div>
+<div class="article-highlight">
+Fokus bukan berarti harus belajar tanpa berhenti. Yang penting adalah mampu
+mengarahkan perhatian pada satu hal dalam waktu tertentu.
+</div>
 
-    </header>
+<h2>1. Tentukan Satu Target</h2>
 
+<p>
+Jangan membuat target terlalu banyak dalam satu waktu. Tentukan satu materi
+atau tugas yang ingin kamu selesaikan terlebih dahulu.
+</p>
 
-    <!-- ===============================
-         ARTICLE
-    =============================== -->
+<h2>2. Jauhkan Gangguan</h2>
 
-    <main class="article-wrapper">
+<p>
+Kalau HP tidak dibutuhkan untuk belajar, simpan di tempat yang tidak mudah
+dijangkau. Matikan notifikasi yang tidak diperlukan agar perhatian tidak
+terpecah.
+</p>
 
-        <article class="article-container">
+<h2>3. Buat Tempat Belajar yang Nyaman</h2>
 
+<p>
+Meja yang rapi dan pencahayaan yang cukup bisa membuat kegiatan belajar
+terasa lebih nyaman.
+</p>
 
-            <header class="article-header">
+<p>
+Tidak perlu membuat tempat belajar yang terlalu rumit. Yang penting kamu
+bisa duduk dengan nyaman dan berkonsentrasi.
+</p>
 
-                <span class="article-category">
-                    Tips Belajar
-                </span>
+<h2>4. Gunakan Sesi Belajar</h2>
 
-                <h1>
-                    Susah Fokus Belajar? Coba 7 Cara Ini Biar Nggak Gampang Terdistraksi
-                </h1>
+<p>
+Cobalah membagi waktu belajar menjadi beberapa sesi. Setelah satu sesi
+selesai, berikan waktu istirahat singkat sebelum kembali belajar.
+</p>
 
-                <div class="article-meta">
-                    17 September 2026 • New Primagama Sunter Indah
-                </div>
+<h2>5. Jangan Multitasking</h2>
 
-            </header>
+<p>
+Mengerjakan tugas sambil menonton video, bermain gim, dan membuka media sosial
+secara bersamaan bisa membuat perhatian mudah berpindah.
+</p>
 
+<p>
+Coba selesaikan satu aktivitas terlebih dahulu sebelum berpindah ke aktivitas
+berikutnya.
+</p>
 
-            <div class="article-image">
+<h2>6. Gunakan Cara Belajar yang Variatif</h2>
 
-                <img
-                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80"
-                    alt="Siswa sedang belajar"
-                    loading="eager"
-                    referrerpolicy="no-referrer">
+<p>
+Kalau membaca terus membuatmu bosan, coba variasikan cara belajar dengan
+membuat rangkuman, mengerjakan latihan soal, berdiskusi, atau menjelaskan
+materi dengan kata-kata sendiri.
+</p>
 
-                <div class="image-credit">
-                    Sumber foto: Unsplash
-                </div>
+<h2>7. Jangan Lupakan Istirahat</h2>
 
-            </div>
+<p>
+Tubuh dan pikiran juga membutuhkan istirahat. Kalau sudah terlalu lelah,
+memaksakan belajar justru bisa membuat fokus semakin sulit.
+</p>
 
+<h2>Kesimpulan</h2>
 
-            <div class="article-content">
+<p>
+Fokus belajar tidak selalu langsung muncul begitu saja. Kamu bisa melatihnya
+dengan mengurangi gangguan, membuat target yang jelas, dan menggunakan metode
+belajar yang sesuai.
+</p>
 
+<p>
+Coba satu cara terlebih dahulu dan lihat mana yang paling cocok untukmu.
+</p>
 
-                <p>
-                    Pernah baru belajar sebentar, tapi tiba-tiba sudah buka
-                    HP, scroll media sosial, atau malah bengong sendiri?
-                    Kalau iya, kamu nggak sendirian.
-                </p>
+</article>
 
-                <p>
-                    Fokus belajar memang nggak selalu gampang. Apalagi kalau
-                    ada banyak hal yang bisa mengalihkan perhatian. Tapi,
-                    kamu bisa mencoba beberapa kebiasaan sederhana supaya
-                    waktu belajar jadi lebih terarah.
-                </p>
+<section class="article-cta">
 
+<h2>Butuh Suasana Belajar yang Lebih Terarah?</h2>
 
-                <h2>
-                    1. Jauhkan HP dari jangkauan
-                </h2>
+<p>
+Yuk belajar bersama New Primagama Sunter Indah.
+</p>
 
-                <p>
-                    Salah satu gangguan yang paling gampang muncul saat
-                    belajar adalah notifikasi dari HP. Awalnya cuma mau
-                    mengecek satu pesan, tetapi akhirnya malah lanjut membuka
-                    aplikasi lain.
-                </p>
+<a href="https://wa.me/6285285705335"
+target="_blank"
+class="cta-button">
 
-                <p>
-                    Kalau sedang belajar, coba letakkan HP agak jauh dari
-                    meja atau aktifkan mode jangan ganggu agar notifikasi
-                    tidak terus menarik perhatian.
-                </p>
+<i class="fa-brands fa-whatsapp"></i>
+Konsultasi Gratis
 
+</a>
 
-                <h2>
-                    2. Tentukan target belajar
-                </h2>
+</section>
 
-                <p>
-                    Jangan hanya mengatakan, "hari ini aku mau belajar".
-                    Buat target yang lebih jelas supaya kamu tahu apa yang
-                    harus diselesaikan.
-                </p>
+<div class="back-blog">
+<a href="blog.html">
+<i class="fa-solid fa-arrow-left"></i>
+Kembali ke Blog
+</a>
+</div>
 
-                <p>
-                    Misalnya, menyelesaikan 20 soal matematika, membaca satu
-                    bab, atau memahami satu materi yang sebelumnya masih
-                    membingungkan.
-                </p>
+</main>
 
+<footer>
+© 2026 New Primagama Sunter Indah. Semua Hak Dilindungi.
+</footer>
 
-                <div class="highlight">
+<script>
+const hamburger=document.getElementById("hamburger");
+const navMenu=document.querySelector(".nav-menu");
 
-                    <strong>
-                        Contoh target sederhana:
-                    </strong>
-
-                    "Selama 45 menit, saya akan menyelesaikan 15 soal
-                    matematika dan membahas soal yang masih salah."
-
-                </div>
-
-
-                <h2>
-                    3. Belajar dengan waktu yang terukur
-                </h2>
-
-                <p>
-                    Belajar tanpa batas waktu kadang membuat kamu merasa
-                    tugasnya terlalu berat. Coba tentukan durasi belajar
-                    terlebih dahulu.
-                </p>
-
-                <p>
-                    Misalnya belajar selama 30–45 menit, kemudian mengambil
-                    jeda singkat sebelum melanjutkan sesi berikutnya.
-                </p>
-
-
-                <h2>
-                    4. Rapikan tempat belajar
-                </h2>
-
-                <p>
-                    Meja yang penuh barang bisa membuat perhatian mudah
-                    teralihkan. Sebelum mulai, siapkan hanya benda yang
-                    benar-benar diperlukan untuk belajar.
-                </p>
-
-                <p>
-                    Buku, alat tulis, dan materi yang sedang dipelajari
-                    sebaiknya berada dalam jangkauan agar kamu tidak perlu
-                    sering berpindah atau mencari barang.
-                </p>
-
-
-                <h2>
-                    5. Jangan multitasking
-                </h2>
-
-                <p>
-                    Belajar sambil menonton video, membuka media sosial, dan
-                    membalas chat memang terasa seperti melakukan banyak hal
-                    sekaligus. Namun, perhatian kamu bisa jadi terbagi.
-                </p>
-
-                <p>
-                    Coba fokus menyelesaikan satu aktivitas terlebih dahulu.
-                    Setelah selesai, baru lanjut ke kegiatan berikutnya.
-                </p>
-
-
-                <h2>
-                    6. Gunakan cara belajar yang sesuai
-                </h2>
-
-                <p>
-                    Setiap orang bisa punya cara belajar yang berbeda. Ada
-                    yang lebih mudah memahami materi melalui rangkuman, ada
-                    yang suka latihan soal, dan ada juga yang lebih terbantu
-                    dengan menjelaskan kembali materi menggunakan kata-kata
-                    sendiri.
-                </p>
-
-                <p>
-                    Coba beberapa cara dan lihat mana yang membuat kamu lebih
-                    mudah memahami materi.
-                </p>
-
-
-                <h2>
-                    7. Beri waktu untuk istirahat
-                </h2>
-
-                <p>
-                    Fokus bukan berarti harus belajar terus tanpa berhenti.
-                    Tubuh dan pikiran juga membutuhkan waktu untuk beristirahat.
-                </p>
-
-                <p>
-                    Setelah menyelesaikan satu sesi belajar, ambil jeda
-                    singkat sebelum kembali melanjutkan. Gunakan waktu
-                    tersebut untuk minum, bergerak sebentar, atau sekadar
-                    mengistirahatkan mata.
-                </p>
-
-
-                <h2>
-                    Kalau terdistraksi, jangan langsung menyerah
-                </h2>
-
-                <p>
-                    Namanya juga belajar, pasti ada saatnya fokus buyar.
-                    Kalau tiba-tiba sadar sudah terdistraksi, nggak perlu
-                    langsung menganggap sesi belajarmu gagal.
-                </p>
-
-                <p>
-                    Cukup kembali ke target awal dan lanjutkan dari bagian
-                    terakhir yang sedang dikerjakan.
-                </p>
-
-
-                <div class="highlight">
-
-                    <strong>
-                        Intinya:
-                    </strong>
-
-                    fokus belajar bisa dilatih. Mulai dari hal sederhana
-                    seperti menjauhkan HP, membuat target, mengatur waktu,
-                    dan memberikan waktu istirahat yang cukup.
-
-                </div>
-
-
-                <!-- ===============================
-                     CTA
-                =============================== -->
-
-                <div class="article-cta">
-
-                    <h2>
-                        Siap belajar lebih terarah?
-                    </h2>
-
-                    <p>
-                        Dapatkan pendampingan belajar yang sesuai dengan
-                        kebutuhanmu bersama New Primagama Sunter Indah.
-                    </p>
-
-                    <a
-                        href="https://wa.me/6285285705335"
-                        target="_blank"
-                        rel="noopener">
-
-                        Konsultasi Gratis
-
-                    </a>
-
-                </div>
-
-
-                <a
-                    href="blog.html"
-                    class="back-blog">
-
-                    ← Kembali ke Blog
-
-                </a>
-
-
-            </div>
-
-        </article>
-
-    </main>
-
-
-    <!-- ===============================
-         FOOTER
-    =============================== -->
-
-    <footer class="article-footer">
-
-        © 2026 New Primagama Sunter Indah.
-        Semua Hak Dilindungi.
-
-    </footer>
-
-
-    <!-- ===============================
-         JAVASCRIPT
-    =============================== -->
-
-    <script>
-
-        const hamburger =
-            document.getElementById("hamburger");
-
-        const navMenu =
-            document.querySelector(".nav-menu");
-
-
-        if (hamburger && navMenu) {
-
-            hamburger.addEventListener(
-                "click",
-                function () {
-
-                    navMenu.classList.toggle("active");
-
-                }
-            );
-
-
-            navMenu
-                .querySelectorAll("a")
-                .forEach(function (link) {
-
-                    link.addEventListener(
-                        "click",
-                        function () {
-
-                            navMenu.classList.remove("active");
-
-                        }
-                    );
-
-                });
-
-        }
-
-    </script>
-
+hamburger.addEventListener("click",function(){
+navMenu.classList.toggle("active");
+});
+</script>
 
 </body>
-
 </html>
