@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental! - New Primagama Sunter Indah</title>
+    <title>Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental! | New Primagama Sunter Indah</title>
 
-    <meta name="description" content="Kenali cara mempersiapkan diri menghadapi ujian tanpa harus menggunakan sistem kebut semalam.">
-
+    <meta name="description" content="Tips menghadapi ujian agar persiapan belajar lebih terarah, mulai dari membuat jadwal, latihan soal, sampai menjaga waktu istirahat.">
     <meta name="robots" content="index, follow">
-
     <link rel="canonical" href="https://newprimagamasunterindah.com/tips-menghadapi-ujian.html">
 
     <meta property="og:title" content="Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!">
-    <meta property="og:description" content="Kenali cara mempersiapkan diri menghadapi ujian tanpa harus menggunakan sistem kebut semalam.">
+    <meta property="og:description" content="Beberapa tips sederhana agar persiapan menghadapi ujian terasa lebih terarah.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://newprimagamasunterindah.com/tips-menghadapi-ujian.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=85">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=85">
+
+    <link rel="icon" href="LOGO_SUNTER_INDAH-removebg-preview.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
 
-        :root {
-            --purple: #5b21b6;
-            --purple-dark: #1e1b4b;
-            --purple-light: #f3e8ff;
-            --text: #1e293b;
-            --muted: #64748b;
-            --bg: #f8fafc;
-            --yellow: #facc15;
-        }
-
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -46,52 +39,37 @@
         }
 
         body {
-            margin: 0;
-            background: var(--bg);
-            color: var(--text);
-            font-family: "Poppins", sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            color: #1e293b;
             line-height: 1.7;
-            overflow-x: hidden;
         }
 
         a {
             text-decoration: none;
+            color: inherit;
         }
-
 
         /* =========================
            NAVBAR
-        ========================= */
+        ========================== */
 
         .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-
             width: 100%;
-            min-height: 80px;
-
-            padding: 0 6%;
-
+            height: 106px;
+            padding: 0 7%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            gap: 24px;
-
             background: #ffffff;
-
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            flex-shrink: 0;
+            border-bottom: 1px solid #eeeeee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo img {
-            width: 150px;
+            width: 185px;
             height: auto;
             display: block;
         }
@@ -99,344 +77,223 @@
         .nav-menu {
             display: flex;
             align-items: center;
-            justify-content: center;
-
-            gap: 24px;
-            margin-left: auto;
+            gap: 28px;
         }
 
         .nav-menu a {
-            color: #334155;
-
             font-size: 14px;
-            font-weight: 500;
-
-            white-space: nowrap;
-        }
-
-        .nav-menu a.active,
-        .nav-menu a:hover {
-            color: var(--purple);
-        }
-
-        .btn-navbar {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            background: var(--purple);
-            color: #ffffff !important;
-
-            padding: 11px 20px;
-
-            border-radius: 9px;
-
-            font-size: 13px;
             font-weight: 600;
+            color: #334155;
+            transition: 0.2s ease;
+        }
 
-            white-space: nowrap;
+        .nav-menu a:hover {
+            color: #5b21b6;
+        }
+
+        .nav-button {
+            background: #5b21b6;
+            color: #ffffff !important;
+            padding: 12px 20px;
+            border-radius: 9px;
+        }
+
+        .nav-button:hover {
+            background: #4c1d95 !important;
         }
 
         .hamburger {
             display: none;
-
-            width: 38px;
-            height: 38px;
-
-            border: 0;
-            background: transparent;
-
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            gap: 5px;
-
+            font-size: 23px;
+            color: #5b21b6;
             cursor: pointer;
         }
 
-        .hamburger span {
-            display: block;
-
-            width: 24px;
-            height: 3px;
-
-            background: #334155;
-
-            border-radius: 5px;
-        }
-
-
         /* =========================
            ARTICLE
-        ========================= */
+        ========================== */
 
         .article-wrapper {
-            padding: 50px 20px 70px;
-        }
-
-        .article-container {
             width: 100%;
-            max-width: 850px;
-
+            max-width: 1050px;
             margin: 0 auto;
-
-            overflow: hidden;
-
-            background: #ffffff;
-
-            border-radius: 20px;
-
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+            padding: 70px 25px 90px;
         }
 
         .article-header {
-            padding: 45px 50px 25px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .article-category {
             display: inline-block;
-
-            margin-bottom: 16px;
-
-            padding: 6px 12px;
-
-            border-radius: 999px;
-
-            background: var(--purple-light);
-            color: var(--purple);
-
-            font-size: 11px;
-            font-weight: 700;
-        }
-
-        .article-header h1 {
-            margin: 0 0 14px;
-
-            color: var(--purple-dark);
-
-            font-size: 38px;
-            line-height: 1.25;
-            font-weight: 800;
-        }
-
-        .article-meta {
-            color: var(--muted);
+            background: #f3e8ff;
+            color: #5b21b6;
             font-size: 13px;
+            font-weight: 700;
+            padding: 7px 15px;
+            border-radius: 50px;
+            margin-bottom: 22px;
         }
 
+        .article-title {
+            font-size: 48px;
+            line-height: 1.2;
+            font-weight: 800;
+            color: #172033;
+            margin-bottom: 20px;
+        }
 
-        /* =========================
-           IMAGE
-        ========================= */
+        .article-date {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 42px;
+        }
 
         .article-image {
-            padding: 0 50px;
-        }
-
-        .article-image img {
-            display: block;
-
             width: 100%;
-            max-width: 100%;
-            height: auto;
-
-            object-fit: contain;
-            object-position: center;
-
-            border-radius: 17px;
-
+            margin-bottom: 45px;
+            border-radius: 18px;
+            overflow: hidden;
             background: #f8fafc;
         }
 
-        .image-credit {
-            margin-top: 8px;
-
-            padding: 0 10px;
-
-            text-align: center;
-
-            color: #94a3b8;
-
-            font-size: 11px;
-            line-height: 1.5;
+        .article-image img {
+            width: 100%;
+            height: 500px;
+            display: block;
+            object-fit: cover;
         }
 
-
-        /* =========================
-           CONTENT
-        ========================= */
+        .image-credit {
+            padding: 10px 15px;
+            font-size: 11px;
+            color: #64748b;
+            background: #f8fafc;
+        }
 
         .article-content {
-            padding: 35px 50px 50px;
+            max-width: 820px;
+            margin: 0 auto;
         }
 
         .article-content p {
-            margin: 0 0 20px;
-
             font-size: 16px;
-            line-height: 1.85;
+            color: #475569;
+            margin-bottom: 22px;
         }
 
         .article-content h2 {
-            margin: 30px 0 13px;
-
-            color: var(--purple);
-
-            font-size: 25px;
+            color: #172033;
+            font-size: 27px;
             line-height: 1.35;
+            margin: 40px 0 15px;
         }
 
-
-        /* =========================
-           HIGHLIGHT
-        ========================= */
-
-        .highlight {
-            margin: 25px 0;
-
-            padding: 18px 20px;
-
-            background: #fffbeb;
-
-            border-left: 4px solid var(--yellow);
-
-            border-radius: 10px;
+        .article-content ul {
+            margin: 0 0 25px 22px;
+            color: #475569;
         }
 
+        .article-content li {
+            margin-bottom: 9px;
+        }
 
         /* =========================
            CTA
-        ========================= */
+        ========================== */
 
         .article-cta {
-            margin-top: 35px;
-
-            padding: 25px;
-
-            border-radius: 16px;
-
-            background: linear-gradient(
-                135deg,
-                #5b21b6,
-                #7c3aed
-            );
-
+            max-width: 820px;
+            margin: 55px auto 45px;
+            padding: 35px;
+            background: #5b21b6;
+            border-radius: 18px;
+            text-align: center;
             color: #ffffff;
         }
 
-        .article-cta h2 {
-            margin: 0 0 8px;
-
-            color: #ffffff;
-
-            font-size: 22px;
+        .article-cta h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
         }
 
         .article-cta p {
-            margin-bottom: 15px;
+            color: #ede9fe;
+            margin-bottom: 22px;
+        }
 
-            color: #ffffff;
-
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: #ffffff;
+            color: #5b21b6;
+            padding: 12px 20px;
+            border-radius: 9px;
+            font-weight: 700;
             font-size: 14px;
         }
 
-        .article-cta a {
-            display: inline-block;
-
-            padding: 10px 17px;
-
-            background: #ffffff;
-            color: var(--purple);
-
-            border-radius: 8px;
-
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-
-        /* =========================
-           BACK BLOG
-        ========================= */
-
         .back-blog {
-            display: block;
-
-            width: max-content;
-
-            margin: 30px auto 0;
-
-            color: var(--purple);
-
-            font-size: 13px;
-            font-weight: 700;
+            text-align: center;
         }
 
+        .back-blog a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #5b21b6;
+            font-size: 14px;
+            font-weight: 700;
+        }
 
         /* =========================
            FOOTER
-        ========================= */
+        ========================== */
 
-        .article-footer {
-            padding: 28px 20px;
-
-            background: var(--purple-dark);
-
+        footer {
+            background: #111827;
             color: #cbd5e1;
-
+            padding: 30px 7%;
             text-align: center;
-
-            font-size: 12px;
+            font-size: 13px;
         }
-
 
         /* =========================
            MOBILE
-        ========================= */
+        ========================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
 
             .navbar {
-                min-height: 70px;
+                height: 82px;
                 padding: 0 20px;
-                gap: 0;
             }
 
             .logo img {
                 width: 125px;
             }
 
-            .btn-navbar {
-                display: none;
-            }
-
             .hamburger {
-                display: flex;
-                margin-left: auto;
+                display: block;
+                order: 2;
             }
 
             .nav-menu {
                 position: absolute;
-
-                top: 70px;
+                top: 82px;
                 left: 0;
-
                 width: 100%;
-
                 display: none;
-
                 flex-direction: column;
-                align-items: flex-start;
-
+                align-items: stretch;
                 gap: 0;
-
-                padding: 12px 20px 18px;
-                margin: 0;
-
                 background: #ffffff;
-
-                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+                border-bottom: 1px solid #eeeeee;
+                padding: 10px 20px 20px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.06);
             }
 
             .nav-menu.active {
@@ -444,46 +301,42 @@
             }
 
             .nav-menu a {
-                width: 100%;
+                padding: 13px 5px;
+            }
 
-                padding: 11px 0;
-
-                border-bottom: 1px solid #f1f5f9;
-
-                font-size: 14px;
+            .nav-button {
+                text-align: center;
+                margin-top: 5px;
             }
 
             .article-wrapper {
-                padding: 30px 12px 50px;
+                padding: 45px 18px 65px;
             }
 
-            .article-container {
-                border-radius: 15px;
+            .article-title {
+                font-size: 31px;
+                line-height: 1.25;
             }
 
-            .article-header {
-                padding: 32px 25px 20px;
+            .article-category {
+                font-size: 12px;
+                margin-bottom: 17px;
             }
 
-            .article-header h1 {
-                font-size: 30px;
+            .article-date {
+                margin-bottom: 28px;
             }
 
             .article-image {
-                padding: 0 25px;
+                border-radius: 13px;
+                margin-bottom: 35px;
             }
 
             .article-image img {
                 width: 100%;
                 height: auto;
-
-                object-fit: contain;
-
-                border-radius: 13px;
-            }
-
-            .article-content {
-                padding: 28px 25px 40px;
+                max-height: none;
+                object-fit: cover;
             }
 
             .article-content p {
@@ -491,336 +344,331 @@
             }
 
             .article-content h2 {
-                font-size: 22px;
+                font-size: 23px;
+                margin-top: 34px;
             }
 
+            .article-cta {
+                padding: 28px 20px;
+                margin-top: 45px;
+            }
+
+            .article-cta h3 {
+                font-size: 21px;
+            }
+
+            footer {
+                padding: 25px 20px;
+            }
         }
 
     </style>
-
 </head>
-
 
 <body>
 
+<header class="navbar">
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
+    <div class="logo">
+        <a href="blog.html">
+            <img src="Logo-NP-Zenius-transparan.png"
+                 alt="Logo New Primagama Sunter Indah">
+        </a>
+    </div>
 
-    <header class="navbar">
+    <nav class="nav-menu" id="navMenu">
 
-        <div class="logo">
+        <a href="index.html">Beranda</a>
 
-        <img src="Logo-NP-Zenius-transparan.png" alt="Logo New Primagama">
-        </div>
+        <a href="index.html#tentang">Tentang</a>
 
+        <a href="index.html#program">Program</a>
 
-        <nav class="nav-menu">
+        <a href="index.html#fasilitas">Fasilitas</a>
 
-            <a href="index.html#hero">
-                Beranda
-            </a>
+        <a href="index.html#faq">FAQ</a>
 
-            <a href="index.html#tentang">
-                Tentang
-            </a>
+        <a href="index.html#kontak">Kontak</a>
 
-            <a href="index.html#program">
-                Program
-            </a>
+        <a href="blog.html">Blog</a>
 
-            <a href="index.html#fasilitas">
-                Fasilitas
-            </a>
-
-            <a href="index.html#faq">
-                FAQ
-            </a>
-
-            <a href="index.html#kontak">
-                Kontak
-            </a>
-
-            <a href="blog.html" class="active">
-                Blog
-            </a>
-
-        </nav>
-
-
-        <a
-            href="index.html#kontak"
-            class="btn-navbar">
-
+        <a href="index.html#kontak" class="nav-button">
             Daftar Sekarang
-
         </a>
 
+    </nav>
 
-        <button
-            class="hamburger"
-            id="hamburger"
-            type="button"
-            aria-label="Buka menu">
+    <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 
-            <span></span>
-            <span></span>
-            <span></span>
+</header>
 
-        </button>
+
+<main class="article-wrapper">
+
+    <header class="article-header">
+
+        <span class="article-category">
+            Ujian &amp; Persiapan
+        </span>
+
+        <h1 class="article-title">
+            Tips &amp; Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!
+        </h1>
+
+        <div class="article-date">
+            15 September 2026
+        </div>
 
     </header>
 
 
-    <!-- =========================
-         ARTICLE
-    ========================== -->
+    <div class="article-image">
 
-    <main class="article-wrapper">
+        <img
+            src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=85"
+            alt="Siswa sedang mempersiapkan diri menghadapi ujian"
+            loading="eager">
 
-        <article class="article-container">
+        <div class="image-credit">
+            Foto ilustrasi kegiatan belajar dan persiapan ujian.
+        </div>
 
+    </div>
 
-            <header class="article-header">
 
-                <span class="article-category">
-                    Ujian & Persiapan
-                </span>
+    <article class="article-content">
 
-                <h1>
-                    Tips & Trik Gaskeun Hadapi Ujian Tanpa Beban Mental!
-                </h1>
+        <p>
+            Ujian sudah semakin dekat dan mulai bikin deg-degan? Wajar kalau kamu
+            merasa sedikit khawatir. Tapi jangan sampai rasa takut justru membuat
+            persiapan belajar menjadi berantakan.
+        </p>
 
-                <div class="article-meta">
-                    5 Agustus 2026 • New Primagama Sunter Indah
-                </div>
+        <p>
+            Dengan persiapan yang lebih teratur, kamu bisa menghadapi ujian dengan
+            lebih tenang dan tahu apa saja yang perlu dilakukan.
+        </p>
 
-            </header>
 
+        <h2>1. Jangan Belajar Sistem Kebut Semalam</h2>
 
-            <div class="article-image">
+        <p>
+            Salah satu hal yang sering dilakukan ketika ujian sudah dekat adalah
+            belajar semua materi dalam satu malam.
+        </p>
 
-                <img
-                    src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=85"
-                    alt="Siswa sedang mempersiapkan ujian"
-                    loading="eager"
-                    referrerpolicy="no-referrer">
+        <p>
+            Daripada menunggu sampai hari terakhir, lebih baik mulai mencicil
+            materi sejak beberapa hari sebelumnya. Dengan begitu, kamu punya
+            kesempatan untuk memahami materi secara bertahap.
+        </p>
 
-                <div class="image-credit">
-                    Sumber foto: Unsplash
-                </div>
 
-            </div>
+        <h2>2. Buat Daftar Materi</h2>
 
+        <p>
+            Sebelum mulai belajar, tulis materi apa saja yang akan dipelajari.
+            Kemudian kelompokkan materi yang sudah dikuasai dan materi yang masih
+            perlu dipelajari lagi.
+        </p>
 
-            <div class="article-content">
+        <p>
+            Cara sederhana ini bisa membuat kamu lebih mudah menentukan prioritas.
+        </p>
 
 
-                <p>
-                    Ujian sering membuat siswa merasa tertekan, apalagi kalau
-                    persiapannya baru dimulai ketika hari ujian sudah dekat.
-                    Padahal, persiapan yang dilakukan secara bertahap bisa
-                    membuat proses belajar terasa lebih terarah.
-                </p>
+        <h2>3. Latihan Soal</h2>
 
+        <p>
+            Jangan hanya membaca buku. Coba kerjakan latihan soal untuk melihat
+            seberapa jauh pemahamanmu terhadap materi.
+        </p>
 
-                <p>
-                    Daripada menggunakan sistem kebut semalam, lebih baik
-                    mulai menyiapkan materi dan latihan dari jauh-jauh hari.
-                </p>
+        <p>
+            Kalau ada soal yang salah, jangan langsung dilewati. Cari tahu
+            penyebabnya dan pelajari kembali konsep yang berkaitan.
+        </p>
 
 
-                <h2>
-                    Kenali materi yang akan diujikan
-                </h2>
+        <h2>4. Buat Jadwal yang Realistis</h2>
 
-                <p>
-                    Langkah pertama adalah mengetahui materi apa saja yang
-                    kemungkinan akan muncul. Dengan begitu, kamu bisa
-                    menentukan bagian mana yang perlu dipelajari terlebih
-                    dahulu.
-                </p>
+        <p>
+            Jadwal belajar tidak harus sangat padat. Justru jadwal yang terlalu
+            berat bisa membuat kamu kesulitan menjalankannya secara konsisten.
+        </p>
 
+        <ul>
+            <li>Tentukan waktu belajar yang nyaman.</li>
+            <li>Prioritaskan materi yang belum dikuasai.</li>
+            <li>Sisihkan waktu untuk latihan soal.</li>
+            <li>Berikan waktu untuk istirahat.</li>
+        </ul>
 
-                <h2>
-                    Buat jadwal belajar
-                </h2>
 
-                <p>
-                    Jadwal belajar membantu membagi materi menjadi beberapa
-                    bagian. Tidak perlu membuat jadwal yang terlalu padat.
-                    Yang penting jadwal tersebut realistis dan bisa
-                    dijalankan.
-                </p>
+        <h2>5. Kurangi Gangguan Saat Belajar</h2>
 
+        <p>
+            Notifikasi ponsel, media sosial, game, atau berbagai gangguan lain
+            bisa membuat waktu belajar menjadi kurang efektif.
+        </p>
 
-                <div class="highlight">
+        <p>
+            Saat mulai belajar, coba jauhkan hal-hal yang tidak diperlukan agar
+            kamu bisa lebih fokus pada materi.
+        </p>
 
-                    <strong>Tips:</strong>
-                    lebih baik belajar secara rutin dalam beberapa sesi
-                    daripada memaksakan semua materi selesai dalam satu malam.
 
-                </div>
+        <h2>6. Jangan Takut Kalau Ada Materi yang Belum Paham</h2>
 
+        <p>
+            Kalau ada materi yang masih terasa sulit, jangan langsung menganggap
+            kamu tidak mampu. Setiap orang memiliki bagian materi yang lebih mudah
+            dan lebih sulit untuk dipahami.
+        </p>
 
-                <h2>
-                    Perbanyak latihan soal
-                </h2>
+        <p>
+            Coba ulangi konsep dasarnya, cari contoh soal, atau tanyakan kepada
+            guru dan teman yang bisa membantu menjelaskan.
+        </p>
 
-                <p>
-                    Setelah memahami materi, coba kerjakan latihan soal.
-                    Latihan membantu kamu mengetahui bagian mana yang masih
-                    belum dikuasai.
-                </p>
 
+        <h2>7. Tetap Jaga Kondisi Tubuh</h2>
 
-                <h2>
-                    Jangan takut salah
-                </h2>
+        <p>
+            Persiapan ujian bukan hanya tentang belajar. Tubuh juga membutuhkan
+            waktu untuk beristirahat agar kamu bisa menjalani aktivitas dengan baik.
+        </p>
 
-                <p>
-                    Jawaban yang salah saat latihan bukan berarti kamu gagal.
-                    Justru dari kesalahan tersebut kamu bisa mengetahui
-                    bagian yang perlu diperbaiki.
-                </p>
+        <p>
+            Jangan sengaja mengurangi waktu tidur hanya untuk menambah jam belajar.
+            Buat keseimbangan antara belajar, istirahat, dan aktivitas lainnya.
+        </p>
 
 
-                <h2>
-                    Gunakan try out sebagai evaluasi
-                </h2>
+        <h2>8. Jangan Membandingkan Diri dengan Orang Lain</h2>
 
-                <p>
-                    Try out bisa digunakan untuk melihat kesiapan sebelum
-                    menghadapi ujian sebenarnya. Selain mengukur pemahaman,
-                    latihan seperti ini juga bisa membantu membiasakan diri
-                    dengan suasana pengerjaan soal.
-                </p>
+        <p>
+            Setiap siswa memiliki cara belajar dan kecepatan memahami materi yang
+            berbeda. Karena itu, fokuslah pada perkembangan dirimu sendiri.
+        </p>
 
+        <p>
+            Daripada memikirkan seberapa banyak teman sudah belajar, lebih baik
+            gunakan waktu tersebut untuk memperbaiki bagian yang masih perlu kamu
+            tingkatkan.
+        </p>
 
-                <h2>
-                    Jaga waktu istirahat
-                </h2>
 
-                <p>
-                    Belajar memang penting, tetapi istirahat juga tidak boleh
-                    diabaikan. Tubuh dan pikiran membutuhkan waktu untuk
-                    beristirahat agar kegiatan belajar tetap nyaman.
-                </p>
+        <h2>Kesimpulan</h2>
 
+        <p>
+            Menghadapi ujian nggak harus selalu dipenuhi rasa panik. Yang paling
+            penting adalah membuat persiapan yang terarah dan dilakukan secara
+            konsisten.
+        </p>
 
-                <h2>
-                    Hindari belajar dengan sistem kebut semalam
-                </h2>
+        <p>
+            Mulai dari mencicil materi, latihan soal, mengatur waktu, mengurangi
+            gangguan, sampai menjaga waktu istirahat. Dengan begitu, kamu bisa
+            menghadapi ujian dengan persiapan yang lebih matang.
+        </p>
 
-                <p>
-                    Memaksakan banyak materi dalam satu malam bisa membuat
-                    kamu merasa semakin lelah dan sulit fokus. Lebih baik
-                    membagi materi dan mengerjakannya secara bertahap.
-                </p>
+    </article>
 
 
-                <h2>
-                    Buat persiapanmu lebih tenang
-                </h2>
+    <div class="article-cta">
 
-                <p>
-                    Ujian memang perlu dipersiapkan, tetapi kamu tidak perlu
-                    menghadapi semuanya sekaligus. Tentukan target, belajar
-                    secara bertahap, latihan, dan evaluasi hasilnya.
-                </p>
+        <h3>
+            Mau Persiapan Ujian Lebih Terarah?
+        </h3>
 
+        <p>
+            Konsultasikan kebutuhan belajarmu bersama New Primagama Sunter Indah.
+        </p>
 
-                <div class="highlight">
+        <a href="https://wa.me/6285285705335"
+           class="cta-button"
+           target="_blank">
 
-                    <strong>Intinya:</strong>
-                    persiapan ujian bukan tentang belajar sebanyak-banyaknya
-                    dalam satu waktu, tetapi membangun kebiasaan belajar yang
-                    teratur dan konsisten.
+            <i class="fa-brands fa-whatsapp"></i>
 
-                </div>
+            Konsultasi Sekarang
 
+        </a>
 
-                <div class="article-cta">
+    </div>
 
-                    <h2>
-                        Siap belajar lebih terarah?
-                    </h2>
 
-                    <p>
-                        Dapatkan pendampingan belajar yang sesuai dengan
-                        kebutuhanmu bersama New Primagama Sunter Indah.
-                    </p>
+    <div class="back-blog">
 
-                    <a
-                        href="https://wa.me/6285285705335"
-                        target="_blank"
-                        rel="noopener">
+        <a href="blog.html">
 
-                        Konsultasi Gratis
+            <i class="fa-solid fa-arrow-left"></i>
 
-                    </a>
+            Kembali ke Blog
 
-                </div>
+        </a>
 
+    </div>
 
-                <a
-                    href="blog.html"
-                    class="back-blog">
+</main>
 
-                    ← Kembali ke Blog
 
-                </a>
+<footer>
+    © 2026 New Primagama Sunter Indah. Semua Hak Dilindungi.
+</footer>
 
 
-            </div>
+<script>
 
-        </article>
+    const hamburger = document.getElementById("hamburger");
 
-    </main>
+    const navMenu = document.getElementById("navMenu");
 
 
-    <footer class="article-footer">
+    hamburger.addEventListener("click", function () {
 
-        © 2026 New Primagama Sunter Indah.
-        Semua Hak Dilindungi.
+        navMenu.classList.toggle("active");
 
-    </footer>
+        const icon = hamburger.querySelector("i");
 
 
-    <script>
+        if (navMenu.classList.contains("active")) {
 
-        const hamburger =
-            document.getElementById("hamburger");
+            icon.classList.remove("fa-bars");
 
-        const navMenu =
-            document.querySelector(".nav-menu");
+            icon.classList.add("fa-xmark");
 
+        } else {
 
-        if (hamburger && navMenu) {
+            icon.classList.remove("fa-xmark");
 
-            hamburger.addEventListener("click", function () {
-
-                navMenu.classList.toggle("active");
-
-            });
-
-
-            navMenu
-                .querySelectorAll("a")
-                .forEach(function (link) {
-
-                    link.addEventListener("click", function () {
-
-                        navMenu.classList.remove("active");
-
-                    });
-
-                });
+            icon.classList.add("fa-bars");
 
         }
 
-    </script>
+    });
+
+
+    document.querySelectorAll(".nav-menu a").forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            navMenu.classList.remove("active");
+
+            const icon = hamburger.querySelector("i");
+
+            icon.classList.remove("fa-xmark");
+
+            icon.classList.add("fa-bars");
+
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
