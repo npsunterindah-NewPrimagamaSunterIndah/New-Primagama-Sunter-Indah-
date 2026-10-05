@@ -4,344 +4,329 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya | New Primagama Sunter Indah</title>
+    <title>Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya - New Primagama Sunter Indah</title>
 
-    <meta name="description" content="Sering mengantuk saat belajar? Kenali beberapa penyebab umum dan cara membuat kegiatan belajar terasa lebih nyaman.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://newprimagamasunterindah.com/ngantuk-saat-belajar.html">
+    <meta name="description" content="Sering ngantuk saat belajar? Kenali beberapa penyebabnya dan cara sederhana supaya kegiatan belajar tetap nyaman dan fokus.">
 
-    <meta property="og:title" content="Sering Ngantuk Saat Belajar? Kenali Penyebab dan Cara Mengatasinya">
-    <meta property="og:description" content="Kenali beberapa penyebab mengantuk saat belajar dan cara membuat sesi belajar lebih nyaman.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://newprimagamasunterindah.com/ngantuk-saat-belajar.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=85">
-
-    <link rel="icon" href="LOGO_SUNTER_INDAH-removebg-preview.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="Logo-NP-Zenius-transparan.png">
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+        *{margin:0;padding:0;box-sizing:border-box}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        body{
+            font-family:Arial,Helvetica,sans-serif;
+            color:#172033;
+            background:#fff;
+            line-height:1.75;
         }
 
-        html {
-            scroll-behavior: smooth;
+        a{text-decoration:none;color:inherit}
+
+        .navbar{
+            width:100%;
+            min-height:88px;
+            padding:0 5.5%;
+            display:grid;
+            grid-template-columns:200px 1fr 200px;
+            align-items:center;
+            gap:20px;
+            background:#fff;
+            border-bottom:1px solid #eee;
+            position:sticky;
+            top:0;
+            z-index:1000;
         }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #ffffff;
-            color: #1e293b;
-            line-height: 1.7;
+        .logo{justify-self:start}
+
+        .logo img{
+            width:165px;
+            height:auto;
+            display:block;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
+        .nav-menu{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:24px;
         }
 
-        .navbar {
-            width: 100%;
-            height: 106px;
-            padding: 0 7%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #ffffff;
-            border-bottom: 1px solid #eeeeee;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .nav-menu a{
+            font-size:15px;
+            font-weight:600;
+            color:#334155;
+            white-space:nowrap;
         }
 
-        .logo img {
-            width: 185px;
-            height: auto;
-            display: block;
+        .nav-menu a.active{color:#5b21b6}
+
+        .nav-button{
+            justify-self:end;
+            background:#5b21b6;
+            color:#fff!important;
+            padding:12px 18px;
+            border-radius:9px;
+            font-size:14px;
+            font-weight:700;
+            white-space:nowrap;
         }
 
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 28px;
+        .hamburger{display:none}
+
+        .article-wrapper{
+            width:100%;
+            max-width:1080px;
+            margin:0 auto;
+            padding:52px 25px 75px;
         }
 
-        .nav-menu a {
-            font-size: 14px;
-            font-weight: 600;
-            color: #334155;
-            transition: 0.2s ease;
+        .article-header{
+            max-width:900px;
+            margin:0 auto;
         }
 
-        .nav-menu a:hover {
-            color: #5b21b6;
+        .article-category{
+            display:inline-block;
+            background:#f3e8ff;
+            color:#5b21b6;
+            font-size:12px;
+            font-weight:700;
+            padding:7px 14px;
+            border-radius:50px;
+            margin-bottom:18px;
         }
 
-        .nav-button {
-            background: #5b21b6;
-            color: #ffffff !important;
-            padding: 12px 20px;
-            border-radius: 9px;
+        .article-title{
+            font-size:42px;
+            line-height:1.18;
+            font-weight:800;
+            color:#211b55;
+            margin-bottom:15px;
         }
 
-        .nav-button:hover {
-            background: #4c1d95 !important;
+        .article-date{
+            color:#7890ad;
+            font-size:14px;
+            margin-bottom:30px;
         }
 
-        .hamburger {
-            display: none;
-            font-size: 23px;
-            color: #5b21b6;
-            cursor: pointer;
+        .article-image{
+            width:100%;
+            max-width:900px;
+            margin:0 auto 38px;
+            border-radius:16px;
+            overflow:hidden;
+            background:#f8fafc;
         }
 
-        .article-wrapper {
-            width: 100%;
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 70px 25px 90px;
+        .article-image img{
+            width:100%;
+            height:360px;
+            display:block;
+            object-fit:cover;
         }
 
-        .article-header {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
+        .image-credit{
+            padding:9px 14px;
+            background:#f8fafc;
+            color:#64748b;
+            font-size:12px;
         }
 
-        .article-category {
-            display: inline-block;
-            background: #f3e8ff;
-            color: #5b21b6;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 7px 15px;
-            border-radius: 50px;
-            margin-bottom: 22px;
+        .article-content{
+            max-width:760px;
+            margin:0 auto;
+            text-align:left;
         }
 
-        .article-title {
-            font-size: 48px;
-            line-height: 1.2;
-            font-weight: 800;
-            color: #172033;
-            margin-bottom: 20px;
+        .article-content p{
+            font-size:16px;
+            color:#475569;
+            margin-bottom:18px;
+            text-align:left;
         }
 
-        .article-date {
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 42px;
+        .article-content h2{
+            color:#211b55;
+            font-size:24px;
+            line-height:1.35;
+            margin:32px 0 12px;
+            text-align:left;
         }
 
-        .article-image {
-            width: 100%;
-            margin-bottom: 45px;
-            border-radius: 18px;
-            overflow: hidden;
-            background: #f8fafc;
+        .article-content ul{
+            padding-left:22px;
+            margin-bottom:20px;
         }
 
-        .article-image img {
-            width: 100%;
-            height: 500px;
-            display: block;
-            object-fit: cover;
+        .article-content li{
+            margin-bottom:8px;
+            color:#475569;
+            text-align:left;
         }
 
-        .image-credit {
-            padding: 10px 15px;
-            font-size: 11px;
-            color: #64748b;
-            background: #f8fafc;
+        .article-cta{
+            max-width:760px;
+            margin:42px auto 30px;
+            padding:28px 24px;
+            background:#5b21b6;
+            border-radius:16px;
+            text-align:center;
+            color:#fff;
         }
 
-        .article-content {
-            max-width: 820px;
-            margin: 0 auto;
+        .article-cta h2{
+            font-size:24px;
+            margin-bottom:8px;
         }
 
-        .article-content p {
-            font-size: 16px;
-            color: #475569;
-            margin-bottom: 22px;
+        .article-cta p{
+            color:#eee;
+            margin-bottom:18px;
         }
 
-        .article-content h2 {
-            color: #172033;
-            font-size: 27px;
-            line-height: 1.35;
-            margin: 40px 0 15px;
+        .cta-button{
+            display:inline-block;
+            background:#fff;
+            color:#5b21b6;
+            padding:11px 20px;
+            border-radius:8px;
+            font-weight:700;
+            font-size:14px;
         }
 
-        .article-content ul {
-            margin: 0 0 25px 22px;
-            color: #475569;
+        .back-blog{
+            text-align:center;
+            margin-top:24px;
         }
 
-        .article-content li {
-            margin-bottom: 9px;
+        .back-blog a{
+            color:#5b21b6;
+            font-weight:700;
+            font-size:14px;
         }
 
-        .article-cta {
-            max-width: 820px;
-            margin: 55px auto 45px;
-            padding: 35px;
-            background: #5b21b6;
-            border-radius: 18px;
-            text-align: center;
-            color: #ffffff;
+        footer{
+            background:#17132e;
+            color:#cbd5e1;
+            text-align:center;
+            padding:24px 15px;
+            font-size:13px;
         }
 
-        .article-cta h3 {
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
-
-        .article-cta p {
-            color: #ede9fe;
-            margin-bottom: 22px;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            background: #ffffff;
-            color: #5b21b6;
-            padding: 12px 20px;
-            border-radius: 9px;
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        .back-blog {
-            text-align: center;
-        }
-
-        .back-blog a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #5b21b6;
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        footer {
-            background: #111827;
-            color: #cbd5e1;
-            padding: 30px 7%;
-            text-align: center;
-            font-size: 13px;
-        }
-
-        @media (max-width: 768px) {
-
-            .navbar {
-                height: 82px;
-                padding: 0 20px;
+        @media(max-width:1100px){
+            .navbar{
+                grid-template-columns:175px 1fr 175px;
+                gap:10px;
             }
 
-            .logo img {
-                width: 125px;
-            }
-
-            .hamburger {
-                display: block;
-                order: 2;
-            }
-
-            .nav-menu {
-                position: absolute;
-                top: 82px;
-                left: 0;
-                width: 100%;
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-                gap: 0;
-                background: #ffffff;
-                border-bottom: 1px solid #eeeeee;
-                padding: 10px 20px 20px;
-                box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-menu a {
-                padding: 13px 5px;
-            }
-
-            .nav-button {
-                text-align: center;
-                margin-top: 5px;
-            }
-
-            .article-wrapper {
-                padding: 45px 18px 65px;
-            }
-
-            .article-title {
-                font-size: 31px;
-                line-height: 1.25;
-            }
-
-            .article-category {
-                font-size: 12px;
-                margin-bottom: 17px;
-            }
-
-            .article-date {
-                margin-bottom: 28px;
-            }
-
-            .article-image {
-                border-radius: 13px;
-                margin-bottom: 35px;
-            }
-
-            .article-image img {
-                width: 100%;
-                height: auto;
-                max-height: none;
-                object-fit: cover;
-            }
-
-            .article-content p {
-                font-size: 15px;
-            }
-
-            .article-content h2 {
-                font-size: 23px;
-                margin-top: 34px;
-            }
-
-            .article-cta {
-                padding: 28px 20px;
-                margin-top: 45px;
-            }
-
-            .article-cta h3 {
-                font-size: 21px;
-            }
-
-            footer {
-                padding: 25px 20px;
-            }
+            .nav-menu{gap:16px}
+            .nav-menu a{font-size:14px}
+            .logo img{width:150px}
         }
 
+        @media(max-width:768px){
+            .navbar{
+                min-height:76px;
+                padding:0 18px;
+                display:flex;
+                justify-content:space-between;
+                gap:0;
+            }
+
+            .logo img{width:125px}
+
+            .nav-menu{
+                position:absolute;
+                top:76px;
+                left:0;
+                width:100%;
+                display:none;
+                flex-direction:column;
+                align-items:stretch;
+                gap:0;
+                background:#fff;
+                border-bottom:1px solid #eee;
+                padding:8px 18px 16px;
+                box-shadow:0 8px 20px rgba(0,0,0,.06);
+            }
+
+            .nav-menu.active{display:flex}
+
+            .nav-menu a{
+                padding:11px 5px;
+                font-size:14px;
+            }
+
+            .nav-button{display:none}
+
+            .hamburger{
+                display:block;
+                color:#5b21b6;
+                font-size:22px;
+                cursor:pointer;
+            }
+
+            .article-wrapper{
+                padding:36px 18px 60px;
+            }
+
+            .article-title{
+                font-size:30px;
+                line-height:1.22;
+            }
+
+            .article-category{
+                font-size:11px;
+                padding:6px 12px;
+            }
+
+            .article-date{
+                font-size:13px;
+                margin-bottom:22px;
+            }
+
+            .article-image{
+                margin-bottom:28px;
+                border-radius:12px;
+            }
+
+            .article-image img{height:220px}
+
+            .image-credit{font-size:11px}
+
+            .article-content{
+                max-width:100%;
+                text-align:left;
+            }
+
+            .article-content p{
+                font-size:15px;
+                text-align:left;
+            }
+
+            .article-content h2{
+                font-size:21px;
+                text-align:left;
+            }
+
+            .article-cta{
+                padding:24px 18px;
+                margin-top:34px;
+            }
+
+            .article-cta h2{font-size:21px}
+        }
+
+        @media(max-width:380px){
+            .logo img{width:115px}
+            .article-title{font-size:27px}
+            .article-image img{height:200px}
+        }
     </style>
 </head>
 
@@ -357,33 +342,24 @@
     </div>
 
     <nav class="nav-menu" id="navMenu">
-
         <a href="index.html">Beranda</a>
-
         <a href="index.html#tentang">Tentang</a>
-
         <a href="index.html#program">Program</a>
-
         <a href="index.html#fasilitas">Fasilitas</a>
-
         <a href="index.html#faq">FAQ</a>
-
         <a href="index.html#kontak">Kontak</a>
-
-        <a href="blog.html">Blog</a>
-
-        <a href="index.html#kontak" class="nav-button">
-            Daftar Sekarang
-        </a>
-
+        <a href="blog.html" class="active">Blog</a>
     </nav>
+
+    <a href="index.html#kontak" class="nav-button">
+        Daftar Sekarang
+    </a>
 
     <div class="hamburger" id="hamburger">
         <i class="fa-solid fa-bars"></i>
     </div>
 
 </header>
-
 
 <main class="article-wrapper">
 
@@ -398,238 +374,116 @@
         </h1>
 
         <div class="article-date">
-            13 September 2026
+            <i class="fa-regular fa-calendar"></i>
+            12 Agustus 2026 &nbsp;•&nbsp; New Primagama Sunter Indah
         </div>
 
     </header>
 
-
     <div class="article-image">
 
         <img
-            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1600&q=85"
-            alt="Siswa sedang beristirahat setelah belajar"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Foto_siswa_sedang_belajar.jpg"
+            alt="Siswa sedang belajar di dalam kelas"
             loading="eager">
 
         <div class="image-credit">
-            Foto ilustrasi kegiatan belajar.
+            Sumber foto: Dicky Herlambang / Wikimedia Commons
         </div>
 
     </div>
 
-
     <article class="article-content">
 
         <p>
-            Baru buka buku beberapa menit, mata sudah terasa berat? Rasa ngantuk
-            ketika belajar memang bisa mengganggu konsentrasi dan membuat materi
-            terasa lebih sulit dipahami.
+            Lagi belajar tapi mata mulai berat? Baru beberapa menit membaca materi,
+            tiba-tiba sudah pengin tidur. Kalau sering mengalami hal seperti ini,
+            bisa jadi ada beberapa kebiasaan yang perlu diperhatikan.
+        </p>
+
+        <h2>1. Kurang Tidur</h2>
+
+        <p>
+            Kalau waktu tidur kamu kurang, rasa ngantuk saat belajar tentu lebih
+            gampang muncul. Tubuh membutuhkan waktu istirahat yang cukup supaya
+            bisa kembali beraktivitas dengan baik.
+        </p>
+
+        <h2>2. Belajar di Waktu yang Kurang Tepat</h2>
+
+        <p>
+            Setiap orang punya waktu ketika dirinya lebih mudah berkonsentrasi.
+            Kalau kamu selalu merasa ngantuk saat belajar pada waktu tertentu,
+            coba atur jadwal belajar di waktu ketika tubuh terasa lebih segar.
+        </p>
+
+        <h2>3. Belajar Terlalu Lama Tanpa Jeda</h2>
+
+        <p>
+            Fokus dalam waktu lama tanpa istirahat bisa bikin pikiran terasa lelah.
+            Coba bagi waktu belajar menjadi beberapa sesi supaya kamu punya kesempatan
+            untuk beristirahat sebentar.
+        </p>
+
+        <h2>4. Posisi Belajar Terlalu Nyaman</h2>
+
+        <p>
+            Belajar sambil rebahan memang terasa nyaman, tapi justru bisa membuat
+            tubuh lebih cepat merasa ingin tidur. Coba gunakan meja dan kursi yang
+            nyaman supaya posisi belajar lebih mendukung.
+        </p>
+
+        <h2>5. Kurangi Gangguan Saat Belajar</h2>
+
+        <p>
+            Notifikasi HP, video, atau hal lain yang terus menarik perhatian bisa
+            membuat kamu cepat kehilangan fokus. Coba jauhkan hal-hal yang nggak
+            diperlukan selama sesi belajar.
         </p>
 
         <p>
-            Sebelum langsung menyalahkan diri sendiri karena sulit fokus, coba
-            perhatikan beberapa kebiasaan yang mungkin memengaruhinya.
-        </p>
-
-
-        <h2>1. Kurang Waktu Istirahat</h2>
-
-        <p>
-            Salah satu hal yang bisa membuat tubuh mudah mengantuk adalah kurang
-            mendapatkan waktu istirahat.
-        </p>
-
-        <p>
-            Kalau kamu sering tidur terlalu larut karena belajar atau aktivitas
-            lainnya, rasa kantuk pada siang atau sore hari bisa terasa lebih kuat.
-        </p>
-
-
-        <h2>2. Belajar di Tempat yang Terlalu Nyaman</h2>
-
-        <p>
-            Tempat belajar yang nyaman memang menyenangkan, tetapi kalau terlalu
-            nyaman kamu bisa menjadi lebih mudah mengantuk.
-        </p>
-
-        <p>
-            Coba gunakan meja dan kursi yang membuat posisi tubuh tetap nyaman
-            tetapi tidak membuat kamu ingin langsung tidur.
-        </p>
-
-
-        <h2>3. Belajar Tanpa Jeda</h2>
-
-        <p>
-            Duduk belajar dalam waktu yang sangat lama tanpa jeda bisa membuat
-            konsentrasi menurun.
-        </p>
-
-        <p>
-            Coba bagi waktu belajar menjadi beberapa sesi dan gunakan jeda untuk
-            berdiri, berjalan sebentar, atau melakukan aktivitas ringan.
-        </p>
-
-
-        <h2>4. Materi Terasa Membosankan</h2>
-
-        <p>
-            Ketika metode belajar hanya membaca materi secara terus-menerus,
-            perhatian bisa lebih mudah teralihkan.
-        </p>
-
-        <p>
-            Coba variasikan cara belajar dengan membuat rangkuman, mengerjakan
-            latihan soal, membuat pertanyaan sendiri, atau berdiskusi.
-        </p>
-
-
-        <h2>5. Kurang Bergerak</h2>
-
-        <p>
-            Duduk dalam posisi yang sama terlalu lama bisa membuat tubuh terasa
-            kurang segar.
-        </p>
-
-        <p>
-            Sesekali berdiri dan melakukan peregangan ringan bisa menjadi cara
-            sederhana untuk memberi jeda dari posisi belajar.
-        </p>
-
-
-        <h2>6. Belajar Ketika Sudah Sangat Lelah</h2>
-
-        <p>
-            Kalau kamu baru mulai belajar setelah seharian melakukan berbagai
-            aktivitas, wajar jika tubuh terasa lebih lelah.
-        </p>
-
-        <p>
-            Kalau memungkinkan, atur waktu belajar pada saat kamu masih memiliki
-            energi dan bisa berkonsentrasi dengan lebih baik.
-        </p>
-
-
-        <h2>7. Coba Evaluasi Kebiasaan Belajarmu</h2>
-
-        <p>
-            Setiap orang bisa memiliki waktu belajar yang berbeda. Ada yang lebih
-            mudah fokus pada pagi hari, sementara yang lain lebih nyaman belajar
-            setelah sore.
-        </p>
-
-        <p>
-            Coba perhatikan kapan kamu paling mudah berkonsentrasi dan gunakan
-            waktu tersebut untuk materi yang membutuhkan perhatian lebih.
-        </p>
-
-
-        <h2>Kesimpulan</h2>
-
-        <p>
-            Mengantuk ketika belajar bisa dipengaruhi oleh berbagai hal, mulai dari
-            waktu istirahat, suasana belajar, sampai cara belajar yang digunakan.
-        </p>
-
-        <p>
-            Daripada memaksakan diri terus belajar ketika sudah sangat lelah, coba
-            evaluasi kebiasaanmu dan buat pola belajar yang lebih sesuai.
+            Jadi, kalau sering ngantuk saat belajar, jangan langsung menganggap kamu
+            malas. Coba lihat dulu kebiasaan tidur, waktu belajar, kondisi tubuh,
+            dan lingkungan belajar kamu.
         </p>
 
     </article>
 
-
     <div class="article-cta">
 
-        <h3>
-            Mau Belajar Lebih Nyaman?
-        </h3>
+        <h2>Belajar Lebih dari Sekadar Nilai</h2>
 
         <p>
-            Cari suasana dan program belajar yang sesuai dengan kebutuhanmu di
+            Temukan suasana belajar yang membantu kamu berkembang bersama
             New Primagama Sunter Indah.
         </p>
 
-        <a href="https://wa.me/6285285705335"
-           class="cta-button"
-           target="_blank">
-
-            <i class="fa-brands fa-whatsapp"></i>
-
+        <a href="https://wa.me/6285285705335" class="cta-button">
             Konsultasi Sekarang
-
         </a>
 
     </div>
 
-
     <div class="back-blog">
-
-        <a href="blog.html">
-
+        <a href="https://newprimagamasunterindah.com/blog.html">
             <i class="fa-solid fa-arrow-left"></i>
-
             Kembali ke Blog
-
         </a>
-
     </div>
 
 </main>
-
 
 <footer>
     © 2026 New Primagama Sunter Indah. Semua Hak Dilindungi.
 </footer>
 
-
 <script>
-
     const hamburger = document.getElementById("hamburger");
-
     const navMenu = document.getElementById("navMenu");
 
-
-    hamburger.addEventListener("click", function () {
-
+    hamburger.addEventListener("click", function(){
         navMenu.classList.toggle("active");
-
-        const icon = hamburger.querySelector("i");
-
-
-        if (navMenu.classList.contains("active")) {
-
-            icon.classList.remove("fa-bars");
-
-            icon.classList.add("fa-xmark");
-
-        } else {
-
-            icon.classList.remove("fa-xmark");
-
-            icon.classList.add("fa-bars");
-
-        }
-
     });
-
-
-    document.querySelectorAll(".nav-menu a").forEach(link => {
-
-        link.addEventListener("click", function () {
-
-            navMenu.classList.remove("active");
-
-            const icon = hamburger.querySelector("i");
-
-            icon.classList.remove("fa-xmark");
-
-            icon.classList.add("fa-bars");
-
-        });
-
-    });
-
 </script>
 
 </body>
