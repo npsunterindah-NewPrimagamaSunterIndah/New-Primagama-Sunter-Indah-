@@ -2747,3 +2747,32 @@ section{
                 display: none; /* Menghilangkan scrollbar tapi tetap bisa digeser */
             }
         }
+
+      /*=========================================
+      PENYESUAIAN TENTANG KAMI & FAQ
+=========================================*/
+
+/* Merapikan jarak antar paragraf di Tentang Kami */
+.tentang-text p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.tentang-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Memastikan teks jawaban FAQ teratur dan mudah dibaca */
+.faq-answer {
+    line-height: 1.7;
+    color: var(--gray);
+    padding-top: 10px;
+}
+
+/* Memperjelas efek hover pada tombol pertanyaan FAQ */
+.faq-question {
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+}
