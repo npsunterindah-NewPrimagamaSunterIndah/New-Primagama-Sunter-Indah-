@@ -1422,19 +1422,14 @@ section{
 
 }
 
-
-
 /*=========================================
                     FOOTER
 =========================================*/
 
 .footer{
 
-    background: linear-gradient(
-        135deg,
-        #5b21b6,
-        #7c3aed
-    );
+    /* Latar belakang biru tua (Navy) */
+    background: #0F172A;
 
     color: white;
 
@@ -1458,9 +1453,18 @@ section{
 
 .footer-logo img{
 
-    width: 140px;
+    width: 160px;
 
     margin-bottom: 20px;
+
+    /* Penyangga putih agar logo biru/gelap terlihat jelas di atas latar biru tua */
+    background: #FFFFFF;
+
+    padding: 8px 18px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -1473,6 +1477,8 @@ section{
 
     margin-bottom: 15px;
 
+    color: #FFFFFF;
+
 }
 
 
@@ -1484,7 +1490,7 @@ section{
 
     line-height: 1.8;
 
-    color: #e5e7eb;
+    color: #94A3B8;
 
     font-size: 16px;
 
@@ -1522,6 +1528,8 @@ section{
 
     font-weight: 600;
 
+    color: #FFFFFF;
+
 }
 
 
@@ -1538,9 +1546,20 @@ section{
 
     margin-bottom: 15px;
 
-    color: #f3f4f6;
+    color: #CBD5E1;
 
     line-height: 1.8;
+
+    transition: .3s ease;
+
+}
+
+
+.footer-box li:hover{
+
+    transform: translateY(-2px);
+
+    color: #38BDF8;
 
 }
 
@@ -1555,8 +1574,7 @@ section{
 
     padding-top: 25px;
 
-    border-top: 1px solid
-    rgba(255,255,255,.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 
     text-align: center;
 
@@ -1565,29 +1583,9 @@ section{
 
 .copyright p{
 
-    color: #e5e7eb;
+    color: #94A3B8;
 
     font-size: 15px;
-
-}
-
-
-/*=========================================
-                HOVER
-=========================================*/
-
-.footer-box li{
-
-    transition: .3s ease;
-
-}
-
-
-.footer-box li:hover{
-
-    transform: translateY(-2px);
-
-    color: white;
 
 }
 
@@ -1615,7 +1613,7 @@ section{
 
     .footer-logo img{
 
-        width: 120px;
+        width: 140px;
 
     }
 
@@ -1667,7 +1665,7 @@ section{
 
     .footer-logo img{
 
-        width: 100px;
+        width: 120px;
 
     }
 
@@ -1709,6 +1707,7 @@ section{
     }
 
 }
+
 
 
 /*=========================================
