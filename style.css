@@ -2814,3 +2814,94 @@ section{
         text-align: left; /* Pada HP yang sangat kecil, rata kiri lebih nyaman dibaca */
     }
 }
+
+/*=========================================
+          TENTANG KAMI - MODEL CARD
+=========================================*/
+
+.tentang-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E293B;
+    margin-bottom: 12px;
+}
+
+.tentang-intro {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #64748B;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+/* Layout Grid Card */
+.tentang-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Desain Individual Card */
+.t-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: #FFFFFF;
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.t-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(91, 33, 182, 0.08);
+    border-color: #C4B5FD;
+}
+
+/* Ikon dalam Card */
+.t-card-icon {
+    width: 44px;
+    height: 44px;
+    background: #F3E8FF;
+    color: #5B21B6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Isi Teks Card */
+.t-card-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1E293B;
+    margin-bottom: 4px;
+}
+
+.t-card-content p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #475569;
+    margin: 0;
+    text-align: left !important;
+}
+
+/* Responsif Layar Laptop */
+@media (min-width: 768px) {
+    .tentang-text h2 {
+        font-size: 28px;
+    }
+    .tentang-intro {
+        font-size: 15px;
+    }
+    .t-card-content h3 {
+        font-size: 16px;
+    }
+    .t-card-content p {
+        font-size: 14px;
+    }
+}
