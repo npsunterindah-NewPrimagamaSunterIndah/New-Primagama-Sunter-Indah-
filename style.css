@@ -1,2732 +1,1926 @@
-/*=========================================
-                RESET CSS
-=========================================*/
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-
-/*=========================================
-                ROOT COLOR
-=========================================*/
-
-:root{
-
-    --primary-color:#6D28D9;
-    --secondary-color:#8B5CF6;
-    --white:#FFFFFF;
-    --black:#111827;
-    --gray:#6B7280;
-    --light-gray:#F8FAFC;
-    --shadow:0 10px 30px rgba(0,0,0,0.08);
-
-}
-
-
-/*=========================================
-                    HTML
-=========================================*/
-
-html{
-    scroll-behavior:smooth;
-}
-
-
-/*=========================================
-                    BODY
-=========================================*/
-
-body{
-
-    font-family:"Poppins",sans-serif;
-
-    background-color:var(--white);
-
-    color:var(--black);
-
-    overflow-x:hidden;
-
-    line-height:1.8;
-
-}
-
-
-/*=========================================
-                CONTAINER
-=========================================*/
-
-.container{
-
-    width:90%;
-    max-width:1200px;
-
-    margin:auto;
-
-}
-
-
-/*=========================================
-                    SECTION
-=========================================*/
-
-section{
-
-    padding:110px 0;
-
-}
-
-
-/*=========================================
-                SECTION TITLE
-=========================================*/
-
-.section-title{
-
-    text-align:center;
-
-    margin-bottom:60px;
-
-}
-
-
-.section-title h2{
-
-    font-size:42px;
-
-    color:var(--primary-color);
-
-    margin-bottom:15px;
-
-    font-weight:700;
-
-}
-
-
-.section-title p{
-
-    color:var(--gray);
-
-    font-size:17px;
-
-    max-width:700px;
-
-    margin:auto;
-
-}
-
-/*=========================================
-                    NAVBAR
-=========================================*/
-
-.navbar{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-
-    padding:18px 8%;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    background:rgba(255, 255, 255, 0.95);
-
-    backdrop-filter:blur(10px);
-
-    box-shadow:0 2px 20px rgba(0,0,0,0.05);
-
-    z-index:1000;
-
-}
-
-
-.logo img{
-
-    width:120px;
-
-}
-
-
-.nav-menu{
-
-    display:flex;
-
-    gap:30px;
-
-}
-
-
-.nav-menu a{
-
-    text-decoration:none;
-
-    color:var(--black);
-
-    font-weight:500;
-
-    transition:.3s;
-
-}
-
-
-.nav-menu a:hover{
-
-    color:var(--primary-color);
-
-}
-
-
-.btn-navbar{
-
-    text-decoration:none;
-
-    padding:13px 28px;
-
-    background:var(--primary-color);
-
-    color:white;
-
-    border-radius:30px;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-
-.btn-navbar:hover{
-
-    background:var(--secondary-color);
-
-}
-
-
-.hamburger{
-
-    display:none;
-
-    cursor:pointer;
-
-}
-
-
-.hamburger span{
-
-    display:block;
-
-    width:28px;
-
-    height:3px;
-
-    margin:5px 0;
-
-    background:var(--black);
-
-    border-radius:20px;
-
-}
-
-
-
-
-/*=========================================
-                HERO SECTION
-=========================================*/
-
-.hero{
-
-    position: relative;
-
-    overflow: hidden;
-
-    padding: 150px 8% 80px;
-
-    background: #FFFFFF;
-
-}
-
-
-/*=========================================
-                SHAPE BACKGROUND
-=========================================*/
-
-.hero::before{
-
-    content: "";
-
-    position: absolute;
-
-    width: 450px;
-
-    height: 450px;
-
-    top: -150px;
-
-    right: -100px;
-
-    border-radius: 50%;
-
-    background: #EDE9FE;
-
-    z-index: 0;
-
-}
-
-
-.hero::after{
-
-    content: "";
-
-    position: absolute;
-
-    width: 300px;
-
-    height: 300px;
-
-    bottom: -100px;
-
-    left: -80px;
-
-    border-radius: 50%;
-
-    background: #DDD6FE;
-
-    z-index: 0;
-
-}
-
-
-/*=========================================
-                HERO CONTENT
-=========================================*/
-
-.hero-content{
-
-    position:relative;
-
-    z-index:1;
-
-    max-width:1000px;
-
-    margin:auto;
-
-    padding:40px 50px;
-
-    text-align:center;
-
-    background:#FFFFFF;
-
-    border-radius:45px;
-
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.08);
-
-}
-
-
-/*=========================================
-                LOGO
-=========================================*/
-
-.hero-logo img{
-
-    width: 240px;
-
-    margin-bottom: 20px;
-
-}
-
-
-/*=========================================
-                TITLE
-=========================================*/
-
-.hero h1{
-
-    font-size: 56px;
-
-    font-weight: 800;
-
-    line-height: 1.3;
-
-    color: #5B21B6;
-
-    margin-bottom: 25px;
-
-}
-
-
-/*=========================================
-                DESCRIPTION
-=========================================*/
-
-.hero p{
-
-    max-width: 750px;
-
-    margin: auto;
-
-    line-height: 1.9;
-
-    font-size: 18px;
-
-    color: #555;
-
-    margin-bottom: 35px;
-
-}
-
-
-/*=========================================
-                BADGE PROGRAM
-=========================================*/
-
-.hero-badge{
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-
-    margin-bottom: 40px;
-
-}
-
-
-.hero-badge span{
-
-    padding: 12px 22px;
-
-    border-radius: 50px;
-
-    background: #540369;
-
-    color: #5B21B6;
-
-    font-weight: 600;
-
-}
-
-
-/*=========================================
-                BUTTON
-=========================================*/
-
-.hero-button{
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-
-}
-
-
-.btn-primary{
-
-    text-decoration: none;
-
-    padding: 18px 35px;
-
-    border-radius: 50px;
-
-    background: #FACC15;
-
-    color: #222;
-
-    font-weight: 700;
-
-    transition: .3s ease;
-
-}
-
-
-.btn-primary:hover{
-
-    transform: translateY(-5px);
-
-}
-
-
-.btn-secondary{
-
-    text-decoration: none;
-
-    padding: 18px 35px;
-
-    border-radius: 50px;
-
-    border: 2px solid #5B21B6;
-
-    color: #5B21B6;
-
-    font-weight: 700;
-
-    transition: .3s ease;
-
-}
-
-
-.btn-secondary:hover{
-
-    background: #5B21B6;
-
-    color: rgb(114, 2, 127);
-
-}
-
-
-/*=========================================
-                STATISTIK
-=========================================*/
-
-.hero-stats{
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap: 20px;
-
-    margin-top: 50px;
-
-}
-
-
-.stat-card{
-
-    padding: 25px;
-
-    background: #FFFFFF;
-
-    border-radius: 25px;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.07);
-
-}
-
-
-.stat-card h2{
-
-    font-size: 34px;
-
-    color: #5B21B6;
-
-    margin-bottom: 10px;
-
-}
-
-
-.stat-card p{
-
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
     margin: 0;
-
-    color: #666;
-
-    font-size: 15px;
-
-}
-
-
-/*=========================================
-                RESPONSIVE
-=========================================*/
-
-@media(max-width:768px){
-
-.hero{
-
-    padding:120px 5% 60px;
-
-}
-
-
-.hero-content{
-
-    padding:40px 25px;
-
-}
-
-
-.hero h1{
-
-    font-size:34px;
-
-}
-
-
-.hero p{
-
-    font-size:16px;
-
-}
-
-
-.hero-logo img{
-
-    width:180px;
-
-}
-
-
-.hero-badge{
-
-    gap:10px;
-
-}
-
-
-.hero-badge span{
-
-    font-size:14px;
-
-}
-
-
-.hero-button{
-
-    flex-direction:column;
-
-}
-
-
-.btn-primary,
-.btn-secondary{
-
-    width:100%;
-
-    text-align:center;
-
-}
-
-
-.hero-stats{
-
-    grid-template-columns:1fr;
-
-}
-
-}
-
-/*=========================================
-                TENTANG KAMI
-=========================================*/
-
-.tentang{
-
-    background:var(--light-gray);
-
-}
-
-
-.tentang-wrapper{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:60px;
-
-}
-
-
-.tentang-image{
-
-    flex:1;
-
-}
-
-
-.tentang-image img{
-
-    width:100%;
-
-    border-radius:25px;
-
-    box-shadow:var(--shadow);
-
-    object-fit:cover;
-
-}
-
-
-.tentang-text{
-
-    flex:1;
-
-}
-
-
-.tentang-text h2{
-
-    color:var(--primary-color);
-
-    font-size:42px;
-
-    margin-bottom:25px;
-
-}
-
-
-.tentang-text p{
-
-    margin-bottom:18px;
-
-    color:var(--gray);
-
-    font-size:16px;
-
-}
-
-
-
-/*=========================================
-              PROGRAM BELAJAR
-=========================================*/
-
-.program{
-
-    background:var(--white);
-
-}
-
-
-.program-tabs{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-    margin-bottom:40px;
-
-}
-
-
-.tab-button{
-
-    border:none;
-
-    cursor:pointer;
-
-    padding:15px 30px;
-
-    border-radius:50px;
-
-    background:#F3F4F6;
-
-    color:var(--black);
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-
-.tab-button:hover{
-
-    background:var(--secondary-color);
-
-    color:white;
-
-}
-
-
-.tab-button.active{
-
-    background:var(--primary-color);
-
-    color:white;
-
-}
-
-
-/* CONTENT PROGRAM */
-
-.program-content{
-
-    display:none;
-
-    max-width:900px;
-
-    margin:auto;
-
-    padding:40px;
-
-    border-radius:25px;
-
-    background:var(--light-gray);
-
-    box-shadow:var(--shadow);
-
-}
-
-
-.program-content.active{
-
-    display:block;
-
-}
-
-
-.program-content ul{
-
-    list-style:none;
-
-}
-
-
-.program-content ul li{
-
-    position:relative;
-
-    padding-left:35px;
-
-    margin-bottom:18px;
-
-    font-size:17px;
-
-    color:var(--black);
-
-}
-
-
-.program-content ul li::before{
-
-    content:"✓";
-
-    position:absolute;
-
-    left:0;
-
-    color:var(--primary-color);
-
-    font-weight:bold;
-
-}
-
-
-/* BUTTON PROGRAM */
-
-.program-btn{
-
-    text-align:center;
-
-    margin-top:35px;
-
-}
-
-
-.btn-program{
-
-    display:inline-block;
-
-    text-decoration:none;
-
-    padding:16px 35px;
-
-    border-radius:50px;
-
-    background:var(--primary-color);
-
-    color:white;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-
-.btn-program:hover{
-
-    background:var(--secondary-color);
-
-}
-
-/*=========================================
-            MENGAPA MEMILIH KAMI
-=========================================*/
-
-.mengapa-kami{
-
-    background:var(--light-gray);
-
-}
-
-
-.mengapa-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:25px;
-
-}
-
-
-.mengapa-card{
-
-    padding:35px 25px;
-
-    background:white;
-
-    border-radius:25px;
-
-    text-align:center;
-
-    box-shadow:var(--shadow);
-
-    transition:.3s;
-
-}
-
-
-.mengapa-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-.mengapa-card i{
-
-    font-size:45px;
-
-    color:var(--primary-color);
-
-    margin-bottom:20px;
-
-}
-
-
-.mengapa-card h3{
-
-    margin-bottom:15px;
-
-    font-size:20px;
-
-}
-
-
-.mengapa-card p{
-
-    color:var(--gray);
-
-    font-size:15px;
-
-}
-
-
-/*=========================================
-                FASILITAS
-=========================================*/
-
-.fasilitas{
-
-    padding:100px 8%;
-
-    background:#ffffff;
-
-}
-
-
-/*=========================================
-              VIDEO TOUR
-=========================================*/
-
-.video-tour{
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin-top:40px;
-    margin-bottom:50px;
-
-}
-
-
-.video-tour video{
-
-    width:100%;
-    max-width:850px;
-
-    max-height:480px;
-
-    object-fit:cover;
-
-    border-radius:25px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.15);
-
-}
-
-
-/*=========================================
-            CARD FASILITAS
-=========================================*/
-
-.facility-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(280px,1fr));
-
-    gap:25px;
-
-}
-
-
-.facility-card{
-
-    background:#ffffff;
-
-    padding:30px;
-
-    border-radius:25px;
-
-    text-align:center;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    transition:.3s ease;
-
-}
-
-
-.facility-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-.facility-card i{
-
-    font-size:40px;
-
-    color:#7c3aed;
-
-    margin-bottom:15px;
-
-}
-
-
-.facility-card h3{
-
-    font-size:22px;
-
-    font-weight:700;
-
-    margin-bottom:15px;
-
-    color:#111827;
-
-}
-
-
-.facility-card p{
-
-    line-height:1.8;
-
-    color:#6b7280;
-
-    font-size:16px;
-
-}
-
-
-/*=========================================
-            TEKS PENUTUP
-=========================================*/
-
-.facility-footer{
-
-    margin-top:60px;
-
-    text-align:center;
-
-}
-
-
-.facility-footer p{
-
-    max-width:850px;
-
-    margin:auto;
-
-    line-height:1.9;
-
-    font-size:18px;
-
-    color:#4b5563;
-
-}
-
-
-/*=========================================
-          RESPONSIVE TABLET
-=========================================*/
-
-@media(max-width:1024px){
-
-
-    .fasilitas{
-
-        padding:90px 7%;
-
-    }
-
-
-    .video-tour video{
-
-        max-width:700px;
-
-        max-height:400px;
-
-    }
-
-
-    .facility-grid{
-
-        gap:20px;
-
-    }
-
-}
-
-
-/*=========================================
-            RESPONSIVE MOBILE
-=========================================*/
-
-@media(max-width:768px){
-
-
-    .fasilitas{
-
-        padding:80px 6%;
-
-    }
-
-
-    .video-tour{
-
-        margin-top:30px;
-
-        margin-bottom:40px;
-
-    }
-
-
-    .video-tour video{
-
-        width:100%;
-
-        max-width:100%;
-
-        max-height:280px;
-
-        border-radius:20px;
-
-    }
-
-
-    .facility-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .facility-card{
-
-        padding:25px;
-
-    }
-
-
-    .facility-card i{
-
-        font-size:35px;
-
-    }
-
-
-    .facility-card h3{
-
-        font-size:20px;
-
-    }
-
-
-    .facility-card p{
-
-        font-size:15px;
-
-    }
-
-
-    .facility-footer{
-
-        margin-top:40px;
-
-    }
-
-
-    .facility-footer p{
-
-        font-size:16px;
-
-        line-height:1.8;
-
-    }
-
-}
-
-
-/*=========================================
-          RESPONSIVE HP KECIL
-=========================================*/
-
-@media(max-width:480px){
-
-
-    .video-tour video{
-
-        max-height:230px;
-
-        border-radius:18px;
-
-    }
-
-
-    .facility-card{
-
-        padding:22px;
-
-    }
-
-
-    .facility-card h3{
-
-        font-size:18px;
-
-    }
-
-
-    .facility-card p{
-
-        font-size:14px;
-
-    }
-
-
-    .facility-footer p{
-
-        font-size:15px;
-
-    }
-
-}
-
-/*=========================================
-                    FAQ
-=========================================*/
-
-.faq{
-
-    background:var(--light-gray);
-
-}
-
-
-.faq-item{
-
-    max-width:900px;
-
-    margin:0 auto 20px;
-
-    background:var(--white);
-
-    border-radius:20px;
-
-    box-shadow:var(--shadow);
-
-    overflow:hidden;
-
-}
-
-
-.faq-question{
-
-    width:100%;
-
-    padding:25px 30px;
-
-    border:none;
-
-    background:transparent;
-
-    cursor:pointer;
-
-    font-size:18px;
-
-    font-weight:600;
-
-    text-align:left;
-
-    color:var(--black);
-
-}
-
-
-.faq-answer{
-
-    max-height:0;
-
-    overflow:hidden;
-
-    padding:0 30px;
-
-    color:var(--gray);
-
-    line-height:1.8;
-
-    transition:all .4s ease;
-
-}
-
-
-.faq-item.active .faq-answer{
-
-    max-height:250px;
-
-    padding:0 30px 25px;
-
-}
-
-
-
-/*=========================================
-                  KONTAK
-=========================================*/
-
-.kontak{
-
-    background:var(--white);
-
-}
-
-
-.kontak-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:25px;
-
-}
-
-
-.kontak-card{
-
-    padding:35px 25px;
-
-    background:var(--light-gray);
-
-    border-radius:25px;
-
-    text-align:center;
-
-    transition:.3s;
-
-}
-
-
-.kontak-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:var(--shadow);
-
-}
-
-
-.kontak-card h3{
-
-    margin-bottom:15px;
-
-    color:var(--primary-color);
-
-    font-size:22px;
-
-}
-
-
-.kontak-card p{
-
-    color:var(--gray);
-
-    font-size:15px;
-
-    line-height:1.8;
-
-}
-
-/*=========================================
-                GOOGLE MAPS
-=========================================*/
-
-.maps{
-
-    padding:0;
-
-}
-
-
-.maps iframe{
-
-    width:100%;
-
-    display:block;
-
-}
-
-
-
-/*=========================================
-                    FOOTER
-=========================================*/
-
-.footer{
-
-    background: linear-gradient(
-        135deg,
-        #5b21b6,
-        #7c3aed
-    );
-
-    color: white;
-
-    padding: 80px 8% 30px;
-
-}
-
-
-/*=========================================
-                LOGO FOOTER
-=========================================*/
-
-.footer-logo{
-
-    text-align: center;
-
-    margin-bottom: 60px;
-
-}
-
-
-.footer-logo img{
-
-    width: 140px;
-
-    margin-bottom: 20px;
-
-}
-
-
-.footer-logo h2{
-
-    font-size: 32px;
-
-    font-weight: 700;
-
-    margin-bottom: 15px;
-
-}
-
-
-.footer-logo p{
-
-    max-width: 700px;
-
-    margin: auto;
-
-    line-height: 1.8;
-
-    color: #e5e7eb;
-
-    font-size: 16px;
-
-}
-
-
-/*=========================================
-                GRID FOOTER
-=========================================*/
-
-.footer-grid{
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(250px,1fr));
-
-    gap: 40px;
-
-}
-
-
-.footer-box{
-
-    text-align: center;
-
-}
-
-
-.footer-box h3{
-
-    font-size: 22px;
-
-    margin-bottom: 20px;
-
-    font-weight: 600;
-
-}
-
-
-.footer-box ul{
-
-    list-style: none;
-
     padding: 0;
-
-}
-
-
-.footer-box li{
-
-    margin-bottom: 15px;
-
-    color: #f3f4f6;
-
-    line-height: 1.8;
-
-}
-
-
-/*=========================================
-                COPYRIGHT
-=========================================*/
-
-.copyright{
-
-    margin-top: 60px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid
-    rgba(255,255,255,.25);
-
-    text-align: center;
-
-}
-
-
-.copyright p{
-
-    color: #e5e7eb;
-
-    font-size: 15px;
-
-}
-
-
-/*=========================================
-                HOVER
-=========================================*/
-
-.footer-box li{
-
-    transition: .3s ease;
-
-}
-
-
-.footer-box li:hover{
-
-    transform: translateY(-2px);
-
-    color: white;
-
-}
-
-
-/*=========================================
-            RESPONSIVE TABLET
-=========================================*/
-
-@media(max-width:768px){
-
-
-    .footer{
-
-        padding: 70px 6% 25px;
-
-    }
-
-
-    .footer-logo{
-
-        margin-bottom: 45px;
-
-    }
-
-
-    .footer-logo img{
-
-        width: 120px;
-
-    }
-
-
-    .footer-logo h2{
-
-        font-size: 26px;
-
-    }
-
-
-    .footer-logo p{
-
-        font-size: 15px;
-
-    }
-
-
-    .footer-grid{
-
-        gap: 30px;
-
-    }
-
-
-    .footer-box h3{
-
-        font-size: 20px;
-
-    }
-
-
-}
-
-
-/*=========================================
-            RESPONSIVE MOBILE
-=========================================*/
-
-@media(max-width:480px){
-
-
-    .footer{
-
-        padding: 60px 5% 20px;
-
-    }
-
-
-    .footer-logo img{
-
-        width: 100px;
-
-    }
-
-
-    .footer-logo h2{
-
-        font-size: 22px;
-
-    }
-
-
-    .footer-logo p{
-
-        font-size: 14px;
-
-        line-height: 1.7;
-
-    }
-
-
-    .footer-box h3{
-
-        font-size: 18px;
-
-    }
-
-
-    .footer-box li{
-
-        font-size: 14px;
-
-    }
-
-
-    .copyright p{
-
-        font-size: 13px;
-
-    }
-
-}
-
-
-/*=========================================
-            FLOATING WHATSAPP
-=========================================*/
-
-.floating-whatsapp{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:30px;
-
-    z-index:999;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:14px 22px;
-
-    background:#25D366;
-
-    color:white;
-
-    border-radius:50px;
-
-    cursor:pointer;
-
-    box-shadow:var(--shadow);
-
-    transition:.3s;
-
-}
-
-
-.floating-whatsapp:hover{
-
-    transform:translateY(-5px);
-
-}
-
-
-.floating-whatsapp i{
-
-    font-size:26px;
-
-}
-
-
-.floating-whatsapp span{
-
-    font-weight:600;
-
-}
-
-
-
-/*=========================================
-                BACK TO TOP
-=========================================*/
-
-.back-to-top{
-
-    position:fixed;
-
-    right:25px;
-
-    bottom:95px;
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:var(--primary-color);
-
-    color:white;
-
-    cursor:pointer;
-
-    box-shadow:var(--shadow);
-
-    display:none;
-
-    transition:.3s;
-
-}
-
-
-.back-to-top:hover{
-
-    background:var(--secondary-color);
-
-}
-
-
-.back-to-top i{
-
-    font-size:18px;
-
-}
-
-/*=========================================
-            RESPONSIVE MOBILE
-=========================================*/
-
-@media (max-width: 992px){
-
-
-/*====================
-      NAVBAR
-====================*/
-
-.nav-menu{
-
-    position:fixed;
-
-    top:80px;
-    right:-100%;
-
-    width:280px;
-
-    height:100vh;
-
-    background:var(--white);
-
-    flex-direction:column;
-
-    align-items:center;
-
-    padding-top:50px;
-
-    gap:30px;
-
-    box-shadow:var(--shadow);
-
-    transition:.4s;
-
-}
-
-
-.nav-menu.active{
-
-    right:0;
-
-}
-
-
-.hamburger{
-
-    display:block;
-
-}
-
-
-.btn-navbar{
-
-    display:none;
-
-}
-
-
-
-/*====================
-        HERO
-====================*/
-
-.hero{
-
-    padding:140px 0 80px;
-
-    min-height:auto;
-
-}
-
-
-.hero h1{
-
-    font-size:38px;
-
-}
-
-
-.hero p{
-
-    font-size:16px;
-
-}
-
-
-.hero-button{
-
-    flex-direction:column;
-
-}
-
-
-.btn-primary,
-.btn-secondary{
-
-    width:100%;
-
-    max-width:300px;
-
-    margin:auto;
-
-}
-
-
-
-/*====================
-      TENTANG
-====================*/
-
-.tentang-wrapper{
-
-    flex-direction:column;
-
-}
-
-
-.tentang-text{
-
-    text-align:center;
-
-}
-
-
-
-/*====================
-     MENGAPA KAMI
-====================*/
-
-.mengapa-grid{
-
-    grid-template-columns:1fr 1fr;
-
-}
-
-
-
-/*====================
-       KONTAK
-====================*/
-
-.kontak-grid{
-
-    grid-template-columns:1fr 1fr;
-
-}
-
-
-}
-
-
-
-/*=========================================
-              MOBILE PHONE
-=========================================*/
-
-@media (max-width:768px){
-
-
-.section-title h2{
-
-    font-size:32px;
-
-}
-
-
-
-/*====================
-      PROGRAM
-====================*/
-
-.program-tabs{
-
-    gap:10px;
-
-}
-
-
-.tab-button{
-
-    width:100%;
-
-}
-
-
-.program-content{
-
-    padding:25px;
-
-}
-
-
-
-/*====================
-     MENGAPA KAMI
-====================*/
-
-.mengapa-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-/*====================
-      FASILITAS
-====================*/
-
-.fasilitas-preview img{
-
-    height:280px;
-
-}
-
-
-.facility-list{
-
-    gap:10px;
-
-}
-
-
-.facility-btn{
-
-    width:100%;
-
-}
-
-
-
-/*====================
-       KONTAK
-====================*/
-
-.kontak-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-/*====================
-       FOOTER
-====================*/
-
-.footer h2{
-
-    font-size:28px;
-
-}
-
-
-.footer p{
-
-    font-size:15px;
-
-}
-
-
-
-/*====================
- FLOATING WHATSAPP
-====================*/
-
-.floating-whatsapp{
-
-    padding:12px 18px;
-
-}
-
-
-.floating-whatsapp span{
-
-    display:none;
-
-}
-
-
-
-/*====================
-    BACK TO TOP
-====================*/
-
-.back-to-top{
-
-    width:50px;
-    height:50px;
-
-}
-
-
-}
-
-
-
-/*=========================================
-              SMALL MOBILE
-=========================================*/
-
-@media (max-width:480px){
-
-
-.hero h1{
-
-    font-size:30px;
-
-}
-
-
-.hero-tag{
-
-    font-size:13px;
-
-}
-
-
-.hero p{
-
-    font-size:15px;
-
-}
-
-
-.trial-class{
-
-    font-size:14px;
-
-    padding:12px 18px;
-
-}
-
-
-.section{
-
-    padding:80px 0;
-
-}
-
-
-.program-content ul li{
-
-    font-size:15px;
-
-}
-
-
-.facility-description h3{
-
-    font-size:25px;
-
-}
-
-
-}
-
-/*=========================================
-                ANIMATION
-=========================================*/
-
-
-/* FADE IN */
-
-.hidden{
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-    transition:
-    opacity .8s ease,
-    transform .8s ease;
-
-}
-
-
-.show{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
-
-
-/*=========================================
-            NAVBAR SCROLL EFFECT
-=========================================*/
-
-.navbar{
-
-    transition:.3s ease;
-
-}
-
-
-.navbar.scroll{
-
-    padding:15px 8%;
-
-    box-shadow:
-    0 10px 30px
-    rgba(0,0,0,.08);
-
-}
-
-
-
-
-/*=========================================
-            BUTTON HOVER EFFECT
-=========================================*/
-
-.btn-primary,
-.btn-secondary,
-.btn-navbar,
-.btn-program{
-
-    transition:
-    transform .3s ease,
-    box-shadow .3s ease;
-
-}
-
-
-.btn-primary:hover,
-.btn-secondary:hover,
-.btn-navbar:hover,
-.btn-program:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-    0 12px 25px
-    rgba(0,0,0,.15);
-
-}
-
-
-
-
-/*=========================================
-                CARD EFFECT
-=========================================*/
-
-.mengapa-card,
-.kontak-card{
-
-    transition:
-    transform .3s ease,
-    box-shadow .3s ease;
-
-}
-
-
-.mengapa-card:hover,
-.kontak-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-
-
-/*=========================================
-            PROGRAM TAB EFFECT
-=========================================*/
-
-.tab-button{
-
-    transition:
-    background .3s ease,
-    color .3s ease,
-    transform .3s ease;
-
-}
-
-
-.tab-button:hover{
-
-    transform:translateY(-2px);
-
-}
-
-
-
-
-/*=========================================
-            FASILITAS EFFECT
-=========================================*/
-
-#facility-image{
-
-    transition:
-    opacity .4s ease;
-
-}
-
-
-.facility-btn{
-
-    transition:
-    .3s ease;
-
-}
-
-
-.facility-btn:hover{
-
-    transform:translateY(-3px);
-
+    box-sizing: border-box;
 }
-
-
-
-
-/*=========================================
-                FAQ EFFECT
-=========================================*/
 
-.faq-item{
-
-    transition:
-    .3s ease;
-
+html {
+    scroll-behavior: smooth;
 }
-
-
-.faq-item:hover{
 
-    box-shadow:
-    0 15px 30px
-    rgba(0,0,0,.08);
-
+body {
+    font-family: "Poppins", sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    line-height: 1.7;
 }
-
-
-
 
-/*=========================================
-            FLOATING WHATSAPP
-=========================================*/
-
-.floating-whatsapp{
-
-    transition:
-    transform .3s ease;
-
+img {
+    max-width: 100%;
+    display: block;
 }
-
 
-.floating-whatsapp:hover{
-
-    transform:translateY(-5px);
-
+a {
+    text-decoration: none;
+    color: inherit;
 }
-
-
 
-
-/*=========================================
-                BACK TO TOP
-=========================================*/
-
-.back-to-top{
-
-    transition:
-    .3s ease;
-
+button {
+    font-family: inherit;
 }
 
 
-.back-to-top:hover{
 
-    transform:translateY(-5px);
+/* =====================================================
+   VARIABLE
+===================================================== */
 
-}
-
+:root {
 
+    --primary-purple: #5b21b6;
+    --dark-purple: #211b55;
+    --light-purple: #f3e8ff;
 
+    --bg-color: #f8fafc;
 
-/*=========================================
-            HERO SECTION EFFECT
-=========================================*/
+    --text-main: #1e293b;
+    --text-muted: #64748b;
 
-.hero-content{
+    --white: #ffffff;
 
-    animation:
-    fadeHero 1.2s ease;
+    --border: #e5e7eb;
 
 }
-
-
-@keyframes fadeHero{
 
-    from{
 
-        opacity:0;
-        transform:translateY(40px);
 
-    }
+/* =====================================================
+   CONTAINER
+===================================================== */
 
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
 }
-
-/* =========================================
-   HERO SECTION
-========================================= */
 
-.hero {
 
-    min-height: 90vh;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 120px 20px 50px;
-
-}
+/* =====================================================
+   NAVBAR
+===================================================== */
 
-.hero-overlay {
+.navbar {
 
     width: 100%;
 
-}
+    min-height: 82px;
 
-.hero-content {
+    padding: 0 5%;
 
-    width: 100%;
+    display: grid;
 
-    max-width: 1200px;
+    grid-template-columns:
+        190px
+        1fr
+        190px;
 
-    margin: auto;
-
-}
-
-.hero-text {
-
-    max-width: 900px;
-
-    margin: auto;
-
-    text-align: center;
-
-}
-
-/* =========================================
-   LOGO HERO
-========================================= */
-
-.hero-logo{
-
-    display: flex;
-    justify-content: center;
     align-items: center;
 
-    margin: 0;
+    gap: 20px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
 
 }
 
 
-.hero-logo img{
+.logo {
+    justify-self: start;
+}
 
-    width: 450px;
+
+.logo a {
+    display: block;
+}
+
+
+.logo img {
+
+    width: 150px;
 
     height: auto;
+
+    max-height: 58px;
 
     object-fit: contain;
 
 }
 
 
-/* =========================================
-   JUDUL HERO
-========================================= */
+.nav-menu {
 
-.hero-text h1{
+    display: flex;
 
-    font-size: 58px;
-    font-weight: 800;
+    justify-content: center;
 
-    line-height: 1.15;
+    align-items: center;
 
-    margin: 0;
+    gap: 24px;
 
 }
-/* =========================================
-   DESKRIPSI HERO
-========================================= */
 
-.hero-description {
 
-    font-size: 22px;
+.nav-menu a {
+
+    color: #334155;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+
+}
+
+
+.nav-menu a:hover {
+
+    color: var(--primary-purple);
+
+}
+
+
+.btn-navbar {
+
+    justify-self: end;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    background: var(--primary-purple);
+
+    color: #ffffff;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+
+}
+
+
+.btn-navbar:hover {
+
+    background: #4c1d95;
+
+}
+
+
+.hamburger {
+
+    display: none;
+
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    padding: 90px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8f5ff 0%,
+            #ffffff 55%,
+            #f5f3ff 100%
+        );
+
+}
+
+
+.hero-content {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(360px, 1fr);
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+
+.hero-left h1 {
+
+    color: var(--dark-purple);
+
+    font-size: 48px;
+
+    line-height: 1.18;
+
+    font-weight: 800;
+
+    margin-bottom: 22px;
+
+}
+
+
+.hero-left > p {
+
+    max-width: 700px;
+
+    color: var(--text-muted);
+
+    font-size: 16px;
 
     line-height: 1.8;
 
-    max-width: 750px;
-
-    margin: auto;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
 }
 
-
-/* =========================================
-   BUTTON HERO
-========================================= */
 
 .hero-button {
 
     display: flex;
-    justify-content: center;
+
     align-items: center;
 
-    gap: 20px;
+    gap: 14px;
 
     flex-wrap: wrap;
-
-    margin-bottom: 25px;
 
 }
 
 
-/* =========================================
-   HERO STATISTIC
-========================================= */
+.btn-primary,
+.btn-secondary,
+.btn-program {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+
+}
+
+
+.btn-primary {
+
+    background: var(--primary-purple);
+
+    color: #ffffff;
+
+}
+
+
+.btn-primary:hover {
+
+    background: #4c1d95;
+
+}
+
+
+.btn-secondary {
+
+    background: #ffffff;
+
+    color: var(--primary-purple);
+
+    border: 1px solid #ddd6fe;
+
+}
+
+
+.btn-secondary:hover {
+
+    background: var(--light-purple);
+
+}
+
 
 .hero-stats {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
 
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
 
-    flex-wrap: wrap;
-
-    margin-bottom: 25px;
+    gap: 16px;
 
 }
 
 
 .stat-card {
 
-    min-width: 170px;
+    padding: 25px 20px;
 
-    padding: 20px 25px;
+    background: #ffffff;
 
-    border-radius: 20px;
+    border: 1px solid #eee;
 
-    text-align: center;
+    border-radius: 15px;
 
-    background: rgba(255,255,255,.15);
-
-    backdrop-filter: blur(10px);
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    box-shadow: 0 8px 25px rgba(91, 33, 182, 0.06);
 
 }
 
 
-.stat-card h3 {
+.stat-card h2 {
 
-    font-size: 36px;
+    color: var(--primary-purple);
 
-    font-weight: 800;
+    font-size: 32px;
 
-    margin-bottom: 8px;
+    line-height: 1.2;
+
+    margin-bottom: 7px;
 
 }
 
 
 .stat-card p {
 
-    font-size: 15px;
+    color: var(--text-muted);
 
-    font-weight: 500;
+    font-size: 13px;
 
-    line-height: 1.5;
+    line-height: 1.6;
 
 }
 
 
-/* =========================================
-   HERO BADGE
-========================================= */
 
-.hero-badge {
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 45px;
+
+}
+
+
+.section-title h2 {
+
+    color: var(--dark-purple);
+
+    font-size: 34px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+
+}
+
+
+.section-title p {
+
+    color: var(--text-muted);
+
+    font-size: 15px;
+
+}
+
+
+
+/* =====================================================
+   TENTANG
+===================================================== */
+
+.tentang {
+
+    padding: 90px 0;
+
+    background: #ffffff;
+
+}
+
+
+.tentang-wrapper {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 65px;
+
+    align-items: center;
+
+}
+
+
+.tentang-image {
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #f8fafc;
+
+}
+
+
+.tentang-image img {
+
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+}
+
+
+.tentang-text {
+
+    max-width: 600px;
+
+}
+
+
+.section-tag {
+
+    color: var(--primary-purple);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.tentang-text h2 {
+
+    color: var(--dark-purple);
+
+    font-size: 36px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+}
+
+
+.tentang-text p:not(.section-tag) {
+
+    color: #475569;
+
+    font-size: 15px;
+
+    line-height: 1.85;
+
+    margin-bottom: 18px;
+
+    text-align: justify;
+
+    text-justify: inter-word;
+
+}
+
+
+
+/* =====================================================
+   PROGRAM
+===================================================== */
+
+.program {
+
+    padding: 90px 0;
+
+    background: var(--bg-color);
+
+}
+
+
+.program-tabs {
 
     display: flex;
 
     justify-content: center;
+
     align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
 
     flex-wrap: wrap;
 
-    gap: 15px;
+}
+
+
+.tab-button {
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border: 1px solid #e2e8f0;
+
+    padding: 11px 22px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
 
 }
 
 
-.hero-badge span {
+.tab-button:hover {
 
-    padding: 10px 18px;
+    border-color: #c4b5fd;
 
-    border-radius: 30px;
+    color: var(--primary-purple);
 
-    background: rgba(255,255,255,.18);
+}
 
-    backdrop-filter: blur(10px);
+
+.tab-button.active {
+
+    background: var(--primary-purple);
+
+    color: #ffffff;
+
+    border-color: var(--primary-purple);
+
+}
+
+
+.program-content {
+
+    display: none;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    border: 1px solid #e5e7eb;
+
+}
+
+
+.program-content.active {
+
+    display: block;
+
+}
+
+
+.program-content ul {
+
+    padding-left: 20px;
+
+}
+
+
+.program-content li {
+
+    color: #475569;
+
+    margin-bottom: 10px;
+
+}
+
+
+.program-btn {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 28px;
+
+}
+
+
+.btn-program {
+
+    background: var(--primary-purple);
+
+    color: #ffffff;
+
+}
+
+
+
+/* =====================================================
+   MENGAPA KAMI
+===================================================== */
+
+.mengapa-kami {
+
+    padding: 90px 0;
+
+    background: #ffffff;
+
+}
+
+
+.mengapa-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.mengapa-card {
+
+    min-height: 230px;
+
+    padding: 28px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+
+}
+
+
+.mengapa-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.08);
+
+}
+
+
+.mengapa-card i {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    background: var(--light-purple);
+
+    color: var(--primary-purple);
+
+    font-size: 22px;
+
+}
+
+
+.mengapa-card h3 {
+
+    color: var(--dark-purple);
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+
+}
+
+
+.mengapa-card p {
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* =====================================================
+   FASILITAS
+===================================================== */
+
+.fasilitas {
+
+    padding: 90px 0;
+
+    background: var(--bg-color);
+
+}
+
+
+.video-tour {
+
+    max-width: 950px;
+
+    margin: 0 auto 45px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #000;
+
+}
+
+
+.video-tour video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 520px;
+
+}
+
+
+.facility-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.facility-card {
+
+    min-height: 210px;
+
+    padding: 27px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+}
+
+
+.facility-card i {
+
+    color: var(--primary-purple);
+
+    font-size: 27px;
+
+    margin-bottom: 14px;
+
+}
+
+
+.facility-card h3 {
+
+    color: var(--dark-purple);
+
+    font-size: 17px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.facility-card p {
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.facility-footer {
+
+    max-width: 800px;
+
+    margin: 35px auto 0;
+
+    text-align: center;
+
+}
+
+
+.facility-footer p {
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq {
+
+    padding: 90px 0;
+
+    background: #ffffff;
+
+}
+
+
+.faq .section-title {
+
+    margin-bottom: 35px;
+
+}
+
+
+.faq-list {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+}
+
+
+.faq-item {
+
+    max-width: 850px;
+
+    margin: 0 auto 12px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+}
+
+
+.faq-question {
+
+    width: 100%;
+
+    min-height: 62px;
+
+    padding: 18px 22px;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+.faq-question:hover {
+
+    color: var(--primary-purple);
+
+    background: #faf7ff;
+
+}
+
+
+.faq-question i {
+
+    flex-shrink: 0;
+
+    color: var(--primary-purple);
+
+    font-size: 14px;
+
+}
+
+
+.faq-answer {
+
+    display: none;
+
+    padding: 0 22px 20px;
+
+    background: #ffffff;
+
+}
+
+
+.faq-answer p {
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =====================================================
+   KONTAK
+===================================================== */
+
+.kontak {
+
+    padding: 90px 0;
+
+    background: var(--bg-color);
+
+}
+
+
+.kontak-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.kontak-card {
+
+    min-height: 150px;
+
+    padding: 25px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+}
+
+
+.kontak-card h3 {
+
+    color: var(--dark-purple);
 
     font-size: 16px;
 
-    font-weight: 600;
+    margin-bottom: 8px;
 
 }
 
 
-/* =========================================
-   RESPONSIVE MOBILE
-========================================= */
+.kontak-card p {
 
-@media (max-width:768px) {
+    color: var(--text-muted);
 
-    .hero {
+    font-size: 13px;
 
-        min-height: auto;
+}
 
-        padding: 80px 20px 60px;
+
+
+/* =====================================================
+   MAPS
+===================================================== */
+
+.maps {
+
+    width: 100%;
+
+    background: #ffffff;
+
+}
+
+
+.maps iframe {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    padding: 55px 0 25px;
+
+    background: #17132e;
+
+    color: #cbd5e1;
+
+}
+
+
+.footer-logo {
+
+    text-align: center;
+
+    max-width: 600px;
+
+    margin: 0 auto 40px;
+
+}
+
+
+.footer-logo img {
+
+    width: 145px;
+
+    height: auto;
+
+    margin: 0 auto 15px;
+
+}
+
+
+.footer-logo h2 {
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.footer-logo p {
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+}
+
+
+.footer-box h3 {
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.footer-box ul {
+
+    list-style: none;
+
+}
+
+
+.footer-box li {
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.copyright {
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    text-align: center;
+
+}
+
+
+.copyright p {
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+}
+
+
+
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
+
+.floating-whatsapp {
+
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    z-index: 900;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 12px 17px;
+
+    border-radius: 50px;
+
+    background: var(--primary-purple);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(91, 33, 182, 0.25);
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.floating-whatsapp i {
+
+    font-size: 18px;
+
+}
+
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.back-to-top {
+
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 82px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: var(--primary-purple);
+
+    box-shadow:
+        0 5px 20px rgba(15,23,42,0.12);
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 899;
+
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+
+        grid-template-columns:
+            160px
+            1fr
+            160px;
+
+        gap: 10px;
 
     }
 
 
-    .hero-content {
+    .logo img {
 
-        transform: none;
-
-    }
-
-
-    .hero-logo img {
-
-        width: 280px;
+        width: 140px;
 
     }
 
 
-    .hero-text h1 {
-
-        font-size: 38px;
-
-        transform: none;
-
-    }
-
-
-    .hero-description {
-
-        font-size: 18px;
-
-    }
-
-
-    .hero-button {
-
-        flex-direction: column;
-
-    }
-
-
-    .hero-stats {
+    .nav-menu {
 
         gap: 15px;
 
     }
 
 
-    .stat-card {
+    .nav-menu a {
 
-        width: 45%;
-
-        min-width: 140px;
-
-        padding: 18px;
+        font-size: 13px;
 
     }
 
 
-    .stat-card h3 {
+    .btn-navbar {
 
-        font-size: 28px;
+        padding: 11px 14px;
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-content {
+
+        gap: 35px;
+
+    }
+
+
+    .hero-left h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .mengapa-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .kontak-grid {
+
+        grid-template-columns: repeat(2, 1fr);
 
     }
 
 }
 
 
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+
+    .container {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+
+        min-height: 74px;
+
+        padding: 0 18px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 0;
+
+    }
+
+
+    .logo {
+
+        justify-self: auto;
+
+    }
+
+
+    .logo img {
+
+        width: 125px;
+
+        max-height: 48px;
+
+    }
+
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 74px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 8px 18px 15px;
+
+        background: #ffffff;
+
+        border-bottom: 1px solid #eeeeee;
+
+        box-shadow:
+            0 10px 25px rgba(15,23,42,0.07);
+
+    }
+
+
+    .nav-menu.active {
+
+        display: flex;
+
+    }
+
+
+    .nav-menu a {
+
+        padding: 11px 4px;
+
+        font-size: 14px;
+
+    }
+
+
+    .btn-navbar {
+
+        display: none;
+
+    }
+
+
+    .hamburger {
+
+        display: flex;
+
+        width: 27px;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        cursor: pointer;
+
+    }
+
+
+    .hamburger span {
+
+        display: block;
+
+        width: 100%;
+
+        height: 3px;
+
+        border-radius: 3px;
+
+        background: var(--primary-purple);
+
+    }
+
+
+
+    /* HERO */
+
+    .hero {
+
+        padding: 60px 0;
+
+    }
+
+
+    .hero-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .hero-left h1 {
+
+        font-size: 34px;
+
+        line-height: 1.2;
+
+    }
+
+
+    .hero-left > p {
+
+        font-size: 14px;
+
+    }
+
+
+    .hero-stats {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .stat-card {
+
+        padding: 20px 16px;
+
+    }
+
+
+    .stat-card h2 {
+
+        font-size: 27px;
+
+    }
+
+
+
+    /* SECTION */
+
+    .section-title {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .section-title p {
+
+        font-size: 13px;
+
+    }
+
+
+
+    /* TENTANG */
+
+    .tentang {
+
+        padding: 65px 0;
+
+    }
+
+
+    .tentang-wrapper {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .tentang-image img {
+
+        height: 280px;
+
+    }
+
+
+    .tentang-text h2 {
+
+        font-size: 29px;
+
+    }
+
+
+    .tentang-text p:not(.section-tag) {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+        text-align: justify;
+
+    }
+
+
+
+    /* PROGRAM */
+
+    .program {
+
+        padding: 65px 0;
+
+    }
+
+
+    .program-tabs {
+
+        gap: 7px;
+
+    }
+
+
+    .tab-button {
+
+        padding: 9px 16px;
+
+        font-size: 13px;
+
+    }
+
+
+    .program-content {
+
+        padding: 23px 20px;
+
+    }
+
+
+    .program-content li {
+
+        font-size: 14px;
+
+    }
+
+
+
+    /* MENGAPA */
+
+    .mengapa-kami {
+
+        padding: 65px 0;
+
+    }
+
+
+    .mengapa-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .mengapa-card {
+
+        min-height: auto;
+
+    }
+
+
+
+    /* FASILITAS */
+
+    .fasilitas {
+
+        padding: 65px 0;
+
+    }
+
+
+    .facility-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .facility-card {
+
+        min-height: auto;
+
+    }
+
+
+
+    /* FAQ */
+
+    .faq {
+
+        padding: 65px 0;
+
+    }
+
+
+    .faq-question {
+
+        min-height: 58px;
+
+        padding: 16px 17px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+    }
+
+
+    .faq-answer {
+
+        padding: 0 17px 18px;
+
+    }
+
+
+    .faq-answer p {
+
+        font-size: 13px;
+
+    }
+
+
+
+    /* KONTAK */
+
+    .kontak {
+
+        padding: 65px 0;
+
+    }
+
+
+    .kontak-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    /* MAP */
+
+    .maps iframe {
+
+        height: 350px;
+
+    }
+
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding: 45px 0 20px;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        text-align: center;
+
+    }
+
+
+    .footer-logo h2 {
+
+        font-size: 19px;
+
+    }
+
+
+
+    /* FLOATING WHATSAPP */
+
+    .floating-whatsapp {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        padding: 11px 15px;
+
+        font-size: 12px;
+
+    }
+
+
+    .back-to-top {
+
+        right: 15px;
+
+        bottom: 70px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+
+    .logo img {
+
+        width: 115px;
+
+    }
+
+
+    .hero-left h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .hero-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .floating-whatsapp span {
+
+        display: none;
+
+    }
+
+
+    .floating-whatsapp {
+
+        width: 45px;
+
+        height: 45px;
+
+        justify-content: center;
+
+        padding: 0;
+
+    }
+
+}
