@@ -1,403 +1,333 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bukan Cuma Nilai, Ini Skill yang Wajib Kamu Punya di Sekolah | New Primagama Sunter Indah</title>
+    <title>Bukan Cuma Nilai, Ini Skill yang Wajib Kamu Punya di Sekolah - New Primagama Sunter Indah</title>
 
-    <meta name="description"
-        content="Sekolah bukan cuma soal nilai. Ada banyak skill penting yang bisa membantu kamu belajar, berkomunikasi, bekerja sama, dan menghadapi tantangan.">
+    <meta name="description" content="Sekolah bukan cuma soal nilai. Ada berbagai kemampuan yang penting untuk dilatih sejak sekarang agar kamu lebih siap menghadapi masa depan.">
 
-    <link rel="canonical"
-        href="https://newprimagamasunterindah.com/bukan-cuma-nilai.html">
+    <link rel="icon" href="Logo-NP-Zenius-transparan.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+        *{margin:0;padding:0;box-sizing:border-box}
 
-        * {
-            box-sizing: border-box;
+        body{
+            font-family:Arial,Helvetica,sans-serif;
+            color:#172033;
+            background:#fff;
+            line-height:1.75;
         }
 
-        html {
-            scroll-behavior: smooth;
+        a{text-decoration:none;color:inherit}
+
+        .navbar{
+            width:100%;
+            min-height:88px;
+            padding:0 5.5%;
+            display:grid;
+            grid-template-columns:200px 1fr 200px;
+            align-items:center;
+            gap:20px;
+            background:#fff;
+            border-bottom:1px solid #eee;
+            position:sticky;
+            top:0;
+            z-index:1000;
         }
 
-        body {
-            margin: 0;
-            background: #ffffff;
-            color: #1e293b;
-            font-family: "Poppins", sans-serif;
-            overflow-x: hidden;
+        .logo{justify-self:start}
+
+        .logo img{
+            width:165px;
+            height:auto;
+            display:block;
         }
 
-        a {
-            text-decoration: none;
+        .nav-menu{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:24px;
         }
 
-        :root {
-            --purple: #5b21b6;
-            --purple-dark: #211d55;
-            --purple-light: #f3e8ff;
-            --yellow: #facc15;
-            --muted: #64748b;
-            --border: #e2e8f0;
+        .nav-menu a{
+            font-size:15px;
+            font-weight:600;
+            color:#334155;
+            white-space:nowrap;
         }
 
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 9999;
+        .nav-menu a.active{color:#5b21b6}
 
-            width: 100%;
-            height: 100px;
-
-            padding: 0 5.5%;
-
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-
-            background: #ffffff;
-            border-bottom: 1px solid #eeeeee;
+        .nav-button{
+            justify-self:end;
+            background:#5b21b6;
+            color:#fff!important;
+            padding:12px 18px;
+            border-radius:9px;
+            font-size:14px;
+            font-weight:700;
+            white-space:nowrap;
         }
 
-        .logo img {
-            width: 185px;
-            height: auto;
-            display: block;
+        .hamburger{display:none}
+
+        .article-wrapper{
+            width:100%;
+            max-width:1080px;
+            margin:0 auto;
+            padding:52px 25px 75px;
         }
 
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 30px;
+        .article-header{
+            max-width:900px;
+            margin:0 auto;
         }
 
-        .nav-menu a {
-            color: #334155;
-            font-size: 15px;
-            font-weight: 500;
-            white-space: nowrap;
+        .article-category{
+            display:inline-block;
+            background:#f3e8ff;
+            color:#5b21b6;
+            font-size:12px;
+            font-weight:700;
+            padding:7px 14px;
+            border-radius:50px;
+            margin-bottom:18px;
         }
 
-        .nav-menu a:hover,
-        .nav-menu a.active {
-            color: var(--purple);
+        .article-title{
+            font-size:42px;
+            line-height:1.18;
+            font-weight:800;
+            color:#211b55;
+            margin-bottom:15px;
         }
 
-        .btn-navbar {
-            justify-self: end;
-
-            padding: 14px 24px;
-
-            border-radius: 10px;
-
-            background: var(--purple);
-            color: #ffffff !important;
-
-            font-size: 14px !important;
-            font-weight: 700 !important;
+        .article-date{
+            color:#7890ad;
+            font-size:14px;
+            margin-bottom:30px;
         }
 
-        .hamburger {
-            display: none;
-
-            border: 0;
-            background: transparent;
-
-            color: var(--purple);
-
-            font-size: 23px;
+        .article-image{
+            width:100%;
+            max-width:900px;
+            margin:0 auto 38px;
+            border-radius:16px;
+            overflow:hidden;
+            background:#f8fafc;
         }
 
-        .article-wrapper {
-            width: 100%;
-            max-width: 1080px;
-
-            margin: auto;
-
-            padding: 70px 25px 90px;
+        .article-image img{
+            width:100%;
+            height:360px;
+            display:block;
+            object-fit:cover;
         }
 
-        .article-header {
-            max-width: 1000px;
-            margin: auto;
+        .image-credit{
+            padding:9px 14px;
+            background:#f8fafc;
+            color:#64748b;
+            font-size:12px;
         }
 
-        .article-category {
-            display: inline-block;
-
-            margin-bottom: 28px;
-
-            padding: 9px 18px;
-
-            border-radius: 9px;
-
-            background: var(--purple-light);
-            color: var(--purple);
-
-            font-size: 13px;
-            font-weight: 700;
+        .article-content{
+            max-width:760px;
+            margin:0 auto;
+            text-align:left;
         }
 
-        .article-title {
-            margin: 0 0 28px;
-
-            color: var(--purple-dark);
-
-            font-size: clamp(42px, 5vw, 68px);
-            line-height: 1.18;
-
-            font-weight: 800;
-
-            letter-spacing: -2px;
+        .article-content p{
+            font-size:16px;
+            color:#475569;
+            margin-bottom:18px;
+            text-align:left;
         }
 
-        .article-date {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            margin-bottom: 42px;
-
-            color: #94a3b8;
-
-            font-size: 14px;
+        .article-content h2{
+            color:#211b55;
+            font-size:24px;
+            line-height:1.35;
+            margin:32px 0 12px;
+            text-align:left;
         }
 
-        .article-image {
-            width: 100%;
-
-            margin-bottom: 48px;
-
-            border-radius: 18px;
-
-            overflow: hidden;
-
-            background: #f8fafc;
+        .article-content ul{
+            padding-left:22px;
+            margin-bottom:20px;
         }
 
-        .article-image img {
-            width: 100%;
-            height: 500px;
-
-            display: block;
-
-            object-fit: cover;
+        .article-content li{
+            margin-bottom:8px;
+            color:#475569;
+            text-align:left;
         }
 
-        .article-content {
-            max-width: 820px;
-            margin: auto;
+        .article-cta{
+            max-width:760px;
+            margin:42px auto 30px;
+            padding:28px 24px;
+            background:#5b21b6;
+            border-radius:16px;
+            text-align:center;
+            color:#fff;
         }
 
-        .article-content p {
-            margin: 0 0 22px;
-
-            color: #475569;
-
-            font-size: 16px;
-            line-height: 1.9;
+        .article-cta h2{
+            font-size:24px;
+            margin-bottom:8px;
         }
 
-        .article-content h2 {
-            margin: 42px 0 16px;
-
-            color: var(--purple-dark);
-
-            font-size: 28px;
-            line-height: 1.35;
-
-            font-weight: 800;
+        .article-cta p{
+            color:#eee;
+            margin-bottom:18px;
         }
 
-        .article-cta {
-            max-width: 820px;
-
-            margin: 55px auto 40px;
-
-            padding: 35px;
-
-            background: var(--purple);
-
-            border-radius: 18px;
-
-            text-align: center;
-
-            color: #ffffff;
+        .cta-button{
+            display:inline-block;
+            background:#fff;
+            color:#5b21b6;
+            padding:11px 20px;
+            border-radius:8px;
+            font-weight:700;
+            font-size:14px;
         }
 
-        .article-cta h2 {
-            margin: 0 0 10px;
-            font-size: 25px;
+        .back-blog{
+            text-align:center;
+            margin-top:24px;
         }
 
-        .article-cta p {
-            margin: 0 0 22px;
-
-            color: rgba(255,255,255,.85);
-
-            font-size: 14px;
+        .back-blog a{
+            color:#5b21b6;
+            font-weight:700;
+            font-size:14px;
         }
 
-        .article-cta a {
-            display: inline-flex;
-
-            padding: 12px 20px;
-
-            border-radius: 9px;
-
-            background: var(--yellow);
-            color: #422006;
-
-            font-size: 13px;
-            font-weight: 700;
+        footer{
+            background:#17132e;
+            color:#cbd5e1;
+            text-align:center;
+            padding:24px 15px;
+            font-size:13px;
         }
 
-        .back-blog {
-            max-width: 820px;
-            margin: auto;
-        }
-
-        .back-blog a {
-            color: var(--purple);
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .article-footer {
-            padding: 28px 20px;
-
-            border-top: 1px solid var(--border);
-
-            text-align: center;
-
-            color: var(--muted);
-
-            font-size: 11px;
-        }
-
-        @media (max-width: 768px) {
-
-            .navbar {
-                height: 82px;
-
-                padding: 0 20px;
-
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+        @media(max-width:1100px){
+            .navbar{
+                grid-template-columns:175px 1fr 175px;
+                gap:10px;
             }
 
-            .logo img {
-                width: 125px;
-            }
-
-            .nav-menu {
-                position: absolute;
-
-                top: 82px;
-                left: 0;
-
-                width: 100%;
-
-                display: none;
-
-                flex-direction: column;
-                align-items: stretch;
-
-                gap: 0;
-
-                padding: 10px 20px 20px;
-
-                background: #ffffff;
-
-                border-bottom: 1px solid #eeeeee;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-menu a {
-                padding: 13px 5px;
-                border-bottom: 1px solid #f1f5f9;
-            }
-
-            .btn-navbar {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-
-                width: 40px;
-                height: 40px;
-
-                align-items: center;
-                justify-content: center;
-
-                margin-left: auto;
-            }
-
-            .article-wrapper {
-                padding: 45px 20px 65px;
-            }
-
-            .article-title {
-                font-size: 37px;
-                letter-spacing: -1px;
-            }
-
-            .article-category {
-                font-size: 11px;
-                padding: 8px 13px;
-            }
-
-            .article-date {
-                font-size: 12px;
-                margin-bottom: 30px;
-            }
-
-            .article-image {
-                border-radius: 13px;
-            }
-
-            .article-image img {
-                width: 100%;
-                height: auto;
-                max-height: none;
-            }
-
-            .article-content p {
-                font-size: 15px;
-            }
-
-            .article-content h2 {
-                font-size: 24px;
-            }
-
-            .article-cta {
-                padding: 27px 20px;
-            }
-
+            .nav-menu{gap:16px}
+            .nav-menu a{font-size:14px}
+            .logo img{width:150px}
         }
 
+        @media(max-width:768px){
+            .navbar{
+                min-height:76px;
+                padding:0 18px;
+                display:flex;
+                justify-content:space-between;
+                gap:0;
+            }
+
+            .logo img{width:125px}
+
+            .nav-menu{
+                position:absolute;
+                top:76px;
+                left:0;
+                width:100%;
+                display:none;
+                flex-direction:column;
+                align-items:stretch;
+                gap:0;
+                background:#fff;
+                border-bottom:1px solid #eee;
+                padding:8px 18px 16px;
+                box-shadow:0 8px 20px rgba(0,0,0,.06);
+            }
+
+            .nav-menu.active{display:flex}
+
+            .nav-menu a{
+                padding:11px 5px;
+                font-size:14px;
+            }
+
+            .nav-button{display:none}
+
+            .hamburger{
+                display:block;
+                color:#5b21b6;
+                font-size:22px;
+                cursor:pointer;
+            }
+
+            .article-wrapper{
+                padding:36px 18px 60px;
+            }
+
+            .article-title{
+                font-size:30px;
+                line-height:1.22;
+            }
+
+            .article-category{
+                font-size:11px;
+                padding:6px 12px;
+            }
+
+            .article-date{
+                font-size:13px;
+                margin-bottom:22px;
+            }
+
+            .article-image{
+                margin-bottom:28px;
+                border-radius:12px;
+            }
+
+            .article-image img{height:220px}
+
+            .image-credit{font-size:11px}
+
+            .article-content{
+                max-width:100%;
+                text-align:left;
+            }
+
+            .article-content p{
+                font-size:15px;
+                text-align:left;
+            }
+
+            .article-content h2{
+                font-size:21px;
+                text-align:left;
+            }
+
+            .article-cta{
+                padding:24px 18px;
+                margin-top:34px;
+            }
+
+            .article-cta h2{font-size:21px}
+        }
+
+        @media(max-width:380px){
+            .logo img{width:115px}
+            .article-title{font-size:27px}
+            .article-image img{height:200px}
+        }
     </style>
-
 </head>
 
 <body>
@@ -406,218 +336,169 @@
 
     <div class="logo">
         <a href="blog.html">
-            <img
-                src="Logo-NP-Zenius-transparan.png"
-                alt="Logo New Primagama Sunter Indah">
+            <img src="Logo-NP-Zenius-transparan.png"
+                 alt="Logo New Primagama Sunter Indah">
         </a>
     </div>
 
     <nav class="nav-menu" id="navMenu">
-
-        <a href="index.html#hero">Beranda</a>
+        <a href="index.html">Beranda</a>
         <a href="index.html#tentang">Tentang</a>
         <a href="index.html#program">Program</a>
         <a href="index.html#fasilitas">Fasilitas</a>
         <a href="index.html#faq">FAQ</a>
         <a href="index.html#kontak">Kontak</a>
         <a href="blog.html" class="active">Blog</a>
-
-        <a href="index.html#kontak" class="btn-navbar">
-            Daftar Sekarang
-        </a>
-
     </nav>
 
-    <button class="hamburger" id="hamburger">
+    <a href="index.html#kontak" class="nav-button">
+        Daftar Sekarang
+    </a>
+
+    <div class="hamburger" id="hamburger">
         <i class="fa-solid fa-bars"></i>
-    </button>
+    </div>
 
 </header>
-
 
 <main class="article-wrapper">
 
     <header class="article-header">
 
-        <div class="article-category">
-            EDUKASI & SEKOLAH
-        </div>
+        <span class="article-category">
+            Edukasi &amp; Sekolah
+        </span>
 
         <h1 class="article-title">
             Bukan Cuma Nilai, Ini Skill yang Wajib Kamu Punya di Sekolah
         </h1>
 
         <div class="article-date">
-
             <i class="fa-regular fa-calendar"></i>
-
-            <span>18 September 2026</span>
-
-            <span>•</span>
-
-            <span>New Primagama Sunter Indah</span>
-
+            2 Agustus 2026 &nbsp;•&nbsp; New Primagama Sunter Indah
         </div>
 
     </header>
 
-
     <div class="article-image">
 
         <img
-            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=85"
-            alt="Siswa belajar bersama di sekolah"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/School_students_in_Indonesia_participating_in_Wikimedia_Design_Research.jpg"
+            alt="Siswa sekolah Indonesia mengikuti kegiatan pembelajaran"
             loading="eager">
 
-    </div>
+        <div class="image-credit">
+            Sumber foto: RAyyakkannu / Wikimedia Commons
+        </div>
 
+    </div>
 
     <article class="article-content">
 
         <p>
-            Nilai memang menjadi salah satu bagian dari perjalanan sekolah. Tetapi kehidupan
-            sekolah sebenarnya juga menjadi tempat untuk mengembangkan berbagai kemampuan yang
-            akan berguna di luar kelas.
+            Nilai memang penting dalam perjalanan sekolah. Tapi ternyata ada
+            banyak kemampuan lain yang juga perlu kamu punya karena bakal kepakai
+            bukan cuma saat belajar, tapi juga dalam kehidupan sehari-hari.
+        </p>
+
+        <h2>1. Komunikasi</h2>
+
+        <p>
+            Bisa menyampaikan pendapat dengan jelas adalah kemampuan yang berguna
+            banget. Mulai dari presentasi di kelas sampai ngobrol dengan teman,
+            komunikasi yang baik bisa membantu menghindari salah paham.
+        </p>
+
+        <h2>2. Mengatur Waktu</h2>
+
+        <p>
+            Tugas sekolah, belajar, kegiatan, dan waktu istirahat harus bisa
+            diatur dengan baik. Kemampuan mengatur waktu membantu kamu menentukan
+            mana yang harus dikerjakan lebih dulu.
+        </p>
+
+        <h2>3. Kerja Sama</h2>
+
+        <p>
+            Di sekolah kamu pasti pernah mendapat tugas kelompok. Dari sini kamu
+            bisa belajar bagaimana bekerja sama, membagi tugas, dan menghargai
+            pendapat orang lain.
+        </p>
+
+        <h2>4. Berpikir Kritis</h2>
+
+        <p>
+            Jangan langsung percaya pada semua informasi yang kamu lihat.
+            Biasakan mencari tahu sumbernya, membandingkan informasi, dan
+            mempertimbangkan apakah sesuatu memang masuk akal.
+        </p>
+
+        <h2>5. Berani Bertanya</h2>
+
+        <p>
+            Kalau ada materi yang belum dipahami, jangan takut bertanya.
+            Bertanya bukan berarti nggak pintar. Justru dengan bertanya kamu
+            bisa mendapatkan pemahaman yang lebih jelas.
+        </p>
+
+        <h2>6. Bertanggung Jawab</h2>
+
+        <p>
+            Mulai dari mengerjakan tugas sampai menjaga barang sendiri,
+            tanggung jawab adalah kebiasaan yang penting dilatih sejak sekolah.
+        </p>
+
+        <h2>7. Mampu Beradaptasi</h2>
+
+        <p>
+            Situasi sekolah bisa berubah. Teman baru, guru baru, sistem belajar
+            baru, atau tugas baru bisa membuat kamu harus menyesuaikan diri.
+            Kemampuan beradaptasi akan membantu kamu menghadapi perubahan tersebut.
         </p>
 
         <p>
-            Ada beberapa skill yang bisa mulai dilatih sejak sekolah dan tidak selalu terlihat
-            dari angka yang ada di rapor.
-        </p>
-
-
-        <h2>
-            1. Kemampuan Berkomunikasi
-        </h2>
-
-        <p>
-            Kemampuan menyampaikan pendapat dengan jelas sangat berguna dalam kegiatan belajar.
-            Mulai dari bertanya kepada guru, melakukan presentasi, sampai berdiskusi bersama
-            teman.
-        </p>
-
-
-        <h2>
-            2. Kerja Sama
-        </h2>
-
-        <p>
-            Tugas kelompok mengajarkan kita untuk bekerja bersama orang lain. Kamu perlu belajar
-            membagi tugas, mendengarkan pendapat, dan menyelesaikan tanggung jawab masing-masing.
-        </p>
-
-
-        <h2>
-            3. Mengatur Waktu
-        </h2>
-
-        <p>
-            Sekolah punya banyak aktivitas. Ada pelajaran, tugas, kegiatan sekolah, dan waktu
-            untuk beristirahat. Karena itu, kemampuan mengatur waktu menjadi hal penting.
-        </p>
-
-
-        <h2>
-            4. Berpikir Kritis
-        </h2>
-
-        <p>
-            Jangan hanya menerima informasi begitu saja. Biasakan bertanya, membandingkan informasi,
-            dan mencari alasan di balik sebuah jawaban.
-        </p>
-
-
-        <h2>
-            5. Bertanggung Jawab
-        </h2>
-
-        <p>
-            Tanggung jawab bisa dilatih dari hal sederhana seperti menyelesaikan tugas tepat
-            waktu, menjaga perlengkapan sekolah, dan menjalankan bagian tugas kelompok.
-        </p>
-
-
-        <h2>
-            Kesimpulan
-        </h2>
-
-        <p>
-            Sekolah bukan cuma tempat untuk mengejar nilai. Banyak kemampuan lain yang bisa
-            berkembang melalui proses belajar dan kegiatan sehari-hari. Dengan melatih skill
-            tersebut sejak sekarang, kamu bisa lebih siap menghadapi berbagai situasi di masa
-            depan.
+            Jadi, jangan cuma mengejar angka di rapor. Manfaatkan masa sekolah
+            untuk melatih kemampuan yang nantinya akan tetap berguna ketika kamu
+            melanjutkan pendidikan atau masuk ke dunia kerja.
         </p>
 
     </article>
 
+    <div class="article-cta">
 
-    <section class="article-cta">
-
-        <h2>
-            Belajar lebih dari sekadar nilai
-        </h2>
+        <h2>Belajar Lebih dari Sekadar Nilai</h2>
 
         <p>
-            Temukan pendampingan belajar yang sesuai bersama New Primagama Sunter Indah.
+            Temukan suasana belajar yang membantu kamu berkembang bersama
+            New Primagama Sunter Indah.
         </p>
 
-        <a
-            href="https://wa.me/6285285705335"
-            target="_blank">
-            Konsultasi Gratis
-        </a>
-
-    </section>
-
-
-    <div class="back-blog">
-
-        <a href="blog.html">
-            ← Kembali ke Blog
+        <a href="https://wa.me/6285285705335" class="cta-button">
+            Konsultasi Sekarang
         </a>
 
     </div>
 
+    <div class="back-blog">
+        <a href="https://newprimagamasunterindah.com/blog.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            Kembali ke Blog
+        </a>
+    </div>
+
 </main>
 
-
-<footer class="article-footer">
-
-    © 2026 New Primagama Sunter Indah.
-    Semua Hak Dilindungi.
-
+<footer>
+    © 2026 New Primagama Sunter Indah. Semua Hak Dilindungi.
 </footer>
 
-
 <script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
 
-    const hamburger =
-        document.getElementById("hamburger");
-
-    const navMenu =
-        document.getElementById("navMenu");
-
-    hamburger.addEventListener("click", function () {
-
+    hamburger.addEventListener("click", function(){
         navMenu.classList.toggle("active");
-
-        const icon =
-            hamburger.querySelector("i");
-
-        if (navMenu.classList.contains("active")) {
-
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-xmark");
-
-        } else {
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        }
-
     });
-
 </script>
 
 </body>
