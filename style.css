@@ -2781,6 +2781,22 @@ section{
       TENTANG KAMI - MODEL CARD MODERN
 =========================================*/
 
+/* Layout Dasar Wrapper */
+.tentang-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.tentang-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* Tipografi Judul & Intro */
 .tentang-text h2 {
     font-size: 24px;
     font-weight: 700;
@@ -2793,15 +2809,17 @@ section{
     line-height: 1.6;
     color: #64748B;
     margin-bottom: 24px;
-    text-align: left; /* Rata kiri agar spasi antar kata tidak bolong */
+    text-align: left; /* Rata kiri agar spasi tidak bolong-bolong di HP */
 }
 
+/* Layout Grid Card */
 .tentang-cards {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
+/* Kartu Individual */
 .t-card {
     display: flex;
     align-items: flex-start;
@@ -2820,11 +2838,12 @@ section{
     border-color: #C4B5FD;
 }
 
+/* Ikon Kartu */
 .t-card-icon {
     width: 44px;
     height: 44px;
     background: #F3E8FF;
-    color: #5B21B6;
+    color: #5B21B6; /* Warna Ungu Primagama */
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -2833,6 +2852,7 @@ section{
     flex-shrink: 0;
 }
 
+/* Teks dalam Kartu */
 .t-card-content h3 {
     font-size: 15px;
     font-weight: 600;
@@ -2845,20 +2865,33 @@ section{
     line-height: 1.55;
     color: #475569;
     margin: 0;
-    text-align: left !important; /* Mencegah masalah text justify */
+    text-align: left !important;
 }
 
-/* Tampilan di Laptop */
+/* Responsif Layar Laptop / Desktop (Min 768px) */
 @media (min-width: 768px) {
+    .tentang-wrapper {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .tentang-image, 
+    .tentang-text {
+        flex: 1;
+    }
+
     .tentang-text h2 {
         font-size: 28px;
     }
+
     .tentang-intro {
         font-size: 15px;
     }
+
     .t-card-content h3 {
         font-size: 16px;
     }
+
     .t-card-content p {
         font-size: 14px;
     }
