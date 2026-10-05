@@ -2776,3 +2776,41 @@ section{
     width: 100%;
     font-weight: 600;
 }
+
+/*=========================================
+          OPTIMASI TENTANG KAMI
+=========================================*/
+
+.tentang-text p {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 16px;
+    
+    /* Mencegah spasi antar kata terlalu lebar pada teks rata kanan-kiri */
+    hyphens: auto;
+    word-break: normal;
+}
+
+.tentang-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsif untuk Layar Laptop / Desktop */
+@media (min-width: 1024px) {
+    .tentang-text p {
+        font-size: 16px; /* Ukuran teks sedikit lebih besar agar nyaman dibaca di layar lebar */
+        line-height: 1.85;
+    }
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 480px) {
+    .tentang-text p {
+        font-size: 14px; /* Ukuran pas untuk layar smartphone */
+        line-height: 1.7;
+        text-align: left; /* Pada HP yang sangat kecil, rata kiri lebih nyaman dibaca */
+    }
+}
