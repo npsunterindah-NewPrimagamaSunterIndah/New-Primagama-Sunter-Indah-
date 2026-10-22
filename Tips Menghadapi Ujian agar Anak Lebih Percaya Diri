@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tips Menghadapi Ujian agar Anak Lebih Percaya Diri - New Primagama Sunter Indah</title>
+    <meta name="description" content="Tips membantu anak menghadapi ujian dengan lebih percaya diri melalui persiapan yang teratur, latihan soal, istirahat cukup, dan cara mengelola rasa gugup.">
+
+    <link rel="icon" href="Logo-NP-Zenius-transparan.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #172033;
+            background: #fff;
+            line-height: 1.75;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .navbar {
+            width: 100%;
+            min-height: 88px;
+            padding: 0 5.5%;
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            align-items: center;
+            gap: 20px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            justify-self: start;
+        }
+
+        .logo img {
+            width: 165px;
+            height: auto;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-menu a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #334155;
+            white-space: nowrap;
+        }
+
+        .nav-menu a.active {
+            color: #5b21b6;
+        }
+
+        .nav-button {
+            justify-self: end;
+            background: #5b21b6;
+            color: #fff !important;
+            padding: 12px 18px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .article-wrapper {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 52px 25px 75px;
+        }
+
+        .article-header {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #f3e8ff;
+            color: #5b21b6;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 7px 14px;
+            border-radius: 50px;
+            margin-bottom: 18px;
+        }
+
+        .article-title {
+            font-size: 42px;
+            line-height: 1.18;
+            font-weight: 800;
+            color: #211b55;
+            margin-bottom: 15px;
+        }
+
+        .article-date {
+            color: #7890ad;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 38px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #f8fafc;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 360px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .image-credit {
+            padding: 9px 14px;
+            background: #f8fafc;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        .article-content {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .article-content p {
+            font-size: 16px;
+            color: #475569;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .article-content h2 {
+            color: #211b55;
+            font-size: 24px;
+            line-height: 1.35;
+            margin: 32px 0 12px;
+            text-align: left;
+        }
+
+        .article-content ul {
+            padding-left: 22px;
+            margin-bottom: 20px;
+        }
+
+        .article-content li {
+            margin-bottom: 8px;
+            color: #475569;
+            text-align: left;
+        }
+
+        .article-cta {
+            max-width: 760px;
+            margin: 42px auto 30px;
+            padding: 28px 24px;
+            background: #5b21b6;
+            border-radius: 16px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .article-cta h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .article-cta p {
+            color: #eee;
+            margin-bottom: 18px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #5b21b6;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .back-blog {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .back-blog a {
+            color: #5b21b6;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #17132e;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 24px 15px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 1100px) {
+            .navbar {
+                grid-template-columns: 175px 1fr 175px;
+                gap: 10px;
+            }
+
+            .nav-menu {
+                gap: 16px;
+            }
+
+            .nav-menu a {
+                font-size: 14px;
+            }
+
+            .logo img {
+                width: 150px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                min-height: 76px;
+                padding: 0 18px;
+                display: flex;
+                justify-content: space-between;
+                gap: 0;
+            }
+
+            .logo img {
+                width: 125px;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 76px;
+                left: 0;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: #fff;
+                border-bottom: 1px solid #eee;
+                padding: 8px 18px 16px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 11px 5px;
+                font-size: 14px;
+            }
+
+            .nav-button {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+                color: #5b21b6;
+                font-size: 22px;
+                cursor: pointer;
+            }
+
+            .article-wrapper {
+                padding: 36px 18px 60px;
+            }
+
+            .article-title {
+                font-size: 30px;
+                line-height: 1.22;
+            }
+
+            .article-category {
+                font-size: 11px;
+                padding: 6px 12px;
+            }
+
+            .article-date {
+                font-size: 13px;
+                margin-bottom: 22px;
+            }
+
+            .article-image {
+                margin-bottom: 28px;
+                border-radius: 12px;
+            }
+
+            .article-image img {
+                height: 220px;
+            }
+
+            .image-credit {
+                font-size: 11px;
+            }
+
+            .article-content {
+                max-width: 100%;
+                text-align: left;
+            }
+
+            .article-content p {
+                font-size: 15px;
+                text-align: left;
+            }
+
+            .article-content h2 {
+                font-size: 21px;
+                text-align: left;
+            }
+
+            .article-cta {
+                padding: 24px 18px;
+                margin-top: 34px;
+            }
+
+            .article-cta h2 {
+                font-size: 21px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .logo img {
+                width: 115px;
+            }
+
+            .article-title {
+                font-size: 27px;
+            }
+
+            .article-image img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="blog.html">
+            <img src="Logo-NP-Zenius-transparan.png"
+                 alt="Logo New Primagama Sunter Indah">
+        </a>
+    </div>
+
+    <nav class="nav-menu" id="navMenu">
+        <a href="index.html">Beranda</a>
+        <a href="index.html#tentang">Tentang</a>
+        <a href="index.html#program">Program</a>
+        <a href="index.html#fasilitas">Fasilitas</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#kontak">Kontak</a>
+        <a href="blog.html" class="active">Blog</a>
+    </nav>
+
+    <a href="index.html#kontak" class="nav-button">Daftar Sekarang</a>
+
+    <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</header>
+
+<main class="article-wrapper">
+    <header class="article-header">
+        <span class="article-category">Tips Belajar</span>
+
+        <h1 class="article-title">
+            Tips Menghadapi Ujian agar Anak Lebih Percaya Diri
+        </h1>
+
+        <div class="article-date">
+            <i class="fa-regular fa-calendar"></i>
+            22 Oktober 2026 &nbsp;•&nbsp; New Primagama Sunter Indah
+        </div>
+    </header>
+
+    <div class="article-image">
+        <img
+            src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=85"
+            alt="Siswa mempersiapkan diri untuk menghadapi ujian"
+            loading="eager"
+            decoding="async"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=85';"
+        >
+        <div class="image-credit">Foto ilustrasi</div>
+    </div>
+
+    <article class="article-content">
+        <p>Menghadapi ujian bisa membuat anak merasa gugup, bahkan ketika ia sudah belajar. Perasaan tersebut wajar, tetapi jika terlalu besar dapat mengganggu konsentrasi. Orang tua dapat membantu anak merasa lebih siap dengan membangun kebiasaan belajar yang teratur dan memberi dukungan tanpa tekanan berlebihan.</p>
+
+        <p>Kepercayaan diri bukan berarti anak harus yakin bisa menjawab semua soal. Kepercayaan diri tumbuh ketika anak memahami apa yang perlu dipersiapkan, mau berusaha, dan tahu bahwa kesalahan bisa menjadi bahan untuk belajar.</p>
+
+        <h2>1. Buat Jadwal Belajar yang Realistis</h2>
+        <p>Hindari membiasakan anak belajar hanya pada malam sebelum ujian. Bantu anak membagi materi menjadi bagian-bagian kecil dan menentukan waktu belajar yang sesuai dengan rutinitasnya. Jadwal yang realistis membuat persiapan terasa lebih terarah dan tidak terlalu membebani.</p>
+
+        <h2>2. Utamakan Memahami Materi, Bukan Sekadar Menghafal</h2>
+        <p>Ajak anak menjelaskan kembali materi dengan kata-katanya sendiri. Jika anak dapat menerangkan konsep atau langkah penyelesaian soal, orang tua bisa mendapat gambaran apakah materi tersebut sudah dipahami. Tandai bagian yang masih membingungkan untuk dipelajari kembali.</p>
+
+        <h2>3. Berlatih Mengerjakan Soal</h2>
+        <p>Latihan soal membantu anak mengenali bentuk pertanyaan dan menerapkan materi yang sudah dipelajari. Setelah selesai, periksa jawaban bersama dan bahas kesalahan tanpa menyalahkan anak. Fokus pada alasan jawaban keliru dan cara memperbaikinya.</p>
+
+        <ul>
+            <li>Mulai dari soal yang sesuai dengan materi yang sudah dipelajari.</li>
+            <li>Latih anak membaca instruksi dan pertanyaan dengan teliti.</li>
+            <li>Gunakan batas waktu secara bertahap agar anak terbiasa mengatur waktu.</li>
+            <li>Catat tipe soal yang masih sering salah untuk menjadi bahan latihan berikutnya.</li>
+        </ul>
+
+        <h2>4. Ajarkan Cara Mengelola Rasa Gugup</h2>
+        <p>Saat merasa gugup, anak dapat berhenti sejenak, menarik napas perlahan, lalu kembali fokus pada hal yang bisa dilakukan. Ingatkan anak untuk mengerjakan soal satu per satu dan tidak membandingkan dirinya dengan teman. Jika satu soal terasa sulit, ia boleh melewatinya sementara dan kembali lagi setelah mengerjakan soal lain.</p>
+
+        <h2>5. Jaga Waktu Istirahat dan Kondisi Tubuh</h2>
+        <p>Tidur yang cukup, makan teratur, dan menyiapkan perlengkapan ujian sejak awal dapat membantu anak menjalani hari ujian dengan lebih nyaman. Hindari memaksakan belajar sampai larut malam karena anak juga membutuhkan waktu istirahat agar dapat berkonsentrasi.</p>
+
+        <h2>6. Berikan Dukungan, Bukan Tekanan</h2>
+        <p>Hindari menjadikan nilai sebagai satu-satunya ukuran keberhasilan. Hargai usaha, kedisiplinan, dan kemajuan anak. Kalimat sederhana seperti “Kerjakan sebaik yang kamu bisa” dapat membantu anak merasa didukung. Jika hasil ujian belum sesuai harapan, ajak anak mengevaluasi strategi belajarnya dan menyusun langkah perbaikan.</p>
+
+        <h2>7. Cari Bantuan Jika Anak Membutuhkannya</h2>
+        <p>Jika anak terus kesulitan memahami materi tertentu atau membutuhkan arahan tambahan, orang tua dapat berdiskusi dengan guru atau mempertimbangkan pendampingan belajar. Bantuan yang sesuai dapat membuat anak memiliki kesempatan untuk bertanya, mengulang materi, dan berlatih secara lebih terarah.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Membantu anak lebih percaya diri menghadapi ujian membutuhkan persiapan yang konsisten, latihan yang sesuai, istirahat cukup, dan dukungan emosional. Orang tua tidak perlu menuntut anak selalu sempurna. Dampingi anak untuk melakukan yang terbaik, belajar dari kesalahan, dan terus memperbaiki cara belajarnya.</p>
+    </article>
+
+    <div class="article-cta">
+        <h2>Temukan Pendampingan Belajar yang Sesuai</h2>
+        <p>Temukan suasana belajar yang membantu kamu berkembang bersama New Primagama Sunter Indah.</p>
+        <a href="https://wa.me/6285285705335" class="cta-button">
+            Konsultasi Sekarang
+        </a>
+    </div>
+
+    <div class="back-blog">
+        <a href="https://newprimagamasunterindah.com/blog.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            Kembali ke Blog
+        </a>
+    </div>
+</main>
+
+<footer>
+    © 2026 New Primagama Sunter Indah. Semua Hak Dilindungi.
+</footer>
+
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+
+    hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>
