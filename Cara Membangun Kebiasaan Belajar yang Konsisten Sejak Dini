@@ -1,0 +1,666 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pelajari cara membangun kebiasaan belajar yang konsisten sejak dini agar anak lebih disiplin, mandiri, dan siap menghadapi ujian.">
+    <title>Cara Membangun Kebiasaan Belajar yang Konsisten Sejak Dini | Primagama</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0756a5;
+            --secondary: #f5a623;
+            --text: #243247;
+            --muted: #65748b;
+            --light: #f3f7fc;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .brand {
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .brand span {
+            color: var(--secondary);
+        }
+
+        .nav-link {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #edf5ff, #fff8eb);
+            padding: 65px 7% 55px;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .category {
+            display: inline-block;
+            background: #dcecff;
+            color: var(--primary);
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 4vw, 46px);
+            line-height: 1.25;
+            color: #12345a;
+            max-width: 850px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--muted);
+            max-width: 750px;
+        }
+
+        .article-meta {
+            margin-top: 22px;
+            color: #63758c;
+            font-size: 13px;
+        }
+
+        .article-container {
+            max-width: 1100px;
+            margin: 45px auto;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: minmax(0, 720px) minmax(220px, 280px);
+            gap: 45px;
+            align-items: start;
+        }
+
+        .article-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            background: #edf2f7;
+        }
+
+        .article-content {
+            min-width: 0;
+        }
+
+        .article-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #45546a;
+        }
+
+        .article-content h2 {
+            color: #123d70;
+            font-size: 25px;
+            line-height: 1.4;
+            margin: 36px 0 15px;
+        }
+
+        .article-content h3 {
+            color: var(--primary);
+            font-size: 19px;
+            margin: 24px 0 8px;
+        }
+
+        .article-content ul {
+            padding-left: 23px;
+            margin: 0 0 22px;
+            color: #45546a;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+
+        .highlight {
+            background: #f0f6ff;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 10px 10px 0;
+            padding: 20px 22px;
+            margin: 25px 0;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+        }
+
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0 25px;
+            font-size: 14px;
+        }
+
+        .schedule th,
+        .schedule td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #e0e7f0;
+        }
+
+        .schedule th {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .schedule tr:nth-child(even) {
+            background: #f5f8fc;
+        }
+
+        .sidebar {
+            background: var(--light);
+            border-radius: 16px;
+            padding: 25px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar h3 {
+            color: #123d70;
+            font-size: 19px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            border-bottom: 1px solid #dce5f0;
+            padding: 12px 0;
+            font-size: 14px;
+            color: #45546a;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #0756a5, #063d78);
+            color: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: #ffffff;
+            font-size: 25px;
+            margin: 0 0 12px;
+        }
+
+        .cta p {
+            color: #e4efff;
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: #17283d;
+            padding: 12px 23px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #ffc04d;
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 700;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 65px;
+            padding: 30px 7%;
+            text-align: center;
+            background: #f3f7fc;
+            color: #65748b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            .navbar {
+                padding: 16px 5%;
+            }
+
+            .brand {
+                font-size: 20px;
+            }
+
+            .hero {
+                padding: 45px 5% 38px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .article-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin: 30px auto;
+                padding: 0 5%;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .article-content h2 {
+                font-size: 23px;
+            }
+
+            .article-content p,
+            .article-content li {
+                font-size: 15px;
+            }
+
+            .cta {
+                padding: 28px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                gap: 12px;
+            }
+
+            .brand {
+                font-size: 18px;
+            }
+
+            .nav-link {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding-top: 35px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .article-image {
+                border-radius: 10px;
+                margin-bottom: 22px;
+            }
+
+            .article-content h2 {
+                font-size: 21px;
+                margin-top: 28px;
+            }
+
+            .article-content h3 {
+                font-size: 18px;
+            }
+
+            .schedule {
+                font-size: 12px;
+            }
+
+            .schedule th,
+            .schedule td {
+                padding: 9px 7px;
+            }
+
+            .cta h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="brand">
+            PRIMAGAMA<span>.</span>
+        </a>
+        <a href="blog.html" class="nav-link">← Kembali ke Blog</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="category">TIPS BELAJAR</span>
+
+            <h1>Cara Membangun Kebiasaan Belajar yang Konsisten Sejak Dini</h1>
+
+            <p>
+                Kebiasaan belajar yang baik membantu anak menjadi lebih mandiri,
+                disiplin, dan siap menghadapi tantangan akademik. Pelajari cara
+                membangunnya melalui langkah sederhana yang bisa diterapkan setiap hari.
+            </p>
+
+            <div class="article-meta">
+                Artikel Edukasi · Primagama Sunter Indah
+            </div>
+        </div>
+    </section>
+
+    <main class="article-container">
+
+        <article class="article-content">
+
+            <img
+                class="article-image"
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=85"
+                alt="Siswa sedang belajar dan mencatat materi pelajaran"
+                fetchpriority="high"
+            >
+
+            <p>
+                Belajar merupakan bagian penting dari perkembangan anak.
+                Namun, membangun kebiasaan belajar yang konsisten tidak selalu
+                mudah. Sebagian siswa baru mulai belajar ketika menghadapi ujian
+                atau ketika mendapatkan tugas dari sekolah.
+            </p>
+
+            <p>
+                Padahal, belajar secara teratur membantu siswa memahami materi
+                secara bertahap. Anak juga memiliki lebih banyak waktu untuk
+                mengulang pelajaran dan memperbaiki bagian yang belum dipahami.
+            </p>
+
+            <p>
+                Orang tua dapat membantu anak membangun rutinitas belajar sejak
+                dini. Proses ini tidak harus dimulai dengan durasi yang panjang.
+                Kebiasaan kecil yang dilakukan secara teratur dapat menjadi langkah
+                awal yang baik.
+            </p>
+
+            <h2>1. Mulai dengan Waktu Belajar yang Singkat</h2>
+
+            <p>
+                Jangan langsung meminta anak belajar selama berjam-jam.
+                Mulailah dengan durasi yang sesuai dengan usia dan kemampuan
+                konsentrasi anak. Misalnya, 15 sampai 20 menit untuk satu sesi
+                belajar bagi anak yang masih membutuhkan waktu beradaptasi.
+            </p>
+
+            <p>
+                Setelah anak terbiasa, durasi belajar dapat ditambah secara
+                bertahap. Cara ini membantu anak menyesuaikan diri tanpa merasa
+                terbebani sejak awal.
+            </p>
+
+            <h2>2. Tentukan Jadwal Belajar Harian</h2>
+
+            <p>
+                Jadwal yang tetap membantu anak mengenali waktu untuk belajar,
+                bermain, dan beristirahat. Pilih waktu ketika anak sudah cukup
+                beristirahat dan dapat berkonsentrasi dengan baik.
+            </p>
+
+            <p>
+                Berikut contoh jadwal sederhana yang dapat disesuaikan dengan
+                kegiatan sekolah dan kebutuhan anak.
+            </p>
+
+            <table class="schedule">
+                <thead>
+                    <tr>
+                        <th>Waktu</th>
+                        <th>Kegiatan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>16.00–16.30</td>
+                        <td>Istirahat setelah pulang sekolah</td>
+                    </tr>
+                    <tr>
+                        <td>16.30–17.00</td>
+                        <td>Mengerjakan PR</td>
+                    </tr>
+                    <tr>
+                        <td>17.00–17.15</td>
+                        <td>Istirahat singkat</td>
+                    </tr>
+                    <tr>
+                        <td>17.15–17.35</td>
+                        <td>Mengulang materi pelajaran</td>
+                    </tr>
+                    <tr>
+                        <td>Malam hari</td>
+                        <td>Membaca kembali catatan jika diperlukan</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                Jadwal tersebut hanya contoh. Sesuaikan waktu belajar dengan
+                jadwal sekolah, kegiatan tambahan, waktu ibadah, dan kebutuhan
+                istirahat anak.
+            </p>
+
+            <h2>3. Ciptakan Tempat Belajar yang Nyaman</h2>
+
+            <p>
+                Lingkungan belajar dapat memengaruhi konsentrasi anak.
+                Sediakan tempat belajar dengan pencahayaan yang cukup,
+                meja yang rapi, dan perlengkapan sekolah yang mudah dijangkau.
+            </p>
+
+            <ul>
+                <li>Jauhkan ponsel atau perangkat yang tidak digunakan untuk belajar.</li>
+                <li>Siapkan buku, alat tulis, dan catatan sebelum mulai belajar.</li>
+                <li>Pilih tempat yang minim gangguan suara.</li>
+                <li>Pastikan anak tetap mendapatkan waktu istirahat.</li>
+            </ul>
+
+            <h2>4. Buat Target Belajar yang Jelas</h2>
+
+            <p>
+                Target belajar membantu anak mengetahui apa yang perlu
+                diselesaikan. Hindari target yang terlalu luas seperti
+                "belajar Matematika". Buat target yang lebih spesifik agar
+                anak dapat melihat hasilnya.
+            </p>
+
+            <div class="highlight">
+                <p>
+                    Contoh target harian: menyelesaikan lima soal Matematika,
+                    membaca dua halaman materi IPA, atau menghafal sepuluh
+                    kosakata Bahasa Inggris.
+                </p>
+            </div>
+
+            <p>
+                Setelah target tercapai, ajak anak mengevaluasi bagian yang
+                sudah dipahami dan bagian yang masih perlu dipelajari kembali.
+            </p>
+
+            <h2>5. Gunakan Metode Belajar yang Bervariasi</h2>
+
+            <p>
+                Setiap anak memiliki cara belajar yang berbeda. Karena itu,
+                gunakan beberapa metode agar anak dapat menemukan cara yang
+                paling membantunya memahami materi.
+            </p>
+
+            <ul>
+                <li>Membuat rangkuman dengan kata-kata sendiri.</li>
+                <li>Mengerjakan latihan soal setelah mempelajari materi.</li>
+                <li>Membuat kartu tanya jawab untuk mengingat konsep penting.</li>
+                <li>Menjelaskan kembali materi yang sudah dipelajari.</li>
+                <li>Menggunakan gambar atau diagram untuk materi tertentu.</li>
+            </ul>
+
+            <p>
+                Latihan soal juga membantu siswa mengetahui apakah mereka
+                benar-benar memahami materi atau hanya mengingat penjelasan.
+            </p>
+
+            <h2>6. Berikan Apresiasi atas Usaha Anak</h2>
+
+            <p>
+                Berikan apresiasi ketika anak berusaha mengikuti jadwal belajar,
+                menyelesaikan tugas, atau mencoba memahami materi yang sulit.
+                Apresiasi tidak harus berupa hadiah.
+            </p>
+
+            <p>
+                Ucapan seperti "Kamu sudah berusaha menyelesaikan soal ini dengan
+                baik" dapat membantu anak menghargai proses belajarnya.
+                Jika anak belum berhasil mencapai target, bantu ia mencari
+                penyebabnya dan menyusun langkah perbaikan.
+            </p>
+
+            <h2>7. Dampingi Anak Tanpa Mengambil Alih Tugasnya</h2>
+
+            <p>
+                Orang tua dapat membantu dengan menanyakan kesulitan yang
+                dihadapi anak, memeriksa jadwal, dan menyediakan kebutuhan
+                belajar. Namun, berikan kesempatan kepada anak untuk mencoba
+                menyelesaikan tugasnya sendiri.
+            </p>
+
+            <p>
+                Ketika anak mengalami kesulitan, ajukan pertanyaan yang
+                membantunya berpikir. Contohnya, "Menurut kamu, langkah pertama
+                untuk menyelesaikan soal ini apa?" Cara ini melatih anak
+                membangun kemandirian dan kemampuan memecahkan masalah.
+            </p>
+
+            <h2>8. Evaluasi Kebiasaan Belajar Setiap Minggu</h2>
+
+            <p>
+                Luangkan waktu pada akhir pekan untuk membahas kegiatan belajar
+                selama satu minggu. Tanyakan pelajaran apa yang paling mudah
+                dipahami, bagian apa yang masih sulit, dan apakah jadwal yang
+                dibuat sudah sesuai.
+            </p>
+
+            <p>
+                Jika jadwal terlalu padat, lakukan penyesuaian. Tujuannya adalah
+                membangun rutinitas yang dapat dijalankan secara berkelanjutan,
+                bukan membuat anak merasa tertekan.
+            </p>
+
+            <h2>Kesimpulan</h2>
+
+            <p>
+                Kebiasaan belajar yang konsisten dapat dibangun melalui langkah
+                sederhana, seperti menentukan jadwal, membuat target harian,
+                menyiapkan tempat belajar, dan melakukan evaluasi rutin.
+                Peran orang tua penting untuk membantu anak menjalankan proses
+                tersebut dengan terarah.
+            </p>
+
+            <p>
+                Tidak masalah jika anak membutuhkan waktu untuk beradaptasi.
+                Fokuslah pada kemajuan kecil yang dilakukan secara teratur.
+                Dengan rutinitas yang sesuai, anak dapat belajar mengelola waktu
+                dan memahami materi pelajaran dengan lebih baik.
+            </p>
+
+            <section class="cta">
+                <h2>Ingin Belajar Lebih Terarah?</h2>
+                <p>
+                    Primagama Sunter Indah siap membantu siswa mengembangkan
+                    kemampuan akademik, memahami materi pelajaran, dan
+                    mempersiapkan diri menghadapi ujian.
+                </p>
+
+                <!-- Ganti nomor di bawah dengan nomor WhatsApp resmi -->
+                <a
+                    href="https://wa.me/6281234567890"
+                    class="cta-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Hubungi Primagama
+                </a>
+            </section>
+
+            <a href="blog.html" class="back-link">
+                ← Kembali ke halaman blog
+            </a>
+
+        </article>
+
+        <aside class="sidebar">
+            <h3>Tips Belajar untuk Siswa</h3>
+
+            <p>
+                Kebiasaan sederhana yang dapat membantu kegiatan belajar
+                menjadi lebih teratur.
+            </p>
+
+            <ul class="sidebar-list">
+                <li>Belajar pada waktu yang sama setiap hari.</li>
+                <li>Membuat target sebelum mulai belajar.</li>
+                <li>Mengulang materi setelah pelajaran sekolah.</li>
+                <li>Mengerjakan latihan soal secara rutin.</li>
+                <li>Menjaga waktu tidur dan istirahat.</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Primagama Sunter Indah. Semua hak dilindungi.</p>
+    </footer>
+
+</body>
+</html>
+```
