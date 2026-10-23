@@ -1,0 +1,702 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pelajari cara mengatasi rasa malas belajar dan meningkatkan motivasi siswa agar lebih semangat, fokus, dan konsisten dalam belajar.">
+    <title>Cara Mengatasi Rasa Malas Belajar dan Meningkatkan Motivasi Siswa | Primagama</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0756a5;
+            --secondary: #f5a623;
+            --text: #243247;
+            --muted: #65748b;
+            --light: #f3f7fc;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            line-height: 1.8;
+            background: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .brand {
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .brand span {
+            color: var(--secondary);
+        }
+
+        .nav-link {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #edf5ff, #fff8eb);
+            padding: 65px 7% 55px;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .category {
+            display: inline-block;
+            background: #dcecff;
+            color: var(--primary);
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 4vw, 46px);
+            line-height: 1.25;
+            color: #12345a;
+            max-width: 850px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--muted);
+            max-width: 750px;
+        }
+
+        .article-meta {
+            margin-top: 22px;
+            color: #63758c;
+            font-size: 13px;
+        }
+
+        .article-container {
+            max-width: 1100px;
+            margin: 45px auto;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: minmax(0, 720px) minmax(220px, 280px);
+            gap: 45px;
+            align-items: start;
+        }
+
+        .article-content {
+            min-width: 0;
+        }
+
+        .article-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            background: #edf2f7;
+        }
+
+        .article-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #45546a;
+        }
+
+        .article-content h2 {
+            color: #123d70;
+            font-size: 25px;
+            line-height: 1.4;
+            margin: 36px 0 15px;
+        }
+
+        .article-content h3 {
+            color: var(--primary);
+            font-size: 19px;
+            margin: 24px 0 8px;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            padding-left: 23px;
+            margin: 0 0 22px;
+            color: #45546a;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+
+        .highlight {
+            background: #f0f6ff;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 10px 10px 0;
+            padding: 20px 22px;
+            margin: 25px 0;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+        }
+
+        .tips-box {
+            background: #fff8eb;
+            border: 1px solid #ffe4b3;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 25px 0;
+        }
+
+        .tips-box h3 {
+            margin-top: 0;
+            color: #8b5700;
+        }
+
+        .sidebar {
+            background: var(--light);
+            border-radius: 16px;
+            padding: 25px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .sidebar h3 {
+            color: #123d70;
+            font-size: 19px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            border-bottom: 1px solid #dce5f0;
+            padding: 12px 0;
+            font-size: 14px;
+            color: #45546a;
+        }
+
+        .sidebar-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #0756a5, #063d78);
+            color: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: #ffffff;
+            font-size: 25px;
+            margin: 0 0 12px;
+        }
+
+        .cta p {
+            color: #e4efff;
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: #17283d;
+            padding: 12px 23px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #ffc04d;
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 700;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 65px;
+            padding: 30px 7%;
+            text-align: center;
+            background: #f3f7fc;
+            color: #65748b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            .navbar {
+                padding: 16px 5%;
+            }
+
+            .brand {
+                font-size: 20px;
+            }
+
+            .hero {
+                padding: 45px 5% 38px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .article-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin: 30px auto;
+                padding: 0 5%;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .article-content h2 {
+                font-size: 23px;
+            }
+
+            .article-content p,
+            .article-content li {
+                font-size: 15px;
+            }
+
+            .cta {
+                padding: 28px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                gap: 12px;
+            }
+
+            .brand {
+                font-size: 18px;
+            }
+
+            .nav-link {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding-top: 35px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .article-image {
+                border-radius: 10px;
+                margin-bottom: 22px;
+            }
+
+            .article-content h2 {
+                font-size: 21px;
+                margin-top: 28px;
+            }
+
+            .article-content h3 {
+                font-size: 18px;
+            }
+
+            .cta h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="brand">
+            PRIMAGAMA<span>.</span>
+        </a>
+        <a href="blog.html" class="nav-link">← Kembali ke Blog</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="category">TIPS BELAJAR</span>
+
+            <h1>Cara Mengatasi Rasa Malas Belajar dan Meningkatkan Motivasi Siswa</h1>
+
+            <p>
+                Rasa malas belajar bisa dialami oleh setiap siswa. Dengan kebiasaan
+                yang tepat, target yang jelas, dan dukungan lingkungan, siswa dapat
+                membangun kembali semangat belajar dan meraih hasil yang lebih baik.
+            </p>
+
+            <div class="article-meta">
+                Artikel Edukasi · Primagama Sunter Indah
+            </div>
+        </div>
+    </section>
+
+    <main class="article-container">
+
+        <article class="article-content">
+
+            <img
+                class="article-image"
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85"
+                alt="Siswa sedang belajar di meja dengan buku pelajaran"
+                fetchpriority="high"
+            >
+
+            <p>
+                Pernah merasa sulit memulai belajar meskipun tugas sekolah sudah
+                menumpuk? Atau merasa lebih tertarik bermain ponsel daripada
+                membuka buku pelajaran? Kondisi seperti ini cukup sering dialami
+                oleh siswa, baik di tingkat SD, SMP, maupun SMA.
+            </p>
+
+            <p>
+                Rasa malas belajar tidak selalu berarti siswa tidak peduli terhadap
+                pendidikan. Ada berbagai hal yang dapat memengaruhinya, seperti
+                kelelahan, kesulitan memahami materi, kurangnya tujuan belajar,
+                atau terlalu banyak gangguan di sekitar.
+            </p>
+
+            <p>
+                Kabar baiknya, semangat belajar dapat dibangun secara bertahap.
+                Siswa tidak harus langsung belajar berjam-jam. Langkah sederhana
+                yang dilakukan secara konsisten dapat membantu membentuk kebiasaan
+                belajar yang lebih positif.
+            </p>
+
+            <h2>1. Cari Tahu Penyebab Rasa Malas Belajar</h2>
+
+            <p>
+                Sebelum mencari solusi, penting untuk memahami penyebab siswa
+                kehilangan semangat belajar. Setiap siswa bisa memiliki alasan
+                yang berbeda. Ada yang merasa lelah setelah sekolah, ada yang
+                kesulitan memahami pelajaran, dan ada pula yang bingung harus
+                mulai belajar dari mana.
+            </p>
+
+            <p>Beberapa penyebab yang sering membuat siswa menunda belajar antara lain:</p>
+
+            <ul>
+                <li>Terlalu lelah karena jadwal kegiatan yang padat.</li>
+                <li>Merasa materi pelajaran terlalu sulit untuk dipahami.</li>
+                <li>Tidak memiliki target belajar yang jelas.</li>
+                <li>Terlalu sering menggunakan ponsel saat waktu belajar.</li>
+                <li>Takut mendapatkan nilai rendah atau melakukan kesalahan.</li>
+            </ul>
+
+            <p>
+                Setelah mengetahui penyebabnya, siswa dapat menentukan langkah
+                yang lebih sesuai. Misalnya, jika sulit memahami materi, siswa
+                bisa mengulang konsep dasar atau meminta bantuan guru.
+            </p>
+
+            <h2>2. Mulai Belajar dari Target Kecil</h2>
+
+            <p>
+                Salah satu alasan siswa menunda belajar adalah karena merasa
+                tugas yang harus dikerjakan terlalu banyak. Untuk mengatasinya,
+                pecah tugas besar menjadi beberapa target kecil yang lebih mudah
+                diselesaikan.
+            </p>
+
+            <div class="highlight">
+                <p>
+                    <strong>Contoh:</strong> Daripada menargetkan untuk menguasai
+                    seluruh materi Matematika dalam satu hari, mulailah dengan
+                    memahami satu konsep dan mengerjakan lima soal latihan.
+                </p>
+            </div>
+
+            <p>
+                Ketika satu target berhasil diselesaikan, siswa akan lebih mudah
+                melihat kemajuan yang sudah dicapai. Hal ini dapat membantu
+                membangun rasa percaya diri untuk melanjutkan ke target berikutnya.
+            </p>
+
+            <h2>3. Buat Jadwal Belajar yang Realistis</h2>
+
+            <p>
+                Jadwal belajar membantu siswa mengatur waktu dan mengurangi
+                kebiasaan menunda pekerjaan. Namun, jadwal tersebut harus
+                disesuaikan dengan kegiatan sekolah, waktu istirahat, dan
+                kemampuan konsentrasi masing-masing siswa.
+            </p>
+
+            <p>Berikut contoh jadwal belajar sederhana setelah pulang sekolah:</p>
+
+            <ul>
+                <li><strong>16.00–16.30:</strong> Istirahat dan makan.</li>
+                <li><strong>16.30–17.00:</strong> Mengerjakan pekerjaan rumah.</li>
+                <li><strong>17.00–17.15:</strong> Istirahat sejenak.</li>
+                <li><strong>17.15–17.45:</strong> Mengulang materi yang belum dipahami.</li>
+                <li><strong>Malam hari:</strong> Menyiapkan buku dan kebutuhan sekolah untuk besok.</li>
+            </ul>
+
+            <p>
+                Jadwal tersebut hanyalah contoh dan tidak harus diikuti secara
+                kaku. Jika siswa memiliki kegiatan tambahan, waktu belajar dapat
+                dipindahkan ke waktu lain yang lebih nyaman.
+            </p>
+
+            <h2>4. Jauhkan Gangguan Saat Belajar</h2>
+
+            <p>
+                Ponsel, permainan, media sosial, dan televisi dapat membuat
+                perhatian siswa mudah teralihkan. Akibatnya, waktu belajar
+                menjadi lebih panjang karena siswa harus berulang kali
+                mengembalikan fokusnya.
+            </p>
+
+            <p>Untuk menciptakan suasana belajar yang lebih kondusif, cobalah beberapa cara berikut:</p>
+
+            <ul>
+                <li>Letakkan ponsel di tempat yang tidak mudah dijangkau selama belajar.</li>
+                <li>Matikan notifikasi yang tidak diperlukan.</li>
+                <li>Rapikan meja dan siapkan alat tulis sebelum memulai.</li>
+                <li>Pilih tempat belajar dengan pencahayaan yang cukup.</li>
+                <li>Kerjakan satu tugas terlebih dahulu sebelum berpindah ke tugas lain.</li>
+            </ul>
+
+            <p>
+                Lingkungan yang lebih teratur dapat membantu siswa memulai
+                kegiatan belajar dengan lebih mudah dan mempertahankan perhatian
+                pada materi yang sedang dipelajari.
+            </p>
+
+            <h2>5. Gunakan Metode Belajar yang Menyenangkan</h2>
+
+            <p>
+                Belajar tidak harus selalu dilakukan dengan membaca buku selama
+                berjam-jam. Siswa dapat mencoba berbagai metode agar proses
+                memahami materi terasa lebih menarik dan tidak monoton.
+            </p>
+
+            <h3>Membuat rangkuman</h3>
+            <p>
+                Tuliskan inti materi menggunakan bahasa sendiri. Rangkuman
+                membantu siswa mengenali informasi penting tanpa harus membaca
+                seluruh materi berulang kali.
+            </p>
+
+            <h3>Mengerjakan latihan soal</h3>
+            <p>
+                Setelah mempelajari konsep, kerjakan soal latihan untuk menguji
+                pemahaman. Periksa jawaban dan pelajari kembali soal yang masih
+                salah agar kesalahan serupa tidak terus berulang.
+            </p>
+
+            <h3>Menggunakan teknik belajar berkala</h3>
+            <p>
+                Belajar selama 25 menit lalu beristirahat selama 5 menit dapat
+                menjadi pilihan bagi siswa yang mudah kehilangan fokus.
+                Durasi tersebut bisa disesuaikan dengan usia dan kebutuhan siswa.
+            </p>
+
+            <h3>Menjelaskan kembali materi</h3>
+            <p>
+                Cobalah menjelaskan materi yang sudah dipelajari kepada teman
+                atau anggota keluarga. Jika siswa dapat menjelaskannya dengan
+                bahasa sendiri, hal tersebut dapat menjadi salah satu tanda
+                bahwa pemahaman terhadap materi mulai terbentuk.
+            </p>
+
+            <h2>6. Jangan Terlalu Sering Membandingkan Diri dengan Orang Lain</h2>
+
+            <p>
+                Setiap siswa memiliki kemampuan, kecepatan memahami materi,
+                dan cara belajar yang berbeda. Membandingkan nilai atau
+                pencapaian dengan teman secara berlebihan dapat membuat siswa
+                merasa tidak mampu dan kehilangan semangat.
+            </p>
+
+            <p>
+                Lebih baik fokus pada perkembangan diri sendiri. Bandingkan
+                hasil belajar saat ini dengan hasil sebelumnya untuk melihat
+                bagian yang sudah meningkat dan hal yang masih perlu diperbaiki.
+            </p>
+
+            <div class="tips-box">
+                <h3>Ingat Hal Ini</h3>
+                <p>
+                    Tidak harus selalu mendapatkan nilai sempurna untuk disebut
+                    mengalami kemajuan. Memahami konsep yang sebelumnya sulit,
+                    lebih disiplin mengerjakan tugas, dan berani bertanya ketika
+                    tidak paham juga merupakan bentuk perkembangan.
+                </p>
+            </div>
+
+            <h2>7. Berikan Apresiasi atas Usaha yang Dilakukan</h2>
+
+            <p>
+                Menghargai usaha sendiri dapat membantu siswa mempertahankan
+                motivasi. Apresiasi tidak harus berupa hadiah besar. Siswa bisa
+                memberikan waktu istirahat setelah menyelesaikan target atau
+                menikmati kegiatan favorit setelah tugas selesai.
+            </p>
+
+            <p>
+                Orang tua juga dapat memberikan dukungan dengan menghargai
+                proses belajar anak. Hindari hanya berfokus pada nilai akhir.
+                Perhatikan juga usaha, kedisiplinan, dan kemauan anak untuk
+                memperbaiki kesalahan.
+            </p>
+
+            <h2>8. Jangan Mengabaikan Istirahat dan Waktu Tidur</h2>
+
+            <p>
+                Semangat belajar tidak hanya dipengaruhi oleh kemauan, tetapi
+                juga oleh kondisi fisik dan pikiran. Kurang tidur dan jadwal
+                yang terlalu padat dapat membuat siswa sulit berkonsentrasi
+                dan merasa cepat lelah.
+            </p>
+
+            <p>
+                Karena itu, seimbangkan waktu belajar dengan tidur yang cukup,
+                aktivitas fisik, makan teratur, dan kegiatan menyenangkan.
+                Istirahat bukan berarti malas. Istirahat merupakan bagian
+                penting agar tubuh dan pikiran siap kembali belajar.
+            </p>
+
+            <h2>9. Minta Bantuan Jika Mengalami Kesulitan</h2>
+
+            <p>
+                Terkadang, rasa malas muncul karena siswa terus mengalami
+                kesulitan pada materi tertentu. Jika hal ini terjadi,
+                jangan ragu untuk bertanya kepada guru, orang tua, atau
+                teman yang dapat membantu menjelaskan materi.
+            </p>
+
+            <p>
+                Siswa juga dapat mengikuti bimbingan belajar untuk mendapatkan
+                penjelasan yang lebih terarah dan latihan soal sesuai dengan
+                kebutuhan. Dengan memahami dasar materi, siswa dapat lebih
+                percaya diri untuk mempelajari topik berikutnya.
+            </p>
+
+            <h2>Kesimpulan</h2>
+
+            <p>
+                Mengatasi rasa malas belajar membutuhkan proses dan kebiasaan
+                yang dibangun secara bertahap. Mulailah dengan mencari penyebab
+                masalah, membuat target kecil, menyusun jadwal realistis,
+                mengurangi gangguan, dan memilih metode belajar yang sesuai.
+            </p>
+
+            <p>
+                Jangan lupa menjaga waktu istirahat dan menghargai setiap
+                perkembangan yang berhasil dicapai. Siswa tidak harus langsung
+                memiliki motivasi tinggi setiap hari. Hal yang lebih penting
+                adalah belajar kembali memulai dan menjalankan kebiasaan
+                positif secara konsisten.
+            </p>
+
+            <p>
+                Dengan dukungan lingkungan yang tepat dan strategi belajar
+                yang sesuai, siswa dapat mengembangkan rasa percaya diri,
+                meningkatkan pemahaman materi, dan lebih siap menghadapi
+                berbagai tantangan akademik.
+            </p>
+
+            <section class="cta">
+                <h2>Butuh Pendampingan Belajar?</h2>
+                <p>
+                    Primagama Sunter Indah siap membantu siswa memahami materi
+                    pelajaran, berlatih mengerjakan soal, dan mempersiapkan
+                    diri menghadapi ujian dengan lebih terarah.
+                </p>
+
+                <!-- Ganti nomor berikut dengan nomor WhatsApp resmi -->
+                <a
+                    href="https://wa.me/6281234567890"
+                    class="cta-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Hubungi Primagama
+                </a>
+            </section>
+
+            <a href="blog.html" class="back-link">
+                ← Kembali ke halaman blog
+            </a>
+
+        </article>
+
+        <aside class="sidebar">
+            <h3>Tips Meningkatkan Motivasi Belajar</h3>
+
+            <p>
+                Mulai dari langkah sederhana agar kegiatan belajar menjadi
+                lebih teratur dan terarah.
+            </p>
+
+            <ul class="sidebar-list">
+                <li>Tentukan target belajar harian.</li>
+                <li>Mulai dari tugas yang paling mudah.</li>
+                <li>Jauhkan ponsel saat belajar.</li>
+                <li>Gunakan latihan soal untuk menguji pemahaman.</li>
+                <li>Berikan apresiasi atas usaha sendiri.</li>
+                <li>Jaga keseimbangan antara belajar dan istirahat.</li>
+                <li>Mintalah bantuan saat menemukan materi yang sulit.</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Primagama Sunter Indah. Semua hak dilindungi.</p>
+    </footer>
+
+</body>
+</html>
+```
