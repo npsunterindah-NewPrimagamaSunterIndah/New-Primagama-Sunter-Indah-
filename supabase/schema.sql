@@ -22,10 +22,15 @@ create table if not exists public.diagnostic_questions (
   options jsonb not null,
   answer_key text not null check (answer_key in ('A','B','C','D')),
   explanation text,
+  difficulty text not null default 'menengah' check (difficulty in ('dasar','menengah','sulit','hots')),
+  competency_indicator text,
   is_active boolean not null default false,
   created_at timestamptz not null default now(),
   check (jsonb_typeof(options) = 'array' and jsonb_array_length(options) = 4)
 );
+
+alter table public.diagnostic_questions add column if not exists difficulty text not null default 'menengah';
+alter table public.diagnostic_questions add column if not exists competency_indicator text;
 
 create index if not exists diagnostic_questions_lookup
 on public.diagnostic_questions(level, grade, subject, is_active);
