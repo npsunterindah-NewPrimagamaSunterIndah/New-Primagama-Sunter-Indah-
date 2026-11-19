@@ -20,7 +20,7 @@ Deno.serve(async (req) => {
     const { data: links, error: linkError } = await db.from("diagnostic_session_questions").select("question_id,diagnostic_questions(id,answer_key,topic)").eq("session_id",session_id);
     if (linkError || !links || links.length !== 20) throw linkError || new Error("Question set invalid");
     const allowed = new Map(links.map((row: any) => [row.question_id,row.diagnostic_questions]));
-    const submitted = answers.filter((a: any) => allowed.has(a.question_id) && ["A","B","C","D"].includes(a.answer));
+    const submitted = answers.filter((a: any) => allowed.has(a.question_id) && ["A","B","C","D",""].includes(a.answer));
     if (submitted.length !== 20 || new Set(submitted.map((a: any) => a.question_id)).size !== 20) return json({ error: "Jawaban tidak sesuai dengan soal pada sesi ini." }, 400);
     let correct = 0;
     const topics: Record<string,{correct:number,total:number}> = {};
@@ -32,7 +32,7 @@ Deno.serve(async (req) => {
       topics[topic] ||= { correct: 0, total: 0 };
       topics[topic].total++;
       if (isCorrect) topics[topic].correct++;
-      return { session_id, question_id: a.question_id, selected_answer: a.answer, is_correct: isCorrect };
+      return { session_id, question_id: a.question_id, selected_answer: a.answer || null, is_correct: isCorrect };
     });
     const { error: saveError } = await db.from("diagnostic_answers").insert(answerRows);
     if (saveError) throw saveError;
