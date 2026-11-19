@@ -1,0 +1,82 @@
+/* New Primagama Sunter Indah | Blog refresh */
+:root{
+  --purple:#0756a5;
+  --purple-dark:#073b70;
+  --purple-light:#eaf3fc;
+  --yellow:#f5a623;
+  --text:#172b45;
+  --muted:#64748b;
+  --border:#e4eaf1;
+  --white:#fff;
+}
+body{background:#f7f9fc;color:var(--text)}
+.navbar{min-height:76px;padding:0 max(5%,calc((100% - 1200px)/2));box-shadow:0 4px 18px rgba(15,45,80,.06)}
+.nav-menu a:hover,.nav-menu a.active{color:#0756a5}
+.btn-navbar{background:#0756a5;border-radius:8px}
+.btn-navbar:hover{background:#063f7c}
+.blog-hero{background:linear-gradient(120deg,#edf5fd 0%,#f8fbff 68%,#fff7e9 100%);border-bottom:1px solid #e6eef7;padding:68px 6% 62px}
+.blog-hero h1{color:#073b70;max-width:780px;letter-spacing:-1.3px}
+.hero-label{color:#0756a5}
+.hero-line{background:#f5a623}
+.hero-description{font-size:15px;max-width:690px}
+.blog-container{max-width:1240px;padding:0 5% 64px}
+.latest-section{padding-top:42px}
+.section-heading h2,.category-heading h2{font-size:19px;text-transform:none;letter-spacing:-.3px}
+.section-heading-left i{color:#f5a623}
+.section-line{height:2px;background:linear-gradient(to right,#f5a623 0,#f5a623 90px,#e4eaf1 90px,#e4eaf1 100%);margin-bottom:24px}
+.article-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.article-card,.article-card:first-child,.article-card:last-child{padding:0 0 18px;border:1px solid #e8edf4;border-radius:14px;background:#fff;overflow:hidden;box-shadow:0 5px 18px rgba(17,55,95,.045);transition:transform .2s ease,box-shadow .2s ease}
+.article-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(17,55,95,.1)}
+.article-image{height:auto;aspect-ratio:16/9;margin:0 0 14px;border-radius:0;background:#eaf3fc}
+.article-image img{object-fit:cover;background:#eaf3fc;transition:transform .3s ease}
+.article-card:hover .article-image img{transform:scale(1.035)}
+.article-category,.article-card h3,.article-description,.article-meta{margin-left:18px;margin-right:18px}
+.article-category{color:#0756a5;font-size:10px;letter-spacing:.5px}
+.article-card h3{font-size:16px;line-height:1.45;margin-top:0}
+.article-description{font-size:12px;line-height:1.75}
+.article-meta{font-size:10px}
+.new-badge{top:12px;left:12px;background:#f5a623;color:#3b2a0b;border-radius:5px;font-size:9px}
+.category-section{padding:32px 0 12px;scroll-margin-top:95px}
+.category-heading h2{padding-left:14px}
+.category-heading h2:before{background:#0756a5;height:20px}
+.see-all{color:#0756a5;font-size:11px}
+.blog-cta{background:linear-gradient(120deg,#0756a5,#063b72);border-radius:16px;padding:38px}
+.cta-primary{background:#f5a623;color:#26364a}
+.cta-secondary{border-radius:8px}
+.blog-footer{background:#fff}
+.blog-tools{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:8px 0 30px}
+.blog-search{width:min(100%,360px);position:relative}
+.blog-search input{width:100%;padding:13px 16px 13px 42px;border:1px solid #dbe4ef;border-radius:9px;background:#fff;font:inherit;font-size:13px;outline:none}
+.blog-search input:focus{border-color:#0756a5;box-shadow:0 0 0 3px rgba(7,86,165,.1)}
+.blog-search i{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#8293a8}
+.blog-filter{display:flex;gap:8px;flex-wrap:wrap}
+.blog-filter a{padding:8px 12px;border-radius:30px;background:#fff;border:1px solid #e2eaf3;color:#52647a;font-size:11px;font-weight:600}
+.blog-filter a:hover{background:#eaf3fc;border-color:#c8def4;color:#0756a5}
+.featured-wrap{padding:28px;margin-top:34px;border:1px solid #e7edf4;border-radius:18px;background:#fff;box-shadow:0 8px 28px rgba(17,55,95,.055)}
+.featured-label{font-size:10px;font-weight:800;letter-spacing:1px;color:#0756a5;margin-bottom:16px}
+.featured-card{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+.featured-card img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px;background:#eaf3fc}
+.featured-category{color:#0756a5;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+.featured-card h2{font-size:clamp(23px,3vw,34px);line-height:1.25;color:#073b70;margin:0 0 12px;letter-spacing:-.7px}
+.featured-card p{font-size:13px;line-height:1.8;color:#64748b;margin:0 0 18px}
+.featured-card a.read-featured{display:inline-flex;padding:11px 16px;border-radius:8px;background:#0756a5;color:#fff;font-size:12px;font-weight:700}
+.featured-meta{font-size:11px;color:#8293a8;margin-bottom:12px}
+.no-results{display:none;padding:22px;text-align:center;color:#64748b;font-size:13px}
+@media(max-width:1000px){.article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.featured-card{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+ .navbar{min-height:70px;padding:0 20px}
+ .blog-hero{padding:45px 20px}
+ .blog-hero h1{font-size:34px}
+ .blog-container{padding:0 20px 35px}
+ .article-grid{grid-template-columns:1fr;gap:16px}
+ .article-card,.article-card:first-child,.article-card:last-child{padding:0 0 16px;margin:0;border:1px solid #e8edf4;border-radius:12px}
+ .article-card h3{font-size:18px}
+ .blog-tools{align-items:stretch}
+ .blog-search{width:100%}
+ .blog-filter{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+ .blog-filter a{white-space:nowrap}
+ .featured-wrap{padding:16px;margin-top:22px}
+ .featured-card{grid-template-columns:1fr;gap:16px}
+ .featured-card h2{font-size:23px}
+ .blog-cta{padding:25px 20px}
+}
