@@ -1671,6 +1671,44 @@ function createArticleCard(article,isLatest){
 
 
 /* =====================================================
+   ARTIKEL UNGGULAN
+===================================================== */
+const featuredArticle = document.getElementById("featuredArticle");
+if (articles.length && featuredArticle) {
+    const featured = articles[0];
+    featuredArticle.innerHTML = `
+      <article class="featured-card">
+        <img src="${featured.image}" alt="${featured.title}" loading="eager">
+        <div>
+          <div class="featured-category">${featured.category}</div>
+          <div class="featured-meta"><i class="fa-regular fa-calendar"></i> ${featured.dateDisplay}</div>
+          <h2>${featured.title}</h2>
+          <p>${featured.description}</p>
+          <a class="read-featured" href="${featured.link}">Baca Artikel <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>`;
+}
+
+/* =====================================================
+   PENCARIAN ARTIKEL
+===================================================== */
+const articleSearch = document.getElementById("articleSearch");
+if (articleSearch) {
+  articleSearch.addEventListener("input", function () {
+    const query = this.value.trim().toLowerCase();
+    document.querySelectorAll(".article-card").forEach(card => {
+      card.style.display = card.innerText.toLowerCase().includes(query) ? "" : "none";
+    });
+    document.querySelectorAll(".category-section").forEach(section => {
+      const visible = [...section.querySelectorAll(".article-card")].some(card => card.style.display !== "none");
+      section.style.display = visible || !query ? "" : "none";
+    });
+    const latest = document.querySelector(".latest-section");
+    if (latest) latest.style.display = [...latest.querySelectorAll(".article-card")].some(card => card.style.display !== "none") || !query ? "" : "none";
+  });
+}
+
+/* =====================================================
    ARTIKEL TERBARU
 ===================================================== */
 
