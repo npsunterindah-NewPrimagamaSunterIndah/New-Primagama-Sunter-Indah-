@@ -2910,3 +2910,18 @@ section{
 .home-blog-mobile-link{display:none}
 @media(max-width:900px){.home-blog{padding:70px 5%}.home-blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-blog-card:last-child{display:none}}
 @media(max-width:600px){.home-blog{padding:58px 20px}.home-blog-heading{display:block}.home-blog-all{display:none}.home-blog-grid{grid-template-columns:1fr;gap:18px}.home-blog-card:last-child{display:flex}.home-blog-content{padding:18px}.home-blog-content h3{font-size:17px}.home-blog-mobile-link{display:block;text-align:center;margin-top:26px}}
+
+
+/* TES DIAGNOSTIK GRATIS DI BERANDA */
+.diagnostic-promo{padding:66px 8%;background:linear-gradient(115deg,#171b5e,#27358b 65%,#5b21b6);color:#fff}
+.diagnostic-promo-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.diagnostic-promo-copy{max-width:700px}
+.diagnostic-promo-copy>span{display:inline-block;color:#f7c948;font-size:11px;font-weight:800;letter-spacing:1.5px;margin-bottom:10px}
+.diagnostic-promo-copy h2{font-size:clamp(25px,4vw,36px);line-height:1.25;margin:0 0 12px;color:#fff}
+.diagnostic-promo-copy p{max-width:650px;color:#e0e7ff;font-size:14px;line-height:1.8;margin:0 0 22px}
+.diagnostic-promo-button{display:inline-flex;align-items:center;gap:10px;background:#f5b51b;color:#171b5e;padding:13px 20px;border-radius:9px;text-decoration:none;font-size:13px;font-weight:800}
+.diagnostic-promo-icon{width:175px;height:175px;flex:none;border:1px solid #ffffff45;background:#ffffff12;border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(3deg)}
+.diagnostic-promo-icon i{font-size:43px;color:#f7c948;margin-bottom:12px}
+.diagnostic-promo-icon strong{font-size:21px;color:#fff}
+.diagnostic-promo-icon small{font-size:10px;color:#e0e7ff}
+@media(max-width:650px){.diagnostic-promo{padding:52px 20px}.diagnostic-promo-inner{align-items:flex-start}.diagnostic-promo-icon{width:105px;height:105px;border-radius:18px}.diagnostic-promo-icon i{font-size:25px;margin-bottom:5px}.diagnostic-promo-icon strong{font-size:14px}.diagnostic-promo-icon small{font-size:8px}.diagnostic-promo-copy p{font-size:12px}}

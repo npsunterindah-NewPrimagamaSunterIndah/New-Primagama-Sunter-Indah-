@@ -1,0 +1,5 @@
+[functions.diagnostic-start]
+verify_jwt = false
+
+[functions.diagnostic-submit]
+verify_jwt = false
