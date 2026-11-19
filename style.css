@@ -2884,3 +2884,29 @@ section{
         line-height: 1.8;
     }
 }
+
+
+/*=========================================
+       ARTIKEL TERBARU DI BERANDA
+=========================================*/
+.home-blog{padding:85px 8%;background:#f8f9ff}
+.home-blog .container{max-width:1200px;margin:0 auto}
+.home-blog-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:32px}
+.home-blog-eyebrow{display:inline-block;color:#5b21b6;font-size:12px;font-weight:800;letter-spacing:1.6px;margin-bottom:10px}
+.home-blog-heading h2{font-size:clamp(28px,4vw,38px);font-weight:800;color:#171b5e;margin:0 0 10px}
+.home-blog-heading p{max-width:620px;color:#64748b;line-height:1.7;margin:0}
+.home-blog-all,.home-blog-mobile-link a{display:inline-flex;align-items:center;gap:10px;color:#27358b;font-weight:700;text-decoration:none;white-space:nowrap}
+.home-blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.home-blog-card{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #e8eaf4;border-radius:18px;text-decoration:none;box-shadow:0 8px 25px rgba(23,27,94,.06);transition:transform .25s ease,box-shadow .25s ease}
+.home-blog-card:hover{transform:translateY(-6px);box-shadow:0 16px 35px rgba(23,27,94,.12)}
+.home-blog-image{aspect-ratio:16/9;overflow:hidden;background:#e9eaf5}
+.home-blog-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.home-blog-card:hover .home-blog-image img{transform:scale(1.04)}
+.home-blog-content{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:22px}
+.home-blog-category{color:#5b21b6;background:#f0eaff;border-radius:30px;padding:6px 11px;font-size:11px;font-weight:700}
+.home-blog-content h3{color:#172554;font-size:18px;line-height:1.45;margin:14px 0 9px}
+.home-blog-content p{color:#64748b;font-size:13px;line-height:1.7;margin:0 0 18px}
+.home-blog-read{margin-top:auto;color:#27358b;font-size:13px;font-weight:700}
+.home-blog-mobile-link{display:none}
+@media(max-width:900px){.home-blog{padding:70px 5%}.home-blog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-blog-card:last-child{display:none}}
+@media(max-width:600px){.home-blog{padding:58px 20px}.home-blog-heading{display:block}.home-blog-all{display:none}.home-blog-grid{grid-template-columns:1fr;gap:18px}.home-blog-card:last-child{display:flex}.home-blog-content{padding:18px}.home-blog-content h3{font-size:17px}.home-blog-mobile-link{display:block;text-align:center;margin-top:26px}}
