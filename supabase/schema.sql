@@ -56,7 +56,7 @@ create table if not exists public.diagnostic_session_questions (
 create table if not exists public.diagnostic_answers (
   session_id uuid not null references public.diagnostic_sessions(id) on delete cascade,
   question_id uuid not null references public.diagnostic_questions(id),
-  selected_answer text not null check (selected_answer in ('A','B','C','D')),
+  selected_answer text check (selected_answer is null or selected_answer in ('A','B','C','D')),
   is_correct boolean not null,
   answered_at timestamptz not null default now(),
   primary key (session_id, question_id)
