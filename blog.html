@@ -889,7 +889,7 @@ a{
 
 </style>
 
-</head>
+    <link rel="stylesheet" href="blog-modern.css">\n</head>
 
 
 <body>
@@ -1010,7 +1010,21 @@ a{
      BLOG
 ========================= -->
 
-<main class="blog-container">
+<main class="blog-container">\n
+    <section class="featured-wrap" aria-label="Artikel pilihan">
+      <div class="featured-label">REKOMENDASI EDITOR</div>
+      <div id="featuredArticle"></div>
+    </section>
+    <div class="blog-tools">
+      <div class="blog-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="articleSearch" type="search" placeholder="Cari artikel, misalnya TKA atau tips belajar..." aria-label="Cari artikel">
+      </div>
+      <nav class="blog-filter" aria-label="Kategori artikel">
+        <a href="#tka">TKA</a><a href="#tips-belajar">Tips Belajar</a><a href="#edukasi-dan-sekolah">Edukasi & Sekolah</a><a href="#ujian-dan-persiapan">Ujian</a><a href="#fun-edukasi">Fun Edukasi</a>
+      </nav>
+    </div>
+
 
 
     <!-- =========================
@@ -1665,7 +1679,7 @@ const latestContainer =
 
 
 articles
-    .slice(0,4)
+    .slice(1,5)
     .forEach(function(article){
 
         latestContainer.innerHTML +=
