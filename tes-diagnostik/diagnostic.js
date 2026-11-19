@@ -9,7 +9,7 @@
   };
   const demoQuestions = [
     ["Jika 3x + 5 = 20, nilai x adalah ...",["3","5","7","8"],"B","Persamaan linear"],
-    ["Hasil dari 24 ÷ 6 × 3 adalah ...",["4","9","12","18"],"D","Operasi bilangan"],
+    ["Hasil dari 24 ÷ 6 × 3 adalah ...",["4","9","12","18"],"C","Operasi bilangan"],
     ["Bentuk sederhana dari 4a + 3a adalah ...",["7","7a","12a","a"],"B","Aljabar"],
     ["Hasil dari 15% × 200 adalah ...",["15","20","30","35"],"C","Persentase"],
     ["Keliling persegi dengan sisi 8 cm adalah ...",["16 cm","24 cm","32 cm","64 cm"],"C","Geometri"],
