@@ -29,11 +29,15 @@ Edit `tes-diagnostik/config.js`:
 Anon key memang digunakan di browser. Keamanan data bergantung pada RLS yang aktif dan Edge Functions yang memakai service role di server.
 
 ## 4. Isi bank soal
+
+Bank soal awal Matematika SMP kelas VII tersedia di `supabase/question-bank-smp7-matematika.csv`. File ini berisi 20 soal yang digunakan sebagai versi 1.0, lengkap dengan kunci, pembahasan, tingkat kesulitan, dan indikator kompetensi. Nilai `is_active` disetel `true` agar bisa dipakai setelah CSV diimpor ke tabel `diagnostic_questions` dan Supabase siap.
+
+Kolom `difficulty` memakai nilai `dasar`, `menengah`, `sulit`, atau `hots`. Kolom `competency_indicator` menjelaskan kompetensi yang diukur.
 Setiap kombinasi jenjang, kelas, dan mata pelajaran memerlukan minimal 20 soal aktif. Soal harus ditinjau tim akademik sebelum `is_active` diubah menjadi true. Struktur pilihan jawaban adalah array empat teks, misalnya:
 `["Pilihan A","Pilihan B","Pilihan C","Pilihan D"]`.
 Kolom `answer_key` berisi A, B, C, atau D. Isi `topic` dan `explanation` untuk mendukung pemetaan dan pembahasan.
 
-Jangan aktifkan bank soal yang belum diperiksa. Mode pratinjau saat ini hanya menyediakan 20 contoh soal Matematika SMP kelas 8. Identitas pada mode pratinjau tidak dikirim ke server.
+Jangan aktifkan bank soal yang belum diperiksa. Mode pratinjau saat ini menyediakan 20 soal Matematika SMP kelas VII. Identitas pada mode pratinjau tidak dikirim ke server.
 
 ## 5. Uji sebelum dipublikasikan
 - Uji pendaftaran dari desktop dan ponsel.
