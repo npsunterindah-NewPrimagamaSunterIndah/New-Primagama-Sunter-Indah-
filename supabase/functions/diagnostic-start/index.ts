@@ -10,7 +10,8 @@ Deno.serve(async (req) => {
     const body = await req.json();
     const { student_name, school_name, parent_name, parent_phone, level, grade, subject } = body;
     if (![student_name, school_name, parent_name, parent_phone, level, subject].every((v) => typeof v === "string" && v.trim().length > 0)) return json({ error: "Data peserta belum lengkap." }, 400);
-    if (!["SD","SMP","SMA","SMK"].includes(level) || !Number.isInteger(grade) || grade < 1 || grade > 12 || !/^[0-9]{10,15}$/.test(parent_phone)) return json({ error: "Data jenjang, kelas, atau nomor WhatsApp tidak valid." }, 400);
+    const gradeValid = level === "SD" ? grade >= 1 && grade <= 6 : level === "SMP" ? grade >= 7 && grade <= 9 : (level === "SMA" || level === "SMK") ? grade >= 10 && grade <= 12 : false;
+    if (!gradeValid || !/^[0-9]{10,15}$/.test(parent_phone)) return json({ error: "Data jenjang, kelas, atau nomor WhatsApp tidak valid." }, 400);
     const url = Deno.env.get("SUPABASE_URL")!;
     const key = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const db = createClient(url, key, { auth: { persistSession: false } });
