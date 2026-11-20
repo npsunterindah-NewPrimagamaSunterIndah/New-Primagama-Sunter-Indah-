@@ -8,6 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Blog & Tips Belajar - New Primagama Sunter Indah</title>
+    <link rel="canonical" href="https://newprimagamasunterindah.com/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog & Tips Belajar - New Primagama Sunter Indah">
+    <meta property="og:description" content="Artikel seputar tips belajar, TKA, ujian, sekolah, dan pendidikan dari New Primagama Sunter Indah.">
+    <meta property="og:url" content="https://newprimagamasunterindah.com/blog.html">
+    <meta property="og:site_name" content="New Primagama Sunter Indah">
+    <meta name="twitter:card" content="summary_large_image">
 
     <meta
         name="description"
@@ -268,7 +275,9 @@
 
 
 
-<script>
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const supabase = createClient('https://fdszchefukrjsklrcuar.supabase.co','sb_publishable__EYU4kvj4NIyVzf-H6xD3A_i2ttl5nV');
 
 /* =====================================================
    DATABASE SELURUH ARTIKEL
@@ -717,6 +726,32 @@ const articles = [
 
 ];
 
+// Ambil artikel yang diterbitkan melalui CMS.
+try {
+    const { data: cmsArticles, error } = await supabase
+        .from("articles")
+        .select("id,title,slug,excerpt,category,cover_image_url,published_at,created_at,status")
+        .eq("status", "published")
+        .not("published_at", "is", null);
+
+    if (error) throw error;
+
+    (cmsArticles || []).forEach(article => {
+        articles.push({
+            title: article.title || "Artikel New Primagama",
+            category: article.category || "Edukasi & Sekolah",
+            date: (article.published_at || article.created_at || "").slice(0, 10),
+            dateDisplay: new Date(article.published_at || article.created_at).toLocaleDateString("id-ID", {day:"numeric", month:"long", year:"numeric"}),
+            description: article.excerpt || "",
+            image: article.cover_image_url || "Logo-NP-Zenius-transparan.png",
+            link: "artikel.html?slug=" + encodeURIComponent(article.slug || article.id)
+        });
+    });
+} catch (error) {
+    console.error("Artikel CMS gagal dimuat:", error);
+}
+
+
 
 /* =====================================================
    URUTKAN TERBARU → TERLAMA
@@ -733,79 +768,21 @@ articles.sort(function(a,b){
    BUAT CARD
 ===================================================== */
 
+function escapeHTML(value){const node=document.createElement('span');node.textContent=String(value ?? '');return node.innerHTML;}
+
 function createArticleCard(article,isLatest){
-
-    const badge = isLatest
-        ? `
-            <span class="new-badge">
-                TERBARU
-            </span>
-          `
-        : "";
-
-
+    const badge = isLatest ? '<span class="new-badge">TERBARU</span>' : "";
     return `
-
-        <article class="article-card">
-
-            ${badge}
-
-
-            <a
-                href="${article.link}"
-                class="article-image"
-            >
-
-                <img
-                    src="${article.image}"
-                    alt="${article.title}"
-                    loading="lazy"
-                >
-
-            </a>
-
-
-            <div class="article-category">
-
-                ${article.category}
-
-            </div>
-
-
-            <h3>
-
-                <a href="${article.link}">
-
-                    ${article.title}
-
-                </a>
-
-            </h3>
-
-
-            <p class="article-description">
-
-                ${article.description}
-
-            </p>
-
-
-            <div class="article-meta">
-
-                <i class="fa-regular fa-calendar"></i>
-
-                <span class="date">
-
-                    ${article.dateDisplay}
-
-                </span>
-
-            </div>
-
-        </article>
-
-    `;
-
+      <article class="article-card">
+        ${badge}
+        <a href="${escapeHTML(article.link)}" class="article-image">
+          <img src="${escapeHTML(article.image)}" alt="${escapeHTML(article.title)}" loading="lazy">
+        </a>
+        <div class="article-category">${escapeHTML(article.category)}</div>
+        <h3><a href="${escapeHTML(article.link)}">${escapeHTML(article.title)}</a></h3>
+        <p class="article-description">${escapeHTML(article.description)}</p>
+        <div class="article-meta"><i class="fa-regular fa-calendar"></i><span class="date">${escapeHTML(article.dateDisplay)}</span></div>
+      </article>`;
 }
 
 
@@ -817,12 +794,12 @@ if (articles.length && featuredArticle) {
     const featured = articles[0];
     featuredArticle.innerHTML = `
       <article class="featured-card">
-        <img src="${featured.image}" alt="${featured.title}" loading="eager">
+        <img src="${escapeHTML(featured.image)}" alt="${escapeHTML(featured.title)}" loading="eager">
         <div>
-          <div class="featured-category">${featured.category}</div>
-          <div class="featured-meta"><i class="fa-regular fa-calendar"></i> ${featured.dateDisplay}</div>
-          <h2>${featured.title}</h2>
-          <p>${featured.description}</p>
+          <div class="featured-category">${escapeHTML(featured.category)}</div>
+          <div class="featured-meta"><i class="fa-regular fa-calendar"></i> ${escapeHTML(featured.dateDisplay)}</div>
+          <h2>${escapeHTML(featured.title)}</h2>
+          <p>${escapeHTML(featured.description)}</p>
           <a class="read-featured" href="${featured.link}">Baca Artikel <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </article>`;

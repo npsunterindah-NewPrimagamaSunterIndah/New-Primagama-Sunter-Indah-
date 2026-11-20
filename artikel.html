@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artikel pendidikan New Primagama Sunter Indah.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:site_name" content="New Primagama Sunter Indah">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Artikel - New Primagama Sunter Indah">
+  <meta property="og:description" content="Artikel pendidikan New Primagama Sunter Indah.">
+  <meta property="og:url" content="https://newprimagamasunterindah.com/artikel.html">
+  <meta property="og:image" content="https://newprimagamasunterindah.com/Logo-NP-Zenius-transparan.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Artikel - New Primagama Sunter Indah">
+  <meta name="twitter:description" content="Artikel pendidikan New Primagama Sunter Indah.">
+  <link rel="canonical" href="https://newprimagamasunterindah.com/artikel.html">
+  <title>Artikel - New Primagama Sunter Indah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog-modern.css">
+  <style>
+    .detail-wrap{max-width:1000px;margin:0 auto;padding:48px 22px 72px}
+    .detail-article{max-width:780px;margin:0 auto;background:#fff;padding:clamp(22px,5vw,54px);border:1px solid #e5ebf2;border-radius:18px}
+    .detail-category{display:inline-block;padding:6px 13px;border-radius:30px;background:#f0effb;color:#27358b;font-size:12px;font-weight:700}
+    .detail-title{margin:16px 0 12px;color:#171b5e;font-size:clamp(28px,5vw,42px);line-height:1.22}
+    .detail-date{color:#8293a8;font-size:13px;margin-bottom:24px}
+    .detail-cover{display:block;width:100%;max-height:430px;object-fit:cover;border-radius:14px;margin:24px 0 30px}
+    .detail-content{color:#475569;font-size:15px;line-height:1.9;overflow-wrap:anywhere}
+    .detail-content p{margin:0 0 18px}
+    .detail-content h2{color:#171b5e;font-size:24px;line-height:1.35;margin:30px 0 12px}
+    .detail-content h3{color:#171b5e;font-size:20px;margin:24px 0 10px}
+    .detail-content ul,.detail-content ol{padding-left:24px;margin:0 0 20px}
+    .detail-content li{margin:7px 0}
+    .detail-content img{max-width:100%;height:auto;border-radius:10px}
+    .detail-back{display:inline-block;margin-bottom:22px;color:#27358b;font-weight:700;font-size:13px}
+    .detail-state{text-align:center;padding:70px 20px;color:#64748b}
+    @media(max-width:600px){.detail-wrap{padding:24px 14px 48px}.detail-article{padding:22px 18px}.detail-content h2{font-size:21px}}
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo"><a href="blog.html"><img src="Logo-NP-Zenius-transparan.png" alt="Logo New Primagama Sunter Indah"></a></div>
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html#hero">Beranda</a><a href="index.html#tentang">Tentang</a><a href="index.html#program">Program</a><a href="index.html#fasilitas">Fasilitas</a><a href="index.html#faq">FAQ</a><a href="index.html#kontak">Kontak</a><a href="blog.html" class="active">Blog</a>
+  </nav>
+  <a href="index.html#kontak" class="btn-navbar">Daftar Sekarang</a>
+  <button class="hamburger" id="hamburger" aria-label="Buka menu"><span></span><span></span><span></span></button>
+</header>
+<main class="detail-wrap">
+  <a class="detail-back" href="blog.html">← Kembali ke Blog</a>
+  <div id="articleState" class="detail-state">Memuat artikel...</div>
+  <article id="articleView" class="detail-article" hidden>
+    <div id="articleCategory" class="detail-category"></div>
+    <h1 id="articleTitle" class="detail-title"></h1>
+    <div id="articleDate" class="detail-date"></div>
+    <img id="articleCover" class="detail-cover" alt="" hidden>
+    <div id="articleContent" class="detail-content"></div>
+  </article>
+</main>
+<footer class="blog-footer">© 2026 New Primagama Sunter Indah. Semua Hak Dilindungi.</footer>
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import DOMPurify from 'https://esm.sh/dompurify@3.2.6';
+const supabase = createClient('https://fdszchefukrjsklrcuar.supabase.co','sb_publishable__EYU4kvj4NIyVzf-H6xD3A_i2ttl5nV');
+const state = document.getElementById('articleState');
+const view = document.getElementById('articleView');
+const params = new URLSearchParams(location.search);
+const articleSlug = params.get('slug');
+const legacyId = params.get('id');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+hamburger?.addEventListener('click', () => navMenu?.classList.toggle('active'));
+
+if (!articleSlug && !legacyId) {
+  state.textContent = 'Artikel tidak ditemukan. Silakan kembali ke halaman Blog.';
+} else {
+  let query = supabase.from('articles')
+    .select('title,slug,seo_title,excerpt,content,category,cover_image_url,published_at,meta_description,status');
+  query = articleSlug ? query.eq('slug', articleSlug) : query.eq('id', legacyId);
+  const { data, error } = await query.eq('status', 'published').maybeSingle();
+
+  if (error || !data) {
+    state.textContent = 'Artikel tidak tersedia atau belum diterbitkan.';
+  } else {
+    const seoTitle = data.seo_title || data.title || 'Artikel New Primagama';
+    const description = data.meta_description || data.excerpt || 'Artikel pendidikan New Primagama Sunter Indah.';
+    const canonicalUrl = 'https://newprimagamasunterindah.com/artikel.html?slug=' + encodeURIComponent(data.slug || articleSlug || '');
+    const imageUrl = data.cover_image_url || 'https://newprimagamasunterindah.com/Logo-NP-Zenius-transparan.png';
+
+    document.title = seoTitle;
+    document.querySelector('meta[name="description"]').content = description;
+    document.querySelector('link[rel="canonical"]').href = canonicalUrl;
+    document.querySelector('meta[property="og:title"]').content = seoTitle;
+    document.querySelector('meta[property="og:description"]').content = description;
+    document.querySelector('meta[property="og:url"]').content = canonicalUrl;
+    document.querySelector('meta[property="og:image"]').content = imageUrl;
+    document.querySelector('meta[name="twitter:title"]').content = seoTitle;
+    document.querySelector('meta[name="twitter:description"]').content = description;
+
+    document.getElementById('articleCategory').textContent = data.category || 'Edukasi & Sekolah';
+    document.getElementById('articleTitle').textContent = data.title || '';
+    document.getElementById('articleDate').textContent = data.published_at
+      ? new Date(data.published_at).toLocaleDateString('id-ID', {day:'numeric', month:'long', year:'numeric'}) + ' · New Primagama Sunter Indah'
+      : 'New Primagama Sunter Indah';
+
+    const cover = document.getElementById('articleCover');
+    if (data.cover_image_url && /^https:\/\//i.test(data.cover_image_url)) {
+      cover.src = data.cover_image_url;
+      cover.alt = data.title || 'Gambar artikel';
+      cover.hidden = false;
+    }
+
+    document.getElementById('articleContent').innerHTML = DOMPurify.sanitize(data.content || '', {USE_PROFILES:{html:true}});
+
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: data.title,
+      description,
+      image: imageUrl,
+      datePublished: data.published_at || undefined,
+      dateModified: data.published_at || undefined,
+      author: {'@type':'Organization', name:'New Primagama Sunter Indah'},
+      publisher: {'@type':'Organization', name:'New Primagama Sunter Indah'},
+      mainEntityOfPage: canonicalUrl
+    };
+    const schemaScript = document.createElement('script');
+    schemaScript.type = 'application/ld+json';
+    schemaScript.textContent = JSON.stringify(schema);
+    document.head.appendChild(schemaScript);
+
+    state.hidden = true;
+    view.hidden = false;
+  }
+}
+</script>
+</body>
+</html>

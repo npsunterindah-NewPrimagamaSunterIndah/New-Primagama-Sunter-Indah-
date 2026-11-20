@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMS Artikel | New Primagama Sunter Indah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--purple:#27358b;--dark:#171b5e;--blue:#1767a8;--yellow:#f5b51b;--ink:#172b45;--muted:#64748b;--line:#e4eaf1;--bg:#f5f7fb}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Poppins,Arial,sans-serif;color:var(--ink)}button,input,textarea,select{font:inherit}
+.top{background:#fff;border-bottom:1px solid var(--line);padding:15px 5%;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;color:var(--purple);font-size:18px}.brand span{color:var(--yellow)}.top small{color:var(--muted)}
+.wrap{max-width:1180px;margin:32px auto;padding:0 20px}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 28px #17365d0a}.login{max-width:430px;margin:8vh auto}.h{margin:0 0 6px;font-size:24px;color:var(--dark)}.muted{color:var(--muted);font-size:13px}.field{display:grid;gap:7px;margin:15px 0}.field label{font-size:12px;font-weight:700}.field input,.field textarea,.field select{width:100%;padding:12px 13px;border:1px solid #d8e0eb;border-radius:9px;background:white;color:var(--ink);outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--purple);box-shadow:0 0 0 3px #27358b15}.field textarea{min-height:220px;resize:vertical;line-height:1.7}.btn{border:0;border-radius:9px;padding:11px 16px;background:var(--purple);color:white;font-weight:700;cursor:pointer}.btn:hover{background:var(--dark)}.btn.secondary{background:#eef1f8;color:var(--purple)}.btn.yellow{background:var(--yellow);color:#30270d}.btn.danger{background:#fff0f0;color:#a22}.actions{display:flex;gap:9px;flex-wrap:wrap}.hidden{display:none!important}.bar{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:20px}.grid{display:grid;grid-template-columns:1.1fr 1.9fr;gap:20px}.list{display:grid;gap:10px;margin-top:15px}.item{border:1px solid var(--line);border-radius:10px;padding:13px;display:flex;align-items:center;justify-content:space-between;gap:12px}.item strong{font-size:13px;display:block}.item small{font-size:11px;color:var(--muted)}.tag{font-size:10px;padding:4px 8px;border-radius:20px;background:#fff5d7;color:#755400;white-space:nowrap}.tag.live{background:#e8f7ee;color:#17663a}.status{margin:12px 0;padding:11px 13px;border-radius:9px;font-size:12px;background:#eef4ff;color:#234}.status.error{background:#fff0f0;color:#a22}.cover-preview{max-width:180px;max-height:120px;object-fit:cover;border-radius:8px;margin-top:8px}.hint{font-size:11px;color:var(--muted)}.ai-box{background:#f6f4ff;border:1px solid #ded9ff;border-radius:12px;padding:16px;margin:14px 0 20px}.ai-box h3{margin:0 0 6px;color:var(--dark);font-size:15px}.ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ai-grid .field{margin:8px 0}.ai-box textarea{min-height:76px}.ai-box .btn{background:#6b4ce6}.ai-status{font-size:12px;margin-top:10px;color:var(--muted)}
+.preview-overlay{position:fixed;inset:0;z-index:1000;overflow:auto;background:#f5f7fb;padding:20px}
+.preview-shell{max-width:900px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 12px 40px #17365d18}
+.preview-toolbar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;background:#fff;border-bottom:1px solid var(--line)}
+.preview-toolbar strong{color:var(--purple);font-size:13px}
+.preview-article{max-width:760px;margin:auto;padding:32px 26px 56px}
+.preview-category{color:var(--purple);font-size:12px;font-weight:700;text-transform:uppercase}
+.preview-article h1{color:var(--dark);font-size:clamp(27px,5vw,40px);line-height:1.25;margin:12px 0}
+.preview-excerpt{color:var(--muted);font-size:16px;line-height:1.8}
+.preview-cover{width:100%;max-height:420px;object-fit:cover;border-radius:12px;margin:22px 0}
+.preview-content{overflow-wrap:anywhere;font-size:15px;line-height:1.9;color:var(--ink)}
+.preview-content p{margin:0 0 18px}.preview-content h2{font-size:24px;line-height:1.35;color:var(--dark);margin:30px 0 12px}.preview-content h3{font-size:19px;color:var(--dark);margin:24px 0 10px}.preview-content ul,.preview-content ol{padding-left:24px;margin:0 0 18px}.preview-content li{margin:6px 0}.preview-content a{color:var(--blue);text-decoration:underline}.preview-content blockquote{margin:18px 0;padding:12px 18px;border-left:4px solid var(--yellow);background:#f8f9fd}
+@media(max-width:600px){.preview-overlay{padding:8px}.preview-toolbar{align-items:flex-start;flex-direction:column}.preview-article{padding:24px 17px 40px}}@media(max-width:600px){.ai-grid{grid-template-columns:1fr}}@media(max-width:850px){.grid{grid-template-columns:1fr}.wrap{margin:18px auto}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand">NEW <span>PRIMAGAMA</span> | CMS ARTIKEL</div><small>Admin New Primagama Sunter Indah</small></header>
+<main class="wrap">
+<section id="loginPanel" class="panel login">
+<h1 class="h">Login Admin</h1><p class="muted">Masuk untuk mengelola artikel website.</p>
+<form id="loginForm">
+<div class="field"><label for="email">Email admin</label><input id="email" type="email" autocomplete="username" required></div>
+<div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required></div>
+<button class="btn" type="submit">Masuk ke CMS</button>
+</form><div id="loginMessage" class="status hidden"></div>
+</section>
+<section id="appPanel" class="hidden">
+<div class="bar"><div><h1 class="h">Dashboard Artikel</h1><div class="muted">Buat, edit, simpan draft, dan terbitkan artikel.</div></div><div class="actions"><button id="newBtn" class="btn yellow">+ Artikel Baru</button><button id="logoutBtn" class="btn secondary">Keluar</button></div></div>
+<div class="grid">
+<aside class="panel"><h2 class="h" style="font-size:18px">Daftar Artikel</h2><div class="field"><input id="filterInput" placeholder="Cari judul artikel..."></div><div id="articleList" class="list"></div></aside>
+<section class="panel">
+<h2 id="formHeading" class="h" style="font-size:18px">Editor Artikel</h2>
+<div class="ai-box">
+<h3>✨ AI Article Generator</h3>
+<p class="muted">Masukkan topik. Gemini akan menyiapkan draf artikel dan SEO untuk kamu edit.</p>
+<div class="ai-grid">
+<div class="field"><label for="aiTopic">Topik artikel</label><input id="aiTopic" maxlength="300" placeholder="Contoh: Tips Persiapan TKA 2026 untuk Siswa SMA"></div>
+<div class="field"><label for="aiCategory">Kategori artikel</label><select id="aiCategory"><option>TKA</option><option>Tips Belajar</option><option>Edukasi & Sekolah</option><option>Ujian & Persiapan</option><option>Fun Edukasi</option></select></div>
+</div>
+<div class="field"><label for="aiKeywords">Kata kunci tambahan (opsional)</label><input id="aiKeywords" placeholder="Contoh: TKA SMA, strategi belajar, latihan soal"></div>
+<button class="btn" type="button" id="generateBtn">✨ Generate Artikel dengan AI</button>
+<div id="aiMessage" class="ai-status" aria-live="polite"></div>
+</div>
+<form id="articleForm">
+<input id="articleId" type="hidden">
+<div class="field"><label for="title">Judul artikel</label><input id="title" maxlength="180" required placeholder="Masukkan judul artikel"></div>
+<div class="field"><label for="slug">Slug URL</label><input id="slug" required placeholder="judul-artikel"><span class="hint">Gunakan huruf kecil dan tanda hubung.</span></div>
+<div class="field"><label for="category">Kategori</label><select id="category"><option>TKA</option><option>Tips Belajar</option><option>Edukasi & Sekolah</option><option>Ujian & Persiapan</option><option>Fun Edukasi</option></select></div>
+<div class="field"><label for="excerpt">Ringkasan artikel</label><textarea id="excerpt" style="min-height:90px" maxlength="300" placeholder="Ringkasan singkat untuk kartu artikel"></textarea></div>
+<div class="field"><label for="content">Isi artikel (HTML diperbolehkan)</label><textarea id="content" required placeholder="Tulis isi artikel di sini..."></textarea><span class="hint">Gunakan paragraf HTML seperti &lt;p&gt;...&lt;/p&gt; atau teks biasa. Gunakan paragraf HTML seperti <p>...</p> atau teks biasa. Preview akan menampilkan format artikel.</span></div>
+<div class="field"><label for="cover">Gambar utama</label><input id="cover" type="file" accept="image/jpeg,image/png,image/webp"><img id="coverPreview" class="cover-preview hidden" alt="Preview gambar"><input id="coverUrl" type="hidden"><span class="hint">JPG, PNG, atau WebP. Maksimal 5 MB.</span></div>
+<div class="field"><label for="seoTitle">SEO title</label><input id="seoTitle" maxlength="70" placeholder="Contoh: Tips Belajar Efektif untuk Siswa SMP"><span class="hint">Gunakan kata kunci utama. Idealnya 50 sampai 60 karakter. Jika kosong, CMS memakai judul artikel.</span></div>
+<div class="field"><label for="metaDescription">Meta description</label><textarea id="metaDescription" style="min-height:80px" maxlength="160" placeholder="Jelaskan isi dan manfaat artikel dalam 140 sampai 160 karakter"></textarea><span class="hint">Tulis ringkasan yang jelas dan memuat kata kunci secara alami. Jika kosong, CMS memakai ringkasan artikel.</span></div>
+<div class="actions"><button class="btn secondary" type="button" id="previewBtn">Lihat Preview</button><button class="btn" type="submit" id="publishBtn">Terbitkan Artikel</button><button class="btn secondary" type="button" id="draftBtn">Simpan Draft</button><button class="btn danger" type="button" id="deleteBtn" disabled>Hapus</button></div>
+</form><div id="appMessage" class="status hidden"></div>
+</section>
+</div>
+</section>
+</main>
+<section id="previewPanel" class="preview-overlay hidden" aria-label="Preview artikel">
+  <div class="preview-shell">
+    <div class="preview-toolbar">
+      <strong>PREVIEW ARTIKEL · NEW PRIMAGAMA</strong>
+      <div class="actions">
+        <button class="btn secondary" type="button" id="closePreviewBtn">Kembali ke Editor</button>
+        <button class="btn" type="button" id="previewPublishBtn">Terbitkan Artikel</button>
+      </div>
+    </div>
+    <article class="preview-article">
+      <div id="previewCategory" class="preview-category"></div>
+      <h1 id="previewTitle"></h1>
+      <p id="previewExcerpt" class="preview-excerpt"></p>
+      <img id="previewCover" class="preview-cover hidden" alt="Gambar utama artikel">
+      <div id="previewContent" class="preview-content"></div>
+    </article>
+  </div>
+</section>
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import DOMPurify from 'https://esm.sh/dompurify@3.2.6';
+const SUPABASE_URL = 'https://fdszchefukrjsklrcuar.supabase.co';
+const SUPABASE_KEY = 'sb_publishable__EYU4kvj4NIyVzf-H6xD3A_i2ttl5nV';
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+const $ = id => document.getElementById(id);
+let articles = [];
+function message(target,text,error=false){const el=$(target);el.textContent=text;el.classList.remove('hidden','error');if(error)el.classList.add('error')}
+function clearMessage(target){$(target).classList.add('hidden')}
+function slugify(value){return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+function dateLabel(value){return value?new Date(value).toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'}):'Belum terbit'}
+function resetForm(){ $('articleForm').reset();$('articleId').value='';$('coverUrl').value='';$('coverPreview').classList.add('hidden');$('deleteBtn').disabled=true;$('formHeading').textContent='Artikel Baru';$('publishBtn').textContent='Terbitkan Artikel'; }
+async function loadArticles(){const {data,error}=await supabase.from('articles').select('*').order('updated_at',{ascending:false});if(error){message('appMessage',error.message,true);return;}articles=data||[];renderList();}
+function renderList(){const q=$('filterInput').value.toLowerCase();const rows=articles.filter(a=>a.title.toLowerCase().includes(q));$('articleList').innerHTML=rows.length?rows.map(a=>'<div class="item"><div><strong></strong><small></small></div><span class="tag"></span><button class="btn secondary" type="button">Edit</button></div>').join(''):'<p class="muted">Belum ada artikel.</p>';[...$('articleList').children].forEach((el,i)=>{const a=rows[i];el.querySelector('strong').textContent=a.title;el.querySelector('small').textContent=dateLabel(a.published_at);const tag=el.querySelector('.tag');tag.textContent=a.status==='published'?'Terbit':'Draft';if(a.status==='published')tag.classList.add('live');el.querySelector('button').addEventListener('click',()=>editArticle(a.id));});}
+function editArticle(id){const a=articles.find(x=>x.id===id);if(!a)return; $('articleId').value=a.id;$('title').value=a.title;$('slug').value=a.slug;$('category').value=a.category||'Tips Belajar';$('excerpt').value=a.excerpt||'';$('content').value=a.content||'';$('coverUrl').value=a.cover_image_url||'';$('seoTitle').value=a.seo_title||'';$('metaDescription').value=a.meta_description||'';$('formHeading').textContent='Edit Artikel';$('deleteBtn').disabled=false;$('publishBtn').textContent='Perbarui & Terbitkan';if(a.cover_image_url){$('coverPreview').src=a.cover_image_url;$('coverPreview').classList.remove('hidden')}else $('coverPreview').classList.add('hidden');clearMessage('appMessage');window.scrollTo({top:0,behavior:'smooth'});}
+async function uploadCover(){const file=$('cover').files[0];if(!file)return $('coverUrl').value||null;if(file.size>5*1024*1024)throw new Error('Ukuran gambar maksimal 5 MB.');if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw new Error('Format gambar harus JPG, PNG, atau WebP.');const ext=file.name.split('.').pop().toLowerCase();const path='articles/'+Date.now()+'-'+crypto.randomUUID()+'.'+ext;const {error}=await supabase.storage.from('article-images').upload(path,file,{cacheControl:'3600',upsert:false,contentType:file.type});if(error)throw error;const {data}=supabase.storage.from('article-images').getPublicUrl(path);return data.publicUrl;}
+async function saveArticle(status){clearMessage('appMessage');const title=$('title').value.trim();const slug=slugify($('slug').value.trim()||title);if(!title||!slug||!$('content').value.trim()){message('appMessage','Judul, slug, dan isi artikel wajib diisi.',true);return;}try{$('publishBtn').disabled=true;$('draftBtn').disabled=true;const imageUrl=await uploadCover();const now=new Date().toISOString();const payload={title,slug,category:$('category').value,excerpt:$('excerpt').value.trim(),content:$('content').value.trim(),cover_image_url:imageUrl,seo_title:$('seoTitle').value.trim()||title,meta_description:$('metaDescription').value.trim()||$('excerpt').value.trim().slice(0,160),status,published_at:status==='published'?now:null,updated_at:now};const id=$('articleId').value;let result;if(id)result=await supabase.from('articles').update(payload).eq('id',id);else result=await supabase.from('articles').insert(payload);if(result.error)throw result.error;message('appMessage',status==='published'?'Artikel tersimpan dan berstatus terbit di database.':'Draft berhasil disimpan.');resetForm();await loadArticles();}catch(e){message('appMessage',e.message||'Gagal menyimpan artikel.',true);}finally{$('publishBtn').disabled=false;$('draftBtn').disabled=false;}}
+$('generateBtn').addEventListener('click', async () => {
+  const topic = $('aiTopic').value.trim();
+  if (!topic) {
+    $('aiMessage').textContent = 'Masukkan topik artikel terlebih dahulu.';
+    return;
+  }
+  const { data: { session } } = await supabase.auth.getSession();
+  if (!session) {
+    $('aiMessage').textContent = 'Sesi login berakhir. Silakan login kembali.';
+    return;
+  }
+  const button = $('generateBtn');
+  button.disabled = true;
+  button.textContent = 'Sedang membuat artikel...';
+  $('aiMessage').textContent = 'Gemini sedang menyusun artikel. Mohon tunggu.';
+  try {
+    const response = await fetch(
+      SUPABASE_URL + '/functions/v1/generate-artcile',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + session.access_token
+        },
+        body: JSON.stringify({
+          topic,
+          category: $('aiCategory').value,
+          keywords: $('aiKeywords').value.trim()
+        })
+      }
+    );
+    const result = await response.json();
+    if (!response.ok || !result.success || !result.article) {
+      throw new Error(result.error || 'AI gagal membuat artikel. Periksa Edge Function dan kuota Gemini.');
+    }
+    const a = result.article;
+    $('title').value = a.title || '';
+    $('slug').value = a.slug || slugify(a.title || '');
+    $('category').value = a.category || $('aiCategory').value;
+    $('excerpt').value = a.excerpt || '';
+    $('content').value = a.content || '';
+    $('seoTitle').value = a.seo_title || a.title || '';
+    $('metaDescription').value = a.meta_description || a.excerpt || '';
+    $('aiMessage').textContent = 'Draf AI berhasil dibuat. Periksa dan edit isinya sebelum menyimpan.';
+    $('formHeading').textContent = 'Review Artikel dari AI';
+    window.scrollTo({ top: $('articleForm').getBoundingClientRect().top + window.scrollY - 20, behavior: 'smooth' });
+  } catch (error) {
+    $('aiMessage').textContent = error.message || 'Terjadi kesalahan saat menghubungi AI.';
+  } finally {
+    button.disabled = false;
+    button.textContent = '✨ Generate Artikel dengan AI';
+  }
+});
+$('loginForm').addEventListener('submit',async e=>{e.preventDefault();clearMessage('loginMessage');const {error}=await supabase.auth.signInWithPassword({email:$('email').value,password:$('password').value});if(error){message('loginMessage',error.message,true);return;}await showApp();});
+async function showApp(){const {data:{session}}=await supabase.auth.getSession();if(!session){$('loginPanel').classList.remove('hidden');$('appPanel').classList.add('hidden');return;}$('loginPanel').classList.add('hidden');$('appPanel').classList.remove('hidden');await loadArticles();}
+$('logoutBtn').addEventListener('click',async()=>{await supabase.auth.signOut();resetForm();showApp();});
+$('newBtn').addEventListener('click',resetForm);
+$('title').addEventListener('input',()=>{if(!$('articleId').value)$('slug').value=slugify($('title').value);});
+$('slug').addEventListener('input',()=>{$('slug').value=slugify($('slug').value);});
+$('cover').addEventListener('change',()=>{const f=$('cover').files[0];if(f){$('coverPreview').src=URL.createObjectURL(f);$('coverPreview').classList.remove('hidden');}});
+function buildPreview(){
+  const title=$('title').value.trim();
+  const content=$('content').value.trim();
+  if(!title||!content){
+    message('appMessage','Isi judul dan konten artikel sebelum melihat preview.',true);
+    return;
+  }
+  $('previewCategory').textContent=$('category').value;
+  $('previewTitle').textContent=title;
+  $('previewExcerpt').textContent=$('excerpt').value.trim();
+  const previewContent=$('previewContent');
+  previewContent.innerHTML=DOMPurify.sanitize(content,{USE_PROFILES:{html:true}});
+  const file=$('cover').files[0];
+  const imageUrl=file?URL.createObjectURL(file):$('coverUrl').value;
+  if(imageUrl){
+    $('previewCover').src=imageUrl;
+    $('previewCover').classList.remove('hidden');
+  }else{
+    $('previewCover').removeAttribute('src');
+    $('previewCover').classList.add('hidden');
+  }
+  $('previewPanel').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+$('previewBtn').addEventListener('click',buildPreview);
+$('closePreviewBtn').addEventListener('click',()=>$('previewPanel').classList.add('hidden'));
+$('previewPublishBtn').addEventListener('click',()=>{
+  $('previewPanel').classList.add('hidden');
+  saveArticle('published');
+});
+$('articleForm').addEventListener('submit',e=>{e.preventDefault();saveArticle('published');});
+$('draftBtn').addEventListener('click',()=>saveArticle('draft'));
+$('deleteBtn').addEventListener('click',async()=>{const id=$('articleId').value;if(!id||!confirm('Hapus artikel ini?'))return;const {error}=await supabase.from('articles').delete().eq('id',id);if(error){message('appMessage',error.message,true);return;}message('appMessage','Artikel berhasil dihapus.');resetForm();await loadArticles();});
+$('filterInput').addEventListener('input',renderList);
+await showApp();
+</script>
+</body>
+</html>
