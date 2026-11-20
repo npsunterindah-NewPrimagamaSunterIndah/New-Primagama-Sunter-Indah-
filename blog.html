@@ -268,7 +268,9 @@
 
 
 
-<script>
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const supabase = createClient('https://fdszchefukrjsklrcuar.supabase.co','sb_publishable__EYU4kvj4NIyVzf-H6xD3A_i2ttl5nV');
 
 /* =====================================================
    DATABASE SELURUH ARTIKEL
@@ -717,6 +719,32 @@ const articles = [
 
 ];
 
+// Ambil artikel yang diterbitkan melalui CMS.
+try {
+    const { data: cmsArticles, error } = await supabase
+        .from("articles")
+        .select("id,title,slug,excerpt,category,cover_image_url,published_at,created_at,status")
+        .eq("status", "published")
+        .not("published_at", "is", null);
+
+    if (error) throw error;
+
+    (cmsArticles || []).forEach(article => {
+        articles.push({
+            title: article.title || "Artikel New Primagama",
+            category: article.category || "Edukasi & Sekolah",
+            date: (article.published_at || article.created_at || "").slice(0, 10),
+            dateDisplay: new Date(article.published_at || article.created_at).toLocaleDateString("id-ID", {day:"numeric", month:"long", year:"numeric"}),
+            description: article.excerpt || "",
+            image: article.cover_image_url || "Logo-NP-Zenius-transparan.png",
+            link: "artikel.html?id=" + encodeURIComponent(article.id)
+        });
+    });
+} catch (error) {
+    console.error("Artikel CMS gagal dimuat:", error);
+}
+
+
 
 /* =====================================================
    URUTKAN TERBARU → TERLAMA
@@ -733,7 +761,7 @@ articles.sort(function(a,b){
    BUAT CARD
 ===================================================== */
 
-function createArticleCard(article,isLatest){
+function escapeHTML(value){return String(value ?? '').replace(/[&<>\"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[char]));}\n\nfunction createArticleCard(article,isLatest){
 
     const badge = isLatest
         ? `
@@ -817,12 +845,12 @@ if (articles.length && featuredArticle) {
     const featured = articles[0];
     featuredArticle.innerHTML = `
       <article class="featured-card">
-        <img src="${featured.image}" alt="${featured.title}" loading="eager">
+        <img src="${escapeHTML(featured.image)}" alt="${escapeHTML(featured.title)}" loading="eager">
         <div>
-          <div class="featured-category">${featured.category}</div>
-          <div class="featured-meta"><i class="fa-regular fa-calendar"></i> ${featured.dateDisplay}</div>
-          <h2>${featured.title}</h2>
-          <p>${featured.description}</p>
+          <div class="featured-category">${escapeHTML(featured.category)}</div>
+          <div class="featured-meta"><i class="fa-regular fa-calendar"></i> ${escapeHTML(featured.dateDisplay)}</div>
+          <h2>${escapeHTML(featured.title)}</h2>
+          <p>${escapeHTML(featured.description)}</p>
           <a class="read-featured" href="${featured.link}">Baca Artikel <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </article>`;
