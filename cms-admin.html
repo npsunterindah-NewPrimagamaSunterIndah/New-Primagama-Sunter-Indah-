@@ -53,6 +53,12 @@
 <button class="btn" type="button" id="generateBtn">✨ Generate Artikel dengan AI</button>
 <div id="aiMessage" class="ai-status" aria-live="polite"></div>
 </div>
+<div class="ai-box">
+<h3>Optimasi SEO Artikel Terbit</h3>
+<p class="muted">Isi SEO title dan meta description otomatis untuk artikel terbit yang masih memakai judul dan ringkasan bawaan. Metadata yang sudah kamu sesuaikan tidak akan ditimpa.</p>
+<button class="btn" type="button" id="bulkSeoBtn">Optimasi SEO Semua Artikel Terbit</button>
+<div id="bulkSeoMessage" class="ai-status" aria-live="polite"></div>
+</div>
 <form id="articleForm">
 <input id="articleId" type="hidden">
 <div class="field"><label for="title">Judul artikel</label><input id="title" maxlength="180" required placeholder="Masukkan judul artikel"></div>
@@ -159,6 +165,50 @@ $('generateBtn').addEventListener('click', async () => {
     button.textContent = '✨ Generate Artikel dengan AI';
   }
 });
+async function optimizePublishedSeo(){
+  const button=$('bulkSeoBtn');
+  const status=$('bulkSeoMessage');
+  const {data:published,error}=await supabase.from('articles').select('id,title,excerpt,content,seo_title,meta_description').eq('status','published');
+  if(error){status.textContent='Gagal mengambil artikel: '+error.message;return;}
+  if(!published||!published.length){status.textContent='Belum ada artikel terbit.';return;}
+  const candidates=published.filter(a=>{
+    const oldTitle=(a.title||'').trim();
+    const oldDescription=(a.excerpt||'').trim().slice(0,160);
+    return !a.seo_title||a.seo_title.trim()===oldTitle||!a.meta_description||a.meta_description.trim()===oldDescription;
+  });
+  if(!candidates.length){status.textContent='Semua artikel terbit sudah memiliki metadata SEO khusus. Tidak ada perubahan.';return;}
+  if(!confirm('Periksa '+candidates.length+' artikel yang masih memakai metadata bawaan? Metadata khusus yang sudah kamu ubah akan tetap dipertahankan.'))return;
+  button.disabled=true;
+  let changed=0,failed=0;
+  status.textContent='Sedang memperbarui metadata SEO...';
+  for(const a of candidates){
+    const oldTitle=(a.title||'').trim();
+    const oldDescription=(a.excerpt||'').trim().slice(0,160);
+    const patch={};
+    if(!a.seo_title||a.seo_title.trim()===oldTitle){
+      const suffix=' | Primagama';
+      const maxBase=60-suffix.length;
+      const base=oldTitle.length>maxBase?oldTitle.slice(0,maxBase-1).trimEnd()+'…':oldTitle;
+      patch.seo_title=base+suffix;
+    }
+    if(!a.meta_description||a.meta_description.trim()===oldDescription){
+      let summary=(a.excerpt||'').trim();
+      if(!summary){
+        const plain=(a.content||'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+        summary=plain;
+      }
+      const ending=' Baca selengkapnya di New Primagama Sunter Indah.';
+      if(summary.length<120)summary+=ending;
+      patch.meta_description=summary.slice(0,160).trim();
+    }
+    if(!Object.keys(patch).length)continue;
+    const {error:updateError}=await supabase.from('articles').update(patch).eq('id',a.id);
+    if(updateError)failed++;else changed++;
+  }
+  status.textContent='Selesai. '+changed+' artikel diperbarui, '+failed+' gagal. Muat ulang daftar artikel untuk melihat hasilnya.';
+  button.disabled=false;
+}
+$('bulkSeoBtn').addEventListener('click',optimizePublishedSeo);
 $('loginForm').addEventListener('submit',async e=>{e.preventDefault();clearMessage('loginMessage');const {error}=await supabase.auth.signInWithPassword({email:$('email').value,password:$('password').value});if(error){message('loginMessage',error.message,true);return;}await showApp();});
 async function showApp(){const {data:{session}}=await supabase.auth.getSession();if(!session){$('loginPanel').classList.remove('hidden');$('appPanel').classList.add('hidden');return;}$('loginPanel').classList.add('hidden');$('appPanel').classList.remove('hidden');await loadArticles();}
 $('logoutBtn').addEventListener('click',async()=>{await supabase.auth.signOut();resetForm();showApp();});
