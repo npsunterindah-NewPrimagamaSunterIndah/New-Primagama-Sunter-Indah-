@@ -10,7 +10,7 @@
 :root{--purple:#27358b;--dark:#171b5e;--blue:#1767a8;--yellow:#f5b51b;--ink:#172b45;--muted:#64748b;--line:#e4eaf1;--bg:#f5f7fb}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Poppins,Arial,sans-serif;color:var(--ink)}button,input,textarea,select{font:inherit}
 .top{background:#fff;border-bottom:1px solid var(--line);padding:15px 5%;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;color:var(--purple);font-size:18px}.brand span{color:var(--yellow)}.top small{color:var(--muted)}
-.wrap{max-width:1180px;margin:32px auto;padding:0 20px}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 28px #17365d0a}.login{max-width:430px;margin:8vh auto}.h{margin:0 0 6px;font-size:24px;color:var(--dark)}.muted{color:var(--muted);font-size:13px}.field{display:grid;gap:7px;margin:15px 0}.field label{font-size:12px;font-weight:700}.field input,.field textarea,.field select{width:100%;padding:12px 13px;border:1px solid #d8e0eb;border-radius:9px;background:white;color:var(--ink);outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--purple);box-shadow:0 0 0 3px #27358b15}.field textarea{min-height:220px;resize:vertical;line-height:1.7}.btn{border:0;border-radius:9px;padding:11px 16px;background:var(--purple);color:white;font-weight:700;cursor:pointer}.btn:hover{background:var(--dark)}.btn.secondary{background:#eef1f8;color:var(--purple)}.btn.yellow{background:var(--yellow);color:#30270d}.btn.danger{background:#fff0f0;color:#a22}.actions{display:flex;gap:9px;flex-wrap:wrap}.hidden{display:none!important}.bar{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:20px}.grid{display:grid;grid-template-columns:1.1fr 1.9fr;gap:20px}.list{display:grid;gap:10px;margin-top:15px}.item{border:1px solid var(--line);border-radius:10px;padding:13px;display:flex;align-items:center;justify-content:space-between;gap:12px}.item strong{font-size:13px;display:block}.item small{font-size:11px;color:var(--muted)}.tag{font-size:10px;padding:4px 8px;border-radius:20px;background:#fff5d7;color:#755400;white-space:nowrap}.tag.live{background:#e8f7ee;color:#17663a}.status{margin:12px 0;padding:11px 13px;border-radius:9px;font-size:12px;background:#eef4ff;color:#234}.status.error{background:#fff0f0;color:#a22}.cover-preview{max-width:180px;max-height:120px;object-fit:cover;border-radius:8px;margin-top:8px}.hint{font-size:11px;color:var(--muted)}@media(max-width:850px){.grid{grid-template-columns:1fr}.wrap{margin:18px auto}.panel{padding:18px}}
+.wrap{max-width:1180px;margin:32px auto;padding:0 20px}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 28px #17365d0a}.login{max-width:430px;margin:8vh auto}.h{margin:0 0 6px;font-size:24px;color:var(--dark)}.muted{color:var(--muted);font-size:13px}.field{display:grid;gap:7px;margin:15px 0}.field label{font-size:12px;font-weight:700}.field input,.field textarea,.field select{width:100%;padding:12px 13px;border:1px solid #d8e0eb;border-radius:9px;background:white;color:var(--ink);outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--purple);box-shadow:0 0 0 3px #27358b15}.field textarea{min-height:220px;resize:vertical;line-height:1.7}.btn{border:0;border-radius:9px;padding:11px 16px;background:var(--purple);color:white;font-weight:700;cursor:pointer}.btn:hover{background:var(--dark)}.btn.secondary{background:#eef1f8;color:var(--purple)}.btn.yellow{background:var(--yellow);color:#30270d}.btn.danger{background:#fff0f0;color:#a22}.actions{display:flex;gap:9px;flex-wrap:wrap}.hidden{display:none!important}.bar{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:20px}.grid{display:grid;grid-template-columns:1.1fr 1.9fr;gap:20px}.list{display:grid;gap:10px;margin-top:15px}.item{border:1px solid var(--line);border-radius:10px;padding:13px;display:flex;align-items:center;justify-content:space-between;gap:12px}.item strong{font-size:13px;display:block}.item small{font-size:11px;color:var(--muted)}.tag{font-size:10px;padding:4px 8px;border-radius:20px;background:#fff5d7;color:#755400;white-space:nowrap}.tag.live{background:#e8f7ee;color:#17663a}.status{margin:12px 0;padding:11px 13px;border-radius:9px;font-size:12px;background:#eef4ff;color:#234}.status.error{background:#fff0f0;color:#a22}.cover-preview{max-width:180px;max-height:120px;object-fit:cover;border-radius:8px;margin-top:8px}.hint{font-size:11px;color:var(--muted)}.ai-box{background:#f6f4ff;border:1px solid #ded9ff;border-radius:12px;padding:16px;margin:14px 0 20px}.ai-box h3{margin:0 0 6px;color:var(--dark);font-size:15px}.ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ai-grid .field{margin:8px 0}.ai-box textarea{min-height:76px}.ai-box .btn{background:#6b4ce6}.ai-status{font-size:12px;margin-top:10px;color:var(--muted)}@media(max-width:600px){.ai-grid{grid-template-columns:1fr}}@media(max-width:850px){.grid{grid-template-columns:1fr}.wrap{margin:18px auto}.panel{padding:18px}}
 </style>
 </head>
 <body>
@@ -30,6 +30,17 @@
 <aside class="panel"><h2 class="h" style="font-size:18px">Daftar Artikel</h2><div class="field"><input id="filterInput" placeholder="Cari judul artikel..."></div><div id="articleList" class="list"></div></aside>
 <section class="panel">
 <h2 id="formHeading" class="h" style="font-size:18px">Editor Artikel</h2>
+<div class="ai-box">
+<h3>✨ AI Article Generator</h3>
+<p class="muted">Masukkan topik. Gemini akan menyiapkan draf artikel dan SEO untuk kamu edit.</p>
+<div class="ai-grid">
+<div class="field"><label for="aiTopic">Topik artikel</label><input id="aiTopic" maxlength="300" placeholder="Contoh: Tips Persiapan TKA 2026 untuk Siswa SMA"></div>
+<div class="field"><label for="aiCategory">Kategori artikel</label><select id="aiCategory"><option>TKA</option><option>Tips Belajar</option><option>Edukasi & Sekolah</option><option>Ujian & Persiapan</option><option>Fun Edukasi</option></select></div>
+</div>
+<div class="field"><label for="aiKeywords">Kata kunci tambahan (opsional)</label><input id="aiKeywords" placeholder="Contoh: TKA SMA, strategi belajar, latihan soal"></div>
+<button class="btn" type="button" id="generateBtn">✨ Generate Artikel dengan AI</button>
+<div id="aiMessage" class="ai-status" aria-live="polite"></div>
+</div>
 <form id="articleForm">
 <input id="articleId" type="hidden">
 <div class="field"><label for="title">Judul artikel</label><input id="title" maxlength="180" required placeholder="Masukkan judul artikel"></div>
@@ -63,6 +74,60 @@ function renderList(){const q=$('filterInput').value.toLowerCase();const rows=ar
 function editArticle(id){const a=articles.find(x=>x.id===id);if(!a)return; $('articleId').value=a.id;$('title').value=a.title;$('slug').value=a.slug;$('category').value=a.category||'Tips Belajar';$('excerpt').value=a.excerpt||'';$('content').value=a.content||'';$('coverUrl').value=a.cover_image_url||'';$('seoTitle').value=a.seo_title||'';$('metaDescription').value=a.meta_description||'';$('formHeading').textContent='Edit Artikel';$('deleteBtn').disabled=false;$('publishBtn').textContent='Perbarui & Terbitkan';if(a.cover_image_url){$('coverPreview').src=a.cover_image_url;$('coverPreview').classList.remove('hidden')}else $('coverPreview').classList.add('hidden');clearMessage('appMessage');window.scrollTo({top:0,behavior:'smooth'});}
 async function uploadCover(){const file=$('cover').files[0];if(!file)return $('coverUrl').value||null;if(file.size>5*1024*1024)throw new Error('Ukuran gambar maksimal 5 MB.');if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw new Error('Format gambar harus JPG, PNG, atau WebP.');const ext=file.name.split('.').pop().toLowerCase();const path='articles/'+Date.now()+'-'+crypto.randomUUID()+'.'+ext;const {error}=await supabase.storage.from('article-images').upload(path,file,{cacheControl:'3600',upsert:false,contentType:file.type});if(error)throw error;const {data}=supabase.storage.from('article-images').getPublicUrl(path);return data.publicUrl;}
 async function saveArticle(status){clearMessage('appMessage');const title=$('title').value.trim();const slug=slugify($('slug').value.trim()||title);if(!title||!slug||!$('content').value.trim()){message('appMessage','Judul, slug, dan isi artikel wajib diisi.',true);return;}try{$('publishBtn').disabled=true;$('draftBtn').disabled=true;const imageUrl=await uploadCover();const now=new Date().toISOString();const payload={title,slug,category:$('category').value,excerpt:$('excerpt').value.trim(),content:$('content').value.trim(),cover_image_url:imageUrl,seo_title:$('seoTitle').value.trim()||title,meta_description:$('metaDescription').value.trim()||$('excerpt').value.trim().slice(0,160),status,published_at:status==='published'?now:null,updated_at:now};const id=$('articleId').value;let result;if(id)result=await supabase.from('articles').update(payload).eq('id',id);else result=await supabase.from('articles').insert(payload);if(result.error)throw result.error;message('appMessage',status==='published'?'Artikel tersimpan dan berstatus terbit di database.':'Draft berhasil disimpan.');resetForm();await loadArticles();}catch(e){message('appMessage',e.message||'Gagal menyimpan artikel.',true);}finally{$('publishBtn').disabled=false;$('draftBtn').disabled=false;}}
+$('generateBtn').addEventListener('click', async () => {
+  const topic = $('aiTopic').value.trim();
+  if (!topic) {
+    $('aiMessage').textContent = 'Masukkan topik artikel terlebih dahulu.';
+    return;
+  }
+  const { data: { session } } = await supabase.auth.getSession();
+  if (!session) {
+    $('aiMessage').textContent = 'Sesi login berakhir. Silakan login kembali.';
+    return;
+  }
+  const button = $('generateBtn');
+  button.disabled = true;
+  button.textContent = 'Sedang membuat artikel...';
+  $('aiMessage').textContent = 'Gemini sedang menyusun artikel. Mohon tunggu.';
+  try {
+    const response = await fetch(
+      SUPABASE_URL + '/functions/v1/generate-artcile',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + session.access_token
+        },
+        body: JSON.stringify({
+          topic,
+          category: $('aiCategory').value,
+          keywords: $('aiKeywords').value.trim()
+        })
+      }
+    );
+    const result = await response.json();
+    if (!response.ok || !result.success || !result.article) {
+      throw new Error(result.error || 'AI gagal membuat artikel. Periksa Edge Function dan kuota Gemini.');
+    }
+    const a = result.article;
+    $('title').value = a.title || '';
+    $('slug').value = a.slug || slugify(a.title || '');
+    $('category').value = a.category || $('aiCategory').value;
+    $('excerpt').value = a.excerpt || '';
+    $('content').value = a.content || '';
+    $('seoTitle').value = a.seo_title || a.title || '';
+    $('metaDescription').value = a.meta_description || a.excerpt || '';
+    $('aiMessage').textContent = 'Draf AI berhasil dibuat. Periksa dan edit isinya sebelum menyimpan.';
+    $('formHeading').textContent = 'Review Artikel dari AI';
+    window.scrollTo({ top: $('articleForm').getBoundingClientRect().top + window.scrollY - 20, behavior: 'smooth' });
+  } catch (error) {
+    $('aiMessage').textContent = error.message || 'Terjadi kesalahan saat menghubungi AI.';
+  } finally {
+    button.disabled = false;
+    button.textContent = '✨ Generate Artikel dengan AI';
+  }
+});
 $('loginForm').addEventListener('submit',async e=>{e.preventDefault();clearMessage('loginMessage');const {error}=await supabase.auth.signInWithPassword({email:$('email').value,password:$('password').value});if(error){message('loginMessage',error.message,true);return;}await showApp();});
 async function showApp(){const {data:{session}}=await supabase.auth.getSession();if(!session){$('loginPanel').classList.remove('hidden');$('appPanel').classList.add('hidden');return;}$('loginPanel').classList.add('hidden');$('appPanel').classList.remove('hidden');await loadArticles();}
 $('logoutBtn').addEventListener('click',async()=>{await supabase.auth.signOut();resetForm();showApp();});
