@@ -48,7 +48,7 @@ jobs:
             const file = 'sitemap.xml';
             let xml = fs.readFileSync(file, 'utf8');
             const known = new Set(
-              [...xml.matchAll(/<loc>(.*?)<\\/loc>/g)].map(match => match[1].trim())
+              [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1].trim())
             );
 
             const additions = [];
@@ -59,14 +59,14 @@ jobs:
               const lastmod = article.published_at
                 ? new Date(article.published_at).toISOString().slice(0, 10)
                 : '';
-              additions.push('  <url>\\n    <loc>' + loc + '</loc>' +
-                (lastmod ? '\\n    <lastmod>' + lastmod + '</lastmod>' : '') +
-                '\\n  </url>');
+              additions.push('  <url>\n    <loc>' + loc + '</loc>' +
+                (lastmod ? '\n    <lastmod>' + lastmod + '</lastmod>' : '') +
+                '\n  </url>');
               known.add(loc);
             }
 
             if (additions.length) {
-              xml = xml.replace('</urlset>', additions.join('\\n') + '\\n</urlset>');
+              xml = xml.replace('</urlset>', additions.join('\n') + '\n</urlset>');
               fs.writeFileSync(file, xml);
               console.log('Added ' + additions.length + ' CMS article URL(s) to sitemap.');
             } else {
