@@ -20,7 +20,7 @@
 .preview-article h1{color:var(--dark);font-size:clamp(27px,5vw,40px);line-height:1.25;margin:12px 0}
 .preview-excerpt{color:var(--muted);font-size:16px;line-height:1.8}
 .preview-cover{width:100%;max-height:420px;object-fit:cover;border-radius:12px;margin:22px 0}
-.preview-content{white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.9;color:var(--ink)}
+.preview-content{overflow-wrap:anywhere;font-size:15px;line-height:1.9;color:var(--ink)}\n.preview-content p{margin:0 0 18px}.preview-content h2{font-size:24px;line-height:1.35;color:var(--dark);margin:30px 0 12px}.preview-content h3{font-size:19px;color:var(--dark);margin:24px 0 10px}.preview-content ul,.preview-content ol{padding-left:24px;margin:0 0 18px}.preview-content li{margin:6px 0}.preview-content a{color:var(--blue);text-decoration:underline}.preview-content blockquote{margin:18px 0;padding:12px 18px;border-left:4px solid var(--yellow);background:#f8f9fd}
 @media(max-width:600px){.preview-overlay{padding:8px}.preview-toolbar{align-items:flex-start;flex-direction:column}.preview-article{padding:24px 17px 40px}}@media(max-width:600px){.ai-grid{grid-template-columns:1fr}}@media(max-width:850px){.grid{grid-template-columns:1fr}.wrap{margin:18px auto}.panel{padding:18px}}
 </style>
 </head>
@@ -174,7 +174,7 @@ function buildPreview(){
   $('previewCategory').textContent=$('category').value;
   $('previewTitle').textContent=title;
   $('previewExcerpt').textContent=$('excerpt').value.trim();
-  $('previewContent').textContent=content;
+  const previewContent=$('previewContent');\n  if(window.DOMPurify){\n    previewContent.innerHTML=window.DOMPurify.sanitize(content,{USE_PROFILES:{html:true}});\n  }else{\n    previewContent.textContent=content;\n  }
   const file=$('cover').files[0];
   const imageUrl=file?URL.createObjectURL(file):$('coverUrl').value;
   if(imageUrl){
