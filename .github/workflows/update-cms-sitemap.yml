@@ -1,0 +1,93 @@
+name: Update CMS sitemap
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Add published CMS articles to sitemap
+        env:
+          SUPABASE_URL: https://fdszchefukrjsklrcuar.supabase.co
+          SUPABASE_ANON_KEY: sb_publishable__EYU4kvj4NIyVzf-H6xD3A_i2ttl5nV
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          async function main() {
+            const endpoint = new URL('/rest/v1/articles', process.env.SUPABASE_URL);
+            endpoint.search = new URLSearchParams({
+              select: 'slug,published_at',
+              status: 'eq.published',
+              published_at: 'not.is.null',
+              slug: 'not.is.null',
+              order: 'published_at.desc'
+            });
+
+            const response = await fetch(endpoint, {
+              headers: {
+                apikey: process.env.SUPABASE_ANON_KEY,
+                Authorization: 'Bearer ' + process.env.SUPABASE_ANON_KEY
+              }
+            });
+
+            if (!response.ok) {
+              throw new Error('Supabase request failed: HTTP ' + response.status + ' ' + await response.text());
+            }
+
+            const articles = await response.json();
+            const file = 'sitemap.xml';
+            let xml = fs.readFileSync(file, 'utf8');
+            const known = new Set(
+              [...xml.matchAll(/<loc>(.*?)<\\/loc>/g)].map(match => match[1].trim())
+            );
+
+            const additions = [];
+            for (const article of articles) {
+              if (!article.slug) continue;
+              const loc = 'https://newprimagamasunterindah.com/artikel.html?slug=' + encodeURIComponent(article.slug);
+              if (known.has(loc)) continue;
+              const lastmod = article.published_at
+                ? new Date(article.published_at).toISOString().slice(0, 10)
+                : '';
+              additions.push('  <url>\\n    <loc>' + loc + '</loc>' +
+                (lastmod ? '\\n    <lastmod>' + lastmod + '</lastmod>' : '') +
+                '\\n  </url>');
+              known.add(loc);
+            }
+
+            if (additions.length) {
+              xml = xml.replace('</urlset>', additions.join('\\n') + '\\n</urlset>');
+              fs.writeFileSync(file, xml);
+              console.log('Added ' + additions.length + ' CMS article URL(s) to sitemap.');
+            } else {
+              console.log('Sitemap is already up to date. Published CMS articles: ' + articles.length);
+            }
+          }
+
+          main().catch(error => {
+            console.error(error);
+            process.exit(1);
+          });
+          NODE
+
+      - name: Commit sitemap when changed
+        run: |
+          if git diff --quiet -- sitemap.xml; then
+            echo "No sitemap changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          git commit -m "chore: update sitemap with published CMS articles"
+          git push
