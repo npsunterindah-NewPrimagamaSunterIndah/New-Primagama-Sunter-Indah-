@@ -761,7 +761,9 @@ articles.sort(function(a,b){
    BUAT CARD
 ===================================================== */
 
-function escapeHTML(value){return String(value ?? '').replace(/[&<>\"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[char]));}\n\nfunction createArticleCard(article,isLatest){
+function escapeHTML(value){const node=document.createElement('span');node.textContent=String(value ?? '');return node.innerHTML;}
+
+function createArticleCard(article,isLatest){
 
     const badge = isLatest
         ? `
