@@ -8,6 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Blog & Tips Belajar - New Primagama Sunter Indah</title>
+    <link rel="canonical" href="https://newprimagamasunterindah.com/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog & Tips Belajar - New Primagama Sunter Indah">
+    <meta property="og:description" content="Artikel seputar tips belajar, TKA, ujian, sekolah, dan pendidikan dari New Primagama Sunter Indah.">
+    <meta property="og:url" content="https://newprimagamasunterindah.com/blog.html">
+    <meta property="og:site_name" content="New Primagama Sunter Indah">
+    <meta name="twitter:card" content="summary_large_image">
 
     <meta
         name="description"
@@ -737,7 +744,7 @@ try {
             dateDisplay: new Date(article.published_at || article.created_at).toLocaleDateString("id-ID", {day:"numeric", month:"long", year:"numeric"}),
             description: article.excerpt || "",
             image: article.cover_image_url || "Logo-NP-Zenius-transparan.png",
-            link: "artikel.html?id=" + encodeURIComponent(article.id)
+            link: "artikel.html?slug=" + encodeURIComponent(article.slug || article.id)
         });
     });
 } catch (error) {
