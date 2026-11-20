@@ -59,7 +59,7 @@
 <div class="field"><label for="slug">Slug URL</label><input id="slug" required placeholder="judul-artikel"><span class="hint">Gunakan huruf kecil dan tanda hubung.</span></div>
 <div class="field"><label for="category">Kategori</label><select id="category"><option>TKA</option><option>Tips Belajar</option><option>Edukasi & Sekolah</option><option>Ujian & Persiapan</option><option>Fun Edukasi</option></select></div>
 <div class="field"><label for="excerpt">Ringkasan artikel</label><textarea id="excerpt" style="min-height:90px" maxlength="300" placeholder="Ringkasan singkat untuk kartu artikel"></textarea></div>
-<div class="field"><label for="content">Isi artikel (HTML diperbolehkan)</label><textarea id="content" required placeholder="Tulis isi artikel di sini..."></textarea><span class="hint">Gunakan paragraf HTML seperti &lt;p&gt;...&lt;/p&gt; atau teks biasa. Preview dan template artikel akan ditambahkan pada tahap berikutnya.</span></div>
+<div class="field"><label for="content">Isi artikel (HTML diperbolehkan)</label><textarea id="content" required placeholder="Tulis isi artikel di sini..."></textarea><span class="hint">Gunakan paragraf HTML seperti &lt;p&gt;...&lt;/p&gt; atau teks biasa. Gunakan paragraf HTML seperti <p>...</p> atau teks biasa. Preview akan menampilkan format artikel.</span></div>
 <div class="field"><label for="cover">Gambar utama</label><input id="cover" type="file" accept="image/jpeg,image/png,image/webp"><img id="coverPreview" class="cover-preview hidden" alt="Preview gambar"><input id="coverUrl" type="hidden"><span class="hint">JPG, PNG, atau WebP. Maksimal 5 MB.</span></div>
 <div class="field"><label for="seoTitle">SEO title</label><input id="seoTitle" maxlength="70" placeholder="Judul untuk Google"></div>
 <div class="field"><label for="metaDescription">Meta description</label><textarea id="metaDescription" style="min-height:80px" maxlength="160" placeholder="Deskripsi singkat untuk hasil pencarian Google"></textarea></div>
@@ -89,6 +89,7 @@
 </section>
 <script type="module">
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import DOMPurify from 'https://esm.sh/dompurify@3.2.6';
 const SUPABASE_URL = 'https://fdszchefukrjsklrcuar.supabase.co';
 const SUPABASE_KEY = 'sb_publishable__EYU4kvj4NIyVzf-H6xD3A_i2ttl5nV';
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -176,11 +177,7 @@ function buildPreview(){
   $('previewTitle').textContent=title;
   $('previewExcerpt').textContent=$('excerpt').value.trim();
   const previewContent=$('previewContent');
-  if(window.DOMPurify){
-    previewContent.innerHTML=window.DOMPurify.sanitize(content,{USE_PROFILES:{html:true}});
-  }else{
-    previewContent.textContent=content;
-  }
+  previewContent.innerHTML=DOMPurify.sanitize(content,{USE_PROFILES:{html:true}});
   const file=$('cover').files[0];
   const imageUrl=file?URL.createObjectURL(file):$('coverUrl').value;
   if(imageUrl){
