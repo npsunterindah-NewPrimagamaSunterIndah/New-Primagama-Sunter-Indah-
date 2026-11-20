@@ -764,78 +764,18 @@ articles.sort(function(a,b){
 function escapeHTML(value){const node=document.createElement('span');node.textContent=String(value ?? '');return node.innerHTML;}
 
 function createArticleCard(article,isLatest){
-
-    const badge = isLatest
-        ? `
-            <span class="new-badge">
-                TERBARU
-            </span>
-          `
-        : "";
-
-
+    const badge = isLatest ? '<span class="new-badge">TERBARU</span>' : "";
     return `
-
-        <article class="article-card">
-
-            ${badge}
-
-
-            <a
-                href="${article.link}"
-                class="article-image"
-            >
-
-                <img
-                    src="${article.image}"
-                    alt="${article.title}"
-                    loading="lazy"
-                >
-
-            </a>
-
-
-            <div class="article-category">
-
-                ${article.category}
-
-            </div>
-
-
-            <h3>
-
-                <a href="${article.link}">
-
-                    ${article.title}
-
-                </a>
-
-            </h3>
-
-
-            <p class="article-description">
-
-                ${article.description}
-
-            </p>
-
-
-            <div class="article-meta">
-
-                <i class="fa-regular fa-calendar"></i>
-
-                <span class="date">
-
-                    ${article.dateDisplay}
-
-                </span>
-
-            </div>
-
-        </article>
-
-    `;
-
+      <article class="article-card">
+        ${badge}
+        <a href="${escapeHTML(article.link)}" class="article-image">
+          <img src="${escapeHTML(article.image)}" alt="${escapeHTML(article.title)}" loading="lazy">
+        </a>
+        <div class="article-category">${escapeHTML(article.category)}</div>
+        <h3><a href="${escapeHTML(article.link)}">${escapeHTML(article.title)}</a></h3>
+        <p class="article-description">${escapeHTML(article.description)}</p>
+        <div class="article-meta"><i class="fa-regular fa-calendar"></i><span class="date">${escapeHTML(article.dateDisplay)}</span></div>
+      </article>`;
 }
 
 
